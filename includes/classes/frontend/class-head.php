@@ -2,13 +2,13 @@
 /**
  * Frontend head section
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Frontend
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Front;
+namespace SPR_Two\Classes\Front;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -39,7 +39,7 @@ class Head {
 		add_action( 'init', [ $this, 'disable_emojis' ] );
 
 		// Load the `<head>` section.
-		add_action( 'BS_Theme\head', [ $this, 'head' ] );
+		add_action( 'SPR_Two\head', [ $this, 'head' ] );
 	}
 
 	/**

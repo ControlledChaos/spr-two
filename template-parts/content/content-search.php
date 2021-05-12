@@ -2,16 +2,16 @@
 /**
  * Template part for displaying results in search pages
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Templates
  * @category   Content
  * @since      1.0.0
  */
 
-namespace BS_Theme;
+namespace SPR_Two;
 
 // Alias namespaces.
-use BS_Theme\Classes\Front as Front;
+use SPR_Two\Classes\Front as Front;
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">

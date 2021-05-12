@@ -2,13 +2,13 @@
 /**
  * Sample plugin compatibility
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Vendor
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Vendor;
+namespace SPR_Two\Classes\Vendor;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -93,7 +93,7 @@ class Sample_Plugin extends Plugin {
 	public function use_bundled() {
 
 		// Override constant.
-		if ( defined( 'BST_USE_SAMPLE_PLUGIN' ) && false == BST_USE_SAMPLE_PLUGIN ) {
+		if ( defined( 'SPRT_USE_SAMPLE_PLUGIN' ) && false == SPRT_USE_SAMPLE_PLUGIN ) {
 			return false;
 		}
 		return true;

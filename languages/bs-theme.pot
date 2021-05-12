@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.5.2; wp-5.7.1\n"
-"X-Domain: bs-theme"
+"X-Domain: spr-two"
 
 #: includes/classes/frontend/class-template-tags.php:290
 #, php-format
@@ -166,7 +166,7 @@ msgid "https://github.com/ControlledChaos"
 msgstr ""
 
 #. URI of the theme
-msgid "https://github.com/ControlledChaos/bs-theme"
+msgid "https://github.com/ControlledChaos/spr-two"
 msgstr ""
 
 #: 404.php:31

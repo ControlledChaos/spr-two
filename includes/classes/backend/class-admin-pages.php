@@ -2,13 +2,13 @@
 /**
  * Admin pages
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Admin;
+namespace SPR_Two\Classes\Admin;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -45,8 +45,8 @@ class Admin_Pages {
 		// Add a submenu page under Themes.
 		$this->help_theme_options = add_submenu_page(
 			'themes.php',
-			__( 'Display Options', 'bs-theme' ),
-			__( 'Display Options', 'bs-theme' ),
+			__( 'Display Options', 'spr-two' ),
+			__( 'Display Options', 'spr-two' ),
 			'manage_options',
 			'frontend-display-options',
 			[ $this, 'theme_options_output' ],
@@ -86,7 +86,7 @@ class Admin_Pages {
 		// More information tab.
 		$screen->add_help_tab( [
 			'id'       => 'help_theme_options_info',
-			'title'    => __( 'More Information', 'bs-theme' ),
+			'title'    => __( 'More Information', 'spr-two' ),
 			'content'  => null,
 			'callback' => [ $this, 'help_theme_options_info' ]
 		] );
@@ -117,22 +117,22 @@ class Admin_Pages {
      */
     public function help_theme_options_sidebar() {
 
-        $html  = sprintf( '<h4>%1s</h4>', __( 'Author Credits', 'bs-theme' ) );
+        $html  = sprintf( '<h4>%1s</h4>', __( 'Author Credits', 'spr-two' ) );
         $html .= sprintf(
             '<p>%1s %2s.</p>',
-            __( 'This theme was created by', 'bs-theme' ),
+            __( 'This theme was created by', 'spr-two' ),
             'Your Name'
         );
         $html .= sprintf(
             '<p>%1s <br /><a href="%2s" target="_blank">%3s</a> <br />%4s</p>',
-            __( 'Visit', 'bs-theme' ),
+            __( 'Visit', 'spr-two' ),
             'https://example.com/',
             'Example Site',
-            __( 'for more details.', 'bs-theme' )
+            __( 'for more details.', 'spr-two' )
         );
         $html .= sprintf(
             '<p>%1s</p>',
-            __( 'Change this sidebar to give yourself credit for the hard work you did customizing this theme.', 'bs-theme' )
+            __( 'Change this sidebar to give yourself credit for the hard work you did customizing this theme.', 'spr-two' )
          );
 
 		return $html;
@@ -150,10 +150,10 @@ class Admin_Pages {
 		// Add a submenu page under Themes.
 		add_submenu_page(
 			'themes.php',
-			__( 'Theme Info', 'bs-theme' ),
-			__( 'Theme Info', 'bs-theme' ),
+			__( 'Theme Info', 'spr-two' ),
+			__( 'Theme Info', 'spr-two' ),
 			'manage_options',
-			'bs-theme-info',
+			'spr-two-info',
 			[ $this, 'theme_info_output' ]
 		);
 	}
@@ -172,7 +172,7 @@ class Admin_Pages {
 			include $output;
 		} else { ?>
 			<div class="wrap theme-info-page">
-				<h1><?php _e( 'Template Error', 'bs-theme' ); ?></h1>
+				<h1><?php _e( 'Template Error', 'spr-two' ); ?></h1>
 				<p class="description"><?php _e( 'The template file for this page was not located.' ); ?></p>
 			</div>
 		<?php }

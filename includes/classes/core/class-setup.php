@@ -2,16 +2,16 @@
 /**
  * Theme setup
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Setup
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Core;
+namespace SPR_Two\Classes\Core;
 
 // Alias namespaces.
-use  BS_Theme\Classes\Core as Core;
+use  SPR_Two\Classes\Core as Core;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -59,7 +59,7 @@ class Setup {
 		 *
 		 * @since 1.0.0
 		 */
-		load_theme_textdomain( 'bs-theme' );
+		load_theme_textdomain( 'spr-two' );
 
 		/**
 		 * Add theme support
@@ -98,11 +98,11 @@ class Setup {
 			'default_image' => [
 				'url'           => '%s/assets/images/default-header.jpg',
 				'thumbnail_url' => '%s/assets/images/default-header.jpg',
-				'description'   => __( 'Default Header Image', 'bs-theme' ),
+				'description'   => __( 'Default Header Image', 'spr-two' ),
 			],
 		] );
 
-		add_theme_support( 'custom-header', apply_filters( 'bst_custom_header_args', [
+		add_theme_support( 'custom-header', apply_filters( 'sprt_custom_header_args', [
 			'width'              => 2048,
 			'height'             => 878,
 			'flex-height'        => true,
@@ -126,7 +126,7 @@ class Setup {
 		];
 
 		// Apply a filter to logo arguments.
-		$logo = apply_filters( 'bst_header_image', $logo_args );
+		$logo = apply_filters( 'sprt_header_image', $logo_args );
 
 		// Add logo support.
 		add_theme_support( 'custom-logo', $logo );
@@ -136,10 +136,10 @@ class Setup {
 		 *
 		 * @since 1.0.0
 		 */
-		$bst_content_width = apply_filters( 'bst_content_width', 1280 );
+		$sprt_content_width = apply_filters( 'sprt_content_width', 1280 );
 
 		if ( ! isset( $content_width ) ) {
-			$content_width = $bst_content_width;
+			$content_width = $sprt_content_width;
 		}
 
 		// Embed sizes.
@@ -152,9 +152,9 @@ class Setup {
 		 * @since  1.0.0
 		 */
 		register_nav_menus( [
-			'main'   => __( 'Main Menu', 'bs-theme' ),
-			'footer' => __( 'Footer Menu', 'bs-theme' ),
-			'social' => __( 'Social Menu', 'bs-theme' )
+			'main'   => __( 'Main Menu', 'spr-two' ),
+			'footer' => __( 'Footer Menu', 'spr-two' ),
+			'social' => __( 'Social Menu', 'spr-two' )
 		] );
 
 		/**
@@ -162,7 +162,7 @@ class Setup {
 		 *
 		 * @since 1.0.0
 		 */
-		add_editor_style( '/assets/css/editor.min.css', [ 'bst-admin' ], '', 'screen' );
+		add_editor_style( '/assets/css/editor.min.css', [ 'sprt-admin' ], '', 'screen' );
 	}
 
 	/**

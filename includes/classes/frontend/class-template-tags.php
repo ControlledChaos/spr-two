@@ -3,17 +3,17 @@
  * Frontend template tags
  *
  * Call new instance of this class in header files.
- * Use of the `$bst_tags` variable is recommended
+ * Use of the `$sprt_tags` variable is recommended
  * to instantiate, where the prefix matches the
  * rest of this theme's prefixes.
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Frontend
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Front;
+namespace SPR_Two\Classes\Front;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -68,7 +68,7 @@ class Template_Tags {
 	 * @return void
 	 */
 	public function head() {
-		do_action( 'BS_Theme\head' );
+		do_action( 'SPR_Two\head' );
 	}
 
 	/**
@@ -81,7 +81,7 @@ class Template_Tags {
 	 */
 	public function body_open() {
 		do_action( 'wp_body_open' );
-		do_action( 'BS_Theme\body_open' );
+		do_action( 'SPR_Two\body_open' );
 	}
 
 	/**
@@ -92,7 +92,7 @@ class Template_Tags {
 	 * @return void
 	 */
 	public function header() {
-		do_action( 'BS_Theme\header' );
+		do_action( 'SPR_Two\header' );
 	}
 
 	/**
@@ -103,7 +103,7 @@ class Template_Tags {
 	 * @return void
 	 */
 	public function footer() {
-		do_action( 'BS_Theme\footer' );
+		do_action( 'SPR_Two\footer' );
 	}
 
 	/**
@@ -126,32 +126,32 @@ class Template_Tags {
 
 	// Fires after opening `body` and before `#page`.
 	public function before_page() {
-		do_action( 'BS_Theme\before_page' );
+		do_action( 'SPR_Two\before_page' );
 	}
 
-	// Fires before `BS_Theme\header`.
+	// Fires before `SPR_Two\header`.
 	public function before_header() {
-		do_action( 'BS_Theme\before_header' );
+		do_action( 'SPR_Two\before_header' );
 	}
 
-	// Fires after `BS_Theme\header`.
+	// Fires after `SPR_Two\header`.
 	public function after_header() {
-		do_action( 'BS_Theme\after_header' );
+		do_action( 'SPR_Two\after_header' );
 	}
 
-	// Fires before `BS_Theme\footer`.
+	// Fires before `SPR_Two\footer`.
 	public function before_footer() {
-		do_action( 'BS_Theme\before_footer' );
+		do_action( 'SPR_Two\before_footer' );
 	}
 
-	// Fires after `BS_Theme\footer`.
+	// Fires after `SPR_Two\footer`.
 	public function after_footer() {
-		do_action( 'BS_Theme\after_footer' );
+		do_action( 'SPR_Two\after_footer' );
 	}
 
 	// Fires after `#page` and before `wp_footer`.
 	public function after_page() {
-		do_action( 'BS_Theme\after_page' );
+		do_action( 'SPR_Two\after_page' );
 	}
 
 	/**
@@ -255,7 +255,7 @@ class Template_Tags {
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'bs-theme' ),
+			esc_html_x( 'Posted on %s', 'post date', 'spr-two' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -275,7 +275,7 @@ class Template_Tags {
 	public function posted_by() {
 
 		$byline = sprintf(
-			esc_html_x( 'by %s', 'post author', 'bs-theme' ),
+			esc_html_x( 'by %s', 'post author', 'spr-two' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -297,15 +297,15 @@ class Template_Tags {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 
-			$categories_list = get_the_category_list( esc_html__( ', ', 'bs-theme' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'spr-two' ) );
 			if ( $categories_list ) {
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bs-theme' ) . '</span>', $categories_list );
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'spr-two' ) . '</span>', $categories_list );
 			}
 
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'bs-theme' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'spr-two' ) );
 
 			if ( $tags_list ) {
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'bs-theme' ) . '</span>', $tags_list );
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'spr-two' ) . '</span>', $tags_list );
 			}
 
 		}
@@ -316,7 +316,7 @@ class Template_Tags {
 			comments_popup_link(
 				sprintf(
 					wp_kses(
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'bs-theme' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'spr-two' ),
 						[
 							'span' => [
 								'class' => [],
@@ -332,7 +332,7 @@ class Template_Tags {
 		edit_post_link(
 			sprintf(
 				wp_kses(
-					__( ' Edit <span class="screen-reader-text">%s</span>', 'bs-theme' ),
+					__( ' Edit <span class="screen-reader-text">%s</span>', 'spr-two' ),
 					[
 						'span' => [
 							'class' => [],
@@ -408,7 +408,7 @@ class Template_Tags {
 	public function theme_mode_script() {
 
 	?>
-		<script>jQuery(document).ready(function(e){var t=e('.theme-toggle');localStorage.theme?(e('body').addClass(localStorage.theme),e(t).text(localStorage.text)):(e('body').addClass('light-mode'),e(t).text('<?php esc_html_e( 'Dark Theme', 'bs-theme' ); ?>')),e(t).click(function(){e('body').hasClass('light-mode')?(e('body').removeClass('light-mode').addClass('dark-mode'),e(t).text('<?php esc_html_e( 'Light Theme', 'bs-theme' ); ?>'),localStorage.theme='dark-mode',localStorage.text='<?php esc_html_e( 'Light Theme', 'bs-theme' ); ?>'):(e('body').removeClass('dark-mode').addClass('light-mode'),e(t).text('<?php esc_html_e( 'Dark Theme', 'bs-theme' ); ?>'),localStorage.theme='light-mode',localStorage.text='<?php esc_html_e( 'Dark Theme', 'bs-theme' ); ?>')})});</script>
+		<script>jQuery(document).ready(function(e){var t=e('.theme-toggle');localStorage.theme?(e('body').addClass(localStorage.theme),e(t).text(localStorage.text)):(e('body').addClass('light-mode'),e(t).text('<?php esc_html_e( 'Dark Theme', 'spr-two' ); ?>')),e(t).click(function(){e('body').hasClass('light-mode')?(e('body').removeClass('light-mode').addClass('dark-mode'),e(t).text('<?php esc_html_e( 'Light Theme', 'spr-two' ); ?>'),localStorage.theme='dark-mode',localStorage.text='<?php esc_html_e( 'Light Theme', 'spr-two' ); ?>'):(e('body').removeClass('dark-mode').addClass('light-mode'),e(t).text('<?php esc_html_e( 'Dark Theme', 'spr-two' ); ?>'),localStorage.theme='light-mode',localStorage.text='<?php esc_html_e( 'Dark Theme', 'spr-two' ); ?>')})});</script>
 	<?php
 
 	}
@@ -431,8 +431,8 @@ class Template_Tags {
 		// Toggle button markup.
 		$button = sprintf(
 			'<button class="theme-toggle" type="button" name="dark_light" title="%1s">%2s</button>',
-			esc_html__( 'Toggle light/dark theme', 'bs-theme' ),
-			esc_html__( 'Light Theme', 'bs-theme' )
+			esc_html__( 'Toggle light/dark theme', 'spr-two' ),
+			esc_html__( 'Light Theme', 'spr-two' )
 		);
 
 		// Print the toggle button.

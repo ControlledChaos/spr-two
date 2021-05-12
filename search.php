@@ -2,16 +2,16 @@
 /**
  * The template for displaying search results pages
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Templates
  * @category   Archives
  * @since      1.0.0
  */
 
-namespace BS_Theme;
+namespace SPR_Two;
 
 // Alias namespaces.
-use BS_Theme\Classes\Front as Front;
+use SPR_Two\Classes\Front as Front;
 
 // Get the default header file.
 get_header();
@@ -26,7 +26,7 @@ get_header();
 
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php printf( esc_html__( 'Search Results for: %s', 'bs-theme' ), '<span>' . get_search_query() . '</span>' );
+					<?php printf( esc_html__( 'Search Results for: %s', 'spr-two' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
 			</header>
@@ -34,7 +34,7 @@ get_header();
 			<?php while ( have_posts() ) :
 				the_post();
 
-				get_template_part( 'template-parts/content/content', 'search' . $bst_acf->suffix() );
+				get_template_part( 'template-parts/content/content', 'search' . $sprt_acf->suffix() );
 
 			endwhile;
 
@@ -42,7 +42,7 @@ get_header();
 
 		else :
 
-			get_template_part( 'template-parts/content/content', 'none' . $bst_acf->suffix() );
+			get_template_part( 'template-parts/content/content', 'none' . $sprt_acf->suffix() );
 
 		endif; ?>
 

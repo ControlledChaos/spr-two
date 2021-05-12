@@ -2,13 +2,13 @@
 /**
  * Theme activation
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Activation
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Activate;
+namespace SPR_Two\Classes\Activate;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {

@@ -2,16 +2,16 @@
 /**
  * The default header of any page
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Templates
  * @category   Headers
  * @since      1.0.0
  */
 
-namespace BS_Theme;
+namespace SPR_Two;
 
 // Alias namespaces.
-use BS_Theme\Classes\Front as Front;
+use SPR_Two\Classes\Front as Front;
 
 ?>
 <header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">

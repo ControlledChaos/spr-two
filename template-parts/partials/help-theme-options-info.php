@@ -2,13 +2,13 @@
 /**
  * Content for theme options page More Information help tab
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Templates
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace BS_Theme;
+namespace SPR_Two;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,6 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<h3><?php _e( 'More information about this theme', 'bs-theme' ); ?></h3>
+<h3><?php _e( 'More information about this theme', 'spr-two' ); ?></h3>
 
-<p><?php _e( 'Start your info here.', 'bs-theme' ); ?></p>
+<p><?php _e( 'Start your info here.', 'spr-two' ); ?></p>

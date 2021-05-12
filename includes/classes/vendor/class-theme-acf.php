@@ -2,13 +2,13 @@
 /**
  * Advanced Custom Fields compatability
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Vendor
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Vendor;
+namespace SPR_Two\Classes\Vendor;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -111,7 +111,7 @@ class Theme_ACF extends Plugin {
 	public function use_bundled() {
 
 		// Override constant.
-		if ( defined( 'BST_USE_BUNDLED_ACF' ) && false == BST_USE_BUNDLED_ACF ) {
+		if ( defined( 'SPRT_USE_BUNDLED_ACF' ) && false == SPRT_USE_BUNDLED_ACF ) {
 			return false;
 		}
 		return true;
@@ -126,7 +126,7 @@ class Theme_ACF extends Plugin {
 	 * @return string Returns the URL for ACF files.
 	 */
 	public function acf_settings_url( $url = '' ) {
-		$url = BST_URL . '/includes/vendor/' . $this->bundled_dir . '/';
+		$url = SPRT_URL . '/includes/vendor/' . $this->bundled_dir . '/';
 		return $url;
 	}
 
@@ -147,7 +147,7 @@ class Theme_ACF extends Plugin {
 		if ( is_multisite() && ! is_main_site() && ! is_super_admin( get_current_user_id() ) ) {
 			$show_admin = false;
 		}
-		return apply_filters( 'bst_acf_settings_show_admin', $show_admin );
+		return apply_filters( 'sprt_acf_settings_show_admin', $show_admin );
 	}
 
 	/**
@@ -159,7 +159,7 @@ class Theme_ACF extends Plugin {
 	 * @return string Returns the directory path.
 	 */
 	public function save_acf_json( $path = '' ) {
-		$path = BST_PATH . 'includes/settings/acf-json';
+		$path = SPRT_PATH . 'includes/settings/acf-json';
 		return $path;
 	}
 
@@ -173,7 +173,7 @@ class Theme_ACF extends Plugin {
 	 */
 	public function load_acf_json( $paths = [] ) {
 		unset( $paths[0] );
-		$paths[] = BST_PATH . 'includes/settings/acf-json';
+		$paths[] = SPRT_PATH . 'includes/settings/acf-json';
 		return $paths;
 	}
 

@@ -5,16 +5,16 @@
  * This is the template that displays the area of the page that contains both the current comments
  * and the comment form.
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Templates
  * @category   Users
  * @since      1.0.0
  */
 
-namespace BS_Theme;
+namespace SPR_Two;
 
 // Alias namespaces.
-use BS_Theme\Classes\Front as Front;
+use SPR_Two\Classes\Front as Front;
 
 /*
  * If the current post is protected by a password and
@@ -30,16 +30,16 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-			$bst_comment_count = get_comments_number();
-			if ( '1' === $bst_comment_count ) {
+			$sprt_comment_count = get_comments_number();
+			if ( '1' === $sprt_comment_count ) {
 				printf(
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'bs-theme' ),
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'spr-two' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf(
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $bst_comment_count, 'comments title', 'bs-theme' ) ),
-					number_format_i18n( $bst_comment_count ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $sprt_comment_count, 'comments title', 'spr-two' ) ),
+					number_format_i18n( $sprt_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			}
@@ -63,7 +63,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'bs-theme' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'spr-two' ); ?></p>
 			<?php
 		endif;
 

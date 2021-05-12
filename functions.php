@@ -4,11 +4,11 @@
  *
  * A basic starter theme for WordPress and ClassicPress.
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Functions
  * @since      1.0.0
  *
- * @link       https://github.com/ControlledChaos/bs-theme
+ * @link       https://github.com/ControlledChaos/spr-two
  * @license    http://www.gnu.org/licenses/gpl-3.0.html
  */
 
@@ -29,57 +29,19 @@
  * along with BS Theme. If not, see {URI to Plugin License}.
  */
 
-/**
- * Renaming, rebranding, and defaults
- *
- * Following is a list of strings to find and replace in all theme files.
- *
- * 1. Plugin name
- *    Find `BS_Theme` and replace with your theme name, include
- *    underscores between words. This will change the namespace and the package
- *    name in file headers.
- *
- * 2. Text domain
- *    Find `bs-theme` and replace with the text domain of your theme.
- *
- * 3. Theme prefix
- *    Find `bst` and replace with the unique, lowercase theme prefix.
- *    This prefix is used for applied filters, stylesheet IDs, and
- *    admin page URIs, so the prefix may be followed by an underscore
- *    or a dash. Search for `bst_` and `bst-` to find the difference.
- *
- * 4. Constant prefix
- *    Find `BST` and replace with the unique, uppercase prefix of your theme.
- *
- * 5. Header image
- *    Replace the default image file `default-header.jpg`.
- *    @see assets/images/
- *
- * 6. Activation and deactivation
- *    Check the activation and deactivation classes for sample methods.
- *    Remove or modify the samples as needed.
- *    @see includes/class-activate
- *    @see includes/class-deactivate
- *
- * 7. README file
- *    Whether or not your theme will be kept in a version control repository,
- *    edit the content of the README file in the theme's root directory or
- *    delete it if it is not necessary.
- */
-
-namespace BS_Theme;
+namespace SPR_Two;
 
 // Alias namespaces.
 use
-BS_Theme\Classes as General,
-BS_Theme\Classes\Activate as Activate,
-BS_Theme\Classes\Core as Core,
-BS_Theme\Classes\Front as Front,
-BS_Theme\Classes\Widgets as Widgets,
-BS_Theme\Classes\Media as Media,
-BS_Theme\Classes\Admin as Admin,
-BS_Theme\Classes\Customize as Customize,
-BS_Theme\Classes\Vendor as Vendor;
+SPR_Two\Classes as General,
+SPR_Two\Classes\Activate as Activate,
+SPR_Two\Classes\Core as Core,
+SPR_Two\Classes\Front as Front,
+SPR_Two\Classes\Widgets as Widgets,
+SPR_Two\Classes\Media as Media,
+SPR_Two\Classes\Admin as Admin,
+SPR_Two\Classes\Customize as Customize,
+SPR_Two\Classes\Vendor as Vendor;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -131,7 +93,7 @@ if ( file_exists( $get_plugin ) ) {
 require get_parent_theme_file_path( '/includes/config.php' );
 
 // Autoload class files.
-require_once BST_PATH . 'includes/autoloader.php';
+require_once SPRT_PATH . 'includes/autoloader.php';
 
 /**
  * Instantiate theme classes
@@ -141,35 +103,35 @@ require_once BST_PATH . 'includes/autoloader.php';
  */
 
 // Activation classes.
-$bst_activate   = new Classes\Activate\Activate;
-$bst_deactivate = new Classes\Activate\Deactivate;
+$sprt_activate   = new Classes\Activate\Activate;
+$sprt_deactivate = new Classes\Activate\Deactivate;
 
 // Theme setup.
-$bst_core    = new Core\Setup;
-$bst_widgets = new Widgets\Register;
-$bst_media   = new Media\Images;
+$sprt_core    = new Core\Setup;
+$sprt_widgets = new Widgets\Register;
+$sprt_media   = new Media\Images;
 
 // Vendor (plugin) classes.
-$bst_acf = new Vendor\Theme_ACF;
+$sprt_acf = new Vendor\Theme_ACF;
 
 // Frontend classes.
 if ( ! is_admin() ) {
-	$bst_head   = new Front\Head;
-	$bst_tags   = new Front\Template_Tags;
-	$bst_assets = new Front\Assets;
-	$bst_layout = new Front\Layout;
+	$sprt_head   = new Front\Head;
+	$sprt_tags   = new Front\Template_Tags;
+	$sprt_assets = new Front\Assets;
+	$sprt_layout = new Front\Layout;
 }
 
 // Backend classes.
 if ( is_admin() ) {
-	$bst_admin_pages  = new Admin\Admin_Pages;
-	$bst_admin_assets = new Admin\Assets;
-	if ( bst_has_blocks() ) {
-		$bst_blocks = new Admin\Block_Editor;
+	$sprt_admin_pages  = new Admin\Admin_Pages;
+	$sprt_admin_assets = new Admin\Assets;
+	if ( sprt_has_blocks() ) {
+		$sprt_blocks = new Admin\Block_Editor;
 	}
 }
 
 // Customizer classes.
 if ( is_customize_preview() ) {
-	$bst_customize = new Customize\Customizer;
+	$sprt_customize = new Customize\Customizer;
 }

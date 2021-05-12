@@ -4,16 +4,16 @@
  *
  * Methods for the block editor in WordPress 5.0 or greater.
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Admin;
+namespace SPR_Two\Classes\Admin;
 
 // Alias namespaces.
-use  BS_Theme\Classes\Core as Core;
+use  SPR_Two\Classes\Core as Core;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -87,44 +87,44 @@ class Block_Editor {
 		 */
 		$color_args = [
 			[
-				'name'  => __( 'Text', 'bs-theme' ),
-				'slug'  => 'bst-text',
+				'name'  => __( 'Text', 'spr-two' ),
+				'slug'  => 'sprt-text',
 				'color' => '#333333',
 			],
 			[
-				'name'  => __( 'Light Gray', 'bs-theme' ),
-				'slug'  => 'bst-light-gray',
+				'name'  => __( 'Light Gray', 'spr-two' ),
+				'slug'  => 'sprt-light-gray',
 				'color' => '#888888',
 			],
 			[
-				'name'  => __( 'Pale Gray', 'bs-theme' ),
-				'slug'  => 'bst-pale-gray',
+				'name'  => __( 'Pale Gray', 'spr-two' ),
+				'slug'  => 'sprt-pale-gray',
 				'color' => '#cccccc',
 			],
 			[
-				'name'  => __( 'White', 'bs-theme' ),
-				'slug'  => 'bst-white',
+				'name'  => __( 'White', 'spr-two' ),
+				'slug'  => 'sprt-white',
 				'color' => '#ffffff',
 			],
 			[
-				'name'  => __( 'Error Red', 'bs-theme' ),
-				'slug'  => 'bst-error',
+				'name'  => __( 'Error Red', 'spr-two' ),
+				'slug'  => 'sprt-error',
 				'color' => '#dc3232',
 			],
 			[
-				'name'  => __( 'Warning Yellow', 'bs-theme' ),
-				'slug'  => 'bst-warning',
+				'name'  => __( 'Warning Yellow', 'spr-two' ),
+				'slug'  => 'sprt-warning',
 				'color' => '#ffb900',
 			],
 			[
-				'name'  => __( 'Success Green', 'bs-theme' ),
-				'slug'  => 'bst-success',
+				'name'  => __( 'Success Green', 'spr-two' ),
+				'slug'  => 'sprt-success',
 				'color' => '#46b450',
 			]
 		];
 
 		// Apply a filter to editor arguments.
-		$colors = apply_filters( 'bst_editor_colors', $color_args );
+		$colors = apply_filters( 'sprt_editor_colors', $color_args );
 
 		// Add theme color support.
 		add_theme_support( 'editor-color-palette', $colors );
@@ -152,7 +152,7 @@ class Block_Editor {
 		$allowed = array_merge( $this->custom_allowed_ids, $admin );
 
 		// Return a filtered array of allowed users.
-		return apply_filters( 'bst_allow_custom_colors', $allowed );
+		return apply_filters( 'sprt_allow_custom_colors', $allowed );
 	}
 
 	/**

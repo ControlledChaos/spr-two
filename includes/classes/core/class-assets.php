@@ -5,13 +5,13 @@
  * Methods for enqueueing and printing assets
  * such as JavaScript and CSS files.
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Core
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Core;
+namespace SPR_Two\Classes\Core;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -27,7 +27,7 @@ final class Assets {
 	 * @access private
 	 * @var    string The version number.
 	 */
-	private $version = BST_VERSION;
+	private $version = SPRT_VERSION;
 
 	/**
 	 * Constructor magic method
@@ -58,7 +58,7 @@ final class Assets {
 	public function toolbar_styles() {
 
 		if ( is_user_logged_in() && is_admin_bar_showing() ) {
-			wp_enqueue_style( 'bst-toolbar', get_theme_file_uri( '/assets/css/toolbar' . $this->suffix() . '.css' ), [], BST_VERSION, 'screen' );
+			wp_enqueue_style( 'sprt-toolbar', get_theme_file_uri( '/assets/css/toolbar' . $this->suffix() . '.css' ), [], SPRT_VERSION, 'screen' );
 		}
 	}
 
@@ -70,7 +70,7 @@ final class Assets {
 	 * @return void
 	 */
 	public function login_styles() {
-		wp_enqueue_style( 'bst-login', get_theme_file_uri( '/assets/css/login' . $this->suffix() . '.css' ), [], BST_VERSION, 'screen' );
+		wp_enqueue_style( 'sprt-login', get_theme_file_uri( '/assets/css/login' . $this->suffix() . '.css' ), [], SPRT_VERSION, 'screen' );
 	}
 
 	/**

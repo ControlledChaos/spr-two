@@ -2,16 +2,16 @@
 /**
  * Theme mode widget
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Widgets
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Widgets;
+namespace SPR_Two\Classes\Widgets;
 
 // Alias namespaces.
-use BS_Theme\Classes\Front as Front;
+use SPR_Two\Classes\Front as Front;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -31,14 +31,14 @@ class Theme_Mode extends \WP_Widget {
 
 		$options = [
 			'classname'                   => 'theme-mode-widget',
-			'description'                 => __( 'Add a button to toggle light & dark modes.', 'bs-theme' ),
+			'description'                 => __( 'Add a button to toggle light & dark modes.', 'spr-two' ),
 			'customize_selective_refresh' => true,
 		];
 
 		// Run the parent constructor.
 		parent :: __construct(
-			'bst_theme_mode',
-			$name = __( 'Theme Mode', 'bs-theme' ),
+			'sprt_theme_mode',
+			$name = __( 'Theme Mode', 'spr-two' ),
 			$options
 		);
 	}
@@ -58,9 +58,9 @@ class Theme_Mode extends \WP_Widget {
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'bs-theme' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'spr-two' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-			<br /><span class="description"><?php _e( 'Title text will display above the toggle button (optional).', 'bs-theme' ); ?></span>
+			<br /><span class="description"><?php _e( 'Title text will display above the toggle button (optional).', 'spr-two' ); ?></span>
 		</p>
 		<?php
 	}
@@ -101,7 +101,7 @@ class Theme_Mode extends \WP_Widget {
 		} else {
 			$title = '';
 		}
-		$title = apply_filters( 'bst_theme_mode_title', $title, $instance, $this->id_base );
+		$title = apply_filters( 'sprt_theme_mode_title', $title, $instance, $this->id_base );
 
 		echo $args['before_widget'];
 		if ( $title ) {

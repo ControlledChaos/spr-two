@@ -4,7 +4,7 @@
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Templates
  * @category   Headers
  * @since      1.0.0
@@ -12,10 +12,10 @@
  * @todo Add hooks for nav above or below header.
  */
 
-namespace BS_Theme;
+namespace SPR_Two;
 
 // Alias namespaces.
-use BS_Theme\Classes\Front as Front;
+use SPR_Two\Classes\Front as Front;
 
 // Conditional canonical link.
 if ( is_home() && ! is_front_page() ) {

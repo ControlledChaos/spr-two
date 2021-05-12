@@ -5,16 +5,16 @@
  * Methods for enqueueing and printing assets
  * such as JavaScript and CSS files.
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Admin;
+namespace SPR_Two\Classes\Admin;
 
 // Alias namespaces.
-use  BS_Theme\Classes\Core as Core;
+use  SPR_Two\Classes\Core as Core;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -67,6 +67,6 @@ class Assets {
 		// Instantiate the Assets class.
 		$assets = new Core\Assets;
 
-		wp_enqueue_style( 'bst-admin', get_theme_file_uri( '/assets/css/admin' . $assets->suffix() . '.css' ), [], BST_VERSION, 'all' );
+		wp_enqueue_style( 'sprt-admin', get_theme_file_uri( '/assets/css/admin' . $assets->suffix() . '.css' ), [], SPRT_VERSION, 'all' );
 	}
 }

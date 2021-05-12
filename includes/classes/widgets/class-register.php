@@ -2,13 +2,13 @@
 /**
  * Register widget areas
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Widgets
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Widgets;
+namespace SPR_Two\Classes\Widgets;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -46,17 +46,17 @@ class Register {
 
 		// Sidebar position.
 		if ( is_rtl() ) {
-			$position = __( 'left', 'bs-theme' );
+			$position = __( 'left', 'spr-two' );
 		} else {
-			$position = __( 'right', 'bs-theme' );
+			$position = __( 'right', 'spr-two' );
 		}
 
 		// Register sidebar widget area.
 		register_sidebar( [
-			'name'          => __( 'Default Sidebar', 'bs-theme' ),
+			'name'          => __( 'Default Sidebar', 'spr-two' ),
 			'id'            => 'sidebar-default',
 			'description'   => sprintf(
-				__( 'Displays to the %s of the main content.', 'bs-theme' ),
+				__( 'Displays to the %s of the main content.', 'spr-two' ),
 				$position
 			),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',

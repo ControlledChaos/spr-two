@@ -2,13 +2,13 @@
 /**
  * The default head section of any page
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Templates
  * @category   Headers
  * @since      1.0.0
  */
 
-namespace BS_Theme;
+namespace SPR_Two;
 
 ?>
 <head id="<?php echo esc_attr( get_bloginfo( 'url' ) ); ?>" data-template-set="<?php echo esc_attr( get_template() ); ?>">

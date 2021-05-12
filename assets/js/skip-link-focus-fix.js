@@ -10,7 +10,7 @@
 
 	if ( isIe && document.getElementById && window.addEventListener ) {
 		window.addEventListener( 'hashchange', function() {
-			var id = location.hash.substring( 1 ),
+			var id = location.hash.susprtring( 1 ),
 				element;
 
 			if ( ! ( /^[A-z0-9_-]+$/.test( id ) ) ) {

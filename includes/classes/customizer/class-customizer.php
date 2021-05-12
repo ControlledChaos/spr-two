@@ -2,12 +2,12 @@
 /**
  * Theme Customizer
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Customizer
  */
 
-namespace BS_Theme\Classes\Customize;
+namespace SPR_Two\Classes\Customize;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {

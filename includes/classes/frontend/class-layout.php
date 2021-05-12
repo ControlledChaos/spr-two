@@ -3,17 +3,17 @@
  * Frontend template tags
  *
  * Call new instance of this class in header files.
- * Use of the `$bst_tags` variable is recommended
+ * Use of the `$sprt_tags` variable is recommended
  * to instantiate, where the prefix matches the
  * rest of this theme's prefixes.
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Frontend
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Front;
+namespace SPR_Two\Classes\Front;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -32,13 +32,13 @@ class Layout {
 	public function __construct() {
 
 		// Add main navigation before header.
-		add_action( 'BS_Theme\before_header', [ $this, 'main_navigation' ] );
+		add_action( 'SPR_Two\before_header', [ $this, 'main_navigation' ] );
 
 		// Add the default header.
-		add_action( 'BS_Theme\header', [ $this, 'default_header' ] );
+		add_action( 'SPR_Two\header', [ $this, 'default_header' ] );
 
 		// Add the default header.
-		add_action( 'BS_Theme\footer', [ $this, 'default_footer' ] );
+		add_action( 'SPR_Two\footer', [ $this, 'default_footer' ] );
 	}
 
 	/**

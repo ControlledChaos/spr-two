@@ -2,16 +2,16 @@
 /**
  * The template for displaying a static front page
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Templates
  * @category   Front Page
  * @since      1.0.0
  */
 
-namespace BS_Theme;
+namespace SPR_Two;
 
 // Alias namespaces.
-use BS_Theme\Classes\Front as Front;
+use SPR_Two\Classes\Front as Front;
 
 // Get the default header file.
 get_header();
@@ -25,7 +25,7 @@ get_header();
 		<?php while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content/content', 'front-page' . $bst_acf->suffix() );
+			get_template_part( 'template-parts/content/content', 'front-page' . $sprt_acf->suffix() );
 
 		endwhile; // End of the loop.
 		?>

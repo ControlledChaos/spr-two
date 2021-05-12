@@ -6,13 +6,13 @@
  * on the plugin's server, notably disable functionality
  * if the minimum version is not met.
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   Core
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes\Core;
+namespace SPR_Two\Classes\Core;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -113,14 +113,14 @@ final class PHP_Version {
 
 			$html = sprintf(
 				'<h1>%s</h1>',
-				__( 'Theme Disabled', 'bs-theme' )
+				__( 'Theme Disabled', 'spr-two' )
 			);
 
 			$html .= sprintf(
-				__( '<p>The active theme has been disabled because the minimum PHP version of <strong>%s</strong> has not been met. Go to the <a href="%s">%s</a> to activate another theme.</p>', 'bs-theme' ),
+				__( '<p>The active theme has been disabled because the minimum PHP version of <strong>%s</strong> has not been met. Go to the <a href="%s">%s</a> to activate another theme.</p>', 'spr-two' ),
 				$this->minimum(),
 				esc_attr( esc_url( self_admin_url( 'themes.php' ) ) ),
-				__( 'themes page', 'bs-theme' )
+				__( 'themes page', 'spr-two' )
 			);
 
 		// Message for users who do not meet the conditions above.
@@ -128,11 +128,11 @@ final class PHP_Version {
 
 			$html = sprintf(
 				'<h1>%s</h1>',
-				__( 'Down for Maintenance', 'bs-theme' )
+				__( 'Down for Maintenance', 'spr-two' )
 			);
 
 			$html .= sprintf(
-				__( '<p>The %s website is down for maintenance. Please check back soon!.</p>', 'bs-theme' ),
+				__( '<p>The %s website is down for maintenance. Please check back soon!.</p>', 'spr-two' ),
 				get_bloginfo( 'name' )
 			);
 		}

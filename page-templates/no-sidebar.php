@@ -6,16 +6,16 @@
  * Template Post Type: post, page
  * Description: Does not load the primary sidebar.
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Templates
  * @category   Posts
  * @since      1.0.0
  */
 
-namespace BS_Theme;
+namespace SPR_Two;
 
 // Alias namespaces.
-use BS_Theme\Classes\Front as Front;
+use SPR_Two\Classes\Front as Front;
 
 // Get the default header file.
 get_header();

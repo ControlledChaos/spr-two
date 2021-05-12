@@ -7,4 +7,4 @@ Second WordPress/ClassicPress theme for the Sequoia Pacific Realty website.
 ![ClassicPress tested on version 1.2.0](https://img.shields.io/badge/ClassicPress-1.2.0-03768e.svg?style=flat-square)
 ![ACF Pro Ready](https://img.shields.io/badge/ACF-ready-00d3ae.svg?style=flat-square)
 
-![Theme Screenshot](https://raw.githubusercontent.com/ControlledChaos/bs-theme/master/screenshot.jpg)
+![Theme Screenshot](https://raw.githubusercontent.com/ControlledChaos/spr-two/master/screenshot.jpg)

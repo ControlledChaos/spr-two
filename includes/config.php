@@ -11,13 +11,13 @@
  * in a settings file is to prevent site administrators wrongly
  * or incorrectly configuring the site built by developers.
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Includes
  * @category   Configuration
  * @since      1.0.0
  */
 
-namespace BS_Theme;
+namespace SPR_Two;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var   string The latest theme version.
  */
 $theme_version = wp_get_theme()->get( 'Version' );
-define( 'BST_VERSION', $theme_version );
+define( 'SPRT_VERSION', $theme_version );
 
 /**
  * Constant: Theme file path
@@ -45,7 +45,7 @@ define( 'BST_VERSION', $theme_version );
  * @var   string File path with trailing slash.
  */
 $theme_path = get_stylesheet_directory();
-define( 'BST_PATH', $theme_path . '/' );
+define( 'SPRT_PATH', $theme_path . '/' );
 
 /**
  * Constant: Theme file URL
@@ -54,7 +54,7 @@ define( 'BST_PATH', $theme_path . '/' );
  * @var   string
  */
 $theme_path = get_template_directory_uri();
-define( 'BST_URL', $theme_path );
+define( 'SPRT_URL', $theme_path );
 
 /**
  * Constant: Companion plugin active
@@ -68,7 +68,7 @@ define( 'BST_URL', $theme_path );
  *
  * @link https://github.com/ControlledChaos/bs-plugin
  *
- * @example ```if ( BST_COMPANION ) {
+ * @example ```if ( SPRT_COMPANION ) {
  *     // Execute code.
  * }```
  */
@@ -91,7 +91,7 @@ if ( \is_plugin_active( "$companion_dir/$companion_file" ) ) {
 }
 
 // Define the companion plugin constant.
-define( 'BST_COMPANION', $companion );
+define( 'SPRT_COMPANION', $companion );
 
 /**
  * Check for block editor
@@ -103,7 +103,7 @@ define( 'BST_COMPANION', $companion );
  *                 if WordPress is less than 5.0.
  *                 Default is true.
  */
-function bst_has_blocks() {
+function sprt_has_blocks() {
 
 	// Get WordPress version.
 	global $wp_version;

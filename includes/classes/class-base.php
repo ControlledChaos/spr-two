@@ -6,13 +6,13 @@
  * so other classes can extend this to add scripts
  * and styles, and other common operations.
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Classes
  * @category   General
  * @since      1.0.0
  */
 
-namespace BS_Theme\Classes;
+namespace SPR_Two\Classes;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {

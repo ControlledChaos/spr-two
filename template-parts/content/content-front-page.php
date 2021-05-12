@@ -2,16 +2,16 @@
 /**
  * Template part for displaying page content in front-page.php
  *
- * @package    BS_Theme
+ * @package    SPR_Two
  * @subpackage Templates
  * @category   Content
  * @since      1.0.0
  */
 
-namespace BS_Theme;
+namespace SPR_Two;
 
 // Alias namespaces.
-use BS_Theme\Classes\Front as Front;
+use SPR_Two\Classes\Front as Front;
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
@@ -34,7 +34,7 @@ use BS_Theme\Classes\Front as Front;
 		the_content();
 
 		wp_link_pages( [
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bs-theme' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'spr-two' ),
 			'after'  => '</div>',
 		] );
 		?>
@@ -46,7 +46,7 @@ use BS_Theme\Classes\Front as Front;
 			edit_post_link(
 				sprintf(
 					wp_kses(
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'bs-theme' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'spr-two' ),
 						[
 							'span' => [
 								'class' => [],
