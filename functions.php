@@ -124,7 +124,6 @@ if ( ! is_admin() ) {
 
 // Backend classes.
 if ( is_admin() ) {
-	$sprt_admin_pages  = new Admin\Admin_Pages;
 	$sprt_admin_assets = new Admin\Assets;
 	if ( sprt_has_blocks() ) {
 		$sprt_blocks = new Admin\Block_Editor;

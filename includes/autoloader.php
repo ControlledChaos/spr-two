@@ -77,7 +77,6 @@ define( 'SPRT_CLASSES', [
 	SPRT_CLASS_NS . '\Front\Layout'        => SPRT_CLASS['front'] . 'layout.php',
 
 	// Backend classes.
-	SPRT_CLASS_NS . '\Admin\Admin_Pages'  => SPRT_CLASS['admin'] . 'admin-pages.php',
 	SPRT_CLASS_NS . '\Admin\Assets'       => SPRT_CLASS['admin'] . 'assets.php',
 	SPRT_CLASS_NS . '\Admin\Block_Editor' => SPRT_CLASS['admin'] . 'block-editor.php',
 
