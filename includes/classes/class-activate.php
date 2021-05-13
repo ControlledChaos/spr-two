@@ -31,9 +31,7 @@ class Activate {
 	 * @return self
 	 */
 	public function __construct() {
-
 		add_action( 'after_switch_theme', [ $this, 'activate' ] );
-
 	}
 
     /**
@@ -60,18 +58,5 @@ class Activate {
 		if ( 0 != get_option( 'fresh_site' ) ) {
 			wp_delete_comment( 1 );
 		}
-
-
-		/**
-		 * Sample action: redirect to the Customizer on theme activation.
-		 */
-		global $pagenow;
-
-		if ( 'themes.php' == $pagenow && is_admin() && isset( $_GET['activated'] ) ) {
-
-			// URL returns to Dashboard on closing the Customizer.
-			wp_redirect( admin_url( 'customize.php' ) . '?return=' . admin_url() );
-		}
-
     }
 }
