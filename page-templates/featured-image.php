@@ -12,9 +12,18 @@
  * @since      1.0.0
  */
 
-get_header(); ?>
+namespace SPR_Two;
 
-	<div id="primary" class="entry-content">
+// Alias namespaces.
+use SPR_Two\Classes\Front as Front;
+
+// Get the default header file.
+get_header();
+
+?>
+<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+
 		<main id="main" class="site-main" itemscope itemprop="mainContentOfPage">
 
 		<?php while ( have_posts() ) :
@@ -27,7 +36,13 @@ get_header(); ?>
 
 		</main>
 	</div>
-
 <?php
+
+// Get the default sidebar file.
 get_sidebar();
+?>
+</div><!-- #content -->
+<?php
+
+// Get the default footer file.
 get_footer();
