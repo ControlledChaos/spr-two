@@ -74,10 +74,10 @@ define( 'SPRT_URL', $theme_path );
  */
 
 // Plugin directory.
-$companion_dir  = 'bs-plugin';
+$companion_dir  = 'spr-core';
 
 // Core plugin filename.
-$companion_file = 'bs-plugin.php';
+$companion_file = 'spr-core.php';
 
 // Return false by default.
 $companion = false;

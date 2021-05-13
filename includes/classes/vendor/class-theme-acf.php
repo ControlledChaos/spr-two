@@ -88,12 +88,14 @@ class Theme_ACF extends Plugin {
 		 * Remove some of the JSON directory filters in ACFE.
 		 * Set new directory for saving & loading ACF field groups.
 		 */
-		add_filter( 'acf/settings/save_json', [ $this, 'save_acf_json' ] );
-		add_filter( 'acf/settings/load_json', [ $this, 'load_acf_json' ] );
-
 		// Filter assets URL.
 		if ( ! $this->is_active() ) {
 			add_filter( 'acf/settings/url', [ $this, 'acf_settings_url' ] );
+		}
+
+		if ( ! SPRT_COMPANION ) {
+			add_filter( 'acf/settings/save_json', [ $this, 'save_acf_json' ] );
+			add_filter( 'acf/settings/load_json', [ $this, 'load_acf_json' ] );
 		}
 
 		// Hide/show the ACF admin menu item.
@@ -159,7 +161,7 @@ class Theme_ACF extends Plugin {
 	 * @return string Returns the directory path.
 	 */
 	public function save_acf_json( $path = '' ) {
-		$path = SPRT_PATH . 'includes/settings/acf-json';
+		$path = SPRT_PATH . 'includes/vendor/acf-json';
 		return $path;
 	}
 
@@ -173,7 +175,7 @@ class Theme_ACF extends Plugin {
 	 */
 	public function load_acf_json( $paths = [] ) {
 		unset( $paths[0] );
-		$paths[] = SPRT_PATH . 'includes/settings/acf-json';
+		$paths[] = SPRT_PATH . 'includes/vendor/acf-json';
 		return $paths;
 	}
 
