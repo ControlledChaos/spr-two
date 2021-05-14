@@ -32,13 +32,13 @@ class Layout {
 	public function __construct() {
 
 		// Add main navigation before header.
-		add_action( 'SPR_Two\before_header', [ $this, 'main_navigation' ] );
+		add_action( 'SPR_Two\before_header', [ $this, 'navigation_main' ] );
 
 		// Add the default header.
-		add_action( 'SPR_Two\header', [ $this, 'default_header' ] );
+		add_action( 'SPR_Two\header', [ $this, 'page_header' ] );
 
 		// Add the default header.
-		add_action( 'SPR_Two\footer', [ $this, 'default_footer' ] );
+		add_action( 'SPR_Two\footer', [ $this, 'page_footer' ] );
 	}
 
 	/**
@@ -48,8 +48,8 @@ class Layout {
 	 * @access public
 	 * @return void
 	 */
-	public function main_navigation() {
-		include get_theme_file_path( '/template-parts/navigation/main-navigation.php' );
+	public function navigation_main() {
+		get_template_part( 'template-parts/navigation/navigation-main' );
 	}
 
 	/**
@@ -59,8 +59,13 @@ class Layout {
 	 * @access public
 	 * @return void
 	 */
-	public function default_header() {
-		include get_theme_file_path( '/template-parts/header/default-header.php' );
+	public function page_header() {
+
+		if ( is_front_page() ) {
+			get_template_part( 'template-parts/header/header-front-page' );
+		} else {
+			get_template_part( 'template-parts/header/header-default' );
+		}
 	}
 
 	/**
@@ -70,7 +75,7 @@ class Layout {
 	 * @access public
 	 * @return void
 	 */
-	public function default_footer() {
-		include get_theme_file_path( '/template-parts/footer/default-footer.php' );
+	public function page_footer() {
+		get_template_part( 'template-parts/footer/footer-default' );
 	}
 }
