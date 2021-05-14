@@ -1,10 +1,12 @@
 <?php
 /**
- * The template for displaying Featured Image, No Sidebar pages
+ * Featured Image, Sidebar template
  *
- * Template Name: Featured Image, No Sidebar
+ * Adds the featured image to the top of the page and adds a sidebar to the right of the main page content (left for RTL languages).
+ *
+ * Template Name: Featured Image, Sidebar
  * Template Post Type: post, page
- * Description: Adds the featured image to the top of the page and does not load sidebar widgets.
+ * Description: Adds the featured image to the top of the page and adds a sidebar to the right of the main page content (left for RTL languages).
  *
  * @package    SPR_Two
  * @subpackage Templates

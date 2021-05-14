@@ -1,6 +1,8 @@
 <?php
 /**
- * The template for displaying Featured Image pages
+ * Featured Image template
+ *
+ * Adds the featured image to the top of the page.
  *
  * Template Name: Featured Image
  * Template Post Type: page
@@ -36,12 +38,6 @@ get_header();
 
 		</main>
 	</div>
-<?php
-
-// Get the default sidebar file.
-get_sidebar();
-?>
-</div><!-- #content -->
 <?php
 
 // Get the default footer file.

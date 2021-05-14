@@ -32,11 +32,6 @@ get_header();
 
 		</main>
 	</div>
-<?php
-
-// Get the default sidebar file.
-get_sidebar();
-?>
 </div><!-- #content -->
 <?php
 

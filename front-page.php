@@ -35,7 +35,10 @@ get_header();
 <?php
 
 // Get the default sidebar file if not the No Sidebar template.
-if ( ! is_page_template( 'page-templates/no-sidebar.php' ) ) {
+if (
+	is_page_template( 'page-templates/sidebar.php' ) ||
+	is_page_template( 'page-templates/featured-image-sidebar.php' )
+) {
 	get_sidebar();
 }
 

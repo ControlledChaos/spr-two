@@ -1,10 +1,12 @@
 <?php
 /**
- * No Sidebar template.
+ * Sidebar template
  *
- * Template Name: No Sidebar
+ * Adds a sidebar to the right of the main page content (left for RTL languages).
+ *
+ * Template Name: Sidebar
  * Template Post Type: post, page
- * Description: Does not load the primary sidebar.
+ * Description: Adds a sidebar to the right of the main page content (left for RTL languages).
  *
  * @package    SPR_Two
  * @subpackage Templates
@@ -36,6 +38,12 @@ get_header();
 
 		</main>
 	</div>
+</div><!-- #content -->
+<?php
+
+// Get the default sidebar file.
+get_sidebar();
+?>
 </div><!-- #content -->
 <?php
 
