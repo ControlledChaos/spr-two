@@ -17,6 +17,19 @@ $overlay = get_field( 'spr_hero_overlay' );
 $message = get_field( 'spr_hero_message' );
 $logo    = get_field( 'spr_hero_logo' );
 
+// Default hero image, located in assets/images.
+$hero = get_theme_file_uri( '/assets/images/default-header.jpg' );
+
+if ( has_header_image() ) {
+	$header_image = get_custom_header_markup();
+} else {
+	$header_image = sprintf(
+		'<div id="wp-custom-header" class="wp-custom-header default-builtin-header"><img src="%s" alt="%s"></div>',
+		$hero,
+		__( 'Panoramic view of Three Rivers, California, from Lake Kaweah to the Sierra Nevada Mountains', 'spr-two' )
+	);
+}
+
 if ( $overlay ) {
 	$overlay = $overlay;
 } else {
@@ -56,9 +69,6 @@ if ( $logo ) {
 	$logo = null;
 }
 
-// Default hero image, located in assets/images.
-$hero = get_theme_file_uri( '/assets/images/default-header.jpg' )
-
 ?>
 <header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
 
@@ -84,9 +94,10 @@ $hero = get_theme_file_uri( '/assets/images/default-header.jpg' )
 	</div>
 
 	<div class="front-page-hero">
+		<style>.custom-header-media:before { background: rgba(0, 0, 0, 0.<?php echo $overlay; ?>);}</style>
 
 		<div class="front-page-hero-media custom-header-media">
-			<?php the_custom_header_markup(); ?>
+			<?php echo $header_image; ?>
 		</div>
 
 		<div class="front-page-hero-content">
