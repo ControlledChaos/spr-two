@@ -261,6 +261,12 @@ b, strong, optgroup {
   zoom: 1;
 }
 
+/**
+ * Font stack variables
+ *
+ * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
+ * stacks are used in @supports( font-variation-settings ) queries.
+ */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   line-height: 1.5;
@@ -362,6 +368,194 @@ a:visited {
   width: auto;
   z-index: 100000;
   /* Above WP toolbar. */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  background: #ffffff;
+  color: #333333;
+}
+
+body.dark-mode {
+  background: #222222;
+  color: #ffffff;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode ul,
+body.dark-mode ol,
+body.dark-mode li,
+body.dark-mode a,
+body.dark-mode a:visited {
+  color: #ffffff;
+}
+
+body.dark-mode #wpadminbar,
+body.dark-mode #wpadminbar .ab-top-menu > li.hover > .ab-item,
+body.dark-mode #wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus,
+body.dark-mode #wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
+body.dark-mode #wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus,
+body.dark-mode #wpadminbar .menupop .ab-sub-wrapper,
+body.dark-mode #wpadminbar .shortlink-input {
+  background: #333333;
+}
+
+.serif {
+  font-family: 'Hoefler Text', 'Baskerville Old Face', Garamond, Times, 'Times New Roman', serif;
+}
+
+.entry-content,
+.sidebar,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-top: 1em;
+}
+
+a {
+  color: #0000ee;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  -webkit-clip-path: none;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/**
+ * Typography
+ */
+/**
+ * Sans-serif font
+ *
+ * The Wilbur theme uses Inter variable as a sans-serif font,
+ * same as the Twenty Twenty parent theme.
+ *
+ * @link https://github.com/rsms/inter
+ */
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  /* stylelint-disable-line font-weight-notation */
+  font-style: normal;
+  src: url(../fonts/inter/Inter-upright-var.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  /* stylelint-disable-line font-weight-notation */
+  font-style: italic;
+  src: url(../fonts/inter/Inter-italic-var.woff2) format("woff2");
+}
+
+/**
+ * Serif font
+ *
+ * The Wilbur theme uses Crimson Pro variable as a serif font.
+ *
+ * Chosen to supercede Hoefler Text, Garamond in the Twenty Twenty
+ * parent theme because of its variable weight, like Inter.
+ *
+ * Also, it render more cleanly at small size on Windows when
+ * Hoefler Text is not available and Garamond is used, with
+ * the exeption of the lowercase E character.
+ *
+ * @link https://github.com/Fonthausen/CrimsonPro
+ */
+@font-face {
+  font-family: 'Crimson Pro';
+  font-weight: 100 900;
+  /* stylelint-disable-line font-weight-notation */
+  font-style: normal;
+  src: url(../fonts/crimson/crimson-pro-roman.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  font-weight: 100 900;
+  /* stylelint-disable-line font-weight-notation */
+  font-style: italic;
+  src: url(../fonts/crimson/crimson-pro-italic.woff) format("woff");
+}
+
+/**
+ * Chrome renders extra-wide &nbsp; characters for the Hoefler Text font.
+ * This results in a jumping cursor when typing in both the classic editor and
+ * block editor. The following font-face override fixes the issue by manually
+ * inserting a custom font that includes just a Hoefler Text space replacement
+ * for that character instead.
+ */
+@font-face {
+  font-family: NonBreakingSpaceOverride;
+  src: url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMoAA0AAAAACDQAAALTAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GYACCahEICjx3CywAATYCJANUBCAFhiEHgWwbXQfILgpsY+rQRRARwyAs6uL7pxzYhxEE+32b3aeHmifR6tklkS9hiZA0ewkqGRJE+H7/+6378ASViK/PGeavqJyOzsceKi1s3BCiQsiOdn1r/RBgIJYEgCUhbm/8/8/h4saPssnTNkkiWUBrTRtjmQSajw3Ui3pZ3LYDPD+XG2C3JA/yKAS8/rU5eNfuGqRf4eNNgV4YAlIIgxglEkWe6FYpq10+wi3g+/nUgvgPFczNrz/RsTgVm/zfbPuHZlsuQECxuyqBcQwKFBjFgKO8AqP4bAN9tFJtnM9xPcbNjeXS/x1wY/xU52f5W/X1+9cnH4YwKIaoRRAkUkj/YlAAeF/624foiIDBgBmgQBeGAyhBljUPZUm/l2dTvmpqcBDUOHdbPZWd8JsBAsGr4w8/EDn82/bUPx4eh0YNrQTBuHO2FjQEAGBwK0DeI37DpQVqdERS4gZBhpeUhWCfLFz7J99aEBgsJCHvUGAdAPp4IADDCAPCEFMGpMZ9AQpTfQtQGhLbGVBZFV8BaqNyP68oTZgHNj3M8kBPfXTTC9t90UuzYhy9ciH0grVlOcqyCytisvbsERsEYztiznR0WCrmTksJwbSNK6fd1Rvr25I9oLvctUoEbNOmXJbqgYgPXEHJ82IUsrCnpkxh23F1rfZ2zcRnJYoXtauB3VTFkFXQg3uoZYD5qE0kdjDtoDoF1h2bulGmev5HbYhbrjtohQSRI4aNOkffIcT+d3v6atpaYh3JvPoQsztCcqvaBkppDSPcQ3bw3KaCBo1f5CJWTZEgW3LjLofYg51MaVezrx8xZitYbQ9KYeoRaqQdVLwSEfrKXLK1otCWOKNdR/YwYAfon5Yk8O2MJfSD10dPGA5PIJJQMkah0ugMJiv6x4Dm7LEa8xnrRGGGLAg4sAlbsA07sAt76DOsXKO3hIjtIlpnnFrt1qW4kh6NhS83P/6HB/fl1SMAAA==) format("woff2"), url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAUQAA0AAAAACDQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAE9AAAABwAAAAchf5yU0dERUYAAATYAAAAHAAAAB4AJwAbT1MvMgAAAaAAAABJAAAAYJAcgU5jbWFwAAACIAAAAF4AAAFqUUxBZ2dhc3AAAATQAAAACAAAAAgAAAAQZ2x5ZgAAApAAAAAyAAAAPL0n8y9oZWFkAAABMAAAADAAAAA2Fi93Z2hoZWEAAAFgAAAAHQAAACQOSgWaaG10eAAAAewAAAAzAAAAVC7TAQBsb2NhAAACgAAAABAAAAAsAOQBAm1heHAAAAGAAAAAHQAAACAAWQALbmFtZQAAAsQAAAF6AAADIYvD/Adwb3N0AAAEQAAAAI4AAADsapk2o3jaY2BkYGAA4ov5mwzj+W2+MnCzXwCKMNzgCBSB0LfbQDQ7AxuI4mBgAlEAFKQIRHjaY2BkYGD3+NvCwMDBAALsDAyMDKhAFAA3+wH3AAAAeNpjYGRgYBBl4GBgYgABEMnIABJzAPMZAAVmAGUAAAB42mNgZlJhnMDAysDCKsKygYGBYRqEZtrDYMT4D8gHSmEHjgUFOQwODAqqf9g9/rYwMLB7MNUAhRlBcsxBrMlASoGBEQAj8QtyAAAAeNrjYGBkAAGmWQwMjO8gmBnIZ2NA0ExAzNjAAFYJVn0ASBsD6VAIDZb7AtELAgANIgb9AHjaY2BgYGaAYBkGRgYQSAHyGMF8FgYPIM3HwMHAxMDGoMCwQIFLQV8hXvXP//9AcRCfAcb///h/ygPW+w/vb7olBjUHCTCyMcAFGZmABBO6AogThgZgIUsXAEDcEzcAAHjaY2BgECMCyoEgACZaAed42mNgYmRgYGBnYGNgYAZSDJqMgorCgoqCjECRXwwNrCAKSP5mAAFGBiRgyAAAi/YFBQAAeNqtkc1OwkAUhU/5M25cEhcsZick0AwlBJq6MWwgJkAgYV/KAA2lJeUn+hY+gktXvpKv4dLTMqKycGHsTZNv7px7z50ZAFd4hYHjdw1Ls4EiHjVncIFnzVnc4F1zDkWjrzmPW+NNcwGlzIRKI3fJlUyrEjZQxb3mDH2fNGfRx4vmHKqG0JzHg6E0F9DOlFBGBxUI1GEzLNT4S0aLuTtsGAEUuYcQHkyg3KmIum1bNUvKlrjbbAIleqHHnS4iSudpQcySMYtdFiXlAxzSbAwfMxK6kZoHKhbjjespMTioOPZnzI+4ucCeTVyKMVKLfeAS6vSWaTinuZwzyy/Dc7vaed+6KaV0kukdPUk6yOcctZPvvxxqksq2lEW8RvHjMEO2FCl/zy6p3NEm0R9OFSafJdldc4QVeyaaObMBO0/5cCaa6d9Ggyubxire+lEojscdjoWUR1xGOy8KD8mG2ZLO2l2paDc3A39qmU2z2W5YNv5+u79e6QfGJY/hAAB42m3NywrCMBQE0DupWp/1AYI7/6DEaLQu66Mrd35BKUWKJSlFv1+rue4cGM7shgR981qSon+ZNwUJ8iDgoYU2OvDRRQ99DDDECAHGmGCKmf80hZSx/Kik/LliFbtmN6xmt+yOjdg9GztV4tROnRwX/Bsaaw51nt4Lc7tWaZYHp/MlzKx51LZs5htNri+2AAAAAQAB//8AD3jaY2BkYGDgAWIxIGZiYARCESBmAfMYAAR6AEMAAAABAAAAANXtRbgAAAAA2AhRFAAAAADYCNuG) format("woff");
+}
+
+.font-size-xl {
+  font-size: 1.25em;
+}
+
+.font-size-xs {
+  font-size: 0.8em;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .site {
@@ -949,8 +1143,25 @@ article .gallery .gallery-item img {
 }
 
 /**
-* Front page
-*/
+ * Font stack variables
+ *
+ * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
+ * stacks are used in @supports( font-variation-settings ) queries.
+ */
+.static-front .entry-title {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
 .front-page-hero {
   position: relative;
   max-width: 2048px;
@@ -975,6 +1186,9 @@ article .gallery .gallery-item img {
 
 .custom-header-media img {
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 .front-page-hero-content {
@@ -999,13 +1213,19 @@ article .gallery .gallery-item img {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: eb-garamond, Garamond, 'NonBreakingSpaceOverride', 'Hoefler Text', 'Baskerville Old Face', 'Times New Roman', serif;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 1.5em;
   text-align: center;
 }
 
+@supports (font-variation-settings: normal) {
+  .front-page-hero-content {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
+}
+
 .front-page-hero-content h3 {
-  font-family: eb-garamond, Garamond, 'NonBreakingSpaceOverride', 'Hoefler Text', 'Baskerville Old Face', 'Times New Roman', serif;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 2em;
   font-weight: normal;
   font-weight: 500;
@@ -1014,6 +1234,14 @@ article .gallery .gallery-item img {
   font-variant-caps: small-caps;
   line-height: 1;
   text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.7);
+}
+
+@supports (font-variation-settings: normal) {
+  .front-page-hero-content h3 {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+    font-size: 2.25em;
+    font-weight: 350;
+  }
 }
 
 .front-page-hero-content p {
@@ -1027,8 +1255,8 @@ article .gallery .gallery-item img {
   margin-bottom: 1em;
 }
 
-.home .entry-content h2 {
-  font-family: eb-garamond, Garamond, 'NonBreakingSpaceOverride', 'Hoefler Text', 'Baskerville Old Face', 'Times New Roman', serif;
+.static-front .entry-content h2 {
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 2.85em;
   font-weight: normal;
   font-style: normal;
@@ -1038,8 +1266,18 @@ article .gallery .gallery-item img {
   line-height: 1;
 }
 
+@supports (font-variation-settings: normal) {
+  .static-front .entry-content h2 {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
+}
+
 .front-intro-content {
   margin-top: 2em;
+}
+
+.front-intro-content img.size-thumbnail, .front-intro-content img.size-medium-thumbnail, .front-intro-content img.size-large-thumbnail, .front-intro-content img.size-x-large-thumbnail {
+  border-radius: 50%;
 }
 
 .front-intro-content > h1,
@@ -1071,13 +1309,19 @@ article .gallery .gallery-item img {
   top: 0;
   z-index: 100;
   font-size: 1.5em;
-  font-family: eb-garamond, Garamond, 'NonBreakingSpaceOverride', 'Hoefler Text', 'Baskerville Old Face', 'Times New Roman', serif;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-weight: normal;
   font-weight: 500;
   font-style: italic;
   line-height: 1;
   color: #384a5a;
   cursor: pointer;
+}
+
+@supports (font-variation-settings: normal) {
+  .front-featured-properties .slick-arrow {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
 }
 
 .front-featured-properties .slick-prev.slick-arrow {
@@ -1137,12 +1381,18 @@ article .gallery .gallery-item img {
 
 .entry-content p.featured-price {
   margin: 0;
-  font-family: eb-garamond, Garamond, Georgia, 'NonBreakingSpaceOverride', 'Hoefler Text', 'Baskerville Old Face', 'Times New Roman', serif;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 1.875em;
   font-weight: bold;
   font-weight: 600;
   font-style: italic;
   color: #4b9960;
+}
+
+@supports (font-variation-settings: normal) {
+  .entry-content p.featured-price {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
 }
 
 .featured-location {
@@ -1164,7 +1414,7 @@ article .gallery .gallery-item img {
   display: inline-block;
   padding: 0.75em 0.5em 0.5em 0.5em;
   font-size: 1.285em;
-  font-family: eb-garamond, Garamond, 'NonBreakingSpaceOverride', 'Hoefler Text', 'Baskerville Old Face', 'Times New Roman', serif;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-weight: normal;
   font-weight: 500;
   font-style: italic;
@@ -1173,6 +1423,12 @@ article .gallery .gallery-item img {
   color: #384a5a;
   -webkit-transition: all .15s;
   transition: all .15s;
+}
+
+@supports (font-variation-settings: normal) {
+  .entry-content .featured-details-link a {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
 }
 
 .entry-content .featured-details-link a:visited {
@@ -1241,13 +1497,19 @@ article .gallery .gallery-item img {
   background: rgba(0, 0, 0, 0.425);
   -webkit-transition: background .15s;
   transition: background .15s;
-  font-family: eb-garamond, Garamond, Georgia, 'NonBreakingSpaceOverride', 'Hoefler Text', 'Baskerville Old Face', 'Times New Roman', serif;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 1.5em;
   font-weight: normal;
   font-weight: 500;
   font-style: italic;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+@supports (font-variation-settings: normal) {
+  .front-image-links figcaption {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
 }
 
 .front-image-links figcaption:hover {
