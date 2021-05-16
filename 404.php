@@ -15,6 +15,19 @@ namespace SPR_Two;
 // Alias namespaces.
 use SPR_Two\Classes\Front as Front;
 
+// Get server protocol.
+if (
+	( ! empty( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] != 'off' ) ||
+	$_SERVER['SERVER_PORT'] == 443
+) {
+	$protocol = 'https://';
+} else {
+	$protocol = 'http://';
+}
+
+// Get the current URL.
+$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
 // Get the default header file.
 get_header();
 
@@ -23,47 +36,31 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" itemscope itemprop="mainContentOfPage">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'That page can\'t be found.', 'spr-two' ); ?></h1>
-				</header>
+			<?php
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'spr-two' ); ?></p>
+			// If the error template is displayed for the site base URL.
+			if (
+				$url === trailingslashit( get_bloginfo( 'url' ) ) ||
+				$url === trailingslashit( get_bloginfo( 'wpurl' ) )
+			) {
 
-					<?php
-					get_search_form();
+				/**
+				 * If the home page option is set to a static page
+				 * and the option's page ID is not found and the
+				 * current user can manage options.
+				 */
+				if ( 'page' == get_option( 'show_on_front' ) && current_user_can( 'manage_options' ) ) {
+					get_template_part( 'template-parts/content/content', '404-front' );
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
+				// Fall back to the default.
+				} else {
+					get_template_part( 'template-parts/content/content', '404' );
+				}
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'spr-two' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( [
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							] );
-							?>
-						</ul>
-					</div>
-
-					<?php
-					$archive_content = sprintf(
-						'<p>%1s</p>',
-						esc_html__( 'Try looking in the monthly archives.', 'spr-two' )
-					);
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div>
-			</section>
+			// If not the site base URL.
+			} else {
+				get_template_part( 'template-parts/content/content', '404' );
+			} ?>
 
 		</main>
 	</div>
