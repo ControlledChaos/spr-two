@@ -5,8 +5,11 @@
 /// Mostly it gets the ball rolling.
 ///
 
+@import '../modules/_colors';
+@import '../modules/_typography';
+
 body {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	font-family: $sans;
 	line-height: 1.5;
 	background: $white;
 	color: $text;

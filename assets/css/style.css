@@ -267,8 +267,14 @@ b, strong, optgroup {
  * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
  * stacks are used in @supports( font-variation-settings ) queries.
  */
+/**
+ * Font stack variables
+ *
+ * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
+ * stacks are used in @supports( font-variation-settings ) queries.
+ */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.5;
   background: #ffffff;
   color: #333333;
@@ -370,8 +376,14 @@ a:visited {
   /* Above WP toolbar. */
 }
 
+/**
+ * Font stack variables
+ *
+ * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
+ * stacks are used in @supports( font-variation-settings ) queries.
+ */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.5;
   background: #ffffff;
   color: #333333;
