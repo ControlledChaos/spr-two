@@ -85,6 +85,7 @@ class Images {
 		add_image_size( 'wide-small', 640, 360, true );
 
 		// 21:9 Cinemascope.
+		add_image_size( 'x-large-banner', 2048, 878, true );
 		add_image_size( 'large-banner', 1280, 549, true );
 		add_image_size( 'medium-banner', 960, 411, true );
 		add_image_size( 'small-banner', 640, 274, true );
