@@ -29,16 +29,18 @@ if ( $links_heading ) {
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
+	<?php if ( ! $intro_content ) : ?>
 	<header class="entry-header">
 		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 	</header>
+	<?php endif; ?>
 
 	<div class="entry-content" itemprop="articleBody">
 
 		<?php if ( $intro_content ) : ?>
-		<div class="front-intro-content">
+		<section class="front-intro-content">
 			<?php echo $intro_content; ?>
-		</div>
+		</section>
 		<?php endif; ?>
 
 		<?php
@@ -53,7 +55,7 @@ if ( $links_heading ) {
 
 		/**
 		 * If there is at least one listing marked as featured then
-		 * disply the Featured Properties section.
+		 * display the Featured Properties section.
 		 */
 		if ( $query->have_posts() ) : ?>
 		<section class="front-featured-properties">
