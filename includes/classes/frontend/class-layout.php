@@ -15,6 +15,9 @@
 
 namespace SPR_Two\Classes\Front;
 
+// Alias namespaces.
+use SPR_Two\Classes\Vendor as Vendor;
+
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -49,7 +52,7 @@ class Layout {
 	 * @return void
 	 */
 	public function navigation_main() {
-		get_template_part( 'template-parts/navigation/navigation-main' );
+		get_template_part( 'template-parts/navigation/navigation', 'main' );
 	}
 
 	/**
@@ -61,10 +64,12 @@ class Layout {
 	 */
 	public function page_header() {
 
+		$sprt_acf = new Vendor\Theme_ACF;
+
 		if ( is_front_page() ) {
-			get_template_part( 'template-parts/header/header-front-page' );
+			get_template_part( 'template-parts/header/header', 'front' . $sprt_acf->suffix() );
 		} else {
-			get_template_part( 'template-parts/header/header-default' );
+			get_template_part( 'template-parts/header/header', 'default' );
 		}
 	}
 
@@ -76,6 +81,6 @@ class Layout {
 	 * @return void
 	 */
 	public function page_footer() {
-		get_template_part( 'template-parts/footer/footer-default' );
+		get_template_part( 'template-parts/footer/footer', 'default' );
 	}
 }
