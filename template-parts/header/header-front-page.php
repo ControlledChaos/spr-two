@@ -17,15 +17,27 @@ $overlay = get_field( 'spr_hero_overlay' );
 $message = get_field( 'spr_hero_message' );
 $logo    = get_field( 'spr_hero_logo' );
 
+// Get hero image from field.
+$hero = get_field( 'spr_front_hero_image' );
+if ( $hero ) {
+	if ( has_image_size( 'x-large-banner' ) ) {
+		$hero_size = 'x-large-banner';
+	} else {
+		$hero_size = 'large';
+	}
+	$hero_src = $hero['sizes'][ $hero_size ];
+
 // Default hero image, located in assets/images.
-$hero = get_theme_file_uri( '/assets/images/default-header.jpg' );
+} else {
+	$hero_src = get_theme_file_uri( '/assets/images/default-header.jpg' );
+}
 
 if ( has_header_image() ) {
 	$header_image = get_custom_header_markup();
 } else {
 	$header_image = sprintf(
 		'<div id="wp-custom-header" class="wp-custom-header default-builtin-header"><img src="%s" alt="%s"></div>',
-		$hero,
+		$hero_src,
 		__( 'Panoramic view of Three Rivers, California, from Lake Kaweah to the Sierra Nevada Mountains', 'spr-two' )
 	);
 }
