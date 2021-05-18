@@ -4,10 +4,20 @@
 
 .site-title {
 	margin: 0;
-
-	/* Match <p> tag to <h1> tag on front page */
+	font-family: $serif;
 	font-size: 2em;
-	font-weight: bold;
+	font-weight: normal;
+	font-weight: 500;
+	font-style: italic;
+	font-variant: unset;
+	font-variant-caps: unset;
+	color: $text_dark;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+		font-size: 2.25em;
+		font-weight: 450;
+	}
 
 	& a {
 		color: inherit;
@@ -17,6 +27,19 @@
 
 .site-description {
 	margin: 0;
+
+	// Same as `.screen-reader-text`.
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+			clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
 }
 
 .site-header-image {
@@ -33,5 +56,34 @@
 	img {
 		margin-right: 1em;
 		max-width: 80px;
+	}
+}
+
+.site-header-contact {
+	font-size: 1.285em;
+	font-family: $serif;
+	font-weight: 500;
+	font-style: italic;
+	line-height: 1.25;
+	color: $medium_gray;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+		font-size: 1.5em;
+		font-weight: 450;
+	}
+
+	p {
+		margin-top: 0.3em;
+	}
+
+	a {
+		color: $medium_gray;
+		text-decoration: none;
+		transition:	color .15s;
+
+		&:hover {
+			color: $link_action_color;
+		}
 	}
 }

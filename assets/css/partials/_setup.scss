@@ -11,12 +11,12 @@
 body {
 	font-family: $sans;
 	line-height: 1.5;
-	background: $white;
-	color: $text;
+	background:$body_bg;
+	color: $text_color;
 
 	&.dark-mode {
-		background: $dark_bg;
-		color: $white;
+		background: $body_bg_dark;
+		color: $text_color_dark;
 
 		h1,
 		h2,
@@ -27,10 +27,20 @@ body {
 		p,
 		ul,
 		ol,
-		li,
+		li {
+			color: $text_color_dark;
+		}
+
 		a,
 		a:visited {
-			color: $white;
+			color: $link_color_dark;
+
+			&:hover,
+			&.hover,
+			&:focus,
+			&.focus {
+				color: $link_action_color_dark;
+			}
 		}
 
 		#wpadminbar,
@@ -46,7 +56,11 @@ body {
 }
 
 .serif {
-	font-family: 'Hoefler Text', 'Baskerville Old Face', Garamond, Times, 'Times New Roman', serif;
+	font-family: $serif;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+	}
 }
 
 .entry-content,
@@ -63,38 +77,60 @@ ol {
 	margin-top: 1em;
 }
 
+h1,
+h2 {
+	font-weight: normal;
+	font-style: normal;
+	font-variant: small-caps;
+	font-variant-caps: small-caps;
+	color: $text_dark;
+
+	> a {
+		color: $text_dark;
+	}
+}
+
 a {
-	color: $link;
+	color: $link_color;
+	text-decoration: none;
+	transition: color .15s;
+	-webkit-transition: color .15s;
+	   -moz-transition: color .15s;
+	    -ms-transition: color .15s;
+	     -o-transition: color .15s;
+
+	&:visited {
+		color: $link_color;
+	}
+
+	&:hover,
+	&.hover,
+	&:focus,
+	&.focus {
+		color: $link_action_color;
+	}
 }
 
-a:visited {
-	color: $visited;
-}
-
-/* Text meant only for screen readers. */
+// Text meant only for screen readers.
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
-	-webkit-clip-path: inset(50%);
-	        clip-path: inset(50%);
+	-webkit-clip-path: inset( 50% );
+	        clip-path: inset( 50% );
 	height: 1px;
 	margin: -1px;
 	overflow: hidden;
 	padding: 0;
 	position: absolute !important;
 	width: 1px;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+	word-wrap: normal !important; // Many screen reader and browser combinations announce broken words as they would appear visually.
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
 	border-radius: 3px;
-	-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	-webkit-clip-path: none;
 	        clip-path: none;
-	color: #21759b;
 	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -106,5 +142,5 @@ a:visited {
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+	z-index: 100000; // Above user toolbar.
 }

@@ -2,6 +2,9 @@
 /// Images & media styles
 ///
 
+@import '../modules/_colors';
+@import '../modules/_typography';
+
 img {
 	font-size: 75%; /* alt text */
 }
@@ -141,4 +144,29 @@ article .gallery {
 	vertical-align: middle;
 	max-width: 48px;
 	margin-right: 0.5em;
+}
+
+/* Touch up native Fancybox styles */
+.fancybox-caption-wrap {
+	padding: 30px !important;
+}
+
+.fancybox-thumbs {
+	background: $dark_gray !important;
+}
+
+.fancybox-thumbs > ul > li {
+	border-color: transparent !important;
+}
+
+.fancybox-thumbs__list a:before {
+	border-color: $white;
+}
+
+.logged-in.admin-bar .fancybox-container {
+	top: 32px;
+
+	@media screen and ( max-width: 782px ) {
+		top: 46px;
+	}
 }

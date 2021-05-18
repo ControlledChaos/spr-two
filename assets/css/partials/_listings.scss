@@ -1,0 +1,107 @@
+///
+/// Listing post type
+///
+
+@import '../modules/_colors';
+@import '../modules/_typography';
+
+.listing-address,
+.entry-content p.listing-type {
+	margin-top: 0;
+	font-family: $serif;
+	font-size: 1.5rem;
+	font-weight: normal;
+	font-weight: 500;
+	font-style: italic;
+	line-height: 1.2;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+		font-size: 1.65rem;
+		font-weight: 450;
+	}
+}
+
+.listing-address {
+	margin-top: 0.75em;
+}
+
+.entry-content h3.listing-price {
+	margin: 0.5em 0 0;
+	font-family: $serif;
+	font-size: 2em;
+	font-weight: bold;
+	font-weight: 600;
+	font-style: italic;
+	color: $green;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+		font-size: 2.1em;
+		font-weight: 550;
+	}
+}
+
+.listing-featured-image {
+	display: block;
+	margin-top: 1em;
+}
+
+.listing-details,
+.listing-gallery,
+.listing-video,
+.listing-map {
+	margin-top: 2em;
+	border-top: solid 1px $box_border_color;
+}
+
+.listing-type span:not( :last-of-type ):after {
+	content: '|';
+	margin: 0 0.3em;
+	color: #aeaeae;
+	font-style: italic;
+}
+
+.listing-details-list {
+	display: grid;
+	grid-gap: 1rem;
+	line-height: 1.2;
+
+	&.top {
+		margin-top: 1em;
+	}
+
+	span {
+		margin-top: 0.5em;
+	}
+
+	&.two-wide {
+		grid-template-columns: repeat( 2, 1fr );
+	}
+
+	&.three-wide {
+		grid-template-columns: repeat( 3, 1fr );
+	}
+
+	&.four-wide {
+		grid-template-columns: repeat( 4, 1fr );
+	}
+}
+
+.entry-content .image-gallery {
+	margin: 2em 0 0 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 5px;
+
+	img {
+		display: block;
+	}
+}
+
+.listing-video {
+	.wp-video {
+		margin: 0.5em 0;
+	}
+}
