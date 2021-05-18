@@ -70,9 +70,6 @@ class Setup {
 		// Browser title tag support.
 		add_theme_support( 'title-tag' );
 
-		// Background color & image support.
-		add_theme_support( 'custom-background' );
-
 		// RSS feed links support.
 		add_theme_support( 'automatic-feed-links' );
 
