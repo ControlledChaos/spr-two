@@ -35,7 +35,7 @@ class Layout {
 	public function __construct() {
 
 		// Add main navigation before header.
-		add_action( 'SPR_Two\before_header', [ $this, 'navigation_main' ] );
+		add_action( 'SPR_Two\after_header', [ $this, 'navigation_main' ] );
 
 		// Add the default header.
 		add_action( 'SPR_Two\header', [ $this, 'page_header' ] );

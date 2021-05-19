@@ -37,17 +37,36 @@ do_action( 'before_html' ); ?>
 
 <?php Front\tags()->head(); ?>
 
+<script>
+// Add class to header wrapper on scroll.
+jQuery(document).ready( function($) {
+	$(window).scroll( function(){
+
+		header_height = $( '.site-header-wrap' ).outerHeight();
+
+		if ( $(this).scrollTop() > header_height ) {
+			$( '.site-header-wrap' ).addClass( 'stuck' );
+		} else {
+			$( '.site-header-wrap' ).removeClass( 'stuck' );
+		}
+	});
+});
+</script>
+
 <body <?php body_class(); ?>>
 
 <?php
 Front\tags()->body_open();
 Front\tags()->before_page();
 ?>
-
+<a class="skip-link screen-reader-text" href="#content"><?php esc_attr( esc_html_e( 'Skip to content', 'spr-two' ) ); ?></a>
 <div id="page" class="site" itemscope="itemscope" itemtype="<?php esc_attr( Front\tags()->site_schema() ); ?>">
 
 	<div class="site-header-wrap">
-		<?php Front\tags()->before_header(); ?>
-		<?php Front\tags()->header(); ?>
-		<?php Front\tags()->after_header(); ?>
+
+		<div class="inner">
+			<?php Front\tags()->before_header(); ?>
+			<?php Front\tags()->header(); ?>
+			<?php Front\tags()->after_header(); ?>
+		</div>
 	</div>
