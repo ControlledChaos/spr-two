@@ -79,27 +79,4 @@ if ( $site_description ) {
 		] );
 		?>
 	</div>
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'spr-two' ),
-						[
-							'span' => [
-								'class' => [],
-							],
-						]
-					),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer>
-	<?php endif; ?>
-
 </article>

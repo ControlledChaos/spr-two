@@ -328,23 +328,6 @@ class Template_Tags {
 			);
 			echo '</span>';
 		}
-
-		edit_post_link(
-			sprintf(
-				wp_kses(
-					__( ' Edit <span class="screen-reader-text">%s</span>', 'spr-two' ),
-					[
-						'span' => [
-							'class' => [],
-						],
-					]
-				),
-				get_the_title()
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
-
 	}
 
 	/**
