@@ -24,6 +24,11 @@ body {
   margin-left: 1em;
 }
 
+.main-navigation {
+  padding-left: unset;
+  padding-right: 2em;
+}
+
 .main-navigation ul {
   padding-left: unset;
   padding-right: 0;

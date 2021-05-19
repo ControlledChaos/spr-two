@@ -648,7 +648,7 @@ a:hover, a.hover, a:focus, a.focus {
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2em;
+  padding: 0 2em;
 }
 
 .site-content .content-area {
@@ -998,11 +998,20 @@ body.no-sidebar figure.alignfull {
   display: block;
 }
 
-.wp-caption.wp-caption-text {
-  margin-top: 0.25em;
-  font-size: 0.85em;
-  line-height: 1.3;
+.wp-caption .wp-caption-text {
+  margin-top: 0.5em;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-weight: 600;
+  font-style: italic;
   text-align: center;
+}
+
+@supports (font-variation-settings: normal) {
+  .wp-caption .wp-caption-text {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+    font-size: 1.25em;
+    font-weight: 500;
+  }
 }
 
 article .gallery {
@@ -1058,7 +1067,88 @@ article .gallery .gallery-item img {
   }
 }
 
-.site-title {
+/**
+ * Font stack variables
+ *
+ * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
+ * stacks are used in @supports( font-variation-settings ) queries.
+ */
+.site-header-wrap {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100vw;
+  padding: 1em 2em;
+  background-color: #ffffff;
+}
+
+.site-header-wrap.stuck {
+  padding: 0.5em 2em;
+  -webkit-box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
+          box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
+}
+
+.site-header-wrap.stuck .site-branding img {
+  max-width: 50px;
+}
+
+.site-header-wrap.stuck .site-title {
+  font-size: 1.625rem;
+  -webkit-transform: translateX(-24px);
+          transform: translateX(-24px);
+}
+
+.site-header-wrap .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.static-front .site-header-wrap {
+  -webkit-box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
+          box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
+}
+
+.logged-in.admin-bar .site-header-wrap {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .logged-in.admin-bar .site-header-wrap {
+    top: 46px;
+  }
+}
+
+.site-header {
+  min-width: 460px;
+}
+
+.site-branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.site-branding .site-title {
   margin: 0;
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 2em;
@@ -1068,22 +1158,26 @@ article .gallery .gallery-item img {
   font-variant: unset;
   font-variant-caps: unset;
   color: #2c3e50;
+  -webkit-transform: translateX(-34px);
+          transform: translateX(-34px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 @supports (font-variation-settings: normal) {
-  .site-title {
+  .site-branding .site-title {
     font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
     font-size: 2.25em;
     font-weight: 450;
   }
 }
 
-.site-title a {
+.site-branding .site-title a {
   color: inherit;
   text-decoration: inherit;
 }
 
-.site-description {
+.site-branding .site-description {
   margin: 0;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1098,23 +1192,15 @@ article .gallery .gallery-item img {
   word-wrap: normal !important;
 }
 
-.site-header-image {
-  margin: 1em 0;
-}
-
-.site-branding {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1em 2em 0;
-}
-
 .site-branding img {
   margin-right: 1em;
   max-width: 80px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.site-header-image {
+  margin: 1em 0;
 }
 
 .site-header-contact {
@@ -1152,14 +1238,13 @@ article .gallery .gallery-item img {
 .main-navigation {
   clear: both;
   display: block;
-  width: 100%;
-  max-width: 1280px;
-  margin: 1em auto 0;
-  padding: 0 2em;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 2em;
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-variant: small-caps;
   font-variant-caps: small-caps;
-  line-height: 1;
 }
 
 @supports (font-variation-settings: normal) {
@@ -1227,6 +1312,7 @@ article .gallery .gallery-item img {
 
 .main-navigation a {
   display: inline-block;
+  line-height: 1.1;
   text-decoration: none;
 }
 
@@ -1274,11 +1360,11 @@ article .gallery .gallery-item img {
     display: none;
   }
   .main-navigation ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
+    width: 100%;
   }
   .main-navigation ul li {
+    display: inline;
     position: relative;
   }
   .main-navigation ul li:not(:last-of-type) {
@@ -1443,7 +1529,13 @@ article .gallery .gallery-item img {
 
 .front-page-hero {
   position: relative;
-  max-width: 2048px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  clear: both;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
   margin: 0 auto;
   background: #222222;
   color: #ffffff;

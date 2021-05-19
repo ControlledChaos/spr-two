@@ -2,61 +2,122 @@
 /// Site header styles
 ///
 
-.site-title {
-	margin: 0;
-	font-family: $serif;
-	font-size: 2em;
-	font-weight: normal;
-	font-weight: 500;
-	font-style: italic;
-	font-variant: unset;
-	font-variant-caps: unset;
-	color: $text_dark;
+@import '../modules/_colors';
+@import '../modules/_typography';
 
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-		font-size: 2.25em;
-		font-weight: 450;
+.site-header-wrap {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 9999;
+	width: 100vw;
+	padding: 1em 2em;
+	background-color: $white;
+
+	&.stuck {
+		padding: 0.5em 2em;
+		box-shadow: 0px 5px 15px -6px rgba( $color: $black, $alpha: 0.625 );
+
+		.site-branding {
+			img {
+				max-width: 50px;
+			}
+		}
+
+		.site-title {
+			font-size: 1.625rem;
+			transform: translateX( -24px );
+		}
 	}
 
-	& a {
-		color: inherit;
-		text-decoration: inherit;
+	.inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
 	}
 }
 
-.site-description {
-	margin: 0;
-
-	// Same as `.screen-reader-text`.
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	-webkit-clip-path: inset(50%);
-			clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important;
+.static-front .site-header-wrap {
+	box-shadow: 0px 5px 15px -6px rgba( $color: $black, $alpha: 0.625 );
 }
 
-.site-header-image {
-	margin: 1em 0;
+.logged-in.admin-bar {
+	.site-header-wrap {
+		top: 32px;
+
+		@media screen and ( max-width: 782px ) {
+			top: 46px;
+		}
+	}
+}
+
+.site-header {
+	min-width: 460px;
 }
 
 .site-branding {
 	display: flex;
+	align-items: center;
 	width: 100%;
 	max-width: 1280px;
 	margin: 0 auto;
-	padding: 1em 2em 0;
+	padding: 0 2em;
+
+	.site-title {
+		margin: 0;
+		font-family: $serif;
+		font-size: 2em;
+		font-weight: normal;
+		font-weight: 500;
+		font-style: italic;
+		font-variant: unset;
+		font-variant-caps: unset;
+		color: $text_dark;
+		transform: translateX( -34px );
+		transition: all 0.2s;
+
+		@supports ( font-variation-settings: normal ) {
+			font-family: $variable_serif;
+			font-size: 2.25em;
+			font-weight: 450;
+		}
+
+		& a {
+			color: inherit;
+			text-decoration: inherit;
+		}
+	}
+
+	.site-description {
+		margin: 0;
+
+		// Same as `.screen-reader-text`.
+		border: 0;
+		clip: rect(1px, 1px, 1px, 1px);
+		-webkit-clip-path: inset(50%);
+				clip-path: inset(50%);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute !important;
+		width: 1px;
+		word-wrap: normal !important;
+	}
 
 	img {
 		margin-right: 1em;
 		max-width: 80px;
+		transition: all 0.2s;
 	}
+}
+
+.site-header-image {
+	margin: 1em 0;
 }
 
 .site-header-contact {

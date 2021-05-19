@@ -25,7 +25,13 @@
 
 .front-page-hero {
 	position: relative;
-	max-width: 2048px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+	clear: both;
+	width: 100vw;
+	max-width: 100vw;
+	overflow-x: hidden;
 	margin: 0 auto;
 	background: $body_bg_dark;
 	color: $white;
