@@ -106,12 +106,16 @@ if ( $links_heading ) {
 			<?php echo $hero_message; ?>
 
 			<?php
+			$menu = get_field( 'spr_hero_menu' );
+			if ( $menu ) :
 			wp_nav_menu( [
-				'theme_location' => 'hero',
-				'menu_id'        => 'hero-menu',
+				'theme_location' => $menu,
+				'container'      => null,
+				'menu_id'        => $menu . '-menu',
+				'menu_class'     => 'hero-menu',
 				'fallback_cb'    => null,
 			] );
-			?>
+			endif; ?>
 		</div>
 	</div>
 </div>
