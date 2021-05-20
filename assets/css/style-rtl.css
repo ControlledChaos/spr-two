@@ -122,8 +122,13 @@ figure.alignleft {
 }
 
 .front-page-hero-content #hero-menu li:not(:last-of-type) {
-  padding-right: unset;
-  padding-left: 0.5em;
+  margin-right: unset;
+  margin-left: 0.5em;
+}
+
+.front-page-hero-content #hero-menu li:not(:last-of-type):after {
+  padding-left: unset;
+  padding-right: 0.5em;
 }
 
 #secondary ul,

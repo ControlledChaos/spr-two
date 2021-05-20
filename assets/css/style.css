@@ -21,6 +21,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 100%;
+  overflow-x: hidden;
   overflow-y: scroll;
   font-size: 100%;
   -ms-text-size-adjust: 100%;
@@ -513,6 +514,7 @@ a:hover, a.hover, a:focus, a.focus {
 }
 
 .site {
+  position: relative;
   background-color: inherit;
 }
 
@@ -1423,7 +1425,7 @@ article .gallery .gallery-item img {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   clear: both;
   width: 100vw;
   max-width: 100vw;
@@ -1451,7 +1453,7 @@ article .gallery .gallery-item img {
 .custom-header-media img {
   display: block;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
 }
 
@@ -1469,14 +1471,14 @@ article .gallery .gallery-item img {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 1.5em;
   text-align: center;
@@ -1520,7 +1522,7 @@ article .gallery .gallery-item img {
   text-shadow: 0.05em 0.05em 0.075em rgba(0, 0, 0, 0.85);
 }
 
-.front-page-hero-content #hero-menu {
+.front-page-hero-content .hero-menu {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1531,17 +1533,42 @@ article .gallery .gallery-item img {
   width: 100%;
 }
 
-.front-page-hero-content #hero-menu li {
+.front-page-hero-content .hero-menu li {
   display: inline-block;
-  margin: 0 0.5em;
 }
 
-.front-page-hero-content #hero-menu li:not(:last-of-type) {
-  padding-right: 0.5em;
+.front-page-hero-content .hero-menu li:not(:last-of-type) {
+  margin-right: 0.5em;
 }
 
-.front-page-hero-content #hero-menu li:not(:last-of-type):after {
-  content: '&bull;';
+.front-page-hero-content .hero-menu li:not(:last-of-type):after {
+  content: '•';
+  display: inline-block;
+  padding-left: 0.5em;
+  font-size: 0.8em;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.front-page-hero-content .hero-menu li a {
+  position: relative;
+}
+
+.front-page-hero-content .hero-menu li a:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+
+.front-page-hero-content .hero-menu li a:hover:before {
+  background-color: #ffffff;
 }
 
 .hero-logo {
@@ -1647,11 +1674,11 @@ article .gallery .gallery-item img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .front-featured-properties h4 {
@@ -1740,11 +1767,11 @@ article .gallery .gallery-item img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.35);
   -webkit-transition: background .15s;
