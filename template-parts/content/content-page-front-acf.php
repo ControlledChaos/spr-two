@@ -74,7 +74,7 @@ if ( $hero_message ) {
 } else {
 	$hero_message = sprintf(
 		'<p>%1s</p>',
-		__( 'Three Rivers, Exeter, Porterville, Visalia, and Tulare County, California', 'seq-pac-theme' )
+		__( 'Three Rivers, Exeter, Porterville, Visalia, and Tulare County, California', 'spr-two' )
 	);
 }
 
@@ -85,7 +85,7 @@ $links_heading   = get_field( 'spr_front_image_links_heading' );
 if ( $links_heading ) {
 	$links_heading = $links_heading;
 } else {
-	$links_heading = __( 'Featured Services', 'seq-pac-theme' );
+	$links_heading = __( 'Featured Services', 'spr-two' );
 }
 
 ?>
@@ -118,145 +118,181 @@ if ( $links_heading ) {
 
 	<div class="entry-content" itemprop="articleBody">
 
-		<?php if ( $intro_content ) : ?>
-		<section class="front-intro-content">
-			<?php echo $intro_content; ?>
-		</section>
-		<?php endif; ?>
-
 		<?php
-		// Featured listings loop.
-		$args = [
-			'post_type'     => [ 'listing' ],
-			'tag_slug__and' => [ 'featured' ],
-			'order'         => 'ASC',
-			'orderby'       => 'menu_order'
-		];
-		$query = new \WP_Query( $args );
+		if ( have_rows( 'spr_front_page_content' ) ) :
+		$counters = [];
+		?>
+		<div class="front-acf-content">
+			<?php while ( have_rows( 'spr_front_page_content' ) ) : the_row();
 
-		/**
-		 * If there is at least one listing marked as featured then
-		 * display the Featured Properties section.
-		 */
-		if ( $query->have_posts() ) : ?>
-		<section class="front-featured-properties">
-			<h2><?php _e( 'Featured Properties', 'seq-pac-theme' ); ?></h2>
-			<ul>
-			<?php while ( $query->have_posts() ) : ?>
-				<?php $query->the_post();
+			$get_layout = get_row_layout();
+			if ( ! isset( $counters[ $get_layout ] ) ) {
+				$counters[ $get_layout ] = 1;
+			} else {
+				$counters[ $get_layout ]++;
+			}
+			$layout = 'layout_' . get_row_layout() . '_' . $counters[ $get_layout ];
 
-				// Get the listing fields.
+			?>
 
-				?>
-				<li>
-					<div class="featured-details">
-						<div>
-							<h4><?php the_title(); ?></h4>
-							<p class="featured-price">$<?php the_field( 'spl_sale_price' ); ?></p>
-							<p class="featured-location"><?php
-							// Get the location(s).
-							$locations = get_field( 'spl_location' );
-							if ( $locations ) {
-								foreach ( $locations as $location ) { echo sprintf( '<span class="location">%1s</span>', $location->name ); };
-							} else {
-								echo sprintf( '<span class="location">%1s</span>', get_field( 'spl_post_office' ) );
-							} ?></p>
-						</div>
-						<div>
-							<p class="featured-details-link"><a href="<?php the_permalink(); ?>"><?php _e( 'View Details', 'seq-pac-theme' ); ?></a></p>
-						</div>
-					</div>
-					<p><?php the_field( 'spl_summary' ); ?></p>
+				<?php if ( get_row_layout() == 'spr_front_content_block' ) : ?>
+				<section class="front-content-section front-editor-content">
+
+					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
+
+					<?php the_sub_field( 'spr_front_content_block_editor' ); ?>
+
+				</section>
+
+				<?php elseif ( get_row_layout() == 'spr_front_content_shortcode' ) : ?>
+				<section id="<?php echo $layout; ?>" class="front-content-section front-shortcode-content">
+
+					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
+
 					<?php
-					// Get the featured image.
-					$image = get_field( 'spl_featured_image' );
-
-					// Image variables.
-					$url     = $image['url'];
-					$title   = $image['title'];
-					$alt     = sprintf(
-						'%1s | %2s - %3s | %4s%5s',
-						esc_html( get_the_title() ),
-						'$' . esc_html( get_field( 'spl_sale_price' ) ),
-						esc_html( get_field( 'spl_summary' ) ),
-						get_field( 'spl_post_office' ),
-						__( ', California', 'seq-pac-plugin' )
-					);
-
-					// Check for our custom image size in the companion plugin.
-					if ( has_image_size( 'wide-large' ) ) {
-						$size = 'wide-large';
-
-					// Otherwise use the large size.
-					} else {
-						$size = 'large';
-					}
-
-					// Image size attributes.
-					$thumb  = $image['sizes'][$size];
-					$width  = $image['sizes'][$size . '-width'];
-					$height = $image['sizes'][$size . '-height'];
-					$srcset = wp_get_attachment_image_srcset( $image['ID'], $size );
+					$code = get_sub_field( 'spr_front_content_shortcode_code' );
+					echo do_shortcode( $code );
 					?>
-					<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" alt="<?php echo $alt; ?>" longdesc="<?php echo esc_url( get_permalink() . '#listing-description' ); ?>" /></a>
-				</li>
+				</section>
+
+				<?php elseif ( get_row_layout() == 'spr_front_content_properties' ) : ?>
+				<section class="front-content-section front-featured-properties hide-if-no-js">
+
+					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
+
+					<?php if ( have_rows( 'spr_front_content_featured_properties' ) ) : ?>
+					<ul>
+					<?php while( have_rows( 'spr_front_content_featured_properties' ) ) : the_row(); ?>
+						<li>
+						<?php
+						$featured = get_sub_field( 'spr_front_content_featured_property' );
+						if ( $featured ) : ?>
+
+							<div class="featured-details">
+								<div>
+
+									<h3><?php echo esc_html( $featured->post_title ); ?></h3>
+
+									<p class="featured-price">$<?php the_field( 'spl_sale_price', $featured->ID ); ?></p>
+
+									<p class="featured-location">
+									<?php
+									// Get the location(s).
+									$locations = get_field( 'spl_location', $featured->ID );
+									if ( $locations ) {
+										foreach ( $locations as $location ) { echo sprintf( '<span class="location">%1s</span>', $location->name ); };
+									} else {
+										echo sprintf( '<span class="location">%1s</span>', get_field( 'spl_post_office', $featured->ID ) );
+									} ?>
+									</p>
+								</div>
+
+								<div>
+									<p class="featured-details-link"><a class="button" href="<?php the_permalink(); ?>"><?php _e( 'View Details', 'spr-two' ); ?></a></p>
+								</div>
+							</div>
+
+							<p><?php the_field( 'spl_summary', $featured->ID ); ?></p>
+
+							<?php
+
+							// Get the featured image.
+							$image = get_field( 'spl_featured_image', $featured->ID );
+
+							// Image variables.
+							$url     = $image['url'];
+							$title   = $image['title'];
+							$alt     = sprintf(
+								'%1s | %2s - %3s | %4s%5s',
+								esc_html( get_the_title() ),
+								'$' . esc_html( get_field( 'spl_sale_price' ) ),
+								esc_html( get_field( 'spl_summary' ) ),
+								get_field( 'spl_post_office' ),
+								__( ', California', 'spr-two' )
+							);
+
+							// Check for our custom image size in the companion plugin.
+							if ( has_image_size( 'wide-large' ) ) {
+								$size = 'wide-large';
+
+							// Otherwise use the large size.
+							} else {
+								$size = 'large';
+							}
+
+							// Image size attributes.
+							$thumb  = $image['sizes'][$size];
+							$width  = $image['sizes'][$size . '-width'];
+							$height = $image['sizes'][$size . '-height'];
+							$srcset = wp_get_attachment_image_srcset( $image['ID'], $size );
+
+							?>
+							<a href="<?php the_permalink(); ?>">
+								<img src="<?php echo $thumb; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" alt="<?php echo $alt; ?>" longdesc="<?php echo esc_url( get_permalink() . '#listing-description' ); ?>" />
+							</a>
+
+						<?php endif; ?>
+						</li>
+					<?php endwhile; ?>
+					</ul>
+					<?php endif; ?>
+
+				</section>
+
+				<?php elseif ( get_row_layout() == 'spr_front_content_image_links' ) : ?>
+				<section class="front-content-section front-image-links">
+
+					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
+
+					<?php
+					if ( get_field( 'spr_front_image_links_message' ) ) {
+						the_field( 'spr_front_image_links_message' );
+					}
+					?>
+
+					<?php if ( have_rows( 'spr_front_image_links' ) ) : ?>
+					<ul>
+					<?php while ( have_rows( 'spr_front_image_links' ) ) : the_row();
+
+						// Get fields.
+						$image = get_sub_field( 'spr_front_image_link_image' );
+						$text  = get_sub_field( 'spr_front_image_link_text' );
+						$link  = get_sub_field( 'spr_front_image_link_url' );
+
+						// Image variables.
+						$url     = $image['url'];
+						$title   = $image['title'];
+						$alt     = $image['alt'];
+
+						// Check for our custom image size in the companion plugin.
+						if ( has_image_size( 'wide-medium' ) ) {
+							$size = 'wide-medium';
+
+						// Otherwise use the medium size.
+						} else {
+							$size = 'medium';
+						}
+
+						// Image size attributes.
+						$thumb  = $image['sizes'][$size];
+						$width  = $image['sizes'][$size . '-width'];
+						$height = $image['sizes'][$size . '-height'];
+						$srcset = wp_get_attachment_image_srcset( $image['ID'], $size );
+						?>
+						<li><a href="<?php echo $link; ?>">
+							<figure>
+								<img src="<?php echo $thumb; ?>" srcset="<?php echo esc_attr( $srcset ); ?>" sizes="(max-width: 640px) 640px, (max-width: 960px) 960px, 640px" width="<?php echo $width; ?>" height="<?php echo $height; ?>" alt="<?php echo $alt; ?>" />
+								<figcaption><?php echo $text; ?></figcaption>
+							</figure>
+						</a></li>
+					<?php endwhile; ?>
+					</ul>
+					<?php endif; ?>
+
+				</section>
+				<?php endif; ?>
 			<?php endwhile; ?>
-			</ul>
-		</section>
-		<?php else :
-			/**
-			 * If there are no listings marked as featured then
-			 * this section will be ignored.
-			 */
-		endif;
-		// Restore original Post Data
-		wp_reset_postdata(); ?>
-
-		<?php if ( $use_image_links ) : ?>
-		<section class="front-image-links">
-			<h2><?php echo $links_heading; ?></h2>
-			<div class="front-image-links-message">
-				<?php the_field( 'spr_front_image_links_message' ); ?>
-			</div>
-			<?php if ( have_rows( 'spr_front_image_links' ) ) : ?>
-			<ul>
-			<?php while ( have_rows( 'spr_front_image_links' ) ) : the_row();
-
-				// Get fields.
-				$image = get_sub_field( 'spr_front_image_link_image' );
-				$text  = get_sub_field( 'spr_front_image_link_text' );
-				$link  = get_sub_field( 'spr_front_image_link_url' );
-
-				// Image variables.
-				$url     = $image['url'];
-				$title   = $image['title'];
-				$alt     = $image['alt'];
-
-				// Check for our custom image size in the companion plugin.
-				if ( has_image_size( 'wide-medium' ) ) {
-					$size = 'wide-medium';
-
-				// Otherwise use the medium size.
-				} else {
-					$size = 'medium';
-				}
-
-				// Image size attributes.
-				$thumb  = $image['sizes'][$size];
-				$width  = $image['sizes'][$size . '-width'];
-				$height = $image['sizes'][$size . '-height'];
-				$srcset = wp_get_attachment_image_srcset( $image['ID'], $size );
-				?>
-				<li><a href="<?php echo $link; ?>">
-					<figure>
-						<img src="<?php echo $thumb; ?>" srcset="<?php echo esc_attr( $srcset ); ?>" sizes="(max-width: 640px) 640px, (max-width: 960px) 960px, 640px" width="<?php echo $width; ?>" height="<?php echo $height; ?>" alt="<?php echo $alt; ?>" />
-						<figcaption><?php echo $text; ?></figcaption>
-					</figure>
-				</a></li>
-			<?php endwhile; ?>
-			</ul>
-			<?php endif; ?>
-		</section>
+		</div>
 		<?php endif; ?>
 	</div>
 </article>
