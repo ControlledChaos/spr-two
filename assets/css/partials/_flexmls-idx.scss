@@ -1,0 +1,156 @@
+///
+/// FlexMLS IDX plugin styles
+///
+
+@import '../modules/_colors';
+@import '../modules/_typography';
+
+.flexmls_connect__page_content {
+
+	.flexmls_connect__sr_result {
+
+		.flexmls_connect__sr_idx {
+			display: none;
+		}
+	}
+
+	.flexmls_connect__sr_listing_facts_container {
+		float: left;
+	}
+
+	.flexmls_connect__sr_listing_facts {
+
+		.flexmls_connect__zebra {
+			padding: 0.25em 1em;
+			font-size: 0.9em;
+
+			&:nth-child( 2n+1 ),
+			&:nth-child( 2n+1 ) {
+				background-color: $off_white;
+			}
+
+			&:last-of-type {
+				padding: 0;
+				background: none;
+			}
+		}
+	}
+
+	.flexmls_toggle-view {
+
+		a {
+			padding: 0.5em;
+			cursor: pointer;
+			font-family: $serif;
+			font-size: 1.25em;
+			font-weight: bold;
+			font-weight: 500;
+			font-style: italic;
+			line-height: 1;
+			background-color: $button_background_color;
+			border-color: $button_border_color;
+			color: $button_text_color;
+
+			@supports ( font-variation-settings: normal ) {
+				font-family: $variable_serif;
+			}
+
+			&.list-view,
+			&.map-view {
+				border-radius: 0px;
+			}
+
+			&.map-view {
+				border-left: unset;
+			}
+
+			&.active,
+			&:hover {
+				background-color: $button_action_background_color;
+				border-color: $button_action_border_color;
+				color: $button_action_text_color;
+			}
+		}
+	}
+}
+
+// Custom version of the plugin.
+.flexmls-custom_view_header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-top: 2rem;
+
+	.flexmls_toggle-view,
+	.flexmls_connect__sr_matches,
+	.flexmls_connect__sr_view_options {
+		float: none;
+	}
+
+	.flexmls_connect__sr_matches {
+		order: 1;
+
+		.flexmls_connect__sr_matches_count {
+			padding: 0;
+			font-size: 2em;
+			color: $text_medium;
+		}
+	}
+
+	.flexmls_connect__sr_view_options {
+		order: 2;
+
+		label {
+			font-size: 0.9em;
+			font-weight: bold;
+			font-weight: 600;
+		}
+	}
+
+	.flexmls_toggle-view {
+		order: 3;
+	}
+}
+
+.flexmls_connect__sr_price {
+	font-family: $serif;
+	font-size: 1.875em;
+	font-weight: bold;
+	font-weight: 600;
+	font-style: italic;
+	color: $green;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+	}
+}
+
+.flexmls_connect__sr_detail,
+.flexmls_connect__sr_email_updates,
+.flexmls_connect__sr_result {
+
+	a {
+		font-size: 0.9em;
+		font-weight: bold;
+		font-weight: 600;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.flexmls_connect__idx_disclosure_text {
+	margin-top: 1em;
+
+	&.flexmls_connect__disclaimer_text {
+		font-size: 0.85em;
+		font-style: italic;
+
+		&:before {
+			content: '* ';
+		}
+	}
+}

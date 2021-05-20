@@ -21,7 +21,8 @@ label {}
 input,
 textarea,
 select,
-button {
+button,
+.button {
 	width: 100%;
 	max-width: 640px;
 	padding: 1rem;
@@ -62,14 +63,31 @@ input[type="checkbox"] {
 }
 
 button,
+.button,
 button[type="submit"],
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
 input[type="image"] {
+	display: inline-block;
 	width: auto;
+	padding: 0.5em;
 	cursor: pointer;
-	font-weight: bold;
+	font-family: $serif;
+	font-size: 1.25em;
+	font-weight: normal;
+	font-weight: 500;
+	font-style: italic;
+	line-height: 1;
+	background-color: $button_background_color;
+	border-color: $button_border_color;
+	color: $button_text_color;
+	-webkit-transition: all .15s;
+	transition: all .15s;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+	}
 
 	svg {
 		width: 24px;
@@ -80,7 +98,9 @@ input[type="image"] {
 
 	&:hover,
 	&:focus {
-		background: $pale_gray;
+		background-color: $button_action_background_color;
+		border-color: $button_action_border_color;
+		color: $button_action_text_color;
 	}
 
 	&.menu-toggle {

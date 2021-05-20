@@ -102,6 +102,7 @@
 		font-variant: small-caps;
 		font-variant-caps: small-caps;
 		line-height: 1;
+		color: $white;
 		text-shadow: 0.05em 0.05em 0.075em rgba( $color: $black, $alpha: 0.85 );
 
 		@supports ( font-variation-settings: normal ) {
@@ -121,6 +122,14 @@
 .hero-logo {
 	max-width: 280px;
 	margin-bottom: 1em;
+}
+
+.front-acf-content > section {
+	&:not( :first-of-type ) {
+		border-top: solid 1px $box_border_color;
+		margin-top: 4rem;
+		padding-top: 1em;
+	}
 }
 
 .static-front .entry-content h2 {
@@ -167,23 +176,10 @@
 }
 
 /* Featured properties */
-.front-featured-properties {
-	border-top: solid 1px $box_border_color;
-	margin-top: 4rem;
-	padding-top: 1em;
-}
-
 .front-featured-properties .slick-arrow {
 	position: absolute;
 	top: 0;
 	z-index: 100;
-	font-size: 1.5em;
-	font-family: $serif;
-	font-weight: normal;
-	font-weight: 500;
-	font-style: italic;
-	line-height: 1;
-	color: #384a5a;
 	cursor: pointer;
 
 	@supports ( font-variation-settings: normal ) {
@@ -256,7 +252,7 @@
 	font-weight: bold;
 	font-weight: 600;
 	font-style: italic;
-	color: #4b9960;
+	color: $green;
 
 	@supports ( font-variation-settings: normal ) {
 		font-family: $variable_serif;
@@ -276,35 +272,6 @@
 
 .featured-details-link {
 	text-align: right;
-}
-
-.entry-content .featured-details-link a {
-	display: inline-block;
-	padding: 0.75em 0.5em 0.5em 0.5em;
-	font-size: 1.285em;
-	font-family: $serif;
-	font-weight: normal;
-	font-weight: 500;
-	font-style: italic;
-	line-height: 1;
-	background: #f8ce30;
-	color: #384a5a;
-	-webkit-transition: all .15s;
-	transition: all .15s;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-	}
-}
-
-.entry-content .featured-details-link a:visited {
-	color: #384a5a;
-}
-
-.entry-content .featured-details-link a:hover,
-.entry-content .featured-details-link a:focus {
-	background: #2c3e50;
-	color: #fff;
 }
 
 /* Image links */

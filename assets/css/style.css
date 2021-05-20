@@ -253,14 +253,6 @@ b, strong, optgroup {
   font-weight: bold;
 }
 
-.clearfix {
-  clear: both;
-  display: block;
-  height: 0;
-  overflow: hidden;
-  zoom: 1;
-}
-
 /**
  * Font stack variables
  *
@@ -347,154 +339,21 @@ ol {
 
 h1,
 h2 {
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-weight: normal;
   font-style: normal;
   font-variant: small-caps;
   font-variant-caps: small-caps;
   color: #2c3e50;
-}
-
-h1 > a,
-h2 > a {
-  color: #2c3e50;
-}
-
-a {
-  color: #2c3e50;
-  text-decoration: none;
-  transition: color .15s;
-  -webkit-transition: color .15s;
-  -moz-transition: color .15s;
-  -ms-transition: color .15s;
-  -o-transition: color .15s;
-}
-
-a:visited {
-  color: #2c3e50;
-}
-
-a:hover, a.hover, a:focus, a.focus {
-  color: #507192;
-}
-
-.screen-reader-text {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important;
-}
-
-.screen-reader-text:focus {
-  border-radius: 3px;
-  clip: auto !important;
-  -webkit-clip-path: none;
-  clip-path: none;
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-}
-
-/**
- * Font stack variables
- *
- * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
- * stacks are used in @supports( font-variation-settings ) queries.
- */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-  line-height: 1.5;
-  background: #ffffff;
-  color: #333333;
-}
-
-body.dark-mode {
-  background: #222222;
-  color: #ffffff;
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6,
-body.dark-mode p,
-body.dark-mode ul,
-body.dark-mode ol,
-body.dark-mode li {
-  color: #ffffff;
-}
-
-body.dark-mode a,
-body.dark-mode a:visited {
-  color: #ffffff;
-}
-
-body.dark-mode a:hover, body.dark-mode a.hover, body.dark-mode a:focus, body.dark-mode a.focus,
-body.dark-mode a:visited:hover,
-body.dark-mode a:visited.hover,
-body.dark-mode a:visited:focus,
-body.dark-mode a:visited.focus {
-  color: #cccccc;
-}
-
-body.dark-mode #wpadminbar,
-body.dark-mode #wpadminbar .ab-top-menu > li.hover > .ab-item,
-body.dark-mode #wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus,
-body.dark-mode #wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
-body.dark-mode #wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus,
-body.dark-mode #wpadminbar .menupop .ab-sub-wrapper,
-body.dark-mode #wpadminbar .shortlink-input {
-  background: #333333;
-}
-
-.serif {
-  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
 }
 
 @supports (font-variation-settings: normal) {
-  .serif {
+  h1,
+  h2 {
     font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+    font-size: 1.5em;
+    letter-spacing: 0.025em;
   }
-}
-
-.entry-content,
-.sidebar,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol {
-  margin-top: 1em;
-}
-
-h1,
-h2 {
-  font-weight: normal;
-  font-style: normal;
-  font-variant: small-caps;
-  font-variant-caps: small-caps;
-  color: #2c3e50;
 }
 
 h1 > a,
@@ -502,14 +361,29 @@ h2 > a {
   color: #2c3e50;
 }
 
+h3 {
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+@supports (font-variation-settings: normal) {
+  h3 {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+    font-size: 1.625em;
+    font-weight: 450;
+  }
+}
+
 a {
   color: #2c3e50;
   text-decoration: none;
-  transition: color .15s;
-  -webkit-transition: color .15s;
-  -moz-transition: color .15s;
-  -ms-transition: color .15s;
-  -o-transition: color .15s;
+  transition: all .15s;
+  -webkit-transition: all .15s;
+  -moz-transition: all .15s;
+  -ms-transition: all .15s;
+  -o-transition: all .15s;
 }
 
 a:visited {
@@ -653,6 +527,9 @@ a:hover, a.hover, a:focus, a.focus {
 
 .site-content .content-area {
   width: 100%;
+}
+
+body:not(.no-sidebar) .site-content .content-area {
   margin-right: 2em;
 }
 
@@ -676,7 +553,7 @@ main article {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .site-content .content-area {
+  body:not(.no-sidebar) .site-content .content-area {
     margin-right: unset;
   }
 }
@@ -698,7 +575,8 @@ legend {
 input,
 textarea,
 select,
-button {
+button,
+.button {
   width: 100%;
   max-width: 640px;
   padding: 1rem;
@@ -710,7 +588,8 @@ button {
 input:focus,
 textarea:focus,
 select:focus,
-button:focus {
+button:focus,
+.button:focus {
   border-color: #888888;
 }
 
@@ -733,17 +612,43 @@ input[type="checkbox"] {
 }
 
 button,
+.button,
 button[type="submit"],
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
 input[type="image"] {
+  display: inline-block;
   width: auto;
+  padding: 0.5em;
   cursor: pointer;
-  font-weight: bold;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.25em;
+  font-weight: normal;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  color: #344a5f;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+
+@supports (font-variation-settings: normal) {
+  button,
+  .button,
+  button[type="submit"],
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  input[type="image"] {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
 }
 
 button svg,
+.button svg,
 button[type="submit"] svg,
 input[type="submit"] svg,
 input[type="button"] svg,
@@ -756,6 +661,8 @@ input[type="image"] svg {
 }
 
 button:hover, button:focus,
+.button:hover,
+.button:focus,
 button[type="submit"]:hover,
 button[type="submit"]:focus,
 input[type="submit"]:hover,
@@ -766,10 +673,13 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="image"]:hover,
 input[type="image"]:focus {
-  background: #cccccc;
+  background-color: #f8ce30;
+  border-color: #555555;
+  color: #333333;
 }
 
 button.menu-toggle,
+.button.menu-toggle,
 button[type="submit"].menu-toggle,
 input[type="submit"].menu-toggle,
 input[type="button"].menu-toggle,
@@ -781,6 +691,7 @@ input[type="image"].menu-toggle {
 }
 
 button.menu-toggle svg,
+.button.menu-toggle svg,
 button[type="submit"].menu-toggle svg,
 input[type="submit"].menu-toggle svg,
 input[type="button"].menu-toggle svg,
@@ -1065,6 +976,10 @@ article .gallery .gallery-item img {
   .logged-in.admin-bar .fancybox-container {
     top: 46px;
   }
+}
+
+.slick-track {
+  margin-top: 3rem;
 }
 
 /**
@@ -1378,13 +1293,14 @@ article .gallery .gallery-item img {
   }
 }
 
+/**
+ * Font stack variables
+ *
+ * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
+ * stacks are used in @supports( font-variation-settings ) queries.
+ */
 .sticky {
   display: block;
-}
-
-.post,
-.page {
-  margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {
@@ -1394,7 +1310,7 @@ article .gallery .gallery-item img {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0;
+  margin: 2rem 0 0;
 }
 
 .page-links {
@@ -1424,34 +1340,12 @@ article .gallery .gallery-item img {
   justify-content: space-between;
 }
 
-.entry-content h1,
-.entry-content h2,
-.entry-content h3 {
-  color: #555;
-}
-
-.entry-content h2 {
-  font-size: 2em;
-}
-
-.entry-content a,
-.entry-content a:visited {
-  color: #2c3e50;
-  -webkit-transition: color .15s;
-  transition: color .15s;
-}
-
-.entry-content a:hover {
-  color: #325b97;
-}
-
 .updated:not(.published) {
   display: none;
 }
 
 .entry-title {
-  font-size: 2em;
-  line-height: 1.2;
+  font-size: 2.25em;
 }
 
 .page-content,
@@ -1462,9 +1356,7 @@ article .gallery .gallery-item img {
 
 .entry-content,
 .entry-summary {
-  width: 78%;
   max-width: 1024px;
-  padding: 0 2rem;
 }
 
 .home .entry-content {
@@ -1605,6 +1497,7 @@ article .gallery .gallery-item img {
   font-variant: small-caps;
   font-variant-caps: small-caps;
   line-height: 1;
+  color: #ffffff;
   text-shadow: 0.05em 0.05em 0.075em rgba(0, 0, 0, 0.85);
 }
 
@@ -1625,6 +1518,12 @@ article .gallery .gallery-item img {
 .hero-logo {
   max-width: 280px;
   margin-bottom: 1em;
+}
+
+.front-acf-content > section:not(:first-of-type) {
+  border-top: solid 1px #cccccc;
+  margin-top: 4rem;
+  padding-top: 1em;
 }
 
 .static-front .entry-content h2 {
@@ -1666,23 +1565,10 @@ article .gallery .gallery-item img {
 }
 
 /* Featured properties */
-.front-featured-properties {
-  border-top: solid 1px #cccccc;
-  margin-top: 4rem;
-  padding-top: 1em;
-}
-
 .front-featured-properties .slick-arrow {
   position: absolute;
   top: 0;
   z-index: 100;
-  font-size: 1.5em;
-  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-  font-weight: normal;
-  font-weight: 500;
-  font-style: italic;
-  line-height: 1;
-  color: #384a5a;
   cursor: pointer;
 }
 
@@ -1776,37 +1662,6 @@ article .gallery .gallery-item img {
 
 .featured-details-link {
   text-align: right;
-}
-
-.entry-content .featured-details-link a {
-  display: inline-block;
-  padding: 0.75em 0.5em 0.5em 0.5em;
-  font-size: 1.285em;
-  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-  font-weight: normal;
-  font-weight: 500;
-  font-style: italic;
-  line-height: 1;
-  background: #f8ce30;
-  color: #384a5a;
-  -webkit-transition: all .15s;
-  transition: all .15s;
-}
-
-@supports (font-variation-settings: normal) {
-  .entry-content .featured-details-link a {
-    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-  }
-}
-
-.entry-content .featured-details-link a:visited {
-  color: #384a5a;
-}
-
-.entry-content .featured-details-link a:hover,
-.entry-content .featured-details-link a:focus {
-  background: #2c3e50;
-  color: #fff;
 }
 
 /* Image links */
@@ -1929,7 +1784,7 @@ article .gallery .gallery-item img {
   font-weight: bold;
   font-weight: 600;
   font-style: italic;
-  color: #46b450;
+  color: #4b9960;
 }
 
 @supports (font-variation-settings: normal) {
@@ -2113,4 +1968,164 @@ article .gallery .gallery-item img {
     column-count: 2;
     text-align: left;
   }
+}
+
+.no-js .hide-if-no-js {
+  display: none !important;
+}
+
+/**
+ * Font stack variables
+ *
+ * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
+ * stacks are used in @supports( font-variation-settings ) queries.
+ */
+.flexmls_connect__page_content .flexmls_connect__sr_result .flexmls_connect__sr_idx {
+  display: none;
+}
+
+.flexmls_connect__page_content .flexmls_connect__sr_listing_facts_container {
+  float: left;
+}
+
+.flexmls_connect__page_content .flexmls_connect__sr_listing_facts .flexmls_connect__zebra {
+  padding: 0.25em 1em;
+  font-size: 0.9em;
+}
+
+.flexmls_connect__page_content .flexmls_connect__sr_listing_facts .flexmls_connect__zebra:nth-child(2n+1), .flexmls_connect__page_content .flexmls_connect__sr_listing_facts .flexmls_connect__zebra:nth-child(2n+1) {
+  background-color: #eeeeee;
+}
+
+.flexmls_connect__page_content .flexmls_connect__sr_listing_facts .flexmls_connect__zebra:last-of-type {
+  padding: 0;
+  background: none;
+}
+
+.flexmls_connect__page_content .flexmls_toggle-view a {
+  padding: 0.5em;
+  cursor: pointer;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  color: #344a5f;
+}
+
+@supports (font-variation-settings: normal) {
+  .flexmls_connect__page_content .flexmls_toggle-view a {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
+}
+
+.flexmls_connect__page_content .flexmls_toggle-view a.list-view, .flexmls_connect__page_content .flexmls_toggle-view a.map-view {
+  border-radius: 0px;
+}
+
+.flexmls_connect__page_content .flexmls_toggle-view a.map-view {
+  border-left: unset;
+}
+
+.flexmls_connect__page_content .flexmls_toggle-view a.active, .flexmls_connect__page_content .flexmls_toggle-view a:hover {
+  background-color: #f8ce30;
+  border-color: #555555;
+  color: #333333;
+}
+
+.flexmls-custom_view_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.flexmls-custom_view_header .flexmls_toggle-view,
+.flexmls-custom_view_header .flexmls_connect__sr_matches,
+.flexmls-custom_view_header .flexmls_connect__sr_view_options {
+  float: none;
+}
+
+.flexmls-custom_view_header .flexmls_connect__sr_matches {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.flexmls-custom_view_header .flexmls_connect__sr_matches .flexmls_connect__sr_matches_count {
+  padding: 0;
+  font-size: 2em;
+  color: #344a5f;
+}
+
+.flexmls-custom_view_header .flexmls_connect__sr_view_options {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.flexmls-custom_view_header .flexmls_connect__sr_view_options label {
+  font-size: 0.9em;
+  font-weight: bold;
+  font-weight: 600;
+}
+
+.flexmls-custom_view_header .flexmls_toggle-view {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.flexmls_connect__sr_price {
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.875em;
+  font-weight: bold;
+  font-weight: 600;
+  font-style: italic;
+  color: #4b9960;
+}
+
+@supports (font-variation-settings: normal) {
+  .flexmls_connect__sr_price {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
+}
+
+.flexmls_connect__sr_detail a,
+.flexmls_connect__sr_email_updates a,
+.flexmls_connect__sr_result a {
+  font-size: 0.9em;
+  font-weight: bold;
+  font-weight: 600;
+}
+
+.flexmls_connect__sr_detail a:hover,
+.flexmls_connect__sr_email_updates a:hover,
+.flexmls_connect__sr_result a:hover {
+  text-decoration: none;
+}
+
+.flexmls_connect__idx_disclosure_text {
+  margin-top: 1em;
+}
+
+.flexmls_connect__idx_disclosure_text.flexmls_connect__disclaimer_text {
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+.flexmls_connect__idx_disclosure_text.flexmls_connect__disclaimer_text:before {
+  content: '* ';
 }

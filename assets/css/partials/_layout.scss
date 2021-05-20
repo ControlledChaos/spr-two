@@ -14,7 +14,14 @@
 
 	.content-area {
 		width: 100%;
-		margin-right: 2em;
+	}
+}
+
+body:not( .no-sidebar ) {
+	.site-content {
+		.content-area {
+			margin-right: 2em;
+		}
 	}
 }
 
@@ -35,9 +42,13 @@ main article {
 
 	.site-content {
 		flex-direction: column;
+	}
 
-		.content-area {
-			margin-right: unset;
+	body:not( .no-sidebar ) {
+		.site-content {
+			.content-area {
+				margin-right: unset;
+			}
 		}
 	}
 }

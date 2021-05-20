@@ -6,7 +6,6 @@
 @import 'modules/_colors';
 @import 'modules/_typography';
 @import 'partials/_setup';
-@import 'partials/_setup';
 @import 'partials/_typography';
 @import 'partials/_layout';
 @import 'partials/_forms';
@@ -22,3 +21,6 @@
 @import 'partials/_interactive';
 @import 'partials/_footer';
 @import 'partials/_no-js';
+
+// Third-party overrides.
+@import 'partials/_flexmls-idx';
