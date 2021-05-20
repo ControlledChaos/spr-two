@@ -104,6 +104,14 @@ if ( $links_heading ) {
 			<h3 class="hero-site-description"><?php echo $hero_heading; ?></h3>
 
 			<?php echo $hero_message; ?>
+
+			<?php
+			wp_nav_menu( [
+				'theme_location' => 'hero',
+				'menu_id'        => 'hero-menu',
+				'fallback_cb'    => null,
+			] );
+			?>
 		</div>
 	</div>
 </div>
@@ -136,7 +144,7 @@ if ( $links_heading ) {
 			?>
 
 				<?php if ( get_row_layout() == 'spr_front_content_block' ) : ?>
-				<section class="front-content-section front-editor-content">
+				<section id="<?php echo $layout; ?>" class="front-content-section front-editor-content">
 
 					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
 
@@ -156,7 +164,7 @@ if ( $links_heading ) {
 				</section>
 
 				<?php elseif ( get_row_layout() == 'spr_front_content_properties' ) : ?>
-				<section class="front-content-section front-featured-properties hide-if-no-js">
+				<section id="<?php echo $layout; ?>" class="front-content-section front-featured-properties hide-if-no-js">
 
 					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
 
@@ -240,7 +248,7 @@ if ( $links_heading ) {
 				</section>
 
 				<?php elseif ( get_row_layout() == 'spr_front_content_image_links' ) : ?>
-				<section class="front-content-section front-image-links">
+				<section id="<?php echo $layout; ?>" class="front-content-section front-image-links">
 
 					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
 

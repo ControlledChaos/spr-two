@@ -150,6 +150,7 @@ class Setup {
 		 */
 		register_nav_menus( [
 			'main'   => __( 'Main Menu', 'spr-two' ),
+			'hero'   => __( 'Hero Menu', 'spr-two' ),
 			'footer' => __( 'Footer Menu', 'spr-two' ),
 			'social' => __( 'Social Menu', 'spr-two' )
 		] );

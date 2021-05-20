@@ -1,0 +1,15 @@
+///
+/// Front page styles
+///
+
+.front-page-hero-content {
+
+	#hero-menu {
+		li {
+			&:not( :last-of-type ) {
+				padding-right: unset;
+				padding-left: 0.5em;
+			}
+		}
+	}
+}
