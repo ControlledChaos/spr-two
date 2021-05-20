@@ -19,6 +19,41 @@ body:not(.no-sidebar) .site-content .content-area {
   margin-left: 0.3em;
 }
 
+img.alignright,
+figure.alignright {
+  margin: 1em 1em 0 0;
+}
+
+img.alignleft,
+figure.alignleft {
+  margin: 1em 0 0 1em;
+}
+
+.alignleft {
+  float: right;
+}
+
+.alignright {
+  float: left;
+}
+
+.entry-content p img.alignleft {
+  margin: 0 1em 1em 0;
+}
+
+.entry-content p img.alignright {
+  margin: 0 0 1em 1em;
+}
+
+.entry-content p img.aligncenter {
+  margin: 2em auto;
+}
+
+.author-avatar {
+  margin-right: unset;
+  margin-left: 0.5em;
+}
+
 .site-branding img {
   margin-right: unset;
   margin-left: 1em;
@@ -86,43 +121,13 @@ body:not(.no-sidebar) .site-content .content-area {
   margin-left: 1em;
 }
 
+.front-page-hero-content #hero-menu li:not(:last-of-type) {
+  padding-right: unset;
+  padding-left: 0.5em;
+}
+
 #secondary ul,
 #secondary ol {
   padding-left: unset;
   padding-right: 1em;
-}
-
-img.alignright,
-figure.alignright {
-  margin: 1em 1em 0 0;
-}
-
-img.alignleft,
-figure.alignleft {
-  margin: 1em 0 0 1em;
-}
-
-.alignleft {
-  float: right;
-}
-
-.alignright {
-  float: left;
-}
-
-.entry-content p img.alignleft {
-  margin: 0 1em 1em 0;
-}
-
-.entry-content p img.alignright {
-  margin: 0 0 1em 1em;
-}
-
-.entry-content p img.aligncenter {
-  margin: 2em auto;
-}
-
-.author-avatar {
-  margin-right: unset;
-  margin-left: 0.5em;
 }
