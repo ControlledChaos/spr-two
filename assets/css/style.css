@@ -998,6 +998,7 @@ article .gallery .gallery-item img {
   width: 100vw;
   padding: 1em 2em;
   background-color: #ffffff;
+  border-bottom: solid 1px #cccccc;
 }
 
 .site-header-wrap.stuck {
@@ -2046,7 +2047,7 @@ article .gallery .gallery-item img {
 
 .flexmls_connect__page_content .flexmls_connect__sr_listing_facts .flexmls_connect__zebra {
   padding: 0.25em 1em;
-  font-size: 0.9em;
+  font-size: 0.9375rem;
 }
 
 .flexmls_connect__page_content .flexmls_connect__sr_listing_facts .flexmls_connect__zebra:nth-child(2n+1), .flexmls_connect__page_content .flexmls_connect__sr_listing_facts .flexmls_connect__zebra:nth-child(2n+1) {
@@ -2133,7 +2134,7 @@ article .gallery .gallery-item img {
 }
 
 .flexmls-custom_view_header .flexmls_connect__sr_view_options label {
-  font-size: 0.9em;
+  font-size: 0.9375rem;
   font-weight: bold;
   font-weight: 600;
 }
@@ -2162,10 +2163,22 @@ article .gallery .gallery-item img {
   }
 }
 
+.flexmls_connect__ld_price {
+  margin-bottom: 1rem;
+}
+
+.flexmls_connect__sr_address {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: bold;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 .flexmls_connect__sr_detail a,
 .flexmls_connect__sr_email_updates a,
 .flexmls_connect__sr_result a {
-  font-size: 0.9em;
+  font-size: 0.9375rem;
   font-weight: bold;
   font-weight: 600;
 }
@@ -2328,4 +2341,52 @@ article .gallery .gallery-item img {
   margin: 0;
   width: 100%;
   max-width: 80px;
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__tab {
+  background-clip: unset;
+  border-top-right-radius: unset;
+  -moz-border-radius: unset;
+  border-top-left-radius: unset;
+  margin: 0;
+  vertical-align: unset;
+  position: relative;
+  top: unset;
+  display: inline-block;
+  width: auto;
+  padding: 0.5em;
+  cursor: pointer;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.25em;
+  font-weight: normal;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1;
+  border: solid 1px #cccccc;
+  color: #344a5f;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__tab:hover, .flexmls_connect__sr_detail .flexmls_connect__tab:focus {
+  background-color: #f8ce30;
+  border-color: #555555;
+  color: #333333;
+}
+
+.flexmls_connect__sr_detail a,
+.flexmls_connect__sr_email_updates a,
+.flexmls_connect__sr_result a {
+  margin-top: 0.5em;
+}
+
+#flexmls_connect__cboxLoadedContent {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0 0.5em;
+}
+
+.flexmls_connect__PublicRemarks {
+  margin-top: 1em;
 }
