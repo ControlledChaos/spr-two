@@ -161,6 +161,10 @@ if ( $links_heading ) {
 
 					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
 
+					<div class="front-content-block-message">
+						<?php the_sub_field( 'spr_front_content_message' ); ?>
+					</div>
+
 					<?php
 					$code = get_sub_field( 'spr_front_content_shortcode_code' );
 					echo do_shortcode( $code );
@@ -171,6 +175,10 @@ if ( $links_heading ) {
 				<section id="<?php echo $layout; ?>" class="front-content-section front-featured-properties hide-if-no-js">
 
 					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
+
+					<div class="front-content-block-message">
+						<?php the_sub_field( 'spr_front_content_message' ); ?>
+					</div>
 
 					<?php if ( have_rows( 'spr_front_content_featured_properties' ) ) : ?>
 					<ul>
@@ -256,11 +264,9 @@ if ( $links_heading ) {
 
 					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
 
-					<?php
-					if ( get_field( 'spr_front_image_links_message' ) ) {
-						the_field( 'spr_front_image_links_message' );
-					}
-					?>
+					<div class="front-content-block-message">
+						<?php the_sub_field( 'spr_front_content_message' ); ?>
+					</div>
 
 					<?php if ( have_rows( 'spr_front_image_links' ) ) : ?>
 					<ul>
