@@ -13,6 +13,7 @@
 	width: 100vw;
 	padding: 1em 2em;
 	background-color: $white;
+	border-bottom: solid 1px $box_border_color;
 
 	&.stuck {
 		padding: 0.5em 2em;
