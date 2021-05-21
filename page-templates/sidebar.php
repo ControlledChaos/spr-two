@@ -4,8 +4,8 @@
  *
  * Adds a sidebar to the right of the main page content (left for RTL languages).
  *
- * Template Name: Sidebar
- * Template Post Type: post, page
+ * Template Name: Sidebar Page
+ * Template Post Type: page
  * Description: Adds a sidebar to the right of the main page content (left for RTL languages).
  *
  * @package    SPR_Two
@@ -38,12 +38,11 @@ get_header();
 
 		</main>
 	</div>
-</div><!-- #content -->
-<?php
+	<?php
 
-// Get the default sidebar file.
-get_sidebar();
-?>
+	// Get the default sidebar file.
+	get_sidebar();
+	?>
 </div><!-- #content -->
 <?php
 

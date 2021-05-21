@@ -5,7 +5,7 @@
  * Adds the featured image to the top of the page and adds a sidebar to the right of the main page content (left for RTL languages).
  *
  * Template Name: Featured Image, Sidebar
- * Template Post Type: post, page
+ * Template Post Type: page
  * Description: Adds the featured image to the top of the page and adds a sidebar to the right of the main page content (left for RTL languages).
  *
  * @package    SPR_Two
@@ -38,11 +38,11 @@ get_header();
 
 		</main>
 	</div>
-<?php
+	<?php
 
-// Get the default sidebar file.
-get_sidebar();
-?>
+	// Get the default sidebar file.
+	get_sidebar();
+	?>
 </div><!-- #content -->
 <?php
 

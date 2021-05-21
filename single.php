@@ -40,11 +40,11 @@ get_header();
 
 		</main>
 	</div>
-<?php
+	<?php
 
-// Get the default sidebar file.
-get_sidebar();
-?>
+	// Get the default sidebar file.
+	get_sidebar();
+	?>
 </div><!-- #content -->
 <?php
 
