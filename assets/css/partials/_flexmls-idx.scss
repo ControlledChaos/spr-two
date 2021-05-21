@@ -5,6 +5,10 @@
 @import '../modules/_colors';
 @import '../modules/_typography';
 
+.flexmls_connect__sr_divider {
+	background: none;
+}
+
 .flexmls_connect__page_content {
 
 	.flexmls_connect__sr_result {
@@ -114,7 +118,9 @@
 	}
 }
 
+.flexmls_connect__ld_price,
 .flexmls_connect__sr_price {
+	float: none;
 	font-family: $serif;
 	font-size: 1.875em;
 	font-weight: bold;
@@ -142,6 +148,10 @@
 	}
 }
 
+.flexmls_connect__ld_button_group button + button {
+	margin-left: 0.25rem;
+}
+
 .flexmls_connect__idx_disclosure_text {
 	margin-top: 1em;
 
@@ -151,6 +161,140 @@
 
 		&:before {
 			content: '* ';
+		}
+	}
+}
+
+.flexmls_connect__button,
+.flexmls_connect__page_content button,
+.flexmls_connect__sr_detail button {
+	border-radius: 0px;
+	background-clip: unset;
+	color: unset;
+	padding: unset;
+	font-size: unset;
+	white-space: nowrap;
+	margin: unset;
+	vertical-align: middle;
+
+	display: inline-block;
+	width: auto;
+	padding: 0.5em;
+	cursor: pointer;
+	font-family: $serif;
+	font-size: 1.25em;
+	font-weight: normal;
+	font-weight: 500;
+	font-style: italic;
+	line-height: 1;
+	background-color: $button_background_color;
+	border-color: $button_border_color;
+	color: $button_text_color;
+	-webkit-transition: all .15s;
+	transition: all .15s;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: $button_action_background_color;
+		border-color: $button_action_border_color;
+		color: $button_action_text_color;
+	}
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__tab_div {
+	border: none;
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__tab.active {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset( 50% );
+	        clip-path: inset( 50% );
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+
+	&:focus {
+		border-radius: 3px;
+		clip: auto !important;
+		-webkit-clip-path: none;
+				clip-path: none;
+		display: block;
+		font-size: 14px;
+		font-size: 0.875rem;
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; // Above user toolbar.
+	}
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__detail_header,
+.flexmls_connect__ld_property_detail {
+	padding: 0.5rem 1rem;
+}
+
+.flexmls_connect__photo_container,
+.flexmls_connect__sr_detail .flexmls_connect__filmstrip {
+	width: 100%;
+}
+
+.flexmls_connect__photo_container {
+
+		img {
+			display: block;
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			max-height: 400px;
+			object-fit: contain;
+		}
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__detail_header {
+	margin-top: 0.5em;
+    font-family: $serif;
+	font-weight: 500;
+	font-size: 1.5em;
+	font-variant: small-caps;
+	font-variant-caps: small-caps;
+    display: block;
+    background-color: unset;
+    color: $text_dark;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+		font-size: 1.625em;
+		letter-spacing: 0.035em;
+	}
+}
+
+.flexmls_connect__sr_detail {
+
+	.flexmls_connect__filmstrip {
+		height: auto;
+		white-space: nowrap;
+
+		img {
+			display: inline-block;
+			border-color: $box_border_color;
+			height: auto;
+			margin: 0;
+			width: 100%;
+			max-width: 80px;
 		}
 	}
 }

@@ -1582,6 +1582,11 @@ article .gallery .gallery-item img {
   padding-top: 1em;
 }
 
+.front-content-block-message p {
+  font-size: 1.25em;
+  text-align: center;
+}
+
 .static-front .entry-content h2 {
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 2.85em;
@@ -1727,16 +1732,6 @@ article .gallery .gallery-item img {
   padding-top: 1em;
 }
 
-.front-image-links p {
-  font-size: 1.25em;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.front-image-links p:first-of-type {
-  margin: 0;
-}
-
 .front-image-links ul {
   display: -ms-grid;
   display: grid;
@@ -1773,7 +1768,7 @@ article .gallery .gallery-item img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.3);
   -webkit-transition: background .15s;
   transition: background .15s;
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
@@ -1792,15 +1787,16 @@ article .gallery .gallery-item img {
 }
 
 .front-image-links figcaption:hover {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.front-image-links a {
+  color: #ffffff;
+  text-shadow: 0.05em 0.05em 0.075em rgba(0, 0, 0, 0.85);
 }
 
 .front-image-links img {
   display: block;
-}
-
-.entry-content .front-image-links a {
-  color: #ffffff !important;
 }
 
 /**
@@ -2036,6 +2032,10 @@ article .gallery .gallery-item img {
  * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
  * stacks are used in @supports( font-variation-settings ) queries.
  */
+.flexmls_connect__sr_divider {
+  background: none;
+}
+
 .flexmls_connect__page_content .flexmls_connect__sr_result .flexmls_connect__sr_idx {
   display: none;
 }
@@ -2144,7 +2144,9 @@ article .gallery .gallery-item img {
           order: 3;
 }
 
+.flexmls_connect__ld_price,
 .flexmls_connect__sr_price {
+  float: none;
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 1.875em;
   font-weight: bold;
@@ -2154,6 +2156,7 @@ article .gallery .gallery-item img {
 }
 
 @supports (font-variation-settings: normal) {
+  .flexmls_connect__ld_price,
   .flexmls_connect__sr_price {
     font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   }
@@ -2173,6 +2176,10 @@ article .gallery .gallery-item img {
   text-decoration: none;
 }
 
+.flexmls_connect__ld_button_group button + button {
+  margin-left: 0.25rem;
+}
+
 .flexmls_connect__idx_disclosure_text {
   margin-top: 1em;
 }
@@ -2184,4 +2191,141 @@ article .gallery .gallery-item img {
 
 .flexmls_connect__idx_disclosure_text.flexmls_connect__disclaimer_text:before {
   content: '* ';
+}
+
+.flexmls_connect__button,
+.flexmls_connect__page_content button,
+.flexmls_connect__sr_detail button {
+  border-radius: 0px;
+  background-clip: unset;
+  color: unset;
+  padding: unset;
+  font-size: unset;
+  white-space: nowrap;
+  margin: unset;
+  vertical-align: middle;
+  display: inline-block;
+  width: auto;
+  padding: 0.5em;
+  cursor: pointer;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.25em;
+  font-weight: normal;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  color: #344a5f;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+
+@supports (font-variation-settings: normal) {
+  .flexmls_connect__button,
+  .flexmls_connect__page_content button,
+  .flexmls_connect__sr_detail button {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
+}
+
+.flexmls_connect__button:hover, .flexmls_connect__button:focus,
+.flexmls_connect__page_content button:hover,
+.flexmls_connect__page_content button:focus,
+.flexmls_connect__sr_detail button:hover,
+.flexmls_connect__sr_detail button:focus {
+  background-color: #f8ce30;
+  border-color: #555555;
+  color: #333333;
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__tab_div {
+  border: none;
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__tab.active {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__tab.active:focus {
+  border-radius: 3px;
+  clip: auto !important;
+  -webkit-clip-path: none;
+  clip-path: none;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__detail_header,
+.flexmls_connect__ld_property_detail {
+  padding: 0.5rem 1rem;
+}
+
+.flexmls_connect__photo_container,
+.flexmls_connect__sr_detail .flexmls_connect__filmstrip {
+  width: 100%;
+}
+
+.flexmls_connect__photo_container img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__detail_header {
+  margin-top: 0.5em;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  font-variant: small-caps;
+  font-variant-caps: small-caps;
+  display: block;
+  background-color: unset;
+  color: #2c3e50;
+}
+
+@supports (font-variation-settings: normal) {
+  .flexmls_connect__sr_detail .flexmls_connect__detail_header {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+    font-size: 1.625em;
+    letter-spacing: 0.035em;
+  }
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__filmstrip {
+  height: auto;
+  white-space: nowrap;
+}
+
+.flexmls_connect__sr_detail .flexmls_connect__filmstrip img {
+  display: inline-block;
+  border-color: #cccccc;
+  height: auto;
+  margin: 0;
+  width: 100%;
+  max-width: 80px;
 }

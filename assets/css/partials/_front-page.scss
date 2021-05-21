@@ -168,6 +168,11 @@
 	}
 }
 
+.front-content-block-message p {
+	font-size: 1.25em;
+	text-align: center;
+}
+
 .static-front .entry-content h2 {
 	font-family: $serif;
 	font-size: 2.85em;
@@ -308,16 +313,6 @@
 	padding-top: 1em;
 }
 
-.front-image-links p {
-	font-size: 1.25em;
-	line-height: 1.6;
-	text-align: center;
-}
-
-.front-image-links p:first-of-type {
-	margin: 0;
-}
-
 .front-image-links ul {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
@@ -331,44 +326,48 @@
 }
 }
 
-.front-image-links figure {
-	position: relative;
-	overflow: hidden;
-}
+.front-image-links {
 
-.front-image-links figcaption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 1rem;
-	background: rgba( $color: $black, $alpha: 0.35 );
-	transition: background .15s;
-	font-family: $serif;
-	font-size: 1.5em;
-	font-weight: normal;
-	font-weight: 500;
-	font-style: italic;
-	text-align: center;
-	letter-spacing: 0.03em;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
+	figure {
+		position: relative;
+		overflow: hidden;
 	}
-}
 
-.front-image-links figcaption:hover {
-	background: rgba( $color: $black, $alpha: 0.6 );
-}
+	figcaption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+		background: rgba( $color: $black, $alpha: 0.3 );
+		transition: background .15s;
+		font-family: $serif;
+		font-size: 1.5em;
+		font-weight: normal;
+		font-weight: 500;
+		font-style: italic;
+		text-align: center;
+		letter-spacing: 0.03em;
 
-.front-image-links img {
-	display: block;
-}
+		@supports ( font-variation-settings: normal ) {
+			font-family: $variable_serif;
+		}
 
-.entry-content .front-image-links a {
-	color: $white !important;
+		&:hover {
+			background: rgba( $color: $black, $alpha: 0.5 );
+		}
+	}
+
+	a {
+		color: $white;
+		text-shadow: 0.05em 0.05em 0.075em rgba( $color: $black, $alpha: 0.85 );
+	}
+
+	img {
+		display: block;
+	}
 }

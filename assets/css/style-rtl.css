@@ -131,6 +131,11 @@ figure.alignleft {
   padding-right: 0.5em;
 }
 
+.flexmls_connect__ld_button_group button + button {
+  margin-left: unset;
+  margin-right: 0.25rem;
+}
+
 #secondary ul,
 #secondary ol {
   padding-left: unset;

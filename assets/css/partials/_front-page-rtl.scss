@@ -18,3 +18,8 @@
 		}
 	}
 }
+
+.flexmls_connect__ld_button_group button + button {
+	margin-left: unset;
+	margin-right: 0.25rem;
+}
