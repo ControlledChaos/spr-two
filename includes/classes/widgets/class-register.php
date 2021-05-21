@@ -46,9 +46,9 @@ class Register {
 
 		// Sidebar position.
 		if ( is_rtl() ) {
-			$position = __( 'left', 'spr-two' );
-		} else {
 			$position = __( 'right', 'spr-two' );
+		} else {
+			$position = __( 'left', 'spr-two' );
 		}
 
 		// Register sidebar widget area.
@@ -57,6 +57,20 @@ class Register {
 			'id'            => 'sidebar-default',
 			'description'   => sprintf(
 				__( 'Displays to the %s of the main content.', 'spr-two' ),
+				$position
+			),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		] );
+
+		// Register front page sidebar widget area.
+		register_sidebar( [
+			'name'          => __( 'Front Page Sidebar', 'spr-two' ),
+			'id'            => 'sidebar-front-section',
+			'description'   => sprintf(
+				__( 'Displays to the %s of shortcode content, such as listings from the MLS plugin.', 'spr-two' ),
 				$position
 			),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',

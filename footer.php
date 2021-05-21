@@ -102,7 +102,37 @@ jQuery(document).ready( function($) {
 	});
 });
 </script>
+
+<script>
+// Add class to header wrapper on scroll.
+jQuery(document).ready( function($) {
+	$(window).scroll( function(){
+
+		header_height = $( '.site-header-wrap' ).outerHeight();
+
+		if ( $(this).scrollTop() > header_height ) {
+			$( '.site-header-wrap' ).addClass( 'stuck' );
+		} else {
+			$( '.site-header-wrap' ).removeClass( 'stuck' );
+		}
+	});
+});
+</script>
+
+<script>
+jQuery(document).ready( function($) {
+	$( '#secondary' ).stick_in_parent({
+		offset_top   : 70,
+		recalc_every : 1
+	});
+});
+</script>
+
 <style>
+#secondary.stuck {
+	position: fixed;
+	top: 120px;
+}
 #back-to-top {
 	display: none;
 	position: fixed;

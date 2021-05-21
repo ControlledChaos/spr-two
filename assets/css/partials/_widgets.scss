@@ -2,15 +2,43 @@
 /// Sidebar & widget styles
 ///
 
-#secondary ul,
-#secondary ol {
-	padding-left: 1em;
+#secondary {
+	padding-top: 2rem;
+
+	.widget {
+		margin: 0 0 1.5em;
+
+		& select {
+			max-width: 100%;
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin-top: 0.5em;
+
+		li {
+			line-height: 1.325;
+
+			&:not( :first-of-type ) {
+				margin-top: 0.625em;
+			}
+		}
+	}
 }
 
-.widget {
-	margin: 0 0 1.5em;
+@media screen and ( max-width: 768px ) {
 
-	& select {
-		max-width: 100%;
+	#secondary {
+		display: grid;
+		grid-gap: 0.5em 0.5em;
+		grid-template-columns: repeat( 3, 1fr );
+	}
+}
+
+@media screen and ( max-width: 640px ) {
+
+	#secondary {
+		grid-template-columns: repeat( 2, 1fr );
 	}
 }

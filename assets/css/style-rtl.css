@@ -3,14 +3,20 @@ body {
   unicode-bidi: embed;
 }
 
-body:not(.no-sidebar) .site-content .content-area {
-  margin-right: unset;
-  margin-left: 2em;
+body:not(.no-sidebar) .site-content .content-area,
+body:not(.no-sidebar) .site-content .shortcode-section-content,
+body:not(.no-sidebar) .shortcode-section .content-area,
+body:not(.no-sidebar) .shortcode-section .shortcode-section-content {
+  margin-left: unset;
+  margin-right: 2em;
 }
 
 @media screen and (max-width: 768px) {
-  body:not(.no-sidebar) .site-content .content-area {
-    margin-left: unset;
+  body:not(.no-sidebar) .site-content .content-area,
+  body:not(.no-sidebar) .site-content .shortcode-section-content,
+  body:not(.no-sidebar) .shortcode-section .content-area,
+  body:not(.no-sidebar) .shortcode-section .shortcode-section-content {
+    margin-right: unset;
   }
 }
 

@@ -3,10 +3,14 @@
 ///
 
 body:not( .no-sidebar ) {
-	.site-content {
-		.content-area {
-			margin-right: unset;
-			margin-left: 2em;
+
+	.site-content,
+	.shortcode-section {
+
+		.content-area,
+		.shortcode-section-content {
+			margin-left: unset;
+			margin-right: 2em;
 		}
 	}
 }
@@ -14,9 +18,13 @@ body:not( .no-sidebar ) {
 @media screen and ( max-width: 768px ) {
 
 	body:not( .no-sidebar ) {
-		.site-content {
-			.content-area {
-				margin-left: unset;
+
+		.site-content,
+		.shortcode-section {
+
+			.content-area,
+			.shortcode-section-content {
+				margin-right: unset;
 			}
 		}
 	}

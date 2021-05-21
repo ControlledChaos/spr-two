@@ -157,18 +157,25 @@ if ( $links_heading ) {
 				</section>
 
 				<?php elseif ( get_row_layout() == 'spr_front_content_shortcode' ) : ?>
-				<section id="<?php echo $layout; ?>" class="front-content-section front-shortcode-content">
+				<section id="<?php echo $layout; ?>" class="-content-section front-shortcode-content">
 
 					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
 
-					<div class="front-content-block-message">
-						<?php the_sub_field( 'spr_front_content_message' ); ?>
-					</div>
+					<div class="shortcode-section">
+						<div class="shortcode-section-content">
+							<div class="front-content-block-message">
+								<?php the_sub_field( 'spr_front_content_message' ); ?>
+							</div>
 
-					<?php
-					$code = get_sub_field( 'spr_front_content_shortcode_code' );
-					echo do_shortcode( $code );
-					?>
+							<?php
+							$code = get_sub_field( 'spr_front_content_shortcode_code' );
+							echo do_shortcode( $code );
+							?>
+						</div>
+						<?php if ( is_active_sidebar( 'sidebar-front-section' ) ) {
+							 get_sidebar( 'front-section' );
+						} ?>
+					</div>
 				</section>
 
 				<?php elseif ( get_row_layout() == 'spr_front_content_properties' ) : ?>
