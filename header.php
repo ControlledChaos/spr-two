@@ -37,22 +37,6 @@ do_action( 'before_html' ); ?>
 
 <?php Front\tags()->head(); ?>
 
-<script>
-// Add class to header wrapper on scroll.
-jQuery(document).ready( function($) {
-	$(window).scroll( function(){
-
-		header_height = $( '.site-header-wrap' ).outerHeight();
-
-		if ( $(this).scrollTop() > header_height ) {
-			$( '.site-header-wrap' ).addClass( 'stuck' );
-		} else {
-			$( '.site-header-wrap' ).removeClass( 'stuck' );
-		}
-	});
-});
-</script>
-
 <body <?php body_class(); ?>>
 
 <?php
