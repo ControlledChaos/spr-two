@@ -115,7 +115,6 @@ class Setup {
 				'thumbnail_url' => '%s/assets/images/sequoia-trunk.jpg',
 				'description'   => __( 'Sequoia Tree Trunk', 'spr-two' ),
 			],
-			/*
 			'pacific_waves' => [
 				'url'           => '%s/assets/images/pacific-waves.jpg',
 				'thumbnail_url' => '%s/assets/images/pacific-waves.jpg',
@@ -126,12 +125,13 @@ class Setup {
 				'thumbnail_url' => '%s/assets/images/pacific-rocky-shore.jpg',
 				'description'   => __( 'Kaweah River', 'spr-two' ),
 			],
-			*/
+			/*
 			'moro_rock_snow' => [
 				'url'           => '%s/assets/images/moro-rock-snow.jpg',
 				'thumbnail_url' => '%s/assets/images/moro-rock-snow.jpg',
 				'description'   => __( 'Moro Rock in Snow', 'spr-two' ),
-			]
+			],
+			*/
 		] );
 
 		add_theme_support( 'custom-header', apply_filters( 'sprt_custom_header_args', [
@@ -233,8 +233,8 @@ class Setup {
 
 		// Adds a class of no-sidebar when there is no default sidebar present.
 		if (
-			! is_active_sidebar( 'sidebar-default' ) ||
-			! is_active_sidebar( 'sidebar-front-section' ) ||
+			! is_active_sidebar( 'default' ) ||
+			! is_active_sidebar( 'front-section' ) ||
 			is_page_template( [ 'page-templates/no-sidebar.php' ] )
 		) {
 			$classes[] .= 'no-sidebar';

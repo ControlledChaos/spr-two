@@ -179,8 +179,15 @@ if ( $links_heading ) {
 							echo do_shortcode( $code );
 							?>
 						</div>
-						<?php if ( is_active_sidebar( 'sidebar-front-section' ) ) {
-							 get_sidebar( 'front-section' );
+						<?php
+						$sidebar = get_sub_field( 'spr_front_content_shortcode_sidebar' );
+						if ( $sidebar ) {
+							$sidebar = $sidebar;
+						} else {
+							$sidebar = 'front-section';
+						}
+						if ( is_active_sidebar( $sidebar ) ) {
+							 get_sidebar( $sidebar );
 						} ?>
 					</div>
 				</section>

@@ -18,9 +18,9 @@ use SPR_Two\Classes\Front as Front;
 	<aside id="secondary" class="widget-area">
 
 		<?php
-			if ( is_active_sidebar( 'sidebar-default' ) ) :
+			if ( is_active_sidebar( 'default' ) ) :
 
-			dynamic_sidebar( 'sidebar-default' );
+			dynamic_sidebar( 'default' );
 
 			else : ?>
 

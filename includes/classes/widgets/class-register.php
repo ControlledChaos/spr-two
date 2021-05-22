@@ -54,7 +54,7 @@ class Register {
 		// Register sidebar widget area.
 		register_sidebar( [
 			'name'          => __( 'Default Sidebar', 'spr-two' ),
-			'id'            => 'sidebar-default',
+			'id'            => 'default',
 			'description'   => sprintf(
 				__( 'Displays to the %s of the main content.', 'spr-two' ),
 				$position
@@ -68,7 +68,7 @@ class Register {
 		// Register front page sidebar widget area.
 		register_sidebar( [
 			'name'          => __( 'Front Page Sidebar', 'spr-two' ),
-			'id'            => 'sidebar-front-section',
+			'id'            => 'front-section',
 			'description'   => sprintf(
 				__( 'Displays to the %s of shortcode content, such as listings from the MLS plugin.', 'spr-two' ),
 				$position
