@@ -5,10 +5,10 @@
 .main-navigation {
 	clear: both;
 	display: block;
+	width: 100%;
 	max-width: 100%;
 	margin: 0;
-	padding: 0;
-	padding-left: 2em;
+	padding: 0 2rem;
 	font-family: $serif;
 	font-variant: small-caps;
 	font-variant-caps: small-caps;
@@ -16,6 +16,10 @@
 	@supports ( font-variation-settings: normal ) {
 		font-family: $variable_serif;
 		font-size: 1.35rem;
+	}
+
+	div:first-of-type {
+		text-align: center;
 	}
 
 	ul {
@@ -26,16 +30,12 @@
 		background-color: inherit;
 
 		ul {
-			position: absolute;
-			top: 100%;
-			left: -999em;
+			position: static;
 			z-index: 99999;
 			width: 100%;
 			min-width: 240px;
-			padding-top: 1em;
+			padding-left: 1rem;
 			background-color: $white;
-			-webkit-box-shadow: 3px 3px 5px rgba( $color: $black, $alpha: 0.5 );
-					box-shadow: 3px 3px 5px rgba( $color: $black, $alpha: 0.5 );
 
 			ul {
 				left: -999em;
@@ -49,17 +49,8 @@
 			}
 
 			li {
-				line-height: 1.25em;
-
 				a {
 					width: 100%;
-					padding: 0.25em 0.75em;
-
-					&:hover,
-					&:focus {
-						background: $bg_pale;
-						color: inherit;
-					}
 				}
 			}
 		}
@@ -82,12 +73,10 @@
 	}
 }
 
-// Mobile menu.
 .menu-toggle {
-	font-size: 1.25em;
+	display: inline-block;
 }
 
-.menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
@@ -140,6 +129,12 @@
 	}
 
 	.main-navigation {
+		width: auto;
+		padding: 0 0 0 2rem;
+
+		div:first-of-type {
+			text-align: unset;
+		}
 
 		ul {
 			display: block;
@@ -155,11 +150,33 @@
 			}
 
 			ul {
+				position: absolute;
+				top: 100%;
+				left: -999em;
 				display: block;
+				padding-top: 1em;
+				padding-left: unset;
+				-webkit-box-shadow: 3px 3px 5px rgba( $color: $black, $alpha: 0.5 );
+				box-shadow: 3px 3px 5px rgba( $color: $black, $alpha: 0.5 );
 
 				li {
 					&:not( :last-of-type ) {
 						margin-right: 0;
+					}
+				}
+
+				li {
+					line-height: 1.25em;
+
+					a {
+						width: 100%;
+						padding: 0.25em 0.75em;
+
+						&:hover,
+						&:focus {
+							background: $bg_pale;
+							color: inherit;
+						}
 					}
 				}
 			}
