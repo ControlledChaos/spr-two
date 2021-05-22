@@ -95,11 +95,43 @@ class Setup {
 		 * Custom header
 		 */
 		$default_image = register_default_headers( [
-			'default_image' => [
-				'url'           => '%s/assets/images/default-header.jpg',
-				'thumbnail_url' => '%s/assets/images/default-header.jpg',
-				'description'   => __( 'Default Header Image', 'spr-two' ),
+			'kaweah_country' => [
+				'url'           => '%s/assets/images/kaweah-country.jpg',
+				'thumbnail_url' => '%s/assets/images/kaweah-country.jpg',
+				'description'   => __( 'Kaweah Country', 'spr-two' ),
 			],
+			'river_scene' => [
+				'url'           => '%s/assets/images/kaweah-river-scene.jpg',
+				'thumbnail_url' => '%s/assets/images/kaweah-river-scene.jpg',
+				'description'   => __( 'Kaweah River', 'spr-two' ),
+			],
+			'sequoia_trees' => [
+				'url'           => '%s/assets/images/sequoia-trees.jpg',
+				'thumbnail_url' => '%s/assets/images/sequoia-trees.jpg',
+				'description'   => __( 'Sequoia Forest', 'spr-two' ),
+			],
+			'sequoia_trunk' => [
+				'url'           => '%s/assets/images/sequoia-trunk.jpg',
+				'thumbnail_url' => '%s/assets/images/sequoia-trunk.jpg',
+				'description'   => __( 'Sequoia Tree Trunk', 'spr-two' ),
+			],
+			/*
+			'pacific_waves' => [
+				'url'           => '%s/assets/images/pacific-waves.jpg',
+				'thumbnail_url' => '%s/assets/images/pacific-waves.jpg',
+				'description'   => __( 'Kaweah River', 'spr-two' ),
+			],
+			'pacific_rocky_shore' => [
+				'url'           => '%s/assets/images/pacific-rocky-shore.jpg',
+				'thumbnail_url' => '%s/assets/images/pacific-rocky-shore.jpg',
+				'description'   => __( 'Kaweah River', 'spr-two' ),
+			],
+			*/
+			'moro_rock_snow' => [
+				'url'           => '%s/assets/images/moro-rock-snow.jpg',
+				'thumbnail_url' => '%s/assets/images/moro-rock-snow.jpg',
+				'description'   => __( 'Moro Rock in Snow', 'spr-two' ),
+			]
 		] );
 
 		add_theme_support( 'custom-header', apply_filters( 'sprt_custom_header_args', [
