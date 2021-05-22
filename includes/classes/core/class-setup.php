@@ -176,7 +176,7 @@ class Setup {
 		}
 
 		// Embed sizes.
-		update_option( 'embed_size_w', 1280 );
+		update_option( 'embed_size_w', 1440 );
 		update_option( 'embed_size_h', 810 );
 
 		/**
