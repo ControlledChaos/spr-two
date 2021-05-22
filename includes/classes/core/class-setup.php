@@ -139,6 +139,7 @@ class Setup {
 			'height'             => 878,
 			'flex-height'        => true,
 			'default-image'      => $default_image,
+			'random-default'     => true,
 			'video'              => false,
 			'wp-head-callback'   => [ $this, 'header_style' ]
 		] ) );
@@ -168,7 +169,7 @@ class Setup {
 		 *
 		 * @since 1.0.0
 		 */
-		$sprt_content_width = apply_filters( 'sprt_content_width', 1280 );
+		$sprt_content_width = apply_filters( 'sprt_content_width', 1440 );
 
 		if ( ! isset( $content_width ) ) {
 			$content_width = $sprt_content_width;
@@ -176,7 +177,7 @@ class Setup {
 
 		// Embed sizes.
 		update_option( 'embed_size_w', 1280 );
-		update_option( 'embed_size_h', 720 );
+		update_option( 'embed_size_h', 810 );
 
 		/**
 		 * Register theme menus.
