@@ -102,6 +102,9 @@ class Theme_ACF extends Plugin {
 
 		// Hide/show the ACF admin menu item.
 		add_filter( 'acf/settings/show_admin', [ $this, 'acf_settings_show_admin' ] );
+
+		// Sidebar selector field
+		add_action( 'acf/include_field_types', [ $this, 'include_field_types_sidebar_selector' ] );
 	}
 
 	/**
@@ -203,5 +206,17 @@ class Theme_ACF extends Plugin {
 
 		// Return the suffix.
 		return $suffix;
+	}
+
+	/**
+	 * Sidebar selector field
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @param  $version integer
+	 * @return void
+	 */
+	public function include_field_types_sidebar_selector( $version ) {
+		include_once( SPRT_PATH . 'includes/classes/vendor/class-sidebar_selector.php' );
 	}
 }
