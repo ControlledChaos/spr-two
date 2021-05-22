@@ -212,6 +212,15 @@ class Setup {
 
 		$classes[] = '';
 
+		// Random theme color class.
+		$random = [
+			'spr-blue',
+			'spr-green',
+			'spr-red',
+			'spr-yellow'
+		];
+		$classes[] .= $random[ array_rand( $random ) ];
+
 		// Adds a class of hfeed to non-singular pages.
 		if ( ! is_singular() ) {
 			$classes[] .= 'hfeed';
