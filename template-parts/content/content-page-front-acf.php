@@ -33,19 +33,26 @@ if ( $hero_image ) {
 
 	// URL of the hero image from the field.
 	$hero_src = $hero_image['sizes'][ $hero_size ];
+	$hero_alt = $hero_image['alt'];
+
+// Use the header image from the customizer.
+} elseif ( has_header_image() ) {
+	$hero_src = get_header_image();
+	$hero_alt = Front\tags()->get_header_image_alt();
 
 // Default hero image, located in assets/images.
 } else {
 
 	// URL of the default hero image, located in assets/images.
 	$hero_src = get_theme_file_uri( '/assets/images/default-header.jpg' );
+	$hero_alt = __( 'Panoramic view of Three Rivers, California, from Lake Kaweah to the Sierra Nevada Mountains', 'spr-two' );
 }
 
 // Hero image markup.
 $hero_image = sprintf(
 	'<div id="wp-custom-header" class="wp-custom-header default-builtin-header"><img src="%s" alt="%s"></div>',
 	$hero_src,
-	__( 'Panoramic view of Three Rivers, California, from Lake Kaweah to the Sierra Nevada Mountains', 'spr-two' )
+	$hero_alt
 );
 
 // Hero image overlay from the field.
