@@ -535,7 +535,7 @@ a:hover, a.hover, a:focus, a.focus {
   max-width: 1280px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 2em;
+  padding: 0 2rem 2rem;
   background-color: #ffffff;
 }
 
@@ -2012,7 +2012,6 @@ article .gallery .gallery-item img {
 
 .site-footer {
   clear: both;
-  margin-top: 3rem;
   padding: 1rem 2rem;
   background: #2c3e50;
   background: linear-gradient(to top, #23313f 0px, #23313f 3.25rem, #2c3e50 3.25rem, #2c3e50 100%);
