@@ -378,7 +378,7 @@ h3 {
 }
 
 a {
-  color: #2c3e50;
+  color: #344a5f;
   text-decoration: none;
   transition: all .15s;
   -webkit-transition: all .15s;
@@ -388,11 +388,11 @@ a {
 }
 
 a:visited {
-  color: #2c3e50;
+  color: #344a5f;
 }
 
 a:hover, a.hover, a:focus, a.focus {
-  color: #507192;
+  color: #587da1;
 }
 
 .screen-reader-text {
@@ -515,7 +515,6 @@ a:hover, a.hover, a:focus, a.focus {
 
 .site {
   position: relative;
-  background-color: #eeeeee;
 }
 
 .custom-background .site {
@@ -532,11 +531,13 @@ a:hover, a.hover, a:focus, a.focus {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
   padding: 0 2rem 2rem;
   background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 300px #c7cfd7;
+          box-shadow: 0px 0px 300px #c7cfd7;
 }
 
 .site-content .content-area {
@@ -553,7 +554,7 @@ a:hover, a.hover, a:focus, a.focus {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
   background-color: inherit;
@@ -1010,14 +1011,11 @@ article .gallery .gallery-item img {
   z-index: 9999;
   width: 100vw;
   padding: 1rem 2rem;
-  background-color: #ffffff;
-  border-bottom: solid 1px #cccccc;
+  background-color: #32475c;
 }
 
 .site-header-wrap.stuck {
   padding: 0.5em 2em;
-  -webkit-box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
-          box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
 }
 
 .site-header-wrap.stuck .site-branding img {
@@ -1043,13 +1041,8 @@ article .gallery .gallery-item img {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-}
-
-.static-front .site-header-wrap {
-  -webkit-box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
-          box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
 }
 
 .logged-in.admin-bar .site-header-wrap {
@@ -1063,6 +1056,7 @@ article .gallery .gallery-item img {
 }
 
 .site-header {
+  width: 100%;
   min-width: 460px;
 }
 
@@ -1073,8 +1067,11 @@ article .gallery .gallery-item img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 2em;
 }
@@ -1088,9 +1085,7 @@ article .gallery .gallery-item img {
   font-style: italic;
   font-variant: unset;
   font-variant-caps: unset;
-  color: #2c3e50;
-  -webkit-transform: translateX(-34px);
-          transform: translateX(-34px);
+  color: #ffffff;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -1163,7 +1158,18 @@ article .gallery .gallery-item img {
 }
 
 .site-header-contact a:hover {
-  color: #507192;
+  color: #587da1;
+}
+
+@media screen and (min-width: 37.5em) {
+  .site-header {
+    width: auto;
+  }
+  .site-branding {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .main-navigation {
@@ -1172,10 +1178,12 @@ article .gallery .gallery-item img {
   width: 100%;
   max-width: 100%;
   margin: 0;
+  margin-top: 1rem;
   padding: 0 2rem;
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-variant: small-caps;
   font-variant-caps: small-caps;
+  color: #ffffff;
 }
 
 @supports (font-variation-settings: normal) {
@@ -1203,7 +1211,6 @@ article .gallery .gallery-item img {
   width: 100%;
   min-width: 240px;
   padding-left: 1rem;
-  background-color: #ffffff;
 }
 
 .main-navigation ul ul ul {
@@ -1235,6 +1242,11 @@ article .gallery .gallery-item img {
   display: inline-block;
   line-height: 1.1;
   text-decoration: none;
+  color: #ffffff;
+}
+
+.main-navigation a:hover, .main-navigation a.hover, .main-navigation a:focus, .main-navigation a.focus {
+  color: #b6c7d7;
 }
 
 .menu-toggle {
@@ -1281,6 +1293,7 @@ article .gallery .gallery-item img {
   }
   .main-navigation {
     width: auto;
+    margin-top: 0;
     padding: 0 0 0 2rem;
   }
   .main-navigation div:first-of-type {
@@ -1304,6 +1317,7 @@ article .gallery .gallery-item img {
     display: block;
     padding-top: 1em;
     padding-left: unset;
+    background-color: #293a4b;
     -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   }
@@ -1318,7 +1332,7 @@ article .gallery .gallery-item img {
     padding: 0.25em 0.75em;
   }
   .main-navigation ul ul li a:hover, .main-navigation ul ul li a:focus {
-    background: #e9e9e9;
+    background: #3b546d;
     color: inherit;
   }
 }
@@ -1945,6 +1959,7 @@ article .gallery .gallery-item img {
 
 #secondary {
   padding-top: 2rem;
+  color: #333333;
 }
 
 #secondary .widget {
@@ -1961,11 +1976,21 @@ article .gallery .gallery-item img {
 }
 
 #secondary ul li {
-  line-height: 1.325;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 #secondary ul li:not(:first-of-type) {
-  margin-top: 0.625em;
+  margin-top: 0.625rem;
+}
+
+#secondary ul a {
+  color: #344a5f;
+}
+
+#secondary ul a:hover, #secondary ul a.hover, #secondary ul a:focus, #secondary ul a.focus {
+  color: #587da1;
 }
 
 @media screen and (max-width: 768px) {
@@ -2005,12 +2030,14 @@ article .gallery .gallery-item img {
  */
 .footer-content {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 2em;
 }
 
 .site-footer {
+  position: relative;
+  z-index: 100;
   clear: both;
   padding: 1rem 2rem;
   background: #2c3e50;
@@ -2259,6 +2286,15 @@ article .gallery .gallery-item img {
   font-size: 1.2rem;
 }
 
+.flexmls_connect__sr_result img {
+  padding: 0;
+  border-color: #cccccc;
+}
+
+.flexmls_connect__sr_result .flexmls_connect__sr_listing_facts {
+  border: none;
+}
+
 .flexmls_connect__ld_button_group button + button {
   margin-left: 0.25rem;
 }
@@ -2505,4 +2541,25 @@ article .gallery .gallery-item img {
 
 .flexmls_connect__idx_disclosure_text p.flexmls_connect__idx_disclosure_text_disclaimer {
   font-style: italic;
+}
+
+.flexmls_connect__sr_openhouse {
+  margin: 0 0.625rem;
+  color: #2c3e50;
+  font-weight: bold;
+  font-weight: 600;
+}
+
+.flexmls_connect__sr_openhouse em {
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #ee6600;
+}
+
+@supports (font-variation-settings: normal) {
+  .flexmls_connect__sr_openhouse em {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+    font-size: 1.625em;
+  }
 }

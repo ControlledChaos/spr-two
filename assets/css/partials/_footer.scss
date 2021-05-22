@@ -7,12 +7,14 @@
 
 .footer-content {
 	width: 100%;
-	max-width: 1280px;
+	max-width: 1440px;
 	margin: 0 auto;
 	padding: 0 2em;
 }
 
 .site-footer {
+	position: relative;
+	z-index: 100;
 	clear: both;
 	padding: 1rem 2rem;
 	background: #2c3e50;

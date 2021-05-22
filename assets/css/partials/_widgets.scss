@@ -4,6 +4,7 @@
 
 #secondary {
 	padding-top: 2rem;
+	color: $sidebar_text_color;
 
 	.widget {
 		margin: 0 0 1.5em;
@@ -18,10 +19,23 @@
 		margin-top: 0.5em;
 
 		li {
-			line-height: 1.325;
+			font-size: 0.9375rem;
+			font-weight: 600;
+			line-height: 1.25;
 
 			&:not( :first-of-type ) {
-				margin-top: 0.625em;
+				margin-top: 0.625rem;
+			}
+		}
+
+		a {
+			color: $sidebar_link_color;
+
+			&:hover,
+			&.hover,
+			&:focus,
+			&.focus {
+				color: $sidebar_link_action_color;
 			}
 		}
 	}

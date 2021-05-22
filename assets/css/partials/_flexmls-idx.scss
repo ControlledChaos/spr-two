@@ -179,6 +179,15 @@
 			font-size: 1.2rem;
 		}
 	}
+
+	img {
+		padding: 0;
+		border-color: $box_border_color;
+	}
+
+	.flexmls_connect__sr_listing_facts {
+		border: none;
+	}
 }
 
 .flexmls_connect__ld_button_group button + button {
@@ -422,6 +431,25 @@
 
 		&.flexmls_connect__idx_disclosure_text_disclaimer {
 			font-style: italic;
+		}
+	}
+}
+
+.flexmls_connect__sr_openhouse {
+	margin: 0 0.625rem;
+	color: $text_dark;
+	font-weight: bold;
+	font-weight: 600;
+
+	em {
+		font-family: $serif;
+		font-weight: 500;
+		font-size: 1.5em;
+		color: $notify;
+
+		@supports ( font-variation-settings: normal ) {
+			font-family: $variable_serif;
+			font-size: 1.625em;
 		}
 	}
 }

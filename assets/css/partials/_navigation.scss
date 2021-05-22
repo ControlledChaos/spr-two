@@ -8,10 +8,12 @@
 	width: 100%;
 	max-width: 100%;
 	margin: 0;
+	margin-top: 1rem;
 	padding: 0 2rem;
 	font-family: $serif;
 	font-variant: small-caps;
 	font-variant-caps: small-caps;
+	color: $nav_text_color;
 
 	@supports ( font-variation-settings: normal ) {
 		font-family: $variable_serif;
@@ -35,7 +37,6 @@
 			width: 100%;
 			min-width: 240px;
 			padding-left: 1rem;
-			background-color: $white;
 
 			ul {
 				left: -999em;
@@ -70,6 +71,14 @@
 		display: inline-block;
 		line-height: 1.1;
 		text-decoration: none;
+		color: $nav_text_color;
+
+		&:hover,
+		&.hover,
+		&:focus,
+		&.focus {
+			color: $nav_link_action_color;
+		}
 	}
 }
 
@@ -130,6 +139,7 @@
 
 	.main-navigation {
 		width: auto;
+		margin-top: 0;
 		padding: 0 0 0 2rem;
 
 		div:first-of-type {
@@ -156,6 +166,7 @@
 				display: block;
 				padding-top: 1em;
 				padding-left: unset;
+				background-color: $subnav_bg_color;
 				-webkit-box-shadow: 3px 3px 5px rgba( $color: $black, $alpha: 0.5 );
 				box-shadow: 3px 3px 5px rgba( $color: $black, $alpha: 0.5 );
 
@@ -174,7 +185,7 @@
 
 						&:hover,
 						&:focus {
-							background: $bg_pale;
+							background: $subnav_link_action_bg_color;
 							color: inherit;
 						}
 					}
