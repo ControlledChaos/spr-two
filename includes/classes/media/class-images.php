@@ -58,7 +58,7 @@ class Images {
 		update_option( 'large_crop', 1 );
 
 		// Set the post thumbnail size, 16:9 HD Video.
-		set_post_thumbnail_size( 1280, 720, [ 'center', 'center' ] );
+		set_post_thumbnail_size( 1440, 810, [ 'center', 'center' ] );
 
 		// Add wide image support for the block editor.
 		add_theme_support( 'align-wide' );
@@ -77,16 +77,16 @@ class Images {
 		add_image_size( 'x-large-thumbnail', 320, 320, true );
 
 		// 16:9 HD Video.
-		add_image_size( 'large-video', 1280, 720, true );
+		add_image_size( 'large-video', 1440, 810, true );
 		add_image_size( 'medium-video', 960, 540, true );
 		add_image_size( 'small-video', 640, 360, true );
-		add_image_size( 'wide-large', 1280, 720, true );
+		add_image_size( 'wide-large', 1440, 810, true );
 		add_image_size( 'wide-medium', 960, 540, true );
 		add_image_size( 'wide-small', 640, 360, true );
 
 		// 21:9 Cinemascope.
 		add_image_size( 'x-large-banner', 2048, 878, true );
-		add_image_size( 'large-banner', 1280, 549, true );
+		add_image_size( 'large-banner', 1440, 549, true );
 		add_image_size( 'medium-banner', 960, 411, true );
 		add_image_size( 'small-banner', 640, 274, true );
 	}
