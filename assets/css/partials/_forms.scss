@@ -74,7 +74,7 @@ input[type="image"] {
 	padding: 0.5em;
 	cursor: pointer;
 	font-family: $serif;
-	font-size: 1.25em;
+	font-size: 1.25rem;
 	font-weight: normal;
 	font-weight: 500;
 	font-style: italic;
@@ -101,21 +101,6 @@ input[type="image"] {
 		background-color: $button_action_background_color;
 		border-color: $button_action_border_color;
 		color: $button_action_text_color;
-	}
-
-	&.menu-toggle {
-		background: none;
-		border: none;
-		color: inherit;
-
-		svg {
-			width: 1rem;
-			height: 1rem;
-			position: relative;
-			top: 0.05em;
-			vertical-align: baseline;
-			fill: currentColor;
-		}
 	}
 }
 

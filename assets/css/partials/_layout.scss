@@ -7,6 +7,12 @@
 	background-color: $off_white;
 }
 
+.custom-background {
+	.site {
+		background-color: transparent;
+	}
+}
+
 .site-content {
 	position: relative;
 	display: flex;
