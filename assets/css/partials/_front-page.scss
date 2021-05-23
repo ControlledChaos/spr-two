@@ -153,6 +153,21 @@
 			}
 		}
 	}
+
+	.front-page-hero-scroll-content {
+		display: inline-block;
+		transition: all .15s;
+
+		svg {
+			height: 30px;
+			margin-top: 1em;
+			fill: $white;
+		}
+
+		&:hover {
+			transform: translateY( 0.35em );
+		}
+	}
 }
 
 .hero-logo {

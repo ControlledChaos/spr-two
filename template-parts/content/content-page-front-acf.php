@@ -95,6 +95,9 @@ if ( $links_heading ) {
 	$links_heading = __( 'Featured Services', 'spr-two' );
 }
 
+// Down arrow.
+$down_arrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M441.9 89.7L232.5 299.1c-4.7 4.7-12.3 4.7-17 0L6.1 89.7c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L224 233.6 405.1 52.9c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17zm0 143l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 393.6 42.9 212.9c-4.7-4.7-12.3-4.7-17 0L6.1 232.7c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"/></svg>';
+
 ?>
 
 <div class="front-page-hero">
@@ -114,7 +117,7 @@ if ( $links_heading ) {
 
 			<?php
 			$menu = get_field( 'spr_hero_menu' );
-			if ( $menu ) :
+			if ( $menu && has_nav_menu( $menu ) ) :
 			wp_nav_menu( [
 				'theme_location' => $menu,
 				'container'      => null,
@@ -122,12 +125,18 @@ if ( $links_heading ) {
 				'menu_class'     => 'hero-menu',
 				'fallback_cb'    => null,
 			] );
+			else :
+				echo sprintf(
+					'<a class="front-page-hero-scroll-content" href="#front-page-content"><span class="screen-reader-text">%s</span> %s</a>',
+					__( 'Scroll to content', 'spr-two' ),
+					$down_arrow
+				);
 			endif; ?>
 		</div>
 	</div>
 </div>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+<article id="front-page-content" <?php post_class(); ?> role="article">
 
 	<?php if ( ! $intro_content ) : ?>
 	<header class="entry-header">

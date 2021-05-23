@@ -1640,6 +1640,23 @@ article .gallery .gallery-item img {
   background-color: #ffffff;
 }
 
+.front-page-hero-content .front-page-hero-scroll-content {
+  display: inline-block;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+
+.front-page-hero-content .front-page-hero-scroll-content svg {
+  height: 30px;
+  margin-top: 1em;
+  fill: #ffffff;
+}
+
+.front-page-hero-content .front-page-hero-scroll-content:hover {
+  -webkit-transform: translateY(0.35em);
+          transform: translateY(0.35em);
+}
+
 .hero-logo {
   max-width: 280px;
   margin-bottom: 1em;
