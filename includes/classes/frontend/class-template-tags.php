@@ -466,7 +466,11 @@ class Template_Tags {
 
 		// Return an empty string if no alt could be found.
 		} else {
-			$alt = '';
+			$alt = sprintf(
+				'%s %s',
+				get_bloginfo( 'name' ),
+				__( 'cover image, undefined', 'spr-two' )
+			);
 		}
 
 		return $alt;
