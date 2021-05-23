@@ -105,6 +105,11 @@ class Setup {
 				'thumbnail_url' => '%s/assets/images/kaweah-river-scene.jpg',
 				'description'   => __( 'Kaweah River', 'spr-two' ),
 			],
+			'high_country_sunset' => [
+				'url'           => '%s/assets/images/sunset-from-high-country.jpg',
+				'thumbnail_url' => '%s/assets/images/sunset-from-high-country.jpg',
+				'description'   => __( 'Sunset View from the High Country', 'spr-two' ),
+			],
 			'sequoia_trees' => [
 				'url'           => '%s/assets/images/sequoia-trees.jpg',
 				'thumbnail_url' => '%s/assets/images/sequoia-trees.jpg',
@@ -115,6 +120,7 @@ class Setup {
 				'thumbnail_url' => '%s/assets/images/sequoia-trunk.jpg',
 				'description'   => __( 'Sequoia Tree Trunk', 'spr-two' ),
 			],
+			/*
 			'pacific_waves' => [
 				'url'           => '%s/assets/images/pacific-waves.jpg',
 				'thumbnail_url' => '%s/assets/images/pacific-waves.jpg',
@@ -125,7 +131,6 @@ class Setup {
 				'thumbnail_url' => '%s/assets/images/pacific-rocky-shore.jpg',
 				'description'   => __( 'Kaweah River', 'spr-two' ),
 			],
-			/*
 			'moro_rock_snow' => [
 				'url'           => '%s/assets/images/moro-rock-snow.jpg',
 				'thumbnail_url' => '%s/assets/images/moro-rock-snow.jpg',
