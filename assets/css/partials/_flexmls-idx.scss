@@ -65,10 +65,6 @@
 				border-radius: 0px;
 			}
 
-			&.map-view {
-				border-left: unset;
-			}
-
 			&.active,
 			&:hover {
 				background-color: $button_action_background_color;
@@ -451,5 +447,49 @@
 			font-family: $variable_serif;
 			font-size: 1.625em;
 		}
+	}
+}
+
+.flexmls_connect__sr_pagination {
+	margin-top: 1rem;
+
+	a,
+	span {
+		display: inline-block;
+		width: auto;
+		padding: 0.5em;
+		vertical-align: middle;
+		font-family: $serif;
+		font-size: 1.25rem;
+		font-weight: normal;
+		font-weight: 500;
+		font-style: italic;
+		text-decoration: none;
+		line-height: 1;
+		background-color: $button_background_color;
+		border: solid 1px $button_border_color;
+		color: $button_text_color;
+		-webkit-transition: all .15s;
+		transition: all .15s;
+
+		@supports ( font-variation-settings: normal ) {
+			font-family: $variable_serif;
+		}
+
+		&:hover,
+		&.hover,
+		&:focus,
+		&.focus {
+			background-color: $button_action_background_color;
+			border-color: $button_action_border_color;
+			color: $button_action_text_color;
+			text-decoration: none;
+		}
+	}
+
+	span {
+		background-color: $button_action_background_color;
+		border-color: $button_action_border_color;
+		color: $button_action_text_color;
 	}
 }

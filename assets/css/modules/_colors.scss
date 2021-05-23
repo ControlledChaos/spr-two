@@ -26,7 +26,7 @@ $success: $green !default;
 // Theme general colors: light mode (default).
 $primary_color: #344a5f !default;
 $secondary_color: #344a5f !default;
-$primary_accent_color: #344a5f !default;
+$primary_accent_color: $yellow !default;
 $secondary_accent_color: #344a5f !default;
 
 $body_bg: $white !default;
@@ -84,7 +84,7 @@ $form_placeholder_color_dark: lighten( $color: $form_background_color_dark, $amo
 $button_background_color: $white !default;
 $button_border_color: $box_border_color !default;
 $button_text_color: $text_medium !default;
-$button_action_background_color: $yellow !default;
+$button_action_background_color: $primary_accent_color !default;
 $button_action_border_color: $medium_gray !default;
 $button_action_text_color: $text_color !default;
 $button_disabled_background_color: $off_white !default;

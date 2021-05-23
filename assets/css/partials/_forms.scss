@@ -9,7 +9,7 @@ form * + * {
 fieldset {
 	margin-top: 1em;
 	padding: 1em 1.5em;
-	border: solid 1px $pale_gray;
+	border: solid 1px $form_border_color;
 }
 
 legend {
@@ -27,11 +27,11 @@ button,
 	max-width: 640px;
 	padding: 1rem;
 	font: inherit;
-	background: $white;
-	border: solid 1px $pale_gray;
+	background: $form_background_color;
+	border: solid 1px $form_border_color;
 
 	&:focus {
-		border-color: $light_gray;
+		border-color: $form_action_border_color;
 	}
 }
 
@@ -97,7 +97,9 @@ input[type="image"] {
 	}
 
 	&:hover,
-	&:focus {
+	&.hover,
+	&:focus,
+	&.focus {
 		background-color: $button_action_background_color;
 		border-color: $button_action_border_color;
 		color: $button_action_text_color;
@@ -144,16 +146,8 @@ option {}
 *:-moz-placeholder,
 *::-moz-placeholder,
 *:-ms-input-placeholder,
-*::-webkit-input-placeholder {
-	color: $light_gray !important;
-}
-
-*::-webkit-input-placeholder,
-*:-moz-placeholder,
-*::-moz-placeholder,
-*:-ms-input-placeholder,
 *::placeholder {
-	color: $light_gray !important;
+	color: $form_placeholder_color !important;
 }
 
 /* Search form */
@@ -190,12 +184,12 @@ h2 + .search-form {
 	textarea,
 	select,
 	button {
-		background: $dark_gray;
-		border-color: $medium_gray;
-		color: $white;
+		background: $form_background_color_dark;
+		border-color: $form_border_color_dark;
+		color: $form_text_color_dark;
 
 		&:focus {
-			border-color: $light_gray;
+			border-color: $form_action_text_color_dark;
 		}
 	}
 
@@ -205,11 +199,25 @@ h2 + .search-form {
 	input[type="button"],
 	input[type="reset"],
 	input[type="image"] {
+		background-color: $button_background_color_dark;
+		border-color: $button_border_color_dark;
+		color: $button_text_color_dark;
 
 		&:hover,
-		&:focus {
-			background: $medium_gray;
-			border-color: $light_gray;
+		&.hover,
+		&:focus,
+		&.focus {
+			background-color: $button_action_background_color_dark;
+			border-color: $button_action_border_color_dark;
+			color: $button_action_text_color_dark;
 		}
+	}
+
+	*::-webkit-input-placeholder,
+	*:-moz-placeholder,
+	*::-moz-placeholder,
+	*:-ms-input-placeholder,
+	*::-webkit-input-placeholder {
+		color: $form_placeholder_color_dark !important;
 	}
 }

@@ -661,7 +661,7 @@ button,
   max-width: 640px;
   padding: 1rem;
   font: inherit;
-  background: #ffffff;
+  background: inherit;
   border: solid 1px #cccccc;
 }
 
@@ -670,7 +670,7 @@ textarea:focus,
 select:focus,
 button:focus,
 .button:focus {
-  border-color: #888888;
+  border-color: #587da1;
 }
 
 label + input:not([type="checkbox"]):not([type="radio"]),
@@ -740,19 +740,31 @@ input[type="image"] svg {
   fill: currentColor;
 }
 
-button:hover, button:focus,
+button:hover, button.hover, button:focus, button.focus,
 .button:hover,
+.button.hover,
 .button:focus,
+.button.focus,
 button[type="submit"]:hover,
+button[type="submit"].hover,
 button[type="submit"]:focus,
+button[type="submit"].focus,
 input[type="submit"]:hover,
+input[type="submit"].hover,
 input[type="submit"]:focus,
+input[type="submit"].focus,
 input[type="button"]:hover,
+input[type="button"].hover,
 input[type="button"]:focus,
+input[type="button"].focus,
 input[type="reset"]:hover,
+input[type="reset"].hover,
 input[type="reset"]:focus,
+input[type="reset"].focus,
 input[type="image"]:hover,
-input[type="image"]:focus {
+input[type="image"].hover,
+input[type="image"]:focus,
+input[type="image"].focus {
   background-color: #f8ce30;
   border-color: #555555;
   color: #333333;
@@ -835,31 +847,61 @@ h2 + .search-form {
 .dark-mode textarea,
 .dark-mode select,
 .dark-mode button {
-  background: #333333;
-  border-color: #555555;
-  color: #ffffff;
+  background: #2f2f2f;
+  border-color: #626262;
+  color: #eeeeee;
 }
 
 .dark-mode input:focus,
 .dark-mode textarea:focus,
 .dark-mode select:focus,
 .dark-mode button:focus {
-  border-color: #888888;
+  border-color: #eeeeee;
 }
 
-.dark-mode button:hover, .dark-mode button:focus,
+.dark-mode button,
+.dark-mode button[type="submit"],
+.dark-mode input[type="submit"],
+.dark-mode input[type="button"],
+.dark-mode input[type="reset"],
+.dark-mode input[type="image"] {
+  background-color: #2f2f2f;
+  border-color: #626262;
+  color: #eeeeee;
+}
+
+.dark-mode button:hover, .dark-mode button.hover, .dark-mode button:focus, .dark-mode button.focus,
 .dark-mode button[type="submit"]:hover,
+.dark-mode button[type="submit"].hover,
 .dark-mode button[type="submit"]:focus,
+.dark-mode button[type="submit"].focus,
 .dark-mode input[type="submit"]:hover,
+.dark-mode input[type="submit"].hover,
 .dark-mode input[type="submit"]:focus,
+.dark-mode input[type="submit"].focus,
 .dark-mode input[type="button"]:hover,
+.dark-mode input[type="button"].hover,
 .dark-mode input[type="button"]:focus,
+.dark-mode input[type="button"].focus,
 .dark-mode input[type="reset"]:hover,
+.dark-mode input[type="reset"].hover,
 .dark-mode input[type="reset"]:focus,
+.dark-mode input[type="reset"].focus,
 .dark-mode input[type="image"]:hover,
-.dark-mode input[type="image"]:focus {
-  background: #555555;
-  border-color: #888888;
+.dark-mode input[type="image"].hover,
+.dark-mode input[type="image"]:focus,
+.dark-mode input[type="image"].focus {
+  background-color: #bbbbbb;
+  border-color: #626262;
+  color: #333333;
+}
+
+.dark-mode *::-webkit-input-placeholder,
+.dark-mode *:-moz-placeholder,
+.dark-mode *::-moz-placeholder,
+.dark-mode *:-ms-input-placeholder,
+.dark-mode *::-webkit-input-placeholder {
+  color: #959595 !important;
 }
 
 /**
@@ -2235,10 +2277,6 @@ article .gallery .gallery-item img {
   border-radius: 0px;
 }
 
-.flexmls_connect__page_content .flexmls_toggle-view a.map-view {
-  border-left: unset;
-}
-
 .flexmls_connect__page_content .flexmls_toggle-view a.active, .flexmls_connect__page_content .flexmls_toggle-view a:hover {
   background-color: #f8ce30;
   border-color: #555555;
@@ -2631,4 +2669,52 @@ article .gallery .gallery-item img {
     font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
     font-size: 1.625em;
   }
+}
+
+.flexmls_connect__sr_pagination {
+  margin-top: 1rem;
+}
+
+.flexmls_connect__sr_pagination a,
+.flexmls_connect__sr_pagination span {
+  display: inline-block;
+  width: auto;
+  padding: 0.5em;
+  vertical-align: middle;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: none;
+  line-height: 1;
+  background-color: #ffffff;
+  border: solid 1px #cccccc;
+  color: #344a5f;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+
+@supports (font-variation-settings: normal) {
+  .flexmls_connect__sr_pagination a,
+  .flexmls_connect__sr_pagination span {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
+}
+
+.flexmls_connect__sr_pagination a:hover, .flexmls_connect__sr_pagination a.hover, .flexmls_connect__sr_pagination a:focus, .flexmls_connect__sr_pagination a.focus,
+.flexmls_connect__sr_pagination span:hover,
+.flexmls_connect__sr_pagination span.hover,
+.flexmls_connect__sr_pagination span:focus,
+.flexmls_connect__sr_pagination span.focus {
+  background-color: #f8ce30;
+  border-color: #555555;
+  color: #333333;
+  text-decoration: none;
+}
+
+.flexmls_connect__sr_pagination span {
+  background-color: #f8ce30;
+  border-color: #555555;
+  color: #333333;
 }
