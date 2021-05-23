@@ -536,8 +536,8 @@ a:hover, a.hover, a:focus, a.focus {
   margin: 0 auto;
   padding: 0 2rem 2rem;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 0px 300px #c7cfd7;
-          box-shadow: 0px 0px 300px #c7cfd7;
+  -webkit-box-shadow: 0px 0px 300px 50px #dddddd;
+          box-shadow: 0px 0px 300px 50px #dddddd;
 }
 
 .site-content .content-area {
