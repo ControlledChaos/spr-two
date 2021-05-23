@@ -95,3 +95,11 @@ main article {
 		}
 	}
 }
+
+.dark-mode {
+
+	.site-content {
+		background-color: $body_bg_dark;
+		box-shadow: 0px 0px 300px 50px darken( $color: $body_bg_dark, $amount: 4% );
+	}
+}

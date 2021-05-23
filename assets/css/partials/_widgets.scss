@@ -56,3 +56,21 @@
 		grid-template-columns: repeat( 1, 1fr );
 	}
 }
+
+.dark-mode {
+
+	#secondary {
+		ul {
+			a {
+				color: $link_color_dark;
+
+				&:hover,
+				&.hover,
+				&:focus,
+				&.focus {
+					color: $link_action_color_dark;
+				}
+			}
+		}
+	}
+}

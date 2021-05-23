@@ -132,6 +132,15 @@ a {
 	}
 }
 
+#back-to-top {
+	display: none;
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+	z-index: 500;
+	transition: none;
+}
+
 // Text meant only for screen readers.
 .screen-reader-text {
 	border: 0;

@@ -11,13 +11,14 @@
 	margin-top: 1rem;
 	padding: 0 2rem;
 	font-family: $serif;
+	font-size: 1.1875rem;
 	font-variant: small-caps;
 	font-variant-caps: small-caps;
 	color: $nav_text_color;
 
 	@supports ( font-variation-settings: normal ) {
 		font-family: $variable_serif;
-		font-size: 1.35rem;
+		font-size: 1.375rem;
 	}
 
 	div:first-of-type {

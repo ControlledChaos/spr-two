@@ -13,11 +13,12 @@
 	width: 100vw;
 	padding: 1rem 2rem;
 	background-color: $header_bg_color;
-	// border-bottom: solid 1px $box_border_color;
+	background-image: linear-gradient( to bottom, $header_bg_color 0%, darken( $color: $header_bg_color, $amount: 5% ) 100% );
+	border-bottom: solid 1px darken( $color: $header_bg_color, $amount: 15% );
+	box-shadow: 0px 5px 15px -6px rgba( $color: $black, $alpha: 0.625 );
 
 	&.stuck {
 		padding: 0.5em 2em;
-		// box-shadow: 0px 5px 15px -6px rgba( $color: $black, $alpha: 0.625 );
 
 		.site-branding {
 			img {
@@ -39,6 +40,12 @@
 		width: 100%;
 		max-width: 1440px;
 		margin: 0 auto;
+	}
+}
+
+.static-front {
+	.site-header-wrap {
+		box-shadow: 0px 5px 15px -6px rgba( $color: $black, $alpha: 0.625 );
 	}
 }
 

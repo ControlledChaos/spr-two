@@ -23,7 +23,12 @@ $notify: $orange !default;
 $warning: $yellow !default;
 $success: $green !default;
 
-// Theme specific colors: light mode (default).
+// Theme general colors: light mode (default).
+$primary_color: #344a5f !default;
+$secondary_color: #344a5f !default;
+$primary_accent_color: #344a5f !default;
+$secondary_accent_color: #344a5f !default;
+
 $body_bg: $white !default;
 $body_bg_gradient: linear-gradient( to right, white 0%, #eceef1 10%, #dde1e5 50%, #eceef1 90%, white 100% ) !default;
 $text_color: $dark_gray !default;
@@ -37,10 +42,10 @@ $bg_medium: #2c3e50 !default;
 $bg_light: #2c3e50 !default;
 $bg_pale: #e9e9e9 !default;
 
-// Theme specific colors: dark mode
+// Theme general colors: dark mode.
 $body_bg_dark: #222222 !default;
-$text_color_dark: $white !default;
-$link_color_dark: $white !default;
+$text_color_dark: darken( $color: $white, $amount: 6.5% ) !default;
+$link_color_dark: $text_color_dark !default;
 $link_action_color_dark: darken( $color: $link_color_dark, $amount: 20% ) !default;
 
 /// Box colors: light mode.
@@ -117,7 +122,13 @@ $subnav_text_color: $nav_text_color !default;
 $subnav_link_color: $nav_link_color !default;
 $subnav_link_action_color: $nav_link_action_color !default;
 
-// Sidebar colors: light.
+// Sidebar colors: light mode.
 $sidebar_text_color: $text_color;
 $sidebar_link_color: $link_color;
 $sidebar_link_action_color: lighten( $color: $sidebar_link_color, $amount: 20% ) !default;
+
+// Footer colors: light mode.
+$footer_bg_color: #32475c !default;
+$footer_text_color: $white !default;
+$footer_link_color: $white !default;
+$footer_link_action_color: lighten( $color: $footer_bg_color, $amount: 50% ) !default;
