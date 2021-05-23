@@ -128,19 +128,5 @@ jQuery(document).ready( function($) {
 });
 </script>
 
-<style>
-#secondary.stuck {
-	position: fixed;
-	top: 120px;
-}
-#back-to-top {
-	display: none;
-	position: fixed;
-	right: 2rem;
-	bottom: 2rem;
-	transition: none;
-}
-</style>
-
 </body>
 </html>
