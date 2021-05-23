@@ -17,7 +17,7 @@ use SPR_Two\Classes\Front as Front;
 	<?php Front\tags()->before_footer(); ?>
 	<?php Front\tags()->footer(); ?>
 	<?php Front\tags()->after_footer(); ?>
-	<button onclick="topFunction()" id="back-to-top" title="Go to top"><svg role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M4.465 366.475l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L224 178.053l195.494 195.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.051c-4.686-4.686-12.284-4.686-16.971 0L4.465 349.505c-4.687 4.686-4.687 12.284 0 16.97z"/></svg><span class="screen-reader-text"><?php _e( 'Top', 'spr-two' ); ?></span></button>
+	<button onclick="topFunction()" id="back-to-top" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M6.1 422.3l209.4-209.4c4.7-4.7 12.3-4.7 17 0l209.4 209.4c4.7 4.7 4.7 12.3 0 17l-19.8 19.8c-4.7 4.7-12.3 4.7-17 0L224 278.4 42.9 459.1c-4.7 4.7-12.3 4.7-17 0L6.1 439.3c-4.7-4.7-4.7-12.3 0-17zm0-143l19.8 19.8c4.7 4.7 12.3 4.7 17 0L224 118.4l181.1 180.7c4.7 4.7 12.3 4.7 17 0l19.8-19.8c4.7-4.7 4.7-12.3 0-17L232.5 52.9c-4.7-4.7-12.3-4.7-17 0L6.1 262.3c-4.7 4.7-4.7 12.3 0 17z"/></svg><span class="screen-reader-text"><?php _e( 'Top', 'spr-two' ); ?></span></button>
 
 </div><!-- #page -->
 
