@@ -132,6 +132,20 @@ a {
 	}
 }
 
+.entry-content {
+	b,
+	strong {
+		color: lighten( $color: $text_color, $amount: 10% );
+	}
+
+	a {
+		b,
+		strong {
+			color: inherit;
+		}
+	}
+}
+
 #back-to-top {
 	display: none;
 	position: fixed;

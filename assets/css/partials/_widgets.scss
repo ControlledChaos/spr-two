@@ -4,6 +4,12 @@
 
 .widget {
 	margin: 0 0 1.5em;
+	color: $sidebar_text_color;
+
+	b,
+	strong {
+		color: lighten( $color: $sidebar_text_color, $amount: 10% );
+	};
 
 	select {
 		max-width: 100%;
@@ -17,6 +23,7 @@
 			font-size: 0.9375rem;
 			font-weight: 600;
 			line-height: 1.25;
+			color: lighten( $color: $sidebar_text_color, $amount: 10% );
 
 			&:not( :first-of-type ) {
 				margin-top: 0.625rem;
