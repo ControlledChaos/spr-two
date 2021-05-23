@@ -92,19 +92,18 @@ class Sidebar_Selector extends \acf_field {
 		?>
 		<div>
 			<select name='<?php echo $field['name'] ?>'>
-				<?php if ( !empty( $field['allow_null'] ) ) : ?>
-					<option value=''><?php _e( 'Select a Sidebar', 'acf' ) ?></option>
+				<?php if ( $field['allow_null'] ) : ?>
+					<option value=''><?php _e( 'Select a Sidebar', 'spr-two' ); ?></option>
 				<?php endif ?>
 				<?php
 					foreach( $wp_registered_sidebars as $sidebar ) :
 					$selected = ( ( $field['value'] == $sidebar['id'] ) || ( empty( $field['value'] ) && $sidebar['id'] == $field['default_value'] ) ) ? 'selected="selected"' : '';
 				?>
-					<option <?php echo $selected ?> value='<?php echo $sidebar['id'] ?>'><?php echo $sidebar['name'] ?></option>
+					<option <?php echo $selected; ?> value='<?php echo $sidebar['id']; ?>'><?php echo $sidebar['name']; ?></option>
 				<?php endforeach; ?>
 
 			</select>
 		</div>
-
 		<?php
 	}
 }
