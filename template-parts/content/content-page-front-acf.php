@@ -111,6 +111,10 @@ $down_arrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><pa
 
 		<div class="global-wrapper">
 
+		<?php if ( 'shortcode' === get_field( 'spr_hero_content_display' ) ) : ?>
+			<?php echo do_shortcode( get_field( 'spr_hero_shortcode' ) ); ?>
+		<?php else : ?>
+
 			<h3 class="hero-site-description"><?php echo $hero_heading; ?></h3>
 
 			<?php echo $hero_message; ?>
@@ -132,6 +136,7 @@ $down_arrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><pa
 					$down_arrow
 				);
 			endif; ?>
+		<?php endif; ?>
 		</div>
 	</div>
 </div>
