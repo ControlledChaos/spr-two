@@ -109,35 +109,32 @@ $down_arrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><pa
 
 	<div class="front-page-hero-content">
 
-		<div class="global-wrapper">
+	<?php if ( 'shortcode' === get_field( 'spr_hero_content_display' ) ) : ?>
+		<?php echo do_shortcode( get_field( 'spr_hero_shortcode' ) ); ?>
+	<?php else : ?>
 
-		<?php if ( 'shortcode' === get_field( 'spr_hero_content_display' ) ) : ?>
-			<?php echo do_shortcode( get_field( 'spr_hero_shortcode' ) ); ?>
-		<?php else : ?>
+		<h3 class="hero-site-description"><?php echo $hero_heading; ?></h3>
 
-			<h3 class="hero-site-description"><?php echo $hero_heading; ?></h3>
+		<?php echo $hero_message; ?>
 
-			<?php echo $hero_message; ?>
-
-			<?php
-			$menu = get_field( 'spr_hero_menu' );
-			if ( $menu && has_nav_menu( $menu ) ) :
-			wp_nav_menu( [
-				'theme_location' => $menu,
-				'container'      => null,
-				'menu_id'        => $menu . '-menu',
-				'menu_class'     => 'hero-menu',
-				'fallback_cb'    => null,
-			] );
-			else :
-				echo sprintf(
-					'<a class="front-page-hero-scroll-content" href="#front-page-content"><span class="screen-reader-text">%s</span> %s</a>',
-					__( 'Scroll to content', 'spr-two' ),
-					$down_arrow
-				);
-			endif; ?>
-		<?php endif; ?>
-		</div>
+		<?php
+		$menu = get_field( 'spr_hero_menu' );
+		if ( $menu && has_nav_menu( $menu ) ) :
+		wp_nav_menu( [
+			'theme_location' => $menu,
+			'container'      => null,
+			'menu_id'        => $menu . '-menu',
+			'menu_class'     => 'hero-menu',
+			'fallback_cb'    => null,
+		] );
+		else :
+			echo sprintf(
+				'<a class="front-page-hero-scroll-content" href="#front-page-content"><span class="screen-reader-text">%s</span> %s</a>',
+				__( 'Scroll to content', 'spr-two' ),
+				$down_arrow
+			);
+		endif; ?>
+	<?php endif; ?>
 	</div>
 </div>
 
