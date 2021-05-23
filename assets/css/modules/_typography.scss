@@ -11,20 +11,43 @@
  * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
  * stacks are used in @supports( font-variation-settings ) queries.
  */
+
+// Default sans stack.
 $sans :
+	system-ui,
 	-apple-system,
 	BlinkMacSystemFont,
+	'Segoe UI',
+	Roboto,
+	Oxygen-Sans,
+	Ubuntu,
+	Cantarell,
 	'Helvetica Neue',
 	Helvetica,
-	sans-serif;
+	sans-serif,
+	'Apple Color Emoji',
+	'Segoe UI Emoji',
+	'Segoe UI Symbol',
+	'Noto Color Emoji';
 
+// Variable sans stack.
 $variable_sans :
 	'Inter',
+	system-ui,
 	-apple-system,
 	BlinkMacSystemFont,
+	'Segoe UI',
+	Roboto,
+	Oxygen-Sans,
+	Ubuntu,
+	Cantarell,
 	'Helvetica Neue',
 	Helvetica,
-	sans-serif;
+	sans-serif,
+	'Apple Color Emoji',
+	'Segoe UI Emoji',
+	'Segoe UI Symbol',
+	'Noto Color Emoji';
 
 $serif :
 	'EB Garamond',

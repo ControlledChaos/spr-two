@@ -147,7 +147,7 @@ option {}
 *::-moz-placeholder,
 *:-ms-input-placeholder,
 *::placeholder {
-	color: $form_placeholder_color !important;
+	color: $form_placeholder_color;
 }
 
 /* Search form */

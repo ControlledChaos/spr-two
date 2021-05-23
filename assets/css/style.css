@@ -267,7 +267,7 @@ b, strong, optgroup {
  * stacks are used in @supports( font-variation-settings ) queries.
  */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.5;
   background: #ffffff;
   color: #333333;
@@ -817,7 +817,7 @@ select {
 *::-moz-placeholder,
 *:-ms-input-placeholder,
 *::-webkit-input-placeholder {
-  color: #888888 !important;
+  color: #888888;
 }
 
 *::-webkit-input-placeholder,
@@ -825,7 +825,7 @@ select {
 *::-moz-placeholder,
 *:-ms-input-placeholder,
 *::placeholder {
-  color: #888888 !important;
+  color: #888888;
 }
 
 /* Search form */
@@ -1101,8 +1101,8 @@ article .gallery .gallery-item img {
   width: 100vw;
   padding: 1rem 2rem;
   background-color: #32475c;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#32475c), to(#293a4b));
-  background-image: linear-gradient(to bottom, #32475c 0%, #293a4b 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#32475c), to(#293a4b));
+  background-image: linear-gradient(to top, #32475c 0%, #293a4b 100%);
   border-bottom: solid 1px #17212a;
   -webkit-box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
           box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
@@ -2243,6 +2243,17 @@ article .gallery .gallery-item img {
  * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
  * stacks are used in @supports( font-variation-settings ) queries.
  */
+.flexmls_flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flexmls_grid-wrap {
+  display: -ms-grid;
+  display: grid;
+}
+
 .flexmls_connect__sr_divider {
   background: none;
   margin: 0;
@@ -2734,4 +2745,197 @@ article .gallery .gallery-item img {
   background-color: #f8ce30;
   border-color: #555555;
   color: #333333;
+}
+
+.static-front .flexmls_connect__search {
+  width: 100% !important;
+  max-width: 1280px !important;
+  background-color: transparent !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-size: 1rem !important;
+  color: #ffffff !important;
+}
+
+.static-front .flexmls_connect__search_new .flexmls_connect__search_new_title {
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: small-caps;
+  font-variant-caps: small-caps;
+  line-height: 1;
+}
+
+@supports (font-variation-settings: normal) {
+  .static-front .flexmls_connect__search_new .flexmls_connect__search_new_title {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+    font-size: 2.375rem;
+    letter-spacing: 0.025em;
+  }
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal input[type="text"] {
+  width: 50% !important;
+  margin: 0 1%;
+  background-color: rgba(0, 0, 0, 0.325);
+  border-color: #cccccc !important;
+  color: #ffffff !important;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal input[type="text"].flexmls_connect__inactive_color {
+  color: #e0e0e0 !important;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form {
+  width: 100%;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form * + * {
+  margin: 0;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label {
+  margin-bottom: 0.5em !important;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 500;
+}
+
+@supports (font-variation-settings: normal) {
+  .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif !important;
+  }
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label + input:not([type="checkbox"]):not([type="radio"]),
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label ~ input:not([type="checkbox"]):not([type="radio"]),
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label + button, .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label label ~ button, .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label label + textarea,
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label ~ textarea, .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label label + select, .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label label ~ select {
+  display: inline-block;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_field {
+  margin-bottom: unset !important;
+  margin-top: 1em;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_field_group {
+  width: 100% !important;
+  float: none !important;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_field_group ~ .flexmls_connect__search_new_field_group {
+  width: 100% !important;
+  float: none !important;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_field_group .flexmls_flex-wrap {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 0.25em;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_min_max {
+  width: 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_min_max .flexmls_connect__search_field {
+  width: 50%;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_links {
+  width: 100% !important;
+  float: none !important;
+  clear: unset !important;
+}
+
+.static-front .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit {
+  border-radius: unset !important;
+  background-clip: unset !important;
+  width: auto !important;
+  margin: 1rem 0 0 0 !important;
+  padding: .625em 1.5em !important;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif !important;
+  font-size: 1.625rem !important;
+  font-weight: normal !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  line-height: 1 !important;
+  background-color: rgba(0, 0, 0, 0.325);
+  border-color: #cccccc !important;
+  color: #ffffff !important;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+  text-align: unset !important;
+}
+
+@supports (font-variation-settings: normal) {
+  .static-front .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif !important;
+    font-size: 1.625rem !important;
+    font-weight: 550 !important;
+    letter-spacing: 0.025em !important;
+  }
+}
+
+.static-front .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit:hover, .static-front .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit.hover, .static-front .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit:focus, .static-front .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit.focus {
+  background-color: #f8ce30 !important;
+  border-color: #333333 !important;
+  color: #333333 !important;
+}
+
+.static-front .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit ~ a {
+  display: none;
+}
+
+.static-front .select2-container--default .select2-selection--multiple {
+  background-color: rgba(0, 0, 0, 0.325) !important;
+  border-radius: unset !important;
+  color: #ffffff !important;
+}
+
+.static-front .select2-container--default.select2-container--focus .select2-selection--multiple {
+  border-color: #cccccc !important;
+}
+
+.static-front .select2-search.select2-search--inline::-webkit-input-placeholder, .static-front .select2-search.select2-search--inline:-moz-placeholder, .static-front .select2-search.select2-search--inline::-moz-placeholder, .static-front .select2-search.select2-search--inline:-ms-input-placeholder, .static-front .select2-search.select2-search--inline::-webkit-input-placeholder {
+  color: #e0e0e0 !important;
+  opacity: 1 !important;
+}
+
+.static-front .select2-search.select2-search--inline::-webkit-input-placeholder, .static-front .select2-search.select2-search--inline:-moz-placeholder, .static-front .select2-search.select2-search--inline::-moz-placeholder, .static-front .select2-search.select2-search--inline:-ms-input-placeholder, .static-front .select2-search.select2-search--inline::placeholder {
+  color: #e0e0e0 !important;
+  opacity: 1 !important;
+}
+
+.static-front .select2-dropdown {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  border-color: #cccccc !important;
+  border-radius: unset !important;
+  color: #ffffff !important;
+}
+
+.static-front .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  border-color: #cccccc !important;
+  border-radius: 0px !important;
+}
+
+.static-front .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  color: #ffffff !important;
+}
+
+.static-front .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+  color: #dd0000 !important;
 }

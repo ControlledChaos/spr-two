@@ -122,6 +122,11 @@ $subnav_text_color: $nav_text_color !default;
 $subnav_link_color: $nav_link_color !default;
 $subnav_link_action_color: $nav_link_action_color !default;
 
+// Front page hero colors: both modes.
+$hero_text_color: $white;
+$hero_border_color: $pale_gray;
+$hero_border_action_color: $white;
+
 // Sidebar colors: light mode.
 $sidebar_text_color: $text_color;
 $sidebar_link_color: $link_color;

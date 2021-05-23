@@ -5,6 +5,14 @@
 @import '../modules/_colors';
 @import '../modules/_typography';
 
+.flexmls_flex-wrap {
+	display: flex;
+}
+
+.flexmls_grid-wrap {
+	display: grid;
+}
+
 .flexmls_connect__sr_divider {
 	background: none;
 	margin: 0;
@@ -491,5 +499,207 @@
 		background-color: $button_action_background_color;
 		border-color: $button_action_border_color;
 		color: $button_action_text_color;
+	}
+}
+
+///
+/// Front page hero form
+///
+/// Many of the plugin shortcode styles are added
+/// by the shortcode generator.
+///
+.static-front {
+
+	.flexmls_connect__search {
+		width: 100% !important;
+		max-width: 1280px !important;
+		background-color: transparent !important;
+		font-family: $sans !important;
+		font-size: 1rem !important;
+		color: $hero_text_color !important;
+	}
+
+	.flexmls_connect__search_new {
+
+		.flexmls_connect__search_new_title {
+			font-family: $serif;
+			font-size: 2.25rem;
+			font-weight: normal;
+			font-style: normal;
+			font-variant: small-caps;
+			font-variant-caps: small-caps;
+			line-height: 1;
+
+			@supports ( font-variation-settings: normal ) {
+				font-family: $variable_serif;
+				font-size: 2.375rem;
+				letter-spacing: 0.025em;
+			}
+		}
+
+		&.flexmls_connect__search_new_horizontal {
+
+			input[type="text"] {
+				width: 50% !important;
+				margin: 0 1%;
+				background-color: rgba( $color: $black, $alpha: 0.325 );
+				border-color: $hero_border_color !important;
+				color: $hero_text_color !important;
+
+				&.flexmls_connect__inactive_color {
+					color: darken( $color: $hero_text_color, $amount: 12% ) !important;
+				}
+			}
+
+			form {
+				width: 100%;
+
+				* {
+					box-sizing: border-box;
+				}
+
+				* + * {
+					margin: 0;
+				}
+
+				label {
+					margin-bottom: 0.5em !important;
+					font-family: $serif !important;
+					font-size: 1.5rem !important;
+					font-weight: 500;
+
+					@supports ( font-variation-settings: normal ) {
+						font-family: $variable_serif !important;
+					}
+
+					& + input:not([type="checkbox"]):not([type="radio"]),
+					& ~ input:not([type="checkbox"]):not([type="radio"]),
+					& + button, label ~ button, label + textarea,
+					& ~ textarea, label + select, label ~ select {
+						display: inline-block;
+					}
+				}
+			}
+
+			.flexmls_connect__search_field {
+				margin-bottom: unset !important;
+				margin-top: 1em;
+			}
+
+			.flexmls_connect__search_new_field_group {
+				width: 100% !important;
+				float: none !important;
+
+				& ~ .flexmls_connect__search_new_field_group {
+					width: 100% !important;
+					float: none !important;
+				}
+
+				.flexmls_flex-wrap {
+					width: 100%;
+					max-width: 100%;
+					padding: 0 0.25em;
+				}
+			}
+
+			.flexmls_connect__search_new_min_max {
+				width: 100%;
+				max-width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+
+				.flexmls_connect__search_field {
+					width: 50%;
+				}
+			}
+
+			.flexmls_connect__search_new_links {
+				width: 100% !important;
+				float: none !important;
+				clear: unset !important;
+			}
+		}
+
+		input[type="submit"].flexmls_connect__search_new_submit {
+			border-radius: unset !important;
+			background-clip: unset !important;
+			width: auto !important;
+			margin: 1rem 0 0 0 !important;
+			padding: .625em 1.5em !important;
+			font-family: $serif !important;
+			font-size: 1.625rem !important;
+			font-weight: normal !important;
+			font-weight: 500 !important;
+			font-style: italic !important;
+			line-height: 1 !important;
+			background-color: rgba( $color: $black, $alpha: 0.325 );
+			border-color: $hero_border_color !important;
+			color: $hero_text_color !important;
+			-webkit-transition: all .15s;
+			transition: all .15s;
+			text-align: unset !important;
+
+			@supports ( font-variation-settings: normal ) {
+				font-family: $variable_serif !important;
+				font-size: 1.625rem !important;
+				font-weight: 550 !important;
+				letter-spacing: 0.025em !important;
+			}
+
+			&:hover,
+			&.hover,
+			&:focus,
+			&.focus {
+				background-color: $button_action_background_color !important;
+				border-color: $dark_gray !important;
+				color: $button_action_text_color !important;
+			}
+
+			~ a {
+				display: none;
+			}
+		}
+	}
+
+	.select2-container--default .select2-selection--multiple {
+		background-color: rgba( $color: $black, $alpha: 0.325 ) !important;
+		border-radius: unset !important;
+		color: $hero_text_color !important;
+	}
+
+	.select2-container--default.select2-container--focus .select2-selection--multiple {
+		border-color: $hero_border_color !important;
+	}
+
+	.select2-search.select2-search--inline {
+		&::-webkit-input-placeholder,
+		&:-moz-placeholder,
+		&::-moz-placeholder,
+		&:-ms-input-placeholder,
+		&::placeholder {
+			color: darken( $color: $hero_text_color, $amount: 12% ) !important;
+			opacity: 1 !important;
+		}
+	}
+
+	.select2-dropdown {
+		background-color: rgba( $color: $black, $alpha: 0.85 ) !important;
+		border-color: $hero_border_color !important;
+		border-radius: unset !important;
+		color: $hero_text_color !important;
+	}
+
+	.select2-container--default .select2-selection--multiple .select2-selection__choice {
+		background-color: rgba( $color: $black, $alpha: 0.25 ) !important;
+		border-color: $hero_border_color !important;
+		border-radius: 0px !important;
+	}
+
+	.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+		color: $hero_text_color !important;
+
+		&:hover {
+			color: $red !important
+		}
 	}
 }
