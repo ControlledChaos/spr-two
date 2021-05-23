@@ -165,7 +165,7 @@
 		}
 
 		&:hover {
-			transform: translateY( 0.35em );
+			transform: translateY( 0.25em );
 		}
 	}
 }
@@ -330,14 +330,14 @@
 
 .front-image-links ul {
 	display: grid;
-	grid-template-columns: repeat(1, 1fr);
+	grid-template-columns: repeat( 1, 1fr );
 	grid-gap: 1em;
 }
 
 @media screen and (min-width: 801px) {
 
 	.front-image-links ul {
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat( 3, 1fr );
 }
 }
 

@@ -172,8 +172,49 @@ $down_arrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><pa
 
 				</section>
 
+				<?php elseif ( get_row_layout() == 'spr_front_content_two_panel' ) : ?>
+				<section id="<?php echo $layout; ?>" class="front-content-section front-two-panel-content">
+
+					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
+
+					<?php
+					if ( have_rows( 'spr_front_content_two_panel_layouts' ) ) : ?>
+
+					<div class="two-panel-content front-two-panel-content">
+
+						<?php while ( have_rows( 'spr_front_content_two_panel_layouts' ) ) : the_row();
+
+						if ( get_row_layout() == 'spr_front_content_two_panel_block_editor' ) : ?>
+
+							<div class="two-panel-content-side">
+								<?php the_sub_field( 'spr_front_content_two_panel_block_editor' ); ?>
+							</div>
+
+						<?php elseif ( get_row_layout() == 'spr_front_content_two_panel_sidebar' ) : ?>
+
+							<div class="two-panel-content-side sticky-wrapper">
+								<?php
+								$sidebar = get_sub_field( 'spr_front_content_two_panel_sidebar' );
+
+								if ( is_active_sidebar( $sidebar ) ) {
+									get_sidebar( $sidebar );
+							   }
+
+								?>
+							</div>
+
+						<?php endif; ?>
+
+						<?php endwhile; ?>
+
+					</div>
+
+					<?php endif; ?>
+
+				</section>
+
 				<?php elseif ( get_row_layout() == 'spr_front_content_shortcode' ) : ?>
-				<section id="<?php echo $layout; ?>" class="-content-section front-shortcode-content">
+				<section id="<?php echo $layout; ?>" class="front-content-section front-shortcode-content">
 
 					<div class="shortcode-section">
 						<div class="shortcode-section-content">
@@ -196,9 +237,18 @@ $down_arrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><pa
 						} else {
 							$sidebar = 'front-section';
 						}
-						if ( is_active_sidebar( $sidebar ) ) {
-							 get_sidebar( $sidebar );
-						} ?>
+
+						if ( is_active_sidebar( $sidebar ) ) :
+
+						?>
+						<div class="sticky-wrapper">
+							<?php get_sidebar( $sidebar ); ?>
+						</div>
+						<?php
+
+						endif;
+
+						?>
 					</div>
 				</section>
 

@@ -78,5 +78,19 @@ class Register {
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		] );
+
+		// Contact & office hours.
+		register_sidebar( [
+			'name'          => __( 'Contact & Office', 'spr-two' ),
+			'id'            => 'contact-office',
+			'description'   => sprintf(
+				__( 'For displaying office hours and contact information. Used on the front page and in the page footer.', 'spr-two' ),
+				$position
+			),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		] );
 	}
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * The sidebar for the front page listings section
+ * The sidebar Contact & Office information
  *
  * @package    SPR_Two
  * @subpackage Templates
@@ -14,6 +14,6 @@ namespace SPR_Two;
 use SPR_Two\Classes\Front as Front;
 
 ?>
-<aside id="front-section-sidebar" class="widget-area">
-	<?php dynamic_sidebar( 'front-section' ); ?>
+<aside id="contact-office-sidebar" class="widget-area">
+	<?php dynamic_sidebar( 'contact-office' ); ?>
 </aside>

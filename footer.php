@@ -121,7 +121,7 @@ jQuery(document).ready( function($) {
 
 <script>
 jQuery(document).ready( function($) {
-	$( '#secondary' ).stick_in_parent({
+	$( '#secondary, #front-section-sidebar, #contact-office-sidebar' ).stick_in_parent({
 		offset_top   : 70,
 		recalc_every : 1
 	});

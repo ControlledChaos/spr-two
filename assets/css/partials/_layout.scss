@@ -64,6 +64,23 @@ main article {
 	clear: both;
 }
 
+.two-panel-content {
+	display: flex;
+	margin-top: 2rem;
+
+	& > div {
+		min-width: 360px;
+
+		&:first-of-type {
+			margin-right: 1rem;
+		}
+
+		&:last-of-type {
+			margin-left: 1rem;
+		}
+	}
+}
+
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
 	outline: 0;
@@ -71,6 +88,8 @@ main article {
 
 #secondary {
 	min-width: 240px;
+	padding-top: 2rem;
+	color: $sidebar_text_color;
 }
 
 @media screen and ( max-width: 768px ) {

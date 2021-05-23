@@ -141,9 +141,3 @@ figure.alignleft {
   margin-left: unset;
   margin-right: 0.25rem;
 }
-
-#secondary ul,
-#secondary ol {
-  padding-left: unset;
-  padding-right: 1em;
-}

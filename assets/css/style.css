@@ -586,6 +586,25 @@ main article {
   clear: both;
 }
 
+.two-panel-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.two-panel-content > div {
+  min-width: 360px;
+}
+
+.two-panel-content > div:first-of-type {
+  margin-right: 1rem;
+}
+
+.two-panel-content > div:last-of-type {
+  margin-left: 1rem;
+}
+
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
   outline: 0;
@@ -593,6 +612,8 @@ main article {
 
 #secondary {
   min-width: 240px;
+  padding-top: 2rem;
+  color: #333333;
 }
 
 @media screen and (max-width: 768px) {
@@ -1653,8 +1674,8 @@ article .gallery .gallery-item img {
 }
 
 .front-page-hero-content .front-page-hero-scroll-content:hover {
-  -webkit-transform: translateY(0.35em);
-          transform: translateY(0.35em);
+  -webkit-transform: translateY(0.25em);
+          transform: translateY(0.25em);
 }
 
 .hero-logo {
@@ -2001,39 +2022,34 @@ article .gallery .gallery-item img {
   margin: 0.5em 0;
 }
 
-#secondary {
-  padding-top: 2rem;
-  color: #333333;
-}
-
-#secondary .widget {
+.widget {
   margin: 0 0 1.5em;
 }
 
-#secondary .widget select {
+.widget select {
   max-width: 100%;
 }
 
-#secondary ul {
+.widget ul {
   list-style: none;
   margin-top: 0.5em;
 }
 
-#secondary ul li {
+.widget ul li {
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.25;
 }
 
-#secondary ul li:not(:first-of-type) {
+.widget ul li:not(:first-of-type) {
   margin-top: 0.625rem;
 }
 
-#secondary ul a {
+.widget a {
   color: #344a5f;
 }
 
-#secondary ul a:hover, #secondary ul a.hover, #secondary ul a:focus, #secondary ul a.focus {
+.widget a:hover, .widget a.hover, .widget a:focus, .widget a.focus {
   color: #587da1;
 }
 
@@ -2054,11 +2070,11 @@ article .gallery .gallery-item img {
   }
 }
 
-.dark-mode #secondary ul a {
+.dark-mode .widget ul a {
   color: #eeeeee;
 }
 
-.dark-mode #secondary ul a:hover, .dark-mode #secondary ul a.hover, .dark-mode #secondary ul a:focus, .dark-mode #secondary ul a.focus {
+.dark-mode .widget ul a:hover, .dark-mode .widget ul a.hover, .dark-mode .widget ul a:focus, .dark-mode .widget ul a.focus {
   color: #bbbbbb;
 }
 

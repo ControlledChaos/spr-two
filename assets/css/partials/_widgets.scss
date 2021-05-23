@@ -2,16 +2,11 @@
 /// Sidebar & widget styles
 ///
 
-#secondary {
-	padding-top: 2rem;
-	color: $sidebar_text_color;
+.widget {
+	margin: 0 0 1.5em;
 
-	.widget {
-		margin: 0 0 1.5em;
-
-		& select {
-			max-width: 100%;
-		}
+	select {
+		max-width: 100%;
 	}
 
 	ul {
@@ -27,16 +22,16 @@
 				margin-top: 0.625rem;
 			}
 		}
+	}
 
-		a {
-			color: $sidebar_link_color;
+	a {
+		color: $sidebar_link_color;
 
-			&:hover,
-			&.hover,
-			&:focus,
-			&.focus {
-				color: $sidebar_link_action_color;
-			}
+		&:hover,
+		&.hover,
+		&:focus,
+		&.focus {
+			color: $sidebar_link_action_color;
 		}
 	}
 }
@@ -59,7 +54,7 @@
 
 .dark-mode {
 
-	#secondary {
+	.widget {
 		ul {
 			a {
 				color: $link_color_dark;
