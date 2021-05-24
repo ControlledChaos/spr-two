@@ -14,20 +14,21 @@ namespace SPR_Two;
 use SPR_Two\Classes\Front as Front;
 
 // Get ACF fields.
-$hero_loading    = get_field( 'spr_hero_loading_text' );
-$hero_heading    = get_field( 'spr_hero_heading' );
-$hero_message    = get_field( 'spr_hero_message' );
-$hero_image      = get_field( 'spr_hero_image' );
-$hero_gallery    = get_field( 'spr_hero_gallery' );
-$hero_overlay    = get_field( 'spr_hero_overlay' );
-$hero_display    = get_field( 'spr_hero_content_display' );
-$code_option     = get_field( 'spr_hero_shortcode_option' );
-$hero_shortcode  = get_field( 'spr_hero_shortcode' );
-$search_location = get_field( 'spr_hero_search_location' );
-$search_params   = get_field( 'spr_hero_search_parameters' );
-$search_results  = get_field( 'spr_hero_search_results' );
-$search_view     = get_field( 'spr_hero_search_map' );
-$search_button   = get_field( 'spr_hero_search_button_text' );
+$hero_loading     = get_field( 'spr_hero_loading_text' );
+$hero_heading     = get_field( 'spr_hero_heading' );
+$hero_message     = get_field( 'spr_hero_message' );
+$hero_menu        = get_field( 'spr_hero_menu' );
+$hero_image       = get_field( 'spr_hero_image' );
+$hero_gallery     = get_field( 'spr_hero_gallery' );
+$hero_overlay     = get_field( 'spr_hero_overlay' );
+$hero_display     = get_field( 'spr_hero_content_display' );
+$hero_code_option = get_field( 'spr_hero_shortcode_option' );
+$hero_shortcode   = get_field( 'spr_hero_shortcode' );
+$search_location  = get_field( 'spr_hero_search_location' );
+$search_params    = get_field( 'spr_hero_search_parameters' );
+$search_results   = get_field( 'spr_hero_search_results' );
+$search_view      = get_field( 'spr_hero_search_map' );
+$search_button    = get_field( 'spr_hero_search_button_text' );
 
 // If the hero image field is not empty.
 if ( $hero_image ) {
@@ -104,30 +105,42 @@ if ( 'shortcode' === $hero_display ) {
 // Build shortcode.
 $font_stack = 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
 
-if ( $search_location ) {
-	$search_location = 'on';
-} else {
+// Use location search field.
+if ( ! $search_location ) {
 	$search_location = 'off';
+} else {
+	$search_location = 'on';
 }
 
+// Text of the search submit button.
 if ( $search_button ) {
 	$search_button = $search_button;
 } else {
 	$search_button = __( 'Search Properties', 'spr-two' );
 }
 
+// Search min/max fields.
 if ( is_array( $search_params ) && ! empty( $search_params ) ) {
 	$search_params = implode( ',', $search_params );
 } else {
 	$search_params - 'beds,baths,square_footage,list_price';
 }
 
-if ( true === $search_view ) {
-	$search_view = 'map';
-} else {
+// Show map at the top of search results.
+if ( ! $search_view ) {
 	$search_view = 'list';
+} else {
+	$search_view = 'map';
 }
 
+// Number of search results per page.
+if ( $search_results ) {
+	$search_results = $search_results;
+} else {
+	$search_results = '10';
+}
+
+// The search form shortcode.
 if ( 'paste' == $code_option && $hero_shortcode ) {
 	$form_code = $hero_shortcode;
 } elseif ( 'build' == $code_option ) {
@@ -175,12 +188,11 @@ $down_arrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><pa
 		<?php echo $hero_message; ?>
 
 		<?php
-		$menu = get_field( 'spr_hero_menu' );
-		if ( $menu && has_nav_menu( $menu ) ) :
+		if ( $hero_menu && has_nav_menu( $hero_menu ) ) :
 		wp_nav_menu( [
-			'theme_location' => $menu,
+			'theme_location' => $hero_menu,
 			'container'      => null,
-			'menu_id'        => $menu . '-menu',
+			'menu_id'        => $hero_menu . '-menu',
 			'menu_class'     => 'hero-menu',
 			'fallback_cb'    => null,
 		] );
