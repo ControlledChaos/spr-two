@@ -2969,6 +2969,9 @@ article .gallery .gallery-item img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_min_max .flexmls_connect__search_field {
