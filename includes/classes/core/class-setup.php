@@ -110,17 +110,17 @@ class Setup {
 				'thumbnail_url' => '%s/assets/images/sunset-from-high-country.jpg',
 				'description'   => __( 'Sunset View from the High Country', 'spr-two' ),
 			],
-			'sequoia_trees' => [
-				'url'           => '%s/assets/images/sequoia-trees.jpg',
-				'thumbnail_url' => '%s/assets/images/sequoia-trees.jpg',
-				'description'   => __( 'Sequoia Forest', 'spr-two' ),
-			],
 			'sequoia_trunk' => [
 				'url'           => '%s/assets/images/sequoia-trunk.jpg',
 				'thumbnail_url' => '%s/assets/images/sequoia-trunk.jpg',
 				'description'   => __( 'Sequoia Tree Trunk', 'spr-two' ),
 			],
 			/*
+			'sequoia_trees' => [
+				'url'           => '%s/assets/images/sequoia-trees.jpg',
+				'thumbnail_url' => '%s/assets/images/sequoia-trees.jpg',
+				'description'   => __( 'Sequoia Forest', 'spr-two' ),
+			],
 			'pacific_waves' => [
 				'url'           => '%s/assets/images/pacific-waves.jpg',
 				'thumbnail_url' => '%s/assets/images/pacific-waves.jpg',
