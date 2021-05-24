@@ -138,14 +138,30 @@ select {
 	margin-top: 1em;
 	padding: 0.5em 1em;
 	font: inherit;
+
+	option {}
 }
 
-option {}
+*::-webkit-input-placeholder {
+	color: $form_placeholder_color;
+}
 
-*::-webkit-input-placeholder,
-*:-moz-placeholder,
-*::-moz-placeholder,
-*:-ms-input-placeholder,
+*::-o-placeholder {
+	color: $form_placeholder_color;
+}
+
+*:-moz-placeholder {
+	color: $form_placeholder_color;
+}
+
+*::-moz-placeholder {
+	color: $form_placeholder_color;
+}
+
+*:-ms-input-placeholder {
+	color: $form_placeholder_color;
+}
+
 *::placeholder {
 	color: $form_placeholder_color;
 }

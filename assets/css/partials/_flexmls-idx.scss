@@ -5,6 +5,11 @@
 @import '../modules/_colors';
 @import '../modules/_typography';
 
+// Unset position relative.
+body.admin-bar {
+    position: unset;
+}
+
 .flexmls_flex-wrap {
 	display: flex;
 }
@@ -513,6 +518,7 @@
 	.flexmls_connect__search {
 		width: 100% !important;
 		max-width: 1280px !important;
+		margin: 0 !important;
 		background-color: transparent !important;
 		font-family: $sans !important;
 		font-size: 1rem !important;
@@ -520,6 +526,7 @@
 	}
 
 	.flexmls_connect__search_new {
+		padding: 0 2rem !important;
 
 		.flexmls_connect__search_new_title {
 			font-family: $serif;
@@ -549,10 +556,34 @@
 				&.flexmls_connect__inactive_color {
 					color: darken( $color: $hero_text_color, $amount: 12% ) !important;
 				}
+
+				&:focus,
+				&.focus {
+					border-color: $hero_border_action_color !important;
+				}
 			}
 
 			form {
 				width: 100%;
+
+				::-webkit-input-placeholder {
+					color: $hero_text_color;
+				}
+				:-moz-placeholder {
+					color: $hero_text_color;
+				}
+				::-moz-placeholder {
+					color: $hero_text_color;
+				}
+				::-o-input-placeholder {
+					color: $hero_text_color;
+				}
+				:-ms-input-placeholder {
+					color: $hero_text_color;
+				}
+				::placeholder {
+					color: $hero_text_color;
+				}
 
 				* {
 					box-sizing: border-box;
@@ -565,8 +596,9 @@
 				label {
 					margin-bottom: 0.5em !important;
 					font-family: $serif !important;
-					font-size: 1.5rem !important;
+					font-size: 1.25rem !important;
 					font-weight: 500;
+					text-shadow: 0.05em 0.05em 0.05em rgba( $color: $black, $alpha: 0.85 );
 
 					@supports ( font-variation-settings: normal ) {
 						font-family: $variable_serif !important;
@@ -609,7 +641,7 @@
 				flex-wrap: wrap;
 
 				.flexmls_connect__search_field {
-					width: 50%;
+					width: 25%;
 				}
 			}
 
@@ -627,7 +659,7 @@
 			margin: 1rem 0 0 0 !important;
 			padding: .625em 1.5em !important;
 			font-family: $serif !important;
-			font-size: 1.625rem !important;
+			font-size: 1.5rem !important;
 			font-weight: normal !important;
 			font-weight: 500 !important;
 			font-style: italic !important;
@@ -661,14 +693,45 @@
 		}
 	}
 
+	.select2-container--default .select2-search--inline {
+		.select2-search__field {
+			margin: 0;
+			padding: 1rem;
+			line-height: 1;
+			border-color: $hero_border_color !important;
+			color: $hero_text_color;
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			appearance: none;
+
+			&:focus,
+			&.focus {
+				border-color: $hero_border_action_color !important;
+			}
+		}
+	}
+
 	.select2-container--default .select2-selection--multiple {
+		min-height: unset !important;
 		background-color: rgba( $color: $black, $alpha: 0.325 ) !important;
 		border-radius: unset !important;
 		color: $hero_text_color !important;
+
+		ul {
+			overflow: hidden !important;
+			display: block !important;
+			height: 54px !important;
+			margin: 0 !important;
+			padding: 0 !important;
+		}
 	}
 
 	.select2-container--default.select2-container--focus .select2-selection--multiple {
 		border-color: $hero_border_color !important;
+	}
+
+	.select2-container .select2-selection--multiple .select2-selection__rendered {
+		display: block !important;
 	}
 
 	.select2-search.select2-search--inline {

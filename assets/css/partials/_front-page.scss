@@ -59,6 +59,7 @@
 }
 
 .front-page-hero-content {
+	overflow: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -80,6 +81,7 @@
 	}
 
 	h3 {
+		margin: 0;
 		font-family: $serif;
 		font-size: 2em;
 		font-weight: normal;
@@ -337,8 +339,8 @@
 @media screen and (min-width: 801px) {
 
 	.front-image-links ul {
-	grid-template-columns: repeat( 3, 1fr );
-}
+		grid-template-columns: repeat( 3, 1fr );
+	}
 }
 
 .front-image-links {

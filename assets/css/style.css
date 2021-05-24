@@ -812,18 +812,22 @@ select {
   font: inherit;
 }
 
-*::-webkit-input-placeholder,
-*:-moz-placeholder,
-*::-moz-placeholder,
-*:-ms-input-placeholder,
 *::-webkit-input-placeholder {
   color: #888888;
 }
 
-*::-webkit-input-placeholder,
-*:-moz-placeholder,
-*::-moz-placeholder,
-*:-ms-input-placeholder,
+*::-o-placeholder {
+  color: #888888;
+}
+
+*:-ms-input-placeholder {
+  color: #888888;
+}
+
+*::-ms-input-placeholder {
+  color: #888888;
+}
+
 *::placeholder {
   color: #888888;
 }
@@ -1600,6 +1604,7 @@ article .gallery .gallery-item img {
 }
 
 .front-page-hero-content {
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -1633,6 +1638,7 @@ article .gallery .gallery-item img {
 }
 
 .front-page-hero-content h3 {
+  margin: 0;
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 2em;
   font-weight: normal;
@@ -2243,6 +2249,10 @@ article .gallery .gallery-item img {
  * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
  * stacks are used in @supports( font-variation-settings ) queries.
  */
+body.admin-bar {
+  position: unset;
+}
+
 .flexmls_flex-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2750,10 +2760,15 @@ article .gallery .gallery-item img {
 .static-front .flexmls_connect__search {
   width: 100% !important;
   max-width: 1280px !important;
+  margin: 0 !important;
   background-color: transparent !important;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   font-size: 1rem !important;
   color: #ffffff !important;
+}
+
+.static-front .flexmls_connect__search_new {
+  padding: 0 2rem !important;
 }
 
 .static-front .flexmls_connect__search_new .flexmls_connect__search_new_title {
@@ -2786,8 +2801,44 @@ article .gallery .gallery-item img {
   color: #e0e0e0 !important;
 }
 
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal input[type="text"]:focus, .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal input[type="text"].focus {
+  border-color: #ffffff !important;
+}
+
 .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form {
   width: 100%;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form ::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form :-moz-placeholder {
+  color: #ffffff;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form ::-moz-placeholder {
+  color: #ffffff;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form ::-o-input-placeholder {
+  color: #ffffff;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form :-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form ::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form ::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form ::placeholder {
+  color: #ffffff;
 }
 
 .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form * {
@@ -2802,8 +2853,9 @@ article .gallery .gallery-item img {
 .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label {
   margin-bottom: 0.5em !important;
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif !important;
-  font-size: 1.5rem !important;
+  font-size: 1.25rem !important;
   font-weight: 500;
+  text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.85);
 }
 
 @supports (font-variation-settings: normal) {
@@ -2851,7 +2903,7 @@ article .gallery .gallery-item img {
 }
 
 .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_min_max .flexmls_connect__search_field {
-  width: 50%;
+  width: 25%;
 }
 
 .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_links {
@@ -2867,7 +2919,7 @@ article .gallery .gallery-item img {
   margin: 1rem 0 0 0 !important;
   padding: .625em 1.5em !important;
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif !important;
-  font-size: 1.625rem !important;
+  font-size: 1.5rem !important;
   font-weight: normal !important;
   font-weight: 500 !important;
   font-style: italic !important;
@@ -2899,14 +2951,42 @@ article .gallery .gallery-item img {
   display: none;
 }
 
+.static-front .select2-container--default .select2-search--inline .select2-search__field {
+  margin: 0;
+  padding: 1rem;
+  line-height: 1;
+  border-color: #cccccc !important;
+  color: #ffffff;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.static-front .select2-container--default .select2-search--inline .select2-search__field:focus, .static-front .select2-container--default .select2-search--inline .select2-search__field.focus {
+  border-color: #ffffff !important;
+}
+
 .static-front .select2-container--default .select2-selection--multiple {
+  min-height: unset !important;
   background-color: rgba(0, 0, 0, 0.325) !important;
   border-radius: unset !important;
   color: #ffffff !important;
 }
 
+.static-front .select2-container--default .select2-selection--multiple ul {
+  overflow: hidden !important;
+  display: block !important;
+  height: 54px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .static-front .select2-container--default.select2-container--focus .select2-selection--multiple {
   border-color: #cccccc !important;
+}
+
+.static-front .select2-container .select2-selection--multiple .select2-selection__rendered {
+  display: block !important;
 }
 
 .static-front .select2-search.select2-search--inline::-webkit-input-placeholder, .static-front .select2-search.select2-search--inline:-moz-placeholder, .static-front .select2-search.select2-search--inline::-moz-placeholder, .static-front .select2-search.select2-search--inline:-ms-input-placeholder, .static-front .select2-search.select2-search--inline::-webkit-input-placeholder {
