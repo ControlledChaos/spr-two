@@ -86,7 +86,16 @@ jQuery(document).ready(function($) {
 	});
 });
 </script>
-<?php endif; ?>
+<script>
+// Fade out the loading screen.
+( function($) {
+	$(window).load( function() {
+		$( 'html' ).addClass( 'site-loaded' );
+		$( '.front-page-hero-loader' ).fadeOut( 500 );
+	});
+})(jQuery);
+</script>
+<?php endif; // If `front_page()`. ?>
 <script>
 jQuery(document).ready( function($) {
 	$(window).scroll( function() {

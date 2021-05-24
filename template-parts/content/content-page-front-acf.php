@@ -75,6 +75,22 @@ if ( $hero_message ) {
 	);
 }
 
+// Hero loading text.
+if ( get_field( 'spr_front_loading_text' ) ) {
+	$hero_loading = get_field( 'spr_front_loading_text' );
+} else {
+	$hero_loading = __( 'Loading&hellip;', 'spr-two' );
+}
+
+// Hero loader display conditions.
+if ( 'shortcode' === get_field( 'spr_hero_content_display' ) ) {
+	$use_shortcode = true;
+	$loader_class  = 'hero-has-loader';
+} else {
+	$use_shortcode =false;
+	$loader_class  = 'hero-no-loader';
+}
+
 $intro_content   = get_field( 'spr_intro_content_front' );
 $use_image_links = get_field( 'spr_front_image_links_use' );
 $links_heading   = get_field( 'spr_front_image_links_heading' );
@@ -91,11 +107,11 @@ $down_arrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><pa
 ?>
 <style>
 .front-page-hero { background-image: url( <?php echo $hero_src; ?> ); }
-.front-page-hero:before { background: rgba(0, 0, 0, 0.<?php echo $hero_overlay; ?>); }
+.front-page-hero:before { background: rgba( 0, 0, 0, 0.<?php echo $hero_overlay; ?> ); }
 </style>
 <div class="front-page-hero">
 
-	<div class="front-page-hero-content">
+	<div class="front-page-hero-content <?php echo $loader_class; ?>">
 
 		<h3 class="hero-site-description"><?php echo $hero_heading; ?></h3>
 
@@ -124,6 +140,15 @@ $down_arrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><pa
 		endif; ?>
 	<?php endif; ?>
 	</div>
+
+	<?php if ( $use_shortcode ) : ?>
+	<div class="front-page-hero-loader">
+		<div class="spinner"></div>
+		<div class="loading">
+			<p><?php echo $hero_loading; ?></p>
+		</div>
+	</div>
+	<?php endif; ?>
 </div>
 
 <article id="front-page-content" <?php post_class(); ?> role="article">
