@@ -165,3 +165,12 @@
 		justify-content: flex-start;
 	}
 }
+
+@media screen and ( max-width: 600px ) {
+
+	.logged-in.admin-bar {
+		.site-header-wrap {
+			position: relative;
+		}
+	}
+}

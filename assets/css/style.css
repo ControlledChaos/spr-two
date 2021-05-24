@@ -1275,6 +1275,12 @@ article .gallery .gallery-item img {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .logged-in.admin-bar .site-header-wrap {
+    position: relative;
+  }
+}
+
 .main-navigation {
   clear: both;
   display: block;
@@ -2239,10 +2245,6 @@ article .gallery .gallery-item img {
  * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
  * stacks are used in @supports( font-variation-settings ) queries.
  */
-body.admin-bar {
-  position: unset;
-}
-
 .flexmls_flex-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
