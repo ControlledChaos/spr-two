@@ -20,18 +20,15 @@ namespace SPR_Two;
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
-	<?php if ( is_singular() && pings_open() ) {
-		echo sprintf( '<link rel="pingback" href="%s" />', esc_attr( get_bloginfo( 'pingback_url' ) ) );
-	} ?>
-
 	<link href="<?php echo esc_attr( $canonical ); ?>" rel="canonical" />
 
 	<?php if ( is_search() ) { echo esc_attr( '<meta name="robots" content="noindex,nofollow" />' ); } ?>
 
-	<!-- Prefetch font URLs -->
-	<link rel='dns-prefetch' href='//fonts.adobe.com'/>
-	<link rel='dns-prefetch' href='//fonts.google.com'/>
+	<!-- Preload font files -->
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/crimson/crimson-pro-roman.woff' ) ); ?>" />
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/crimson/crimson-pro-italic.woff' ) ); ?>" />
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/EBGaramond-Regular.woff2' ) ); ?>" />
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/EBGaramond-Italic.woff2' ) ); ?>" />
 
 	<?php
 	// Hook into the head.
