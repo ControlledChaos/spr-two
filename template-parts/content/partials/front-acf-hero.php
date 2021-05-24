@@ -14,10 +14,20 @@ namespace SPR_Two;
 use SPR_Two\Classes\Front as Front;
 
 // Get ACF fields.
-$hero_image   = get_field( 'spr_front_hero_image' );
-$hero_overlay = get_field( 'spr_hero_overlay' );
-$hero_heading = get_field( 'spr_hero_heading' );
-$hero_message = get_field( 'spr_hero_message' );
+$hero_loading    = get_field( 'spr_hero_loading_text' );
+$hero_heading    = get_field( 'spr_hero_heading' );
+$hero_message    = get_field( 'spr_hero_message' );
+$hero_image      = get_field( 'spr_hero_image' );
+$hero_gallery    = get_field( 'spr_hero_gallery' );
+$hero_overlay    = get_field( 'spr_hero_overlay' );
+$hero_display    = get_field( 'spr_hero_content_display' );
+$code_option     = get_field( 'spr_hero_shortcode_option' );
+$hero_shortcode  = get_field( 'spr_hero_shortcode' );
+$search_location = get_field( 'spr_hero_search_location' );
+$search_params   = get_field( 'spr_hero_search_parameters' );
+$search_results  = get_field( 'spr_hero_search_results' );
+$search_view     = get_field( 'spr_hero_search_map' );
+$search_button   = get_field( 'spr_hero_search_button_text' );
 
 // If the hero image field is not empty.
 if ( $hero_image ) {
@@ -83,12 +93,65 @@ if ( get_field( 'spr_front_loading_text' ) ) {
 }
 
 // Hero loader display conditions.
-if ( 'shortcode' === get_field( 'spr_hero_content_display' ) ) {
+if ( 'shortcode' === $hero_display ) {
 	$use_shortcode = true;
 	$loader_class  = 'hero-has-loader';
 } else {
-	$use_shortcode =false;
+	$use_shortcode = false;
 	$loader_class  = 'hero-no-loader';
+}
+
+// Build shortcode.
+$font_stack = 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
+
+if ( $search_location ) {
+	$search_location = 'on';
+} else {
+	$search_location = 'off';
+}
+
+if ( $search_button ) {
+	$search_button = $search_button;
+} else {
+	$search_button = __( 'Search Properties', 'spr-two' );
+}
+
+if ( is_array( $search_params ) && ! empty( $search_params ) ) {
+	$search_params = implode( ',', $search_params );
+} else {
+	$search_params - 'beds,baths,square_footage,list_price';
+}
+
+if ( true === $search_view ) {
+	$search_view = 'map';
+} else {
+	$search_view = 'list';
+}
+
+if ( 'paste' == $code_option && $hero_shortcode ) {
+	$form_code = $hero_shortcode;
+} elseif ( 'build' == $code_option ) {
+	$form_code = sprintf(
+		'[idx_search title="" link="1lkpig7k5t4z" buttontext="%s" detailed_search="on" destination="local" user_sorting="off" location_search="%s" property_type_enabled="off" property_type="A,B,D" std_fields="%s" theme="hori_square_light" orientation="horizontal" title_font="%s" field_font="%s" border_style="squared" widget_drop_shadow="off" background_color="#222222" title_text_color="#ffffff" field_text_color="#ffffff" detailed_search_text_color="#ffffff" submit_button_shine="none" submit_button_background="#222222" submit_button_text_color="#ffffff" allow_sold_searching="off" default_view="%s" listings_per_page="%s" allow_pending_searching="off"]',
+		$search_button,
+		$search_location,
+		$search_params,
+		$font_stack,
+		$font_stack,
+		$search_view,
+		$search_results
+	);
+} else {
+	$form_code = sprintf(
+		'[idx_search title="" link="1lkpig7k5t4z" buttontext="%s" detailed_search="on" destination="local" user_sorting="off" location_search="%s" property_type_enabled="off" property_type="A,B,D" std_fields="%s" theme="hori_square_light" orientation="horizontal" title_font="%s" field_font="%s" border_style="squared" widget_drop_shadow="off" background_color="#222222" title_text_color="#ffffff" field_text_color="#ffffff" detailed_search_text_color="#ffffff" submit_button_shine="none" submit_button_background="#222222" submit_button_text_color="#ffffff" allow_sold_searching="off" default_view="%s" listings_per_page="%s" allow_pending_searching="off"]',
+		$search_button,
+		$search_location,
+		$search_params,
+		$font_stack,
+		$font_stack,
+		$search_view,
+		$search_results
+	);
 }
 
 // Down arrow.
@@ -105,8 +168,8 @@ $down_arrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><pa
 
 		<h3 class="hero-site-description"><?php echo $hero_heading; ?></h3>
 
-	<?php if ( 'shortcode' === get_field( 'spr_hero_content_display' ) ) : ?>
-		<?php echo do_shortcode( get_field( 'spr_hero_shortcode' ) ); ?>
+	<?php if ( 'shortcode' === $hero_display ) : ?>
+		<?php echo do_shortcode( $form_code ); ?>
 	<?php else : ?>
 
 		<?php echo $hero_message; ?>
