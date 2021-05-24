@@ -1577,15 +1577,14 @@ article .gallery .gallery-item img {
   max-width: 2560px;
   overflow-x: hidden;
   margin: 0 auto;
-  background: #222222;
+  background-color: #222222;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #ffffff;
 }
 
-.custom-header-media {
-  position: relative;
-}
-
-.custom-header-media:before {
+.front-page-hero:before {
   content: '';
   display: block;
   position: absolute;
@@ -1596,23 +1595,14 @@ article .gallery .gallery-item img {
   background: rgba(0, 0, 0, 0.35);
 }
 
-.custom-header-media img {
-  display: block;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-}
-
 .front-page-hero-content {
+  position: relative;
   overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 100;
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 2rem;
+  padding: 10vw 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2949,6 +2939,11 @@ body.admin-bar {
 
 .static-front .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit ~ a {
   display: none;
+}
+
+.static-front .select2-container--default {
+  width: 100% !important;
+  max-width: 640px !important;
 }
 
 .static-front .select2-container--default .select2-search--inline .select2-search__field {
