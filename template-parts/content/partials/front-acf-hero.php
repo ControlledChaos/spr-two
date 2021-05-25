@@ -80,10 +80,7 @@ if ( $hero_message ) {
 
 // Use the following if the field is empty.
 } else {
-	$hero_message = sprintf(
-		'<p>%1s</p>',
-		__( 'Three Rivers, Exeter, Porterville, Visalia, and Tulare County, California', 'spr-two' )
-	);
+	$hero_message = '';
 }
 
 // Hero loading text.
@@ -181,11 +178,11 @@ $down_arrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><pa
 
 		<h3 class="hero-site-description"><?php echo $hero_heading; ?></h3>
 
+		<?php echo $hero_message; ?>
+
 	<?php if ( 'shortcode' === $hero_display ) : ?>
 		<?php echo do_shortcode( $form_code ); ?>
 	<?php else : ?>
-
-		<?php echo $hero_message; ?>
 
 		<?php
 		if ( $hero_menu && has_nav_menu( $hero_menu ) ) :
