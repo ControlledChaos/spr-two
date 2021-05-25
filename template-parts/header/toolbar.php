@@ -1,10 +1,6 @@
 <?php
 /**
- * Visitor toolbar
- *
- * Used for phone number & email.
- * Good for login/logout if
- * necessary in the future.
+ * Toolbar
  *
  * @package    SPR_Two
  * @subpackage Templates
