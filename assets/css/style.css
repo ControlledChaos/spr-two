@@ -267,6 +267,7 @@ b, strong, optgroup {
  * stacks are used in @supports( font-variation-settings ) queries.
  */
 body {
+  overflow-y: hidden;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.5;
   background: #ffffff;
@@ -1232,16 +1233,6 @@ article .gallery .gallery-item img {
           box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
 }
 
-.logged-in.admin-bar .site-header-wrap {
-  top: 32px;
-}
-
-@media screen and (max-width: 782px) {
-  .logged-in.admin-bar .site-header-wrap {
-    top: 46px;
-  }
-}
-
 .site-header {
   width: 100%;
 }
@@ -1355,12 +1346,6 @@ article .gallery .gallery-item img {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .logged-in.admin-bar .site-header-wrap {
-    position: relative;
   }
 }
 

@@ -131,16 +131,6 @@
 	}
 }
 
-.logged-in.admin-bar {
-	.site-header-wrap {
-		top: 32px;
-
-		@media screen and ( max-width: 782px ) {
-			top: 46px;
-		}
-	}
-}
-
 .site-header {
 	width: 100%;
 }
@@ -244,15 +234,6 @@
 
 	.site-branding {
 		justify-content: flex-start;
-	}
-}
-
-@media screen and ( max-width: 600px ) {
-
-	.logged-in.admin-bar {
-		.site-header-wrap {
-			position: relative;
-		}
 	}
 }
 

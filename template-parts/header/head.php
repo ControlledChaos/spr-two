@@ -32,9 +32,9 @@ namespace SPR_Two;
 
 	<?php
 	// Hook into the head.
-	do_action( 'before_wp_head' );
+	do_action( 'SPR_Two\before_wp_head' );
 	wp_head();
-	do_action( 'after_wp_head' );
+	do_action( 'SPR_Two\after_wp_head' );
 	?>
 
 </head>

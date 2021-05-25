@@ -43,6 +43,9 @@ class Setup {
 
 		// User color scheme classes.
 		add_filter( 'body_class', [ $this, 'color_scheme_classes' ] );
+
+		// Print styles to head.
+		add_action( 'SPR_Two\after_wp_head', [ $this, 'print_styles_after' ] );
 	}
 
 	/**
@@ -321,5 +324,28 @@ class Setup {
 
 		// Return the unfiltered classes if user is not logged in.
 		return $classes;
+	}
+
+	/**
+	 * Print styles
+	 *
+	 * Hooked after 'wp_head()`.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return string Returns the style blocks.
+	 */
+	public function print_styles_after() {
+
+		$styles = '<style>';
+
+		if ( is_user_logged_in() && is_admin_bar_showing() ) {
+			$styles .= 'html { margin: 0px !important }';
+			$styles .= '#wpadminbar { display: none !important }';
+		}
+
+		$styles .= '</style>';
+
+		echo $styles;
 	}
 }
