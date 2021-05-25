@@ -152,6 +152,13 @@ a {
 	bottom: 2rem;
 	z-index: 500;
 	transition: none;
+
+	&.focus,
+	&:focus {
+		background-color: $button_background_color;
+		border-color: $button_border_color;
+		color: $button_text_color;
+	}
 }
 
 // Text meant only for screen readers.

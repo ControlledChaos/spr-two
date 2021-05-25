@@ -415,6 +415,12 @@ a:hover, a.hover, a:focus, a.focus {
   transition: none;
 }
 
+#back-to-top.focus, #back-to-top:focus {
+  background-color: #ffffff;
+  border-color: #cccccc;
+  color: #344a5f;
+}
+
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
