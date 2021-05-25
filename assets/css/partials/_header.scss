@@ -5,12 +5,13 @@
 @import '../modules/_colors';
 @import '../modules/_typography';
 
-#info-bar {
+#theme-toolbar {
 	position: relative;
 	z-index: 9999;
 	width: 100%;
 	background-color: $bg_darker;
 	color: $header_text_color;
+	font-weight: 600;
 
 	.inner {
 		display: flex;
@@ -40,28 +41,36 @@
 				}
 			}
 
-			svg {
-				display: inline-block;
-				height: 1rem;
-				vertical-align: sub;
-				fill: $header_text_color;
-				transition: all 0.2s;
-			}
+			.toolbar-icon {
+				position: relative;
 
-			.toolbar-phone-icon {
-				display: inline-block;
-				transform: rotate( 30deg );
+				svg {
+					display: inline-block;
+					height: 1em;
+					vertical-align: sub;
+					fill: $header_text_color;
+					transition: all 0.2s;
+				}
+
+				&.toolbar-phone-icon {
+					display: inline-block;
+					transform: rotate( 30deg );
+				}
+
+				&.toolbar-dashboard-icon {
+					top: -1px;
+				}
 			}
 		}
 	}
 
-	.info-bar-one {
+	.theme-toolbar-one {
 		li {
 			margin-right: 0.5em;
 		}
 	}
 
-	.info-bar-two {
+	.theme-toolbar-two {
 		li {
 			margin-left: 0.5em;
 		}
@@ -77,8 +86,10 @@
 		&.focus {
 			color: $header_link_action_color;
 
-			svg {
-				fill: $header_link_action_color;
+			.toolbar-icon {
+				svg {
+					fill: $header_link_action_color;
+				}
 			}
 		}
 	}
@@ -97,6 +108,7 @@
 	box-shadow: 0px 5px 15px -6px rgba( $color: $black, $alpha: 0.625 );
 
 	&.stuck {
+
 		.header-inner {
 			padding: 0.5em 1rem;
 		}
@@ -234,6 +246,23 @@
 
 	.site-branding {
 		justify-content: flex-start;
+	}
+}
+
+@media screen and ( max-width: 640px ) {
+
+	.toolbar-link-text {
+		border: 0;
+		clip: rect(1px, 1px, 1px, 1px);
+		-webkit-clip-path: inset( 50% );
+				clip-path: inset( 50% );
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute !important;
+		width: 1px;
+		word-wrap: normal !important;
 	}
 }
 

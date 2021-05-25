@@ -267,7 +267,6 @@ b, strong, optgroup {
  * stacks are used in @supports( font-variation-settings ) queries.
  */
 body {
-  overflow-y: hidden;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.5;
   background: #ffffff;
@@ -1098,15 +1097,16 @@ article .gallery .gallery-item img {
  * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
  * stacks are used in @supports( font-variation-settings ) queries.
  */
-#info-bar {
+#theme-toolbar {
   position: relative;
   z-index: 9999;
   width: 100%;
   background-color: #1b252dff;
   color: #ffffff;
+  font-weight: 600;
 }
 
-#info-bar .inner {
+#theme-toolbar .inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1126,60 +1126,68 @@ article .gallery .gallery-item img {
   line-height: 36px;
 }
 
-#info-bar .inner div p:first-of-type {
+#theme-toolbar .inner div p:first-of-type {
   margin: 0;
 }
 
-#info-bar .inner div ul {
+#theme-toolbar .inner div ul {
   list-style: none;
   margin: 0;
 }
 
-#info-bar .inner div ul li {
+#theme-toolbar .inner div ul li {
   display: inline;
 }
 
-#info-bar .inner div svg {
+#theme-toolbar .inner div .toolbar-icon {
+  position: relative;
+}
+
+#theme-toolbar .inner div .toolbar-icon svg {
   display: inline-block;
-  height: 1rem;
+  height: 1em;
   vertical-align: sub;
   fill: #ffffff;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-#info-bar .inner div .toolbar-phone-icon {
+#theme-toolbar .inner div .toolbar-icon.toolbar-phone-icon {
   display: inline-block;
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
 }
 
-#info-bar .info-bar-one li {
+#theme-toolbar .inner div .toolbar-icon.toolbar-dashboard-icon {
+  top: -1px;
+}
+
+#theme-toolbar .theme-toolbar-one li {
   margin-right: 0.5em;
 }
 
-#info-bar .info-bar-two li {
+#theme-toolbar .theme-toolbar-two li {
   margin-left: 0.5em;
 }
 
-#info-bar a,
-#info-bar a:visited {
+#theme-toolbar a,
+#theme-toolbar a:visited {
   color: #ffffff;
 }
 
-#info-bar a:hover, #info-bar a.hover, #info-bar a:focus, #info-bar a.focus,
-#info-bar a:visited:hover,
-#info-bar a:visited.hover,
-#info-bar a:visited:focus,
-#info-bar a:visited.focus {
+#theme-toolbar a:hover, #theme-toolbar a.hover, #theme-toolbar a:focus, #theme-toolbar a.focus,
+#theme-toolbar a:visited:hover,
+#theme-toolbar a:visited.hover,
+#theme-toolbar a:visited:focus,
+#theme-toolbar a:visited.focus {
   color: #b6c7d7;
 }
 
-#info-bar a:hover svg, #info-bar a.hover svg, #info-bar a:focus svg, #info-bar a.focus svg,
-#info-bar a:visited:hover svg,
-#info-bar a:visited.hover svg,
-#info-bar a:visited:focus svg,
-#info-bar a:visited.focus svg {
+#theme-toolbar a:hover .toolbar-icon svg, #theme-toolbar a.hover .toolbar-icon svg, #theme-toolbar a:focus .toolbar-icon svg, #theme-toolbar a.focus .toolbar-icon svg,
+#theme-toolbar a:visited:hover .toolbar-icon svg,
+#theme-toolbar a:visited.hover .toolbar-icon svg,
+#theme-toolbar a:visited:focus .toolbar-icon svg,
+#theme-toolbar a:visited.focus .toolbar-icon svg {
   fill: #b6c7d7;
 }
 
@@ -1346,6 +1354,22 @@ article .gallery .gallery-item img {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .toolbar-link-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
   }
 }
 
