@@ -9,6 +9,7 @@
 @import '../modules/_typography';
 
 body {
+	overflow-y: hidden;
 	font-family: $sans;
 	line-height: 1.5;
 	background:$body_bg;
