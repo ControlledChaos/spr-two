@@ -11,7 +11,8 @@
 	top: 0;
 	z-index: 9999;
 	width: 100vw;
-	padding: 1rem 2rem;
+	max-width: 100%;
+	padding: 1rem;
 	background-color: $header_bg_color;
 	background-image: linear-gradient( to top, $header_bg_color 0%, darken( $color: $header_bg_color, $amount: 5% ) 100% );
 	border-bottom: solid 1px darken( $color: $header_bg_color, $amount: 15% );
@@ -61,7 +62,6 @@
 
 .site-header {
 	width: 100%;
-	min-width: 460px;
 }
 
 .site-branding {
@@ -159,6 +159,7 @@
 
 	.site-header {
 		width: auto;
+		min-width: 460px;
 	}
 
 	.site-branding {
@@ -171,6 +172,17 @@
 	.logged-in.admin-bar {
 		.site-header-wrap {
 			position: relative;
+		}
+	}
+}
+
+@media screen and ( max-width: 480px ) {
+
+	.site-branding {
+		padding: 0;
+
+		.site-title {
+			font-size: 1.75em;
 		}
 	}
 }

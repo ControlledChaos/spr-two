@@ -1103,7 +1103,8 @@ article .gallery .gallery-item img {
   top: 0;
   z-index: 9999;
   width: 100vw;
-  padding: 1rem 2rem;
+  max-width: 100%;
+  padding: 1rem;
   background-color: #32475c;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#32475c), to(#293a4b));
   background-image: linear-gradient(to top, #32475c 0%, #293a4b 100%);
@@ -1160,7 +1161,6 @@ article .gallery .gallery-item img {
 
 .site-header {
   width: 100%;
-  min-width: 460px;
 }
 
 .site-branding {
@@ -1267,6 +1267,7 @@ article .gallery .gallery-item img {
 @media screen and (min-width: 37.5em) {
   .site-header {
     width: auto;
+    min-width: 460px;
   }
   .site-branding {
     -webkit-box-pack: start;
@@ -1278,6 +1279,15 @@ article .gallery .gallery-item img {
 @media screen and (max-width: 600px) {
   .logged-in.admin-bar .site-header-wrap {
     position: relative;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-branding {
+    padding: 0;
+  }
+  .site-branding .site-title {
+    font-size: 1.75em;
   }
 }
 
@@ -2943,6 +2953,39 @@ article .gallery .gallery-item img {
 .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_field {
   margin-bottom: unset !important;
   margin-top: 1em;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_field.flexmls_connect__search_field_location label {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_field.flexmls_connect__search_field_location label:focus {
+  border-radius: 3px;
+  clip: auto !important;
+  -webkit-clip-path: none;
+  clip-path: none;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
 }
 
 .static-front .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_field_group {
