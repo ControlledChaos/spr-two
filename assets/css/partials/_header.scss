@@ -5,11 +5,70 @@
 @import '../modules/_colors';
 @import '../modules/_typography';
 
+#info-bar {
+	position: relative;
+	z-index: 9999;
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: $bg_darker;
+	color: $header_text_color;
+
+	.inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 1440px;
+		margin: 0 auto;
+
+		div {
+			p {
+				&:first-of-type {
+					margin: 0;
+				}
+			}
+
+			ul {
+				list-style: none;
+
+				li {
+					display: inline;
+				}
+			}
+		}
+	}
+
+	.info-bar-one {
+		li {
+			margin-right: 0.5em;
+		}
+	}
+
+	.info-bar-two {
+		li {
+			margin-left: 0.5em;
+		}
+	}
+
+	a,
+	a:visited {
+		color: $header_link_color;
+
+		&:hover,
+		&.hover,
+		&:focus,
+		&.focus {
+			color: $header_link_action_color;
+		}
+	}
+}
+
 .site-header-wrap {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-	z-index: 9999;
+	z-index: 9998;
 	width: 100vw;
 	max-width: 100%;
 	padding: 1rem;
@@ -71,7 +130,6 @@
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 0 2em;
 
 	.site-title {
 		margin: 0;

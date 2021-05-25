@@ -34,6 +34,9 @@ class Layout {
 	 */
 	public function __construct() {
 
+		// Add a visitor toolbar.
+		add_action( 'SPR_Two\before_page', [ $this, 'visitor_toolbar' ] );
+
 		// Add main navigation before header.
 		add_action( 'SPR_Two\after_header', [ $this, 'navigation_main' ] );
 
@@ -42,6 +45,17 @@ class Layout {
 
 		// Add the default header.
 		add_action( 'SPR_Two\footer', [ $this, 'page_footer' ] );
+	}
+
+	/**
+	 * Load visitor toolbar
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function visitor_toolbar() {
+		get_template_part( 'template-parts/header/visitor-toolbar' );
 	}
 
 	/**

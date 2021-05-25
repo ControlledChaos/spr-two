@@ -60,6 +60,16 @@ figure.alignleft {
   margin-left: 0.5em;
 }
 
+#info-bar .info-bar-one li {
+  margin-right: unset;
+  margin-left: 0.5em;
+}
+
+#info-bar .info-bar-two li {
+  margin-left: unset;
+  margin-right: 0.5em;
+}
+
 .site-branding img {
   margin-right: unset;
   margin-left: 1em;
@@ -125,6 +135,14 @@ figure.alignleft {
 .entry-footer span {
   margin-right: unset;
   margin-left: 1em;
+}
+
+.front-page-hero {
+  left: 50%;
+  left: unset;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 .front-page-hero-content #hero-menu li:not(:last-of-type) {

@@ -1097,11 +1097,70 @@ article .gallery .gallery-item img {
  * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
  * stacks are used in @supports( font-variation-settings ) queries.
  */
+#info-bar {
+  position: relative;
+  z-index: 9999;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #1b252dff;
+  color: #ffffff;
+}
+
+#info-bar .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#info-bar .inner div p:first-of-type {
+  margin: 0;
+}
+
+#info-bar .inner div ul {
+  list-style: none;
+}
+
+#info-bar .inner div ul li {
+  display: inline;
+}
+
+#info-bar .info-bar-one li {
+  margin-right: 0.5em;
+}
+
+#info-bar .info-bar-two li {
+  margin-left: 0.5em;
+}
+
+#info-bar a,
+#info-bar a:visited {
+  color: #ffffff;
+}
+
+#info-bar a:hover, #info-bar a.hover, #info-bar a:focus, #info-bar a.focus,
+#info-bar a:visited:hover,
+#info-bar a:visited.hover,
+#info-bar a:visited:focus,
+#info-bar a:visited.focus {
+  color: #b6c7d7;
+}
+
 .site-header-wrap {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 9998;
   width: 100vw;
   max-width: 100%;
   padding: 1rem;
@@ -1176,7 +1235,6 @@ article .gallery .gallery-item img {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2em;
 }
 
 .site-branding .site-title {
