@@ -18,7 +18,6 @@ $hero_loading     = get_field( 'spr_hero_loading_text' );
 $hero_heading     = get_field( 'spr_hero_heading' );
 $hero_message     = get_field( 'spr_hero_message' );
 $hero_menu        = get_field( 'spr_hero_menu' );
-$hero_image       = get_field( 'spr_hero_image' );
 $hero_gallery     = get_field( 'spr_hero_gallery' );
 $hero_overlay     = get_field( 'spr_hero_overlay' );
 $hero_display     = get_field( 'spr_hero_content_display' );
@@ -30,20 +29,20 @@ $search_results   = get_field( 'spr_hero_search_results' );
 $search_view      = get_field( 'spr_hero_search_map' );
 $search_button    = get_field( 'spr_hero_search_button_text' );
 
-// If the hero image field is not empty.
-if ( $hero_image ) {
+// Random gallery image.
+if ( $hero_gallery ) {
+
+	$random_gallery = array_rand( $hero_gallery, 1 );
 
 	// Preferred image size.
 	if ( has_image_size( 'x-large-banner' ) ) {
-		$hero_size = 'x-large-banner';
+		$hero_src = $hero_gallery[$random_gallery]['sizes']['x-large-banner'];
 
 	// Fallback image size.
 	} else {
-		$hero_size = 'large';
+		$get_src  = wp_get_attachment_image_src( $hero_gallery[ $random_gallery ]['ID'], 'full' );
+		$hero_src = $get_src{0};
 	}
-
-	// URL of the hero image from the field.
-	$hero_src = $hero_image['sizes'][ $hero_size ];
 
 // Use the header image from the customizer.
 } elseif ( has_header_image() ) {
