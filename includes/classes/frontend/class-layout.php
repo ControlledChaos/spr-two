@@ -35,7 +35,7 @@ class Layout {
 	public function __construct() {
 
 		// Add a visitor toolbar.
-		add_action( 'SPR_Two\before_page', [ $this, 'visitor_toolbar' ] );
+		add_action( 'SPR_Two\before_header', [ $this, 'visitor_toolbar' ] );
 
 		// Add main navigation before header.
 		add_action( 'SPR_Two\after_header', [ $this, 'navigation_main' ] );

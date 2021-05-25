@@ -9,7 +9,6 @@
 	position: relative;
 	z-index: 9999;
 	width: 100%;
-	padding: 0.5rem 1rem;
 	background-color: $bg_darker;
 	color: $header_text_color;
 
@@ -20,7 +19,10 @@
 		align-items: center;
 		width: 100%;
 		max-width: 1440px;
+		height: 36px;
 		margin: 0 auto;
+		padding: 0 1rem;
+		line-height: 36px;
 
 		div {
 			p {
@@ -31,10 +33,24 @@
 
 			ul {
 				list-style: none;
+				margin: 0;
 
 				li {
 					display: inline;
 				}
+			}
+
+			svg {
+				display: inline-block;
+				height: 1rem;
+				vertical-align: sub;
+				fill: $header_text_color;
+				transition: all 0.2s;
+			}
+
+			.toolbar-phone-icon {
+				display: inline-block;
+				transform: rotate( 30deg );
 			}
 		}
 	}
@@ -60,6 +76,10 @@
 		&:focus,
 		&.focus {
 			color: $header_link_action_color;
+
+			svg {
+				fill: $header_link_action_color;
+			}
 		}
 	}
 }
@@ -71,14 +91,15 @@
 	z-index: 9998;
 	width: 100vw;
 	max-width: 100%;
-	padding: 1rem;
 	background-color: $header_bg_color;
 	background-image: linear-gradient( to top, $header_bg_color 0%, darken( $color: $header_bg_color, $amount: 5% ) 100% );
 	border-bottom: solid 1px darken( $color: $header_bg_color, $amount: 15% );
 	box-shadow: 0px 5px 15px -6px rgba( $color: $black, $alpha: 0.625 );
 
 	&.stuck {
-		padding: 0.5em 2em;
+		.header-inner {
+			padding: 0.5em 1rem;
+		}
 
 		.site-branding {
 			img {
@@ -88,11 +109,11 @@
 
 		.site-title {
 			font-size: 1.625rem;
-			transform: translateX( -24px );
+			// transform: translateX( -24px );
 		}
 	}
 
-	.inner {
+	.header-inner {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -100,6 +121,7 @@
 		width: 100%;
 		max-width: 1440px;
 		margin: 0 auto;
+		padding: 1rem;
 	}
 }
 
