@@ -3,3 +3,101 @@
 ///
 
 @import 'modules/_colors';
+@import 'modules/_typography';
+@import 'partials/_typography';
+@import 'partials/_forms';
+@import 'partials/_media';
+
+body {
+	font-family: $sans;
+	font-size: 1rem;
+	background:$body_bg;
+	color: $text_color;
+}
+
+.serif {
+	font-family: $serif;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+	margin-top: 1em;
+}
+
+h1,
+h2 {
+	font-family: $serif;
+	font-size: 2rem;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: small-caps;
+	font-variant-caps: small-caps;
+	color: $text_dark;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+		font-size: 2.25rem;
+		letter-spacing: 0.025em;
+	}
+
+	> a {
+		color: $text_dark;
+	}
+}
+
+h3 {
+	font-family: $serif;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: $text_dark;
+
+	@supports ( font-variation-settings: normal ) {
+		font-family: $variable_serif;
+		font-size: 1.625rem;
+		font-weight: 450;
+	}
+}
+
+a {
+	color: $link_color;
+	text-decoration: none;
+	transition: all .15s;
+	-webkit-transition: all .15s;
+	   -moz-transition: all .15s;
+	    -ms-transition: all .15s;
+	     -o-transition: all .15s;
+
+	&:visited {
+		color: $link_color;
+	}
+
+	&:hover,
+	&.hover,
+	&:focus,
+	&.focus {
+		color: $link_action_color;
+	}
+}
+
+b,
+strong {
+	color: lighten( $color: $text_color, $amount: 10% );
+}
+
+a {
+	b,
+	strong {
+		color: inherit;
+	}
+}
