@@ -15,8 +15,9 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: $white;
+	text-shadow: 0.05em 0.05em 0.075em rgba( $color: $black, $alpha: 0.85 );
 
-	&:before { background: rgba( $color: black, $alpha: 0.7 ); }
+	&:before { background: rgba( $color: black, $alpha: 0.5 ); }
 
 	h2,
 	h3 {
@@ -42,10 +43,8 @@
 		justify-content: space-between;
 		margin: 0 auto;
 
-		@media screen and ( max-width: 768px ) {
+		@media screen and ( max-width: 800px ) {
 			flex-wrap: wrap;
-			// flex-direction: column;
-			// justify-content: flex-start;
 		}
 
 		> div {
@@ -53,21 +52,39 @@
 			max-width: 640px;
 			padding-right: 1rem;
 
-			@media screen and ( max-width: 768px ) {
+			@media screen and ( max-width: 800px ) {
 				width: 33.33325%;
 				width: calc( 100%/3 );
+			}
+
+			@media screen and ( max-width: 600px ) {
+				width: 50%;
 				padding: 0;
+			}
+
+			@media screen and ( max-width: 480px ) {
+				width: 100%;
 			}
 
 			&:last-of-type {
 				padding-left: 1rem;
 				padding-right: 0;
 
-				@media screen and ( max-width: 768px ) {
+				@media screen and ( max-width: 800px ) {
 					align-self: center;
 					width: 100%;
 					max-width: 100%;
-					padding: 1rem 0 0;
+					padding-top: 2rem;
+				}
+
+				@media screen and ( max-width: 600px ) {
+					align-self: flex-start;
+					width: 50%;
+					padding-top: 0;
+				}
+
+				@media screen and ( max-width: 480px ) {
+					width: 100%;
 				}
 			}
 		}
