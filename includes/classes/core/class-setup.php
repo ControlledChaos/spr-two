@@ -41,6 +41,15 @@ class Setup {
 		// Remove WooCommerce styles.
 		add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
+		// Login styles.
+		add_action( 'login_enqueue_scripts', [ $this, 'login_styles' ] );
+
+		// Login title.
+		add_filter( 'login_headertext', [ $this, 'login_title' ] );
+
+		// Login URL.
+		add_filter( 'login_headerurl', [ $this, 'login_url' ] );
+
 		// User color scheme classes.
 		add_filter( 'body_class', [ $this, 'color_scheme_classes' ] );
 
@@ -298,6 +307,43 @@ class Setup {
 
 		// Print the style block.
 		echo $style;
+	}
+
+	/**
+	 * Login styles
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function login_styles() {
+
+		// Instantiate the Assets class.
+		$assets = new Assets;
+
+		wp_enqueue_style( 'sprt-login', get_theme_file_uri( '/assets/css/login' . $assets->suffix() . '.css' ), [], SPRT_VERSION, 'screen' );
+	}
+
+	/**
+	 * Login URL
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return string Returns the URL.
+	 */
+	public function login_url() {
+		return site_url( '/' );
+	}
+
+	/**
+	 * Login title
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return string Returns the title text.
+	 */
+	public function login_title() {
+		return get_bloginfo( 'name' );
 	}
 
 	/**
