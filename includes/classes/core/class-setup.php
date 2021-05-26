@@ -154,7 +154,8 @@ class Setup {
 		add_theme_support( 'custom-header', apply_filters( 'sprt_custom_header_args', [
 			'width'              => 2048,
 			'height'             => 878,
-			'flex-height'        => true,
+			'flex-width'         => false,
+        	'flex-height'        => false,
 			'default-image'      => $default_image,
 			'random-default'     => true,
 			'video'              => false,
