@@ -24,8 +24,16 @@ $copyright = sprintf(
 
 ?>
 <aside class="footer-widgets">
-<?php dynamic_sidebar( 'footer-one' ); ?>
-<?php dynamic_sidebar( 'footer-two' ); ?>
+
+	<div class="inner">
+		<div class="footer-one">
+			<?php dynamic_sidebar( 'footer-one' ); ?>
+		</div>
+		<div class="footer-two">
+			<?php dynamic_sidebar( 'footer-two' ); ?>
+		</div>
+	</div>
+
 </aside>
 <footer id="colophon" class="site-footer">
 	<div class="footer-content global-wrapper footer-wrapper">
