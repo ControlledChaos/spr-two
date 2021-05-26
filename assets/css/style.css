@@ -2450,6 +2450,10 @@ article .gallery .gallery-item img {
   display: none;
 }
 
+.flexmls_connect__page_content .flexmls_connect__sr_result .flexmls_connect__sr_listing_facts .flexmls_connect__zebra:nth-child(2n+1), .flexmls_connect__page_content .flexmls_connect__sr_result .flexmls_connect__sr_listing_facts .flexmls_connect__zebra:nth-child(2n+1) {
+  background-color: unset;
+}
+
 .flexmls_connect__page_content .flexmls_connect__sr_listing_facts_container {
   float: left;
 }
@@ -2496,6 +2500,14 @@ article .gallery .gallery-item img {
   background-color: #f8ce30;
   border-color: #555555;
   color: #333333;
+}
+
+@media (min-width: 481px) {
+  .columns2 .flexmls_connect__ld_property_detail_row:nth-of-type(2n),
+  .flexmls_connect__ld_property_detail_row:nth-of-type(2n) {
+    background-color: #eeeeee !important;
+    border-color: #cccccc !important;
+  }
 }
 
 .flexmls-custom_view_header {

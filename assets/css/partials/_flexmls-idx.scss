@@ -30,6 +30,16 @@ body.admin-bar {
 		.flexmls_connect__sr_idx {
 			display: none;
 		}
+
+		.flexmls_connect__sr_listing_facts {
+
+			.flexmls_connect__zebra {
+				&:nth-child( 2n+1 ),
+				&:nth-child( 2n+1 ) {
+					background-color: unset;
+				}
+			}
+		}
 	}
 
 	.flexmls_connect__sr_listing_facts_container {
@@ -85,6 +95,15 @@ body.admin-bar {
 				color: $button_action_text_color;
 			}
 		}
+	}
+}
+
+.columns2 .flexmls_connect__ld_property_detail_row:nth-of-type(2n),
+.flexmls_connect__ld_property_detail_row:nth-of-type(2n) {
+
+	@media ( min-width:481px ) {
+		background-color: $off_white !important;
+		border-color: $box_border_color !important;
 	}
 }
 
