@@ -114,5 +114,27 @@ class Register {
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		] );
+
+		// Footer two.
+		register_sidebar( [
+			'name'          => __( 'Footer Three', 'spr-two' ),
+			'id'            => 'footer-three',
+			'description'   => __( '', 'spr-two' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		] );
+
+		// Footer two.
+		register_sidebar( [
+			'name'          => __( 'Footer Four', 'spr-two' ),
+			'id'            => 'footer-four',
+			'description'   => __( '', 'spr-two' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		] );
 	}
 }

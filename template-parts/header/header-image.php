@@ -48,7 +48,7 @@ use SPR_Two\Classes\Front as Front;
 			} else {
 				echo sprintf(
 					'<img src="%1s" alt="" width="2048" height="878" />',
-					esc_attr( get_theme_file_uri( '/assets/images/default-header.jpg' ) )
+					esc_attr( get_theme_file_uri( '/assets/images/kaweah-country.jpg' ) )
 				);
 			} ?>
 		</figure>

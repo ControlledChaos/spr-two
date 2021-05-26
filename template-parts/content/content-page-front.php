@@ -14,7 +14,7 @@ namespace SPR_Two;
 use SPR_Two\Classes\Front as Front;
 
 // Default hero image, located in assets/images.
-$hero_src = get_theme_file_uri( '/assets/images/default-header.jpg' );
+$hero_src = get_theme_file_uri( '/assets/images/kaweah-country.jpg' );
 
 // Use the header image from the customizer.
 if ( has_header_image() ) {

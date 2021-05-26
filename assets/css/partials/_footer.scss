@@ -8,14 +8,68 @@
 .footer-widgets {
 	position: relative;
 	z-index: 10;
-	padding: 2rem 1rem;
+	padding: 5vw 1rem;
 	background-color: $bg_light;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: $white;
 
+	&:before { background: rgba( $color: black, $alpha: 0.7 ); }
+
+	h2,
+	h3 {
+		color: inherit;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
 	.inner {
+		position: relative;
+		z-index: 20;
 		width: 100%;
 		max-width: 1440px;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
 		margin: 0 auto;
+
+		@media screen and ( max-width: 768px ) {
+			flex-wrap: wrap;
+			// flex-direction: column;
+			// justify-content: flex-start;
+		}
+
+		> div {
+			width: 100%;
+			max-width: 640px;
+			padding-right: 1rem;
+
+			@media screen and ( max-width: 768px ) {
+				width: 33.33325%;
+				width: calc( 100%/3 );
+				padding: 0;
+			}
+
+			&:last-of-type {
+				padding-left: 1rem;
+				padding-right: 0;
+
+				@media screen and ( max-width: 768px ) {
+					align-self: center;
+					width: 100%;
+					max-width: 100%;
+					padding: 1rem 0 0;
+				}
+			}
+		}
 	}
 
 	.widget {
@@ -58,6 +112,15 @@
 	:-ms-input-placeholder {
 		color: rgba( $color: $white, $alpha: 0.5 );
 	}
+	::-webkit-input-placeholder {
+		color: rgba( $color: $white, $alpha: 0.5 );
+	}
+	::-moz-placeholder {
+		color: rgba( $color: $white, $alpha: 0.5 );
+	}
+	::-ms-input-placeholder {
+		color: rgba( $color: $white, $alpha: 0.5 );
+	}
 	::placeholder {
 		color: rgba( $color: $white, $alpha: 0.5 );
 	}
@@ -88,12 +151,13 @@
 }
 
 .copyright-text {
+	margin: 0;
 	font-size: 0.825em;
 	text-align: center;
 	color: rgba( $color: $white, $alpha: 0.625 );
 }
 
-@media screen and (min-width: 801px) {
+@media screen and ( min-width: 801px ) {
 
 	.footer-widgets {
 		.inner {

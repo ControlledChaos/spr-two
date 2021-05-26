@@ -52,7 +52,7 @@ if ( $hero_gallery ) {
 } else {
 
 	// URL of the default hero image, located in assets/images.
-	$hero_src = get_theme_file_uri( '/assets/images/default-header.jpg' );
+	$hero_src = get_theme_file_uri( '/assets/images/kaweah-country.jpg' );
 }
 
 // Hero image overlay from the field.
