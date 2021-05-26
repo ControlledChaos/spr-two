@@ -129,10 +129,29 @@ jQuery(document).ready( function($) {
 </script>
 
 <script>
+
+// Sticky sidebars (Sticky-kit JS).
 jQuery(document).ready( function($) {
+
 	$( '#secondary, #front-section-sidebar, #contact-office-sidebar' ).stick_in_parent({
 		offset_top   : 70,
 		recalc_every : 1
+	});
+
+	$(window).resize( function() {
+
+		var windowSize = jQuery(window).width();
+
+		if ( windowSize.width() <= 768 ) {
+			$( '#secondary, #front-section-sidebar, #contact-office-sidebar' ).trigger( 'sticky_kit:detach' ).css( 'position', 'relative' );
+		}
+
+		if ( windowSize.width() > 768 ) {
+			$( '#secondary, #front-section-sidebar, #contact-office-sidebar' ).stick_in_parent({
+				offset_top   : 70,
+				recalc_every : 1
+			});
+		}
 	});
 });
 </script>
