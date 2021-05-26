@@ -23,6 +23,10 @@ $copyright = sprintf(
 );
 
 ?>
+<aside class="footer-widgets">
+<?php dynamic_sidebar( 'footer-one' ); ?>
+<?php dynamic_sidebar( 'footer-two' ); ?>
+</aside>
 <footer id="colophon" class="site-footer">
 	<div class="footer-content global-wrapper footer-wrapper">
 			<?php echo apply_filters( 'sprt_footer_copyright', $copyright ); ?>

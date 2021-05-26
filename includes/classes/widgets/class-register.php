@@ -92,5 +92,27 @@ class Register {
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		] );
+
+		// Footer one.
+		register_sidebar( [
+			'name'          => __( 'Footer One', 'spr-two' ),
+			'id'            => 'footer-one',
+			'description'   => __( '', 'spr-two' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		] );
+
+		// Footer two.
+		register_sidebar( [
+			'name'          => __( 'Footer Two', 'spr-two' ),
+			'id'            => 'footer-two',
+			'description'   => __( '', 'spr-two' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		] );
 	}
 }
