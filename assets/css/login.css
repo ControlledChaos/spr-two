@@ -1,0 +1,234 @@
+/**
+ * Font stack variables
+ *
+ * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
+ * stacks are used in @supports( font-variation-settings ) queries.
+ */
+/**
+ * Typography
+ */
+/**
+ * Sans-serif font
+ *
+ * The Wilbur theme uses Inter variable as a sans-serif font,
+ * same as the Twenty Twenty parent theme.
+ *
+ * @link https://github.com/rsms/inter
+ */
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  /* stylelint-disable-line font-weight-notation */
+  font-style: normal;
+  src: url(../fonts/inter/Inter-upright-var.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  /* stylelint-disable-line font-weight-notation */
+  font-style: italic;
+  src: url(../fonts/inter/Inter-italic-var.woff2) format("woff2");
+}
+
+/**
+ * Serif font
+ *
+ * The Wilbur theme uses Crimson Pro variable as a serif font.
+ *
+ * Chosen to supercede Hoefler Text, Garamond in the Twenty Twenty
+ * parent theme because of its variable weight, like Inter.
+ *
+ * Also, it render more cleanly at small size on Windows when
+ * Hoefler Text is not available and Garamond is used, with
+ * the exeption of the lowercase E character.
+ *
+ * @link https://github.com/Fonthausen/CrimsonPro
+ */
+@font-face {
+  font-family: 'Crimson Pro';
+  font-weight: 100 900;
+  /* stylelint-disable-line font-weight-notation */
+  font-style: normal;
+  src: url(../fonts/crimson/crimson-pro-roman.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  font-weight: 100 900;
+  /* stylelint-disable-line font-weight-notation */
+  font-style: italic;
+  src: url(../fonts/crimson/crimson-pro-italic.woff) format("woff");
+}
+
+/**
+ * Chrome renders extra-wide &nbsp; characters for the Hoefler Text font.
+ * This results in a jumping cursor when typing in both the classic editor and
+ * block editor. The following font-face override fixes the issue by manually
+ * inserting a custom font that includes just a Hoefler Text space replacement
+ * for that character instead.
+ */
+@font-face {
+  font-family: NonBreakingSpaceOverride;
+  src: url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMoAA0AAAAACDQAAALTAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GYACCahEICjx3CywAATYCJANUBCAFhiEHgWwbXQfILgpsY+rQRRARwyAs6uL7pxzYhxEE+32b3aeHmifR6tklkS9hiZA0ewkqGRJE+H7/+6378ASViK/PGeavqJyOzsceKi1s3BCiQsiOdn1r/RBgIJYEgCUhbm/8/8/h4saPssnTNkkiWUBrTRtjmQSajw3Ui3pZ3LYDPD+XG2C3JA/yKAS8/rU5eNfuGqRf4eNNgV4YAlIIgxglEkWe6FYpq10+wi3g+/nUgvgPFczNrz/RsTgVm/zfbPuHZlsuQECxuyqBcQwKFBjFgKO8AqP4bAN9tFJtnM9xPcbNjeXS/x1wY/xU52f5W/X1+9cnH4YwKIaoRRAkUkj/YlAAeF/624foiIDBgBmgQBeGAyhBljUPZUm/l2dTvmpqcBDUOHdbPZWd8JsBAsGr4w8/EDn82/bUPx4eh0YNrQTBuHO2FjQEAGBwK0DeI37DpQVqdERS4gZBhpeUhWCfLFz7J99aEBgsJCHvUGAdAPp4IADDCAPCEFMGpMZ9AQpTfQtQGhLbGVBZFV8BaqNyP68oTZgHNj3M8kBPfXTTC9t90UuzYhy9ciH0grVlOcqyCytisvbsERsEYztiznR0WCrmTksJwbSNK6fd1Rvr25I9oLvctUoEbNOmXJbqgYgPXEHJ82IUsrCnpkxh23F1rfZ2zcRnJYoXtauB3VTFkFXQg3uoZYD5qE0kdjDtoDoF1h2bulGmev5HbYhbrjtohQSRI4aNOkffIcT+d3v6atpaYh3JvPoQsztCcqvaBkppDSPcQ3bw3KaCBo1f5CJWTZEgW3LjLofYg51MaVezrx8xZitYbQ9KYeoRaqQdVLwSEfrKXLK1otCWOKNdR/YwYAfon5Yk8O2MJfSD10dPGA5PIJJQMkah0ugMJiv6x4Dm7LEa8xnrRGGGLAg4sAlbsA07sAt76DOsXKO3hIjtIlpnnFrt1qW4kh6NhS83P/6HB/fl1SMAAA==) format("woff2"), url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAUQAA0AAAAACDQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAE9AAAABwAAAAchf5yU0dERUYAAATYAAAAHAAAAB4AJwAbT1MvMgAAAaAAAABJAAAAYJAcgU5jbWFwAAACIAAAAF4AAAFqUUxBZ2dhc3AAAATQAAAACAAAAAgAAAAQZ2x5ZgAAApAAAAAyAAAAPL0n8y9oZWFkAAABMAAAADAAAAA2Fi93Z2hoZWEAAAFgAAAAHQAAACQOSgWaaG10eAAAAewAAAAzAAAAVC7TAQBsb2NhAAACgAAAABAAAAAsAOQBAm1heHAAAAGAAAAAHQAAACAAWQALbmFtZQAAAsQAAAF6AAADIYvD/Adwb3N0AAAEQAAAAI4AAADsapk2o3jaY2BkYGAA4ov5mwzj+W2+MnCzXwCKMNzgCBSB0LfbQDQ7AxuI4mBgAlEAFKQIRHjaY2BkYGD3+NvCwMDBAALsDAyMDKhAFAA3+wH3AAAAeNpjYGRgYBBl4GBgYgABEMnIABJzAPMZAAVmAGUAAAB42mNgZlJhnMDAysDCKsKygYGBYRqEZtrDYMT4D8gHSmEHjgUFOQwODAqqf9g9/rYwMLB7MNUAhRlBcsxBrMlASoGBEQAj8QtyAAAAeNrjYGBkAAGmWQwMjO8gmBnIZ2NA0ExAzNjAAFYJVn0ASBsD6VAIDZb7AtELAgANIgb9AHjaY2BgYGaAYBkGRgYQSAHyGMF8FgYPIM3HwMHAxMDGoMCwQIFLQV8hXvXP//9AcRCfAcb///h/ygPW+w/vb7olBjUHCTCyMcAFGZmABBO6AogThgZgIUsXAEDcEzcAAHjaY2BgECMCyoEgACZaAed42mNgYmRgYGBnYGNgYAZSDJqMgorCgoqCjECRXwwNrCAKSP5mAAFGBiRgyAAAi/YFBQAAeNqtkc1OwkAUhU/5M25cEhcsZick0AwlBJq6MWwgJkAgYV/KAA2lJeUn+hY+gktXvpKv4dLTMqKycGHsTZNv7px7z50ZAFd4hYHjdw1Ls4EiHjVncIFnzVnc4F1zDkWjrzmPW+NNcwGlzIRKI3fJlUyrEjZQxb3mDH2fNGfRx4vmHKqG0JzHg6E0F9DOlFBGBxUI1GEzLNT4S0aLuTtsGAEUuYcQHkyg3KmIum1bNUvKlrjbbAIleqHHnS4iSudpQcySMYtdFiXlAxzSbAwfMxK6kZoHKhbjjespMTioOPZnzI+4ucCeTVyKMVKLfeAS6vSWaTinuZwzyy/Dc7vaed+6KaV0kukdPUk6yOcctZPvvxxqksq2lEW8RvHjMEO2FCl/zy6p3NEm0R9OFSafJdldc4QVeyaaObMBO0/5cCaa6d9Ggyubxire+lEojscdjoWUR1xGOy8KD8mG2ZLO2l2paDc3A39qmU2z2W5YNv5+u79e6QfGJY/hAAB42m3NywrCMBQE0DupWp/1AYI7/6DEaLQu66Mrd35BKUWKJSlFv1+rue4cGM7shgR981qSon+ZNwUJ8iDgoYU2OvDRRQ99DDDECAHGmGCKmf80hZSx/Kik/LliFbtmN6xmt+yOjdg9GztV4tROnRwX/Bsaaw51nt4Lc7tWaZYHp/MlzKx51LZs5htNri+2AAAAAQAB//8AD3jaY2BkYGDgAWIxIGZiYARCESBmAfMYAAR6AEMAAAABAAAAANXtRbgAAAAA2AhRFAAAAADYCNuG) format("woff");
+}
+
+.font-size-xl {
+  font-size: 1.25em;
+}
+
+.font-size-xs {
+  font-size: 0.8em;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login h1 {
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: small-caps;
+  font-variant-caps: small-caps;
+  color: #2c3e50;
+}
+
+@supports (font-variation-settings: normal) {
+  .login h1 {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+    font-size: 2.25rem;
+    letter-spacing: 0.025em;
+  }
+}
+
+.login h1 > a {
+  color: #2c3e50;
+}
+
+.login h1 a {
+  width: unset;
+  height: unset;
+  margin: 0;
+  text-indent: 0px;
+  background: none;
+  font-size: unset;
+  font-weight: inherit;
+}
+
+.login a {
+  color: #3e5871;
+  text-decoration: none;
+  transition: all .15s;
+  -webkit-transition: all .15s;
+  -moz-transition: all .15s;
+  -ms-transition: all .15s;
+  -o-transition: all .15s;
+}
+
+.login a:visited {
+  color: #3e5871;
+}
+
+.login a:hover, .login a.hover, .login a:focus, .login a.focus {
+  color: #698bac;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.login label {
+  font-size: 1rem;
+}
+
+.login #login {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0;
+  padding: 2rem;
+}
+
+.login #login #loginform,
+.login #login #nav,
+.login #login #backtoblog {
+  max-width: 480px;
+  margin: 1em auto 0;
+}
+
+.login #login #user_login,
+.login #login #user_pass,
+.login #login #rememberme {
+  background: inherit;
+  border-color: #cccccc;
+  border-radius: unset;
+}
+
+.login #login #user_login:focus,
+.login #login #user_pass:focus,
+.login #login #rememberme:focus {
+  border-color: #698bac;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.login #login .button.wp-hide-pw:focus {
+  background: 0 0;
+  border-color: #698bac;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.login #login #wp-submit {
+  display: inline-block;
+  width: auto;
+  padding: 0.5em;
+  cursor: pointer;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  border-radius: unset;
+  color: #344a5f;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+
+@supports (font-variation-settings: normal) {
+  .login #login #wp-submit {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  }
+}
+
+.login #login #wp-submit:hover, .login #login #wp-submit.hover, .login #login #wp-submit:focus, .login #login #wp-submit.focus {
+  background-color: #f8ce30;
+  border-color: #555555;
+  color: #333333;
+}
+
+.wp-core-ui .button, .wp-core-ui .button-secondary {
+  color: #3e5871;
+}
