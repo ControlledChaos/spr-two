@@ -5,6 +5,64 @@
 @import '../modules/_colors';
 @import '../modules/_typography';
 
+.footer-widgets {
+	position: relative;
+	z-index: 10;
+	padding: 2rem 1rem;
+	background-color: $bg_light;
+	color: $white;
+
+	.inner {
+		width: 100%;
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	.widget {
+		color: $white;
+	}
+
+	a {
+		color: $white;
+		text-decoration: none;
+		transition: all .15s;
+		-webkit-transition: all .15s;
+		   -moz-transition: all .15s;
+			-ms-transition: all .15s;
+			 -o-transition: all .15s;
+
+		&:visited {
+			color: $white;
+		}
+
+		&:hover,
+		&.hover,
+		&:focus,
+		&.focus {
+			color: rgba( $color: $white, $alpha: 0.625 );
+		}
+	}
+
+	::-webkit-input-placeholder {
+		color: rgba( $color: $white, $alpha: 0.5 );
+	}
+	:-moz-placeholder {
+		color: rgba( $color: $white, $alpha: 0.5 );
+	}
+	::-moz-placeholder {
+		color: rgba( $color: $white, $alpha: 0.5 );
+	}
+	::-o-input-placeholder {
+		color: rgba( $color: $white, $alpha: 0.5 );
+	}
+	:-ms-input-placeholder {
+		color: rgba( $color: $white, $alpha: 0.5 );
+	}
+	::placeholder {
+		color: rgba( $color: $white, $alpha: 0.5 );
+	}
+}
+
 .footer-content {
 	width: 100%;
 	max-width: 1440px;
@@ -18,7 +76,6 @@
 	clear: both;
 	padding: 1rem 2rem;
 	background-color: $footer_bg_color;
-	background-image: linear-gradient( to top, $footer_bg_color 0%, darken( $color: $footer_bg_color, $amount: 5% ) 100% );
 	color: $white;
 
 	section:not(:first-of-type) {
@@ -28,66 +85,30 @@
 	h3 {
 		text-align: center;
 	}
-
-	a {
-		color: $white;
-		-webkit-transition: color .15s;
-		transition: color .15s;
-
-		&:hover {
-			color: rgba( $color: $white, $alpha: 0.6 );
-		}
-	}
-
-	ul {
-		list-style: none;
-	}
-
-	.menu {
-		text-align: center;
-
-		a {
-			display: inline-block;
-			padding: 0.5em 0;
-			line-height: 1.2;
-		}
-	}
 }
 
 .copyright-text {
 	font-size: 0.825em;
 	text-align: center;
-	color: rgba(255,255,255,0.7);
+	color: rgba( $color: $white, $alpha: 0.625 );
 }
 
 @media screen and (min-width: 801px) {
 
 	.footer-widgets {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-pack: justify;
-		-moz-box-pack: justify;
-			-ms-flex-pack: justify;
-				justify-content: space-between;
+		.inner {
+			display: flex;
+
+			.footer-one {
+				margin-right: 2rem;
+			}
+		}
 	}
 
 	.site-footer {
 
 		section:not(:first-of-type) {
 			border-top: none;
-		}
-
-		h3 {
-			text-align: left;
-		}
-
-		ul.menu {
-			-webkit-column-count: 2;
-			-moz-column-count: 2;
-					column-count: 2;
-			text-align: left;
 		}
 	}
 }

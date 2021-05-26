@@ -1107,7 +1107,7 @@ article .gallery .gallery-item img {
   position: relative;
   z-index: 9999;
   width: 100%;
-  background-color: #1b252dff;
+  background-color: #1b252d;
   color: #ffffff;
   font-weight: 600;
 }
@@ -2342,6 +2342,74 @@ article .gallery .gallery-item img {
  * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
  * stacks are used in @supports( font-variation-settings ) queries.
  */
+.footer-widgets {
+  position: relative;
+  z-index: 10;
+  padding: 2rem 1rem;
+  background-color: #2c3e50;
+  color: #ffffff;
+}
+
+.footer-widgets .inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.footer-widgets .widget {
+  color: #ffffff;
+}
+
+.footer-widgets a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all .15s;
+  -webkit-transition: all .15s;
+  -moz-transition: all .15s;
+  -ms-transition: all .15s;
+  -o-transition: all .15s;
+}
+
+.footer-widgets a:visited {
+  color: #ffffff;
+}
+
+.footer-widgets a:hover, .footer-widgets a.hover, .footer-widgets a:focus, .footer-widgets a.focus {
+  color: rgba(255, 255, 255, 0.625);
+}
+
+.footer-widgets ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-widgets :-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-widgets ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-widgets ::-o-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-widgets :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-widgets ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-widgets ::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-widgets ::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .footer-content {
   width: 100%;
   max-width: 1440px;
@@ -2354,9 +2422,7 @@ article .gallery .gallery-item img {
   z-index: 100;
   clear: both;
   padding: 1rem 2rem;
-  background-color: #32475c;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#32475c), to(#293a4b));
-  background-image: linear-gradient(to top, #32475c 0%, #293a4b 100%);
+  background-color: #1b252d;
   color: #ffffff;
 }
 
@@ -2368,55 +2434,23 @@ article .gallery .gallery-item img {
   text-align: center;
 }
 
-.site-footer a {
-  color: #ffffff;
-  -webkit-transition: color .15s;
-  transition: color .15s;
-}
-
-.site-footer a:hover {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.site-footer ul {
-  list-style: none;
-}
-
-.site-footer .menu {
-  text-align: center;
-}
-
-.site-footer .menu a {
-  display: inline-block;
-  padding: 0.5em 0;
-  line-height: 1.2;
-}
-
 .copyright-text {
   font-size: 0.825em;
   text-align: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.625);
 }
 
 @media screen and (min-width: 801px) {
-  .footer-widgets {
+  .footer-widgets .inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+  }
+  .footer-widgets .inner .footer-one {
+    margin-right: 2rem;
   }
   .site-footer section:not(:first-of-type) {
     border-top: none;
-  }
-  .site-footer h3 {
-    text-align: left;
-  }
-  .site-footer ul.menu {
-    -webkit-column-count: 2;
-    column-count: 2;
-    text-align: left;
   }
 }
 
