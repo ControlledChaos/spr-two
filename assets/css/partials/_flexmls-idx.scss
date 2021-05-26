@@ -257,7 +257,7 @@ body.admin-bar {
 	padding: 0.5em;
 	cursor: pointer;
 	font-family: $serif;
-	font-size: 1.25em;
+	font-size: 1.25rem;
 	font-weight: normal;
 	font-weight: 500;
 	font-style: italic;
@@ -449,6 +449,10 @@ body.admin-bar {
 	justify-content: space-between;
 	width: 100%;
 	margin-top: 2rem;
+
+	.flexmls_connect__button {
+		font-size: 1.625rem;
+	}
 }
 
 .flexmls_connect__idx_disclosure_text {
