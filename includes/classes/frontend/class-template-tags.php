@@ -475,6 +475,44 @@ class Template_Tags {
 
 		return $alt;
 	}
+
+	/**
+	 * Featured navigation
+	 *
+	 * Next & previous navigation of singular featured post type.
+	 *
+	 * @return void
+	 */
+	public function featured_navigation() {
+
+		$prev = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+		$next = get_adjacent_post( false, '', false );
+
+		if ( ! $next && ! $prev ) {
+			return;
+		}
+
+		// Post navigation labels.
+		$prev_text = __( 'Previous Featured', 'spr-two' );
+		$next_text = __( 'Next Featured', 'spr-two' );
+
+		// Post navigation links.
+		$next_url = get_permalink( $next );
+		$prev_url = get_permalink( $prev );
+
+		?>
+		<nav class="post-navigation">
+
+			<?php if ( $prev ) : ?>
+			<a class="button nav-previous" href="<?php echo $prev_url; ?>"><?php echo $prev_text; ?></a>
+			<?php endif; ?>
+
+			<?php if ( $next ) : ?>
+			<a class="button nav-next" href="<?php echo $next_url; ?>"><?php echo $next_text; ?></a>
+			<?php endif; ?>
+		</nav>
+		<?php
+	}
 }
 
 /**
