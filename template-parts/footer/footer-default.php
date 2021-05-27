@@ -46,7 +46,7 @@ if ( 'page' == $front_page && $front_id && $gallery ) {
 	// Fallback image size.
 	} else {
 		$get_src  = wp_get_attachment_image_src( $gallery[ $random_gallery ]['ID'], 'full' );
-		$footer_bg_src = $get_src{0};
+		$footer_bg_src = $get_src[0];
 	}
 
 // Use the header image from the customizer.
