@@ -101,12 +101,14 @@ h3 {
 	font-family: $serif;
 	font-size: 1.5rem;
 	font-weight: 500;
+	line-height: 1.25;
 	color: $text_dark;
 
 	@supports ( font-variation-settings: normal ) {
 		font-family: $variable_serif;
 		font-size: 1.625rem;
 		font-weight: 450;
+		line-height: 1;
 	}
 }
 

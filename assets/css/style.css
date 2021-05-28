@@ -451,6 +451,7 @@ h3 {
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 1.5rem;
   font-weight: 500;
+  line-height: 1.25;
   color: #2c3e50;
 }
 
@@ -459,6 +460,7 @@ h3 {
     font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
     font-size: 1.625rem;
     font-weight: 450;
+    line-height: 1;
   }
 }
 
@@ -1768,6 +1770,10 @@ article .gallery .gallery-item img {
   word-wrap: normal !important;
 }
 
+.static-front #contact-office-sidebar {
+  margin-top: 3rem;
+}
+
 .front-page-hero {
   position: relative;
   left: 50%;
@@ -2351,6 +2357,7 @@ article .gallery .gallery-item img {
 
 .widget {
   margin: 0 0 1.5em;
+  line-height: 1.25;
   color: #333333;
 }
 
