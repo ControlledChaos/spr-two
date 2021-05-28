@@ -19,17 +19,26 @@ $mls_shortcode = sprintf(
 	$mls_number
 );
 
+if ( is_singular() ) {
+	$title = sprintf(
+		'<h1 class="entry-title">%s %s</h1>',
+		get_field( 'spr_featured_heading' ),
+		"(MLS# $mls_number)"
+	);
+} else {
+	$title = sprintf(
+		'<h2 class="entry-title"><a href="%s">%s %s</a></h2>',
+		get_permalink(),
+		get_field( 'spr_featured_heading' ),
+		"(MLS# $mls_number)"
+	);
+}
+
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
 	<header class="entry-header">
-		<?php
-		printf(
-			'<h1 class="entry-title">%s %s</h1>',
-			get_field( 'spr_featured_heading' ),
-			"(MLS# $mls_number)"
-		);
-		?>
+		<?php echo $title; ?>
 	</header>
 
 	<div class="entry-content" itemprop="articleBody">
@@ -37,4 +46,6 @@ $mls_shortcode = sprintf(
 	</div>
 </article>
 
-<?php echo Front\tags()->featured_navigation(); ?>
+<?php if ( is_singular() ) {
+	echo Front\tags()->post_navigation();
+} ?>

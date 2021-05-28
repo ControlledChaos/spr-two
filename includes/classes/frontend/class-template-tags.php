@@ -477,13 +477,15 @@ class Template_Tags {
 	}
 
 	/**
-	 * Featured navigation
+	 * Post navigation
 	 *
-	 * Next & previous navigation of singular featured post type.
+	 * Next & previous navigation of singular post types.
 	 *
+	 * @since  1.0.0
+	 * @access public
 	 * @return void
 	 */
-	public function featured_navigation() {
+	public function post_navigation() {
 
 		$prev = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 		$next = get_adjacent_post( false, '', false );
@@ -492,9 +494,24 @@ class Template_Tags {
 			return;
 		}
 
+		global $post;
+
+		$post_id  = get_post_type( $post->ID );
+		$get_type = get_post_type_object( $post_id );
+		$type     = $get_type->labels->singular_name;
+
 		// Post navigation labels.
-		$prev_text = __( 'Previous Featured', 'spr-two' );
-		$next_text = __( 'Next Featured', 'spr-two' );
+		$prev_text = sprintf(
+			'%s %s',
+			__( 'Previous', 'spr-two' ),
+			$type
+		);
+
+		$next_text = sprintf(
+			'%s %s',
+			__( 'Next', 'spr-two' ),
+			$type
+		);
 
 		// Post navigation links.
 		$next_url = get_permalink( $next );
