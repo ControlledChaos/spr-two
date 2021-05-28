@@ -70,11 +70,6 @@ figure.alignleft {
   margin-right: 0.5em;
 }
 
-.site-branding img {
-  margin-right: unset;
-  margin-left: 1em;
-}
-
 .main-navigation {
   padding-left: unset;
   padding-right: 2em;

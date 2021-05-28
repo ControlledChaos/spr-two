@@ -88,7 +88,7 @@ h2 {
 
 	@supports ( font-variation-settings: normal ) {
 		font-family: $variable_serif;
-		font-size: 1.5em;
+		font-size: 1.5rem;
 		letter-spacing: 0.025em;
 	}
 
@@ -99,13 +99,13 @@ h2 {
 
 h3 {
 	font-family: $serif;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	font-weight: 500;
 	color: $text_dark;
 
 	@supports ( font-variation-settings: normal ) {
 		font-family: $variable_serif;
-		font-size: 1.625em;
+		font-size: 1.625rem;
 		font-weight: 450;
 	}
 }

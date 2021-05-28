@@ -21,6 +21,8 @@
 
 	h2,
 	h3 {
+		font-variant: small-caps;
+		font-variant-caps: small-caps;
 		color: inherit;
 	}
 
@@ -113,6 +115,12 @@
 		&.focus {
 			color: rgba( $color: $white, $alpha: 0.625 );
 		}
+	}
+
+	b,
+	strong {
+		color: $white;
+		font-weight: 600;
 	}
 
 	::-webkit-input-placeholder {

@@ -437,7 +437,7 @@ h2 {
   h1,
   h2 {
     font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     letter-spacing: 0.025em;
   }
 }
@@ -449,7 +449,7 @@ h2 > a {
 
 h3 {
   font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #2c3e50;
 }
@@ -457,7 +457,7 @@ h3 {
 @supports (font-variation-settings: normal) {
   h3 {
     font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-    font-size: 1.625em;
+    font-size: 1.625rem;
     font-weight: 450;
   }
 }
@@ -1309,7 +1309,6 @@ article .gallery .gallery-item img {
 }
 
 .site-branding img {
-  margin-right: 1em;
   max-width: 80px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -2449,6 +2448,8 @@ article .gallery .gallery-item img {
 
 .footer-widgets h2,
 .footer-widgets h3 {
+  font-variant: small-caps;
+  font-variant-caps: small-caps;
   color: inherit;
 }
 
@@ -2561,6 +2562,12 @@ article .gallery .gallery-item img {
 
 .footer-widgets a:hover, .footer-widgets a.hover, .footer-widgets a:focus, .footer-widgets a.focus {
   color: rgba(255, 255, 255, 0.625);
+}
+
+.footer-widgets b,
+.footer-widgets strong {
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .footer-widgets ::-webkit-input-placeholder {
