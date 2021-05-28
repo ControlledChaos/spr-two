@@ -41,7 +41,7 @@ if ( $hero_gallery ) {
 	// Fallback image size.
 	} else {
 		$get_src  = wp_get_attachment_image_src( $hero_gallery[ $random_gallery ]['ID'], 'full' );
-		$hero_src = $get_src{0};
+		$hero_src = $get_src[0];
 	}
 
 // Use the header image from the customizer.
@@ -137,9 +137,9 @@ if ( $search_results ) {
 }
 
 // The search form shortcode.
-if ( 'paste' == $code_option && $hero_shortcode ) {
+if ( 'paste' == $hero_code_option && $hero_shortcode ) {
 	$form_code = $hero_shortcode;
-} elseif ( 'build' == $code_option ) {
+} elseif ( 'build' == $hero_code_option ) {
 	$form_code = sprintf(
 		'[idx_search title="" link="1lkpig7k5t4z" buttontext="%s" detailed_search="on" destination="local" user_sorting="off" location_search="%s" property_type_enabled="off" property_type="A,B,D" std_fields="%s" theme="hori_square_light" orientation="horizontal" title_font="%s" field_font="%s" border_style="squared" widget_drop_shadow="off" background_color="#222222" title_text_color="#ffffff" field_text_color="#ffffff" detailed_search_text_color="#ffffff" submit_button_shine="none" submit_button_background="#222222" submit_button_text_color="#ffffff" allow_sold_searching="off" default_view="%s" listings_per_page="%s" allow_pending_searching="off"]',
 		$search_button,
