@@ -70,19 +70,34 @@ if ( 'page' == $front_page && $front_id && $gallery ) {
 <aside class="footer-widgets">
 
 	<div class="inner">
+
+	<?php if ( is_active_sidebar( 'footer-one' ) ) : ?>
 		<div class="footer-one">
 			<?php dynamic_sidebar( 'footer-one' ); ?>
 		</div>
+	<?php
+	endif;
+
+	if ( is_active_sidebar( 'footer-two' ) ) : ?>
 		<div class="footer-two">
 			<?php dynamic_sidebar( 'footer-two' ); ?>
 		</div>
-		<div class="footer-one">
+	<?php
+	endif;
+
+	if ( is_active_sidebar( 'footer-three' ) ) : ?>
+		<div class="footer-three">
 			<?php dynamic_sidebar( 'footer-three' ); ?>
 		</div>
-		<div class="footer-two">
+	<?php
+	endif;
+
+	if ( is_active_sidebar( 'footer-four' ) ) : ?>
+		<div class="footer-four">
 			<?php dynamic_sidebar( 'footer-four' ); ?>
 		</div>
 	</div>
+	<?php endif; ?>
 
 </aside>
 <footer id="colophon" class="site-footer">
