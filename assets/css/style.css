@@ -2372,7 +2372,7 @@ article .gallery .gallery-item img {
 
 .widget ul {
   list-style: none;
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 .widget ul li {
@@ -2455,6 +2455,7 @@ article .gallery .gallery-item img {
 
 .footer-widgets h2,
 .footer-widgets h3 {
+  font-size: 1.7rem;
   font-variant: small-caps;
   font-variant-caps: small-caps;
   color: inherit;
@@ -2494,7 +2495,7 @@ article .gallery .gallery-item img {
 
 .footer-widgets .inner > div {
   width: 100%;
-  max-width: 640px;
+  margin-right: 5vw;
   padding-right: 1rem;
 }
 
@@ -2515,6 +2516,7 @@ article .gallery .gallery-item img {
 @media screen and (max-width: 480px) {
   .footer-widgets .inner > div {
     width: 100%;
+    margin-right: 0;
   }
 }
 
@@ -2551,6 +2553,19 @@ article .gallery .gallery-item img {
 
 .footer-widgets .widget {
   color: #ffffff;
+}
+
+.footer-widgets .widget ul.menu {
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
+.footer-widgets .widget ul.menu li {
+  line-height: 1.1;
+}
+
+.footer-widgets .widget ul.menu li:not(:first-of-type) {
+  margin-top: 0.5em;
 }
 
 .footer-widgets a {
@@ -2645,9 +2660,6 @@ article .gallery .gallery-item img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .footer-widgets .inner .footer-one {
-    margin-right: 2rem;
   }
   .site-footer section:not(:first-of-type) {
     border-top: none;

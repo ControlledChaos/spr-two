@@ -115,12 +115,11 @@ jQuery(document).ready( function($) {
 <script>
 // Add class to header wrapper on scroll.
 jQuery(document).ready( function($) {
-	$(window).scroll( function(){
+	$(window).scroll( function() {
 
-		// Sticky sidebar top margin.
-		sidebar_top = $( '#secondary' ).css( 'margin-top' ).replace( 'px', '' );
+		scroll_top = $( '.site-header-wrap' ).outerHeight();
 
-		if ( $(this).scrollTop() > sidebar_top ) {
+		if ( $(this).scrollTop() > scroll_top ) {
 			$( '.site-header-wrap' ).addClass( 'header-wrap-scrolled' );
 		} else {
 			$( '.site-header-wrap' ).removeClass( 'header-wrap-scrolled' );

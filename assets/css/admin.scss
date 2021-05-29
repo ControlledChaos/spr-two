@@ -65,27 +65,6 @@ body {
 		font-size: 1.0625rem;
 	}
 
-	a {
-		color: $link_color;
-		text-decoration: none;
-		transition: all .15s;
-		-webkit-transition: all .15s;
-		-moz-transition: all .15s;
-			-ms-transition: all .15s;
-			-o-transition: all .15s;
-
-		&:visited {
-			color: $link_color;
-		}
-
-		&:hover,
-		&.hover,
-		&:focus,
-		&.focus {
-			color: $link_action_color;
-		}
-	}
-
 	b,
 	strong {
 		color: lighten( $color: $text_color, $amount: 10% );
