@@ -117,12 +117,13 @@ jQuery(document).ready( function($) {
 jQuery(document).ready( function($) {
 	$(window).scroll( function(){
 
-		header_height = $( '.site-header-wrap' ).outerHeight();
+		// Sticky sidebar top margin.
+		sidebar_top = $( '#secondary' ).css( 'margin-top' ).replace( 'px', '' );
 
-		if ( $(this).scrollTop() > header_height ) {
-			$( '.site-header-wrap' ).addClass( 'stuck' );
+		if ( $(this).scrollTop() > sidebar_top ) {
+			$( '.site-header-wrap' ).addClass( 'header-wrap-scrolled' );
 		} else {
-			$( '.site-header-wrap' ).removeClass( 'stuck' );
+			$( '.site-header-wrap' ).removeClass( 'header-wrap-scrolled' );
 		}
 	});
 });
