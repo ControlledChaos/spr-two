@@ -100,4 +100,8 @@ body {
 			}
 		}
 	}
+
+	.select2-container {
+		z-index: 9899 !important;
+	}
 }
