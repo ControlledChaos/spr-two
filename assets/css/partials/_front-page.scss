@@ -218,6 +218,10 @@
 			transform: translateY( 0.25em );
 		}
 	}
+
+	.flexmlsLocationSearch {
+		overflow: hidden !important;
+	}
 }
 
 .site-loaded {
@@ -239,9 +243,17 @@
 	}
 }
 
-.front-content-block-message p {
-	font-size: 1.25em;
-	text-align: center;
+.front-content-section {
+
+	.front-content-block-message p {
+		font-size: 1.25em;
+	}
+
+	&.front-image-links {
+		p {
+			text-align: center;
+		}
+	}
 }
 
 .static-front .entry-content h2 {

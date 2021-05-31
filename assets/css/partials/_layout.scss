@@ -45,6 +45,12 @@
 	.shortcode-section-content {
 		width: 100%;
 	}
+
+	aside {
+		min-width: 240px;
+		margin-top: 3rem;
+		color: $sidebar_text_color;
+	}
 }
 
 body:not( .no-sidebar ) {
@@ -70,15 +76,27 @@ main article {
 	display: flex;
 	margin-top: 2rem;
 
+	@media screen and ( max-width: 769px ) {
+		flex-direction: column-reverse;
+	}
+
 	& > div {
 		min-width: 360px;
 
 		&:first-of-type {
 			margin-right: 1rem;
+
+			@media screen and ( max-width: 769px ) {
+				margin: unset;
+			}
 		}
 
 		&:last-of-type {
 			margin-left: 1rem;
+
+			@media screen and ( max-width: 769px ) {
+				margin: unset;
+			}
 		}
 	}
 }
@@ -99,6 +117,12 @@ main article {
 	.site-content,
 	.shortcode-section {
 		flex-direction: column;
+	}
+
+	.shortcode-section {
+		aside {
+			margin-top: unset;
+		}
 	}
 
 	body:not( .no-sidebar ) {
