@@ -21,13 +21,6 @@ use SPR_Two\Classes\Front as Front;
 	</header>
 
 	<div class="entry-content" itemprop="articleBody">
-		<?php
-		the_content();
-
-		wp_link_pages( [
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'spr-two' ),
-			'after'  => '</div>',
-		] );
-		?>
+		<?php the_content(); ?>
 	</div>
 </article>
