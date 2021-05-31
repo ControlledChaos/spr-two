@@ -105,3 +105,16 @@ body {
 		z-index: 9899 !important;
 	}
 }
+
+///
+/// ACF field groups
+///
+.spr-location-area-specific-none {
+	> div {
+		p {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

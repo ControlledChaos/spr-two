@@ -186,3 +186,7 @@ body {
 .wrap .select2-container {
   z-index: 9899 !important;
 }
+
+.spr-location-area-specific-none > div p:last-of-type {
+  margin-bottom: 0;
+}
