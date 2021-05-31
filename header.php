@@ -33,7 +33,7 @@ if ( is_home() && ! is_front_page() ) {
 // Hook for ACF forms & similar.
 do_action( 'before_html' ); ?>
 
-<html <?php language_attributes(); ?> class="no-js">
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?> class="no-js">
 
 <?php Front\tags()->head(); ?>
 
