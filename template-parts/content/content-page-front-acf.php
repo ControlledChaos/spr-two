@@ -110,10 +110,11 @@ get_template_part( 'template-parts/content/partials/front-acf', 'hero' );
 				<?php elseif ( get_row_layout() == 'spr_front_content_shortcode' ) : ?>
 				<section id="<?php echo $layout; ?>" class="front-content-section front-shortcode-content">
 
-					<div class="shortcode-section">
-						<div class="shortcode-section-content">
+					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
 
-							<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
+					<div class="shortcode-section">
+
+						<div class="shortcode-section-content">
 
 							<div class="front-content-block-message">
 								<?php the_sub_field( 'spr_front_content_message' ); ?>
