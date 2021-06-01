@@ -2238,6 +2238,22 @@ article .gallery .gallery-item img {
  * The $sans and $serif stacks are default. The $variable_sans and $variable_serif
  * stacks are used in @supports( font-variation-settings ) queries.
  */
+.single-location .location-search-parameters {
+  margin-top: 0;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-weight: 600;
+  font-style: italic;
+}
+
+@supports (font-variation-settings: normal) {
+  .single-location .location-search-parameters {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+    font-weight: 450;
+  }
+}
+
 .listing-address,
 .entry-content p.listing-type {
   margin-top: 0;

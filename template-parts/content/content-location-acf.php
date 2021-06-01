@@ -34,7 +34,7 @@ $per_page      = get_field( 'spr_location_per_page' );
 
 // Define the area type if area is the search type.
 $specific = '';
-if ( 'area' == $search_type && 'none' != $area_specific ) {
+if ( 'area' == $search_type ) {
 
 	$area_type = 'MLSAreaMinor';
 
@@ -429,12 +429,25 @@ if ( 'res_sale' == $property_type ) {
 	$sub_type_name = null;
 }
 
-// Search parameters.
-$search_params = [
+// Search type names.
+$search_type_names = [
 	$type_name,
 	$sub_type_name
 ];
-$search_params = implode( ', ', $search_params );
+if ( ! is_null( $sub_type_name ) ) {
+	$search_types  = implode( ', ', $search_type_names );
+	$search_params = sprintf(
+		'<p class="location-search-parameters">%s %s</p>',
+		__( 'Properties Tagged:', 'spr-two' ),
+		ucwords( $search_types )
+	);
+} else {
+	$search_params = sprintf(
+		'<p class="location-search-parameters">%s %s</p>',
+		__( 'Properties Tagged:', 'spr-two' ),
+		ucwords( $type_name )
+	);
+}
 
 // Assemble the MLS shortcode.
 $mls_code = sprintf(
@@ -455,12 +468,7 @@ $mls_code = sprintf(
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php
-		printf(
-			'<p>%s %s</p>',
-			__( 'Search Parameters:', 'spr-two' ),
-			ucwords( $search_params )
-		);
+		<?php echo $search_params;
 		?>
 	</header>
 

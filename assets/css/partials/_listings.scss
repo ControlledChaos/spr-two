@@ -5,6 +5,26 @@
 @import '../modules/_colors';
 @import '../modules/_typography';
 
+.single-location {
+
+	.location-search-parameters {
+		margin-top: 0;
+		font-family: $serif;
+		font-size: 1.375rem;
+		font-weight: bold;
+		font-weight: 600;
+		font-style: italic;
+
+		@supports ( font-variation-settings: normal ) {
+			font-family: $variable_serif;
+			font-weight: 450;
+		}
+	}
+}
+
+///
+/// Below may be from previous theme.
+/// @todo Remove unused styles below.
 .listing-address,
 .entry-content p.listing-type {
 	margin-top: 0;
