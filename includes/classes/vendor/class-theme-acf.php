@@ -1,6 +1,6 @@
 <?php
 /**
- * Advanced Custom Fields compatability
+ * Advanced Custom Fields compatibility
  *
  * @package    SPR_Two
  * @subpackage Classes
