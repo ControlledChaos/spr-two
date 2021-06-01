@@ -31,12 +31,29 @@ if ( is_front_page() ) :
 echo sprintf(
 	'<script>%s</script>',
 	'jQuery(document).ready(function(){
-		jQuery( ".front-featured-properties ul" ).slick({
+		jQuery( ".front-featured-slides" ).slick({
+			slidesToShow : 3,
+			slidesToScroll : 1,
 			autoplay : true,
 			autoplaySpeed : 7500,
 			speed : 750,
-			fade : true,
-			easing : "easeInOut"
+			fade : false,
+			easing : "easeInOut",
+			adaptiveHeight : false,
+			responsive: [
+				{
+					breakpoint: 800,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
 		});
 	  });'
 ); endif; ?>

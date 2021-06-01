@@ -121,12 +121,26 @@ get_template_part( 'template-parts/content/partials/front-acf', 'hero' );
 							</div>
 
 							<?php
-							$code = get_sub_field( 'spr_front_content_shortcode_code' );
-							echo do_shortcode( $code );
+							$shortcode   = get_sub_field( 'spr_front_shortcode' );
+							$grid_width  =  get_sub_field( 'spr_front_grid_width' );
+							$grid_height =  get_sub_field( 'spr_front_grid_height' );
+
+							// Grid shortcode.
+							$grid_display = sprintf(
+								'[idx_slideshow link="default" horizontal="%s" vertical="%s" source="location" location="PostalCode=93271&93271|PostalCode=93221&93221|PostalCode=93244&93244|PostalCode=93286&93286" display="all" sort="recently_changed" additional_fields="beds,baths,sqft" destination="local" send_to="photo"]',
+								$grid_width,
+								$grid_height
+							);
+
+							if ( $shortcode ) {
+								echo do_shortcode( $shortcode );
+							} else {
+								// Build code.
+							}
 							?>
 						</div>
 						<?php
-						$sidebar = get_sub_field( 'spr_front_content_shortcode_sidebar' );
+						$sidebar = get_sub_field( 'spr_front_shortcode_sidebar' );
 						if ( $sidebar ) {
 							$sidebar = $sidebar;
 						} else {
@@ -156,82 +170,7 @@ get_template_part( 'template-parts/content/partials/front-acf', 'hero' );
 						<?php the_sub_field( 'spr_front_content_message' ); ?>
 					</div>
 
-					<?php if ( have_rows( 'spr_front_content_featured_properties' ) ) : ?>
-					<ul>
-					<?php while( have_rows( 'spr_front_content_featured_properties' ) ) : the_row(); ?>
-						<li>
-						<?php
-						$featured = get_sub_field( 'spr_front_content_featured_property' );
-						if ( $featured ) : ?>
-
-							<div class="featured-details">
-								<div>
-
-									<h3><?php echo esc_html( $featured->post_title ); ?></h3>
-
-									<p class="featured-price">$<?php the_field( 'spl_sale_price', $featured->ID ); ?></p>
-
-									<p class="featured-location">
-									<?php
-									// Get the location(s).
-									$locations = get_field( 'spl_location', $featured->ID );
-									if ( $locations ) {
-										foreach ( $locations as $location ) { echo sprintf( '<span class="location">%1s</span>', $location->name ); };
-									} else {
-										echo sprintf( '<span class="location">%1s</span>', get_field( 'spl_post_office', $featured->ID ) );
-									} ?>
-									</p>
-								</div>
-
-								<div>
-									<p class="featured-details-link"><a class="button" href="<?php the_permalink(); ?>"><?php _e( 'View Details', 'spr-two' ); ?></a></p>
-								</div>
-							</div>
-
-							<p><?php the_field( 'spl_summary', $featured->ID ); ?></p>
-
-							<?php
-
-							// Get the featured image.
-							$image = get_field( 'spl_featured_image', $featured->ID );
-
-							// Image variables.
-							$url     = $image['url'];
-							$title   = $image['title'];
-							$alt     = sprintf(
-								'%1s | %2s - %3s | %4s%5s',
-								esc_html( get_the_title() ),
-								'$' . esc_html( get_field( 'spl_sale_price' ) ),
-								esc_html( get_field( 'spl_summary' ) ),
-								get_field( 'spl_post_office' ),
-								__( ', California', 'spr-two' )
-							);
-
-							// Check for our custom image size in the companion plugin.
-							if ( has_image_size( 'wide-large' ) ) {
-								$size = 'wide-large';
-
-							// Otherwise use the large size.
-							} else {
-								$size = 'large';
-							}
-
-							// Image size attributes.
-							$thumb  = $image['sizes'][$size];
-							$width  = $image['sizes'][$size . '-width'];
-							$height = $image['sizes'][$size . '-height'];
-							$srcset = wp_get_attachment_image_srcset( $image['ID'], $size );
-
-							?>
-							<a href="<?php the_permalink(); ?>">
-								<img src="<?php echo $thumb; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" alt="<?php echo $alt; ?>" longdesc="<?php echo esc_url( get_permalink() . '#listing-description' ); ?>" />
-							</a>
-
-						<?php endif; ?>
-						</li>
-					<?php endwhile; ?>
-					</ul>
-					<?php endif; ?>
+					<?php get_template_part( 'template-parts/content/partials/front-acf', 'featured' ); ?>
 
 				</section>
 

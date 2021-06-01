@@ -2105,6 +2105,37 @@ article .gallery .gallery-item img {
 }
 
 /* Featured properties */
+.front-featured-properties .front-content-block-message {
+  margin-bottom: 1rem;
+}
+
+.front-featured-properties .front-featured-slides {
+  list-style: none;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.front-featured-properties .flexmls_connect__carousel .flexmls_connect__count,
+.front-featured-properties .flexmls_connect__carousel_nav,
+.front-featured-properties .flexmls_connect__disclaimer {
+  display: none !important;
+}
+
+.front-featured-properties .flexmls_connect__listing {
+  width: 100% !important;
+}
+
+.front-featured-properties .flexmls_popup {
+  max-height: 360px !important;
+}
+
+.front-featured-properties .flexmls_popup img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 360px !important;
+}
+
 .front-featured-properties .slick-arrow {
   position: absolute;
   top: 0;
@@ -2118,90 +2149,13 @@ article .gallery .gallery-item img {
   }
 }
 
-.front-featured-properties .slick-prev.slick-arrow {
+.front-featured-properties .slick-arrow.slick-prev {
   left: 0;
 }
 
-.front-featured-properties .slick-next.slick-arrow {
+.front-featured-properties .slick-arrow.slick-next {
   left: auto;
   right: 0;
-}
-
-.front-featured-properties .slick-prev.slick-arrow:before {
-  content: '←';
-  display: inline-block;
-  margin-right: 0.25em;
-}
-
-.front-featured-properties .slick-next.slick-arrow:after {
-  content: '→';
-  display: inline-block;
-  margin-left: 0.25em;
-}
-
-.featured-location {
-  margin: 0;
-}
-
-.front-featured-properties ul li .location:not(:last-of-type):after {
-  content: '|';
-  margin: 0 0.3em;
-  color: #cccccc;
-}
-
-.entry-content .front-featured-properties ul {
-  padding: 0;
-}
-
-.featured-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.front-featured-properties h4 {
-  margin-top: 3rem;
-  font-size: 1.5em;
-  color: #555;
-  font-variant: small-caps;
-  letter-spacing: 0.025em;
-}
-
-.entry-content p.featured-price {
-  margin: 0;
-  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-  font-size: 1.875em;
-  font-weight: bold;
-  font-weight: 600;
-  font-style: italic;
-  color: #4b9960;
-}
-
-@supports (font-variation-settings: normal) {
-  .entry-content p.featured-price {
-    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-  }
-}
-
-.featured-location {
-  margin: 0;
-  font-size: 1.2em;
-  font-weight: 600;
-}
-
-.front-featured-properties img {
-  display: block;
-  margin-top: 10px;
-}
-
-.featured-details-link {
-  text-align: right;
 }
 
 /* Image links */

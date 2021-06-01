@@ -300,93 +300,60 @@
 }
 
 /* Featured properties */
-.front-featured-properties .slick-arrow {
-	position: absolute;
-	top: 0;
-	z-index: 100;
-	cursor: pointer;
+.front-featured-properties {
 
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
+	.front-content-block-message {
+		margin-bottom: 1rem;
 	}
-}
 
-.front-featured-properties .slick-prev.slick-arrow {
-	left: 0;
-}
-
-.front-featured-properties .slick-next.slick-arrow {
-	left: auto;
-	right: 0;
-}
-
-.front-featured-properties .slick-prev.slick-arrow:before {
-	content: '←';
-	display: inline-block;
-	margin-right: 0.25em;
-}
-
-.front-featured-properties .slick-next.slick-arrow:after {
-	content: '→';
-	display: inline-block;
-	margin-left: 0.25em;
-}
-
-.featured-location {
-	margin: 0;
-}
-
-.front-featured-properties ul li .location:not(:last-of-type):after {
-	content: '|';
-	margin: 0 0.3em;
-	color: $pale_gray;
-}
-
-.entry-content .front-featured-properties ul {
-	padding: 0;
-}
-
-.featured-details {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.front-featured-properties h4 {
-	margin-top: 3rem;
-	font-size: 1.5em;
-	color: #555;
-	font-variant: small-caps;
-	letter-spacing: 0.025em;
-}
-
-.entry-content p.featured-price {
-	margin: 0;
-	font-family: $serif;
-	font-size: 1.875em;
-	font-weight: bold;
-	font-weight: 600;
-	font-style: italic;
-	color: $green;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
+	.front-featured-slides {
+		list-style: none;
+		width: 100%;
+		max-width: 1440px;
+		margin: 0 auto;
 	}
-}
 
-.featured-location {
-	margin: 0;
-	font-size: 1.2em;
-	font-weight: 600;
-}
+	///
+	/// FlexMLS plugin
+	///
+	.flexmls_connect__carousel .flexmls_connect__count,
+	.flexmls_connect__carousel_nav,
+	.flexmls_connect__disclaimer {
+		display: none !important;
+	}
 
-.front-featured-properties img {
-	display: block;
-	margin-top: 10px;
-}
+	.flexmls_connect__listing {
+		width: 100% !important;
+	}
 
-.featured-details-link {
-	text-align: right;
+	.flexmls_popup {
+		max-height: 360px !important;
+
+		img {
+			object-fit: cover;
+			max-height: 360px !important;
+		}
+	}
+
+	.slick-arrow {
+		position: absolute;
+		top: 0;
+		z-index: 100;
+		cursor: pointer;
+
+		@supports ( font-variation-settings: normal ) {
+			font-family: $variable_serif;
+		}
+
+		&.slick-prev {
+			left: 0;
+		}
+
+		&.slick-next {
+			left: auto;
+			right: 0;
+		}
+	}
 }
 
 /* Image links */
