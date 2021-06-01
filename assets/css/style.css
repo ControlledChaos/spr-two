@@ -3765,6 +3765,262 @@ article .gallery .gallery-item img {
   border-radius: 0px !important;
 }
 
+.mls-search-form.mls-search-page .flexmls_connect__search {
+  width: 100% !important;
+  max-width: 1024px !important;
+  margin: 0.5rem 0 0 0 !important;
+  background-color: inherit !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-size: 1rem !important;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new {
+  padding: 0 !important;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new .flexmls_connect__search_new_title {
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: small-caps;
+  font-variant-caps: small-caps;
+  line-height: 1;
+}
+
+@supports (font-variation-settings: normal) {
+  .mls-search-form.mls-search-page .flexmls_connect__search_new .flexmls_connect__search_new_title {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+    font-size: 2.375rem;
+    letter-spacing: 0.025em;
+  }
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal input[type="text"] {
+  width: 50% !important;
+  margin: 0 1%;
+  background: inherit !important;
+  border-color: #cccccc !important;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal input[type="text"]:focus {
+  border-color: #698bac !important;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form {
+  width: 100%;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form * + * {
+  margin: 0;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label {
+  margin-bottom: 0.5em !important;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif !important;
+  font-size: 1.25rem !important;
+  font-weight: 500;
+}
+
+@supports (font-variation-settings: normal) {
+  .mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif !important;
+  }
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label + input:not([type="checkbox"]):not([type="radio"]),
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label ~ input:not([type="checkbox"]):not([type="radio"]),
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label + button, .mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label label ~ button, .mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label label + textarea,
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label ~ textarea, .mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label label + select, .mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal form label label ~ select {
+  display: inline-block;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_field {
+  max-width: 640px;
+  margin-bottom: unset !important;
+  margin-top: 1em;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_field.flexmls_connect__search_field_location label {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_field.flexmls_connect__search_field_location label:focus {
+  border-radius: 3px;
+  clip: auto !important;
+  -webkit-clip-path: none;
+  clip-path: none;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_field_group {
+  width: 100% !important;
+  float: none !important;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_field_group ~ .flexmls_connect__search_new_field_group {
+  width: 100% !important;
+  float: none !important;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_field_group .flexmls_flex-wrap {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 0.25em;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_min_max {
+  width: 100%;
+  max-width: 640px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_min_max .flexmls_connect__search_field {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_min_max .flexmls_connect__search_field {
+    width: 50%;
+  }
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new.flexmls_connect__search_new_horizontal .flexmls_connect__search_new_links {
+  width: 100% !important;
+  float: none !important;
+  clear: unset !important;
+  text-align: left;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit {
+  border-radius: unset !important;
+  background-clip: unset !important;
+  width: auto !important;
+  margin: 1rem 0 0 0 !important;
+  padding: .625em 1.5em !important;
+  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif !important;
+  font-size: 1.5rem !important;
+  font-weight: normal !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  line-height: 1 !important;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+  text-align: unset !important;
+  background-color: #ffffff !important;
+  border-color: #cccccc !important;
+  color: #344a5f !important;
+}
+
+@supports (font-variation-settings: normal) {
+  .mls-search-form.mls-search-page .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit {
+    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif !important;
+    font-size: 1.625rem !important;
+    font-weight: 550 !important;
+    letter-spacing: 0.025em !important;
+  }
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit:hover, .mls-search-form.mls-search-page .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit.hover, .mls-search-form.mls-search-page .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit:focus, .mls-search-form.mls-search-page .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit.focus {
+  background-color: #f8ce30 !important;
+  border-color: #555555 !important;
+  color: #333333 !important;
+}
+
+.mls-search-form.mls-search-page .flexmls_connect__search_new input[type="submit"].flexmls_connect__search_new_submit ~ a {
+  display: none;
+}
+
+.mls-search-form.mls-search-page .select2-container--default {
+  width: 100% !important;
+  max-width: 640px !important;
+}
+
+.mls-search-form.mls-search-page .select2-container--default .select2-search--inline .select2-search__field {
+  margin: 0;
+  padding: 1rem;
+  line-height: 1;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.mls-search-form.mls-search-page .select2-container--default .select2-selection--multiple {
+  min-height: unset !important;
+  border-radius: unset !important;
+  background: inherit !important;
+  border-color: #cccccc !important;
+}
+
+.mls-search-form.mls-search-page .select2-container--default .select2-selection--multiple:focus {
+  border-color: #698bac !important;
+}
+
+.mls-search-form.mls-search-page .select2-container--default .select2-selection--multiple ul {
+  overflow: hidden !important;
+  display: block !important;
+  height: 54px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.mls-search-form.mls-search-page .select2-container .select2-selection--multiple .select2-selection__rendered {
+  display: block !important;
+}
+
+.mls-search-form.mls-search-page .select2-search.select2-search--inline::-webkit-input-placeholder, .mls-search-form.mls-search-page .select2-search.select2-search--inline:-moz-placeholder, .mls-search-form.mls-search-page .select2-search.select2-search--inline::-moz-placeholder, .mls-search-form.mls-search-page .select2-search.select2-search--inline:-ms-input-placeholder, .mls-search-form.mls-search-page .select2-search.select2-search--inline::-webkit-input-placeholder {
+  opacity: 1 !important;
+}
+
+.mls-search-form.mls-search-page .select2-search.select2-search--inline::-webkit-input-placeholder, .mls-search-form.mls-search-page .select2-search.select2-search--inline:-moz-placeholder, .mls-search-form.mls-search-page .select2-search.select2-search--inline::-moz-placeholder, .mls-search-form.mls-search-page .select2-search.select2-search--inline:-ms-input-placeholder, .mls-search-form.mls-search-page .select2-search.select2-search--inline::placeholder {
+  opacity: 1 !important;
+}
+
+.mls-search-form.mls-search-page .select2-dropdown {
+  border-radius: unset !important;
+}
+
+.mls-search-form.mls-search-page .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  border-radius: 0px !important;
+}
+
+.mls-search-form.mls-search-page .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+  color: #dd0000 !important;
+}
+
 #flexmls_connect__cboxCurrent {
   font-size: 1.0625rem;
   font-weight: bold;

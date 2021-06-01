@@ -1103,6 +1103,272 @@ body.admin-bar {
 }
 
 ///
+/// Search form
+///
+.mls-search-form {
+
+	&.mls-search-page {
+
+		.flexmls_connect__search {
+			width: 100% !important;
+			max-width: 1024px !important;
+			margin: 0.5rem 0 0 0 !important;
+			background-color: inherit !important;
+			font-family: $sans !important;
+			font-size: 1rem !important;
+		}
+
+		.flexmls_connect__search_new {
+			padding: 0 !important;
+
+			.flexmls_connect__search_new_title {
+				font-family: $serif;
+				font-size: 2.25rem;
+				font-weight: normal;
+				font-style: normal;
+				font-variant: small-caps;
+				font-variant-caps: small-caps;
+				line-height: 1;
+
+				@supports ( font-variation-settings: normal ) {
+					font-family: $variable_serif;
+					font-size: 2.375rem;
+					letter-spacing: 0.025em;
+				}
+			}
+
+			&.flexmls_connect__search_new_horizontal {
+
+				input[type="text"] {
+					width: 50% !important;
+					margin: 0 1%;
+					background: $form_background_color !important;
+					border-color: $form_border_color !important;
+
+					&:focus {
+						border-color: $form_action_border_color !important;
+					}
+				}
+
+				form {
+					width: 100%;
+
+					* {
+						box-sizing: border-box;
+					}
+
+					* + * {
+						margin: 0;
+					}
+
+					label {
+						margin-bottom: 0.5em !important;
+						font-family: $serif !important;
+						font-size: 1.25rem !important;
+						font-weight: 500;
+
+						@supports ( font-variation-settings: normal ) {
+							font-family: $variable_serif !important;
+						}
+
+						& + input:not([type="checkbox"]):not([type="radio"]),
+						& ~ input:not([type="checkbox"]):not([type="radio"]),
+						& + button, label ~ button, label + textarea,
+						& ~ textarea, label + select, label ~ select {
+							display: inline-block;
+						}
+					}
+				}
+
+				.flexmls_connect__search_field {
+					max-width: 640px;
+					margin-bottom: unset !important;
+					margin-top: 1em;
+
+					&.flexmls_connect__search_field_location {
+						label {
+							border: 0;
+							clip: rect(1px, 1px, 1px, 1px);
+							-webkit-clip-path: inset( 50% );
+									clip-path: inset( 50% );
+							height: 1px;
+							margin: -1px;
+							overflow: hidden;
+							padding: 0;
+							position: absolute !important;
+							width: 1px;
+							word-wrap: normal !important;
+
+							&:focus {
+								border-radius: 3px;
+								clip: auto !important;
+								-webkit-clip-path: none;
+										clip-path: none;
+								display: block;
+								font-size: 14px;
+								font-size: 0.875rem;
+								font-weight: bold;
+								height: auto;
+								left: 5px;
+								line-height: normal;
+								padding: 15px 23px 14px;
+								text-decoration: none;
+								top: 5px;
+								width: auto;
+								z-index: 100000; // Above user toolbar.
+							}
+						}
+					}
+				}
+
+				.flexmls_connect__search_new_field_group {
+					width: 100% !important;
+					float: none !important;
+
+					& ~ .flexmls_connect__search_new_field_group {
+						width: 100% !important;
+						float: none !important;
+					}
+
+					.flexmls_flex-wrap {
+						width: 100%;
+						max-width: 100%;
+						padding: 0 0.25em;
+					}
+				}
+
+				.flexmls_connect__search_new_min_max {
+					width: 100%;
+					max-width: 640px;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+
+					.flexmls_connect__search_field {
+						width: 50%;
+
+						@media screen and ( max-width: 768px ) {
+							width: 50%;
+						}
+					}
+				}
+
+				.flexmls_connect__search_new_links {
+					width: 100% !important;
+					float: none !important;
+					clear: unset !important;
+					text-align: left;
+				}
+			}
+
+			input[type="submit"].flexmls_connect__search_new_submit {
+				border-radius: unset !important;
+				background-clip: unset !important;
+				width: auto !important;
+				margin: 1rem 0 0 0 !important;
+				padding: .625em 1.5em !important;
+				font-family: $serif !important;
+				font-size: 1.5rem !important;
+				font-weight: normal !important;
+				font-weight: 500 !important;
+				font-style: italic !important;
+				line-height: 1 !important;
+				-webkit-transition: all .15s;
+				transition: all .15s;
+				text-align: unset !important;
+				background-color: $button_background_color !important;
+				border-color: $button_border_color !important;
+				color: $button_text_color !important;
+
+				@supports ( font-variation-settings: normal ) {
+					font-family: $variable_serif !important;
+					font-size: 1.625rem !important;
+					font-weight: 550 !important;
+					letter-spacing: 0.025em !important;
+				}
+
+				&:hover,
+				&.hover,
+				&:focus,
+				&.focus {
+					background-color: $button_action_background_color !important;
+					border-color: $button_action_border_color !important;
+					color: $button_action_text_color !important;
+				}
+
+				~ a {
+					display: none;
+				}
+			}
+		}
+
+		.select2-container--default {
+			width: 100% !important;
+			max-width: 640px !important;
+
+			.select2-search--inline {
+				.select2-search__field {
+					margin: 0;
+					padding: 1rem;
+					line-height: 1;
+					-moz-appearance: none;
+					-webkit-appearance: none;
+					appearance: none;
+				}
+			}
+		}
+
+		.select2-container--default .select2-selection--multiple {
+			min-height: unset !important;
+			border-radius: unset !important;
+			background: $form_background_color !important;
+			border-color: $form_border_color !important;
+
+			&:focus {
+				border-color: $form_action_border_color !important;
+			}
+
+			ul {
+				overflow: hidden !important;
+				display: block !important;
+				height: 54px !important;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+		}
+
+		.select2-container .select2-selection--multiple .select2-selection__rendered {
+			display: block !important;
+		}
+
+		.select2-search.select2-search--inline {
+			&::-webkit-input-placeholder,
+			&:-moz-placeholder,
+			&::-moz-placeholder,
+			&:-ms-input-placeholder,
+			&::placeholder {
+				opacity: 1 !important;
+			}
+		}
+
+		.select2-dropdown {
+			border-radius: unset !important;
+		}
+
+		.select2-container--default .select2-selection--multiple .select2-selection__choice {
+			border-radius: 0px !important;
+		}
+
+		.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+
+			&:hover {
+				color: $red !important
+			}
+		}
+	}
+}
+
+///
 /// ColorBox modal
 ///
 #flexmls_connect__cboxCurrent {
