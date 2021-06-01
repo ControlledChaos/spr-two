@@ -443,8 +443,7 @@ if ( ! is_null( $sub_type_name ) ) {
 	);
 } else {
 	$search_params = sprintf(
-		'<p class="location-search-parameters">%s %s</p>',
-		__( 'Properties Tagged:', 'spr-two' ),
+		'<p class="location-search-parameters">%s</p>',
 		ucwords( $type_name )
 	);
 }
