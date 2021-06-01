@@ -11,7 +11,8 @@
 namespace SPR_Two;
 
 // Alias namespaces.
-use SPR_Two\Classes\Front as Front;
+use SPR_Two\Classes\Front  as Front,
+	SPR_Two\Classes\Vendor as Vendor;
 
 // Get ACF fields.
 $_ = get_field( '' );
@@ -465,10 +466,7 @@ $mls_code = sprintf(
 
 	<div class="entry-content" itemprop="articleBody">
 		<?php
-		if (
-			is_plugin_active( 'flexmls-idx/flexmls_connect.php' ) ||
-			is_plugin_active( 'mls-idx/mls-idx.php' )
-		) {
+		if ( Vendor\mls()->flexmls_idx() ) {
 			echo do_shortcode( $mls_code );
 		}
 		?>

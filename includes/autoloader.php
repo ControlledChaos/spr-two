@@ -84,8 +84,9 @@ define( 'SPRT_CLASSES', [
 	SPRT_CLASS_NS . '\Customize\Customizer' => SPRT_CLASS['customize'] . 'customizer.php',
 
 	// Vendor classes.
-	SPRT_CLASS_NS . '\Vendor\Plugin'    => SPRT_CLASS['vendor'] . 'plugin.php',
-	SPRT_CLASS_NS . '\Vendor\Theme_ACF' => SPRT_CLASS['vendor'] . 'theme-acf.php',
+	SPRT_CLASS_NS . '\Vendor\Plugin'     => SPRT_CLASS['vendor'] . 'plugin.php',
+	SPRT_CLASS_NS . '\Vendor\Theme_ACF'  => SPRT_CLASS['vendor'] . 'theme-acf.php',
+	SPRT_CLASS_NS . '\Vendor\MLS_Plugin' => SPRT_CLASS['vendor'] . 'mls-plugin.php',
 
 	// General/miscellaneous classes.
 	SPRT_CLASS_NS . '\Activate\Activate'   => SPRT_CLASS['general'] . 'activate.php',

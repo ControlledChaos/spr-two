@@ -113,6 +113,7 @@ $sprt_media   = new Media\Images;
 
 // Vendor (plugin) classes.
 $sprt_acf = new Vendor\Theme_ACF;
+$sprt_mls = new Vendor\MLS_Plugin;
 
 // Frontend classes.
 if ( ! is_admin() ) {
