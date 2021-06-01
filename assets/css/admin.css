@@ -187,6 +187,17 @@ body {
   z-index: 9899 !important;
 }
 
+.wrap #poststuff .stuffbox > h3,
+.wrap #poststuff h2,
+.wrap #poststuff h3.hndle {
+  font-size: 1.125rem;
+  line-height: 1.1;
+}
+
+.wrap #poststuff #postexcerpt h2 {
+  font-size: 1.3125rem;
+}
+
 .spr-location-area-specific-none > div p:last-of-type {
   margin-bottom: 0;
 }
