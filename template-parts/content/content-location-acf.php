@@ -32,7 +32,8 @@ $per_page      = get_field( 'spr_location_per_page' );
  */
 
 // Define the area type if area is the search type.
-if ( 'none' != $area_specific ) {
+$specific = '';
+if ( 'area' == $search_type && 'none' != $area_specific ) {
 
 	$area_type = 'MLSAreaMinor';
 
@@ -74,7 +75,6 @@ if ( 'none' != $area_specific ) {
 
 } else {
 	$area_type = 'MLSArea';
-	$specific = '';
 }
 
 // Listings status.
