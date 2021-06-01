@@ -104,7 +104,7 @@ $button_disabled_border_color_dark: $button_border_color_dark !default;
 $button_disabled_text_color_dark: lighten( $color: $body_bg_dark, $amount: 25% ) !default;
 
 // Header colors: light mode.
-$header_bg_color: #32475c !default;
+$header_bg_color: #2c3e50 !default;
 $header_text_color: $white !default;
 $header_link_color: $white !default;
 $header_link_action_color: lighten( $color: $header_bg_color, $amount: 50% ) !default;
@@ -134,7 +134,7 @@ $sidebar_link_color: $link_color;
 $sidebar_link_action_color: lighten( $color: $sidebar_link_color, $amount: 20% ) !default;
 
 // Footer colors: light mode.
-$footer_bg_color: $bg_darker !default;
+$footer_bg_color: #2c3e50 !default;
 $footer_text_color: $white !default;
 $footer_link_color: $white !default;
 $footer_link_action_color: lighten( $color: $footer_bg_color, $amount: 50% ) !default;

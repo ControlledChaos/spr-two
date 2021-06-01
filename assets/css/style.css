@@ -1222,7 +1222,7 @@ article .gallery .gallery-item img {
 #theme-toolbar a:visited.hover,
 #theme-toolbar a:visited:focus,
 #theme-toolbar a:visited.focus {
-  color: #b6c7d7;
+  color: #aabed1;
 }
 
 #theme-toolbar a:hover .toolbar-icon svg, #theme-toolbar a.hover .toolbar-icon svg, #theme-toolbar a:focus .toolbar-icon svg, #theme-toolbar a.focus .toolbar-icon svg,
@@ -1230,7 +1230,7 @@ article .gallery .gallery-item img {
 #theme-toolbar a:visited.hover .toolbar-icon svg,
 #theme-toolbar a:visited:focus .toolbar-icon svg,
 #theme-toolbar a:visited.focus .toolbar-icon svg {
-  fill: #b6c7d7;
+  fill: #aabed1;
 }
 
 .site-header-wrap {
@@ -1240,10 +1240,10 @@ article .gallery .gallery-item img {
   z-index: 9998;
   width: 100vw;
   max-width: 100%;
-  background-color: #32475c;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#32475c), to(#293a4b));
-  background-image: linear-gradient(to top, #32475c 0%, #293a4b 100%);
-  border-bottom: solid 1px #17212a;
+  background-color: #2c3e50;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#2c3e50), to(#233140));
+  background-image: linear-gradient(to top, #2c3e50 0%, #233140 100%);
+  border-bottom: solid 1px #11181f;
   -webkit-box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
           box-shadow: 0px 5px 15px -6px rgba(0, 0, 0, 0.625);
 }
@@ -1496,7 +1496,7 @@ article .gallery .gallery-item img {
 }
 
 .main-navigation a:hover, .main-navigation a.hover, .main-navigation a:focus, .main-navigation a.focus {
-  color: #b6c7d7;
+  color: #aabed1;
 }
 
 .menu-toggle {
@@ -1656,7 +1656,7 @@ article .gallery .gallery-item img {
     display: block;
     padding-top: 1em;
     padding-left: unset;
-    background-color: #293a4b;
+    background-color: #233140;
     -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   }
@@ -1671,7 +1671,7 @@ article .gallery .gallery-item img {
     padding: 0.25em 0.75em;
   }
   .main-navigation ul ul li a:hover, .main-navigation ul ul li a:focus {
-    background: #3b546d;
+    background: #354b60;
     color: inherit;
   }
 }
@@ -2653,7 +2653,7 @@ article .gallery .gallery-item img {
   z-index: 100;
   clear: both;
   padding: 1rem 2rem;
-  background-color: #1b252d;
+  background-color: #2c3e50;
   color: #ffffff;
 }
 
