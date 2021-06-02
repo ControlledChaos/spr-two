@@ -11,6 +11,19 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	color: $text_color;
+
+	.login-logo {
+		max-width: 160px;
+		margin: 0 auto;
+
+		img {
+			display: block;
+			width: 100%;
+			max-width: 120px;
+			height: auto;
+		}
+	}
 
 	h1 {
 		font-family: $serif;
@@ -74,7 +87,7 @@
 		width: 100%;
 		max-width: 1280px;
 		margin: 0;
-		padding: 2rem;
+		padding: 1rem 2rem 2rem;;
 
 		#loginform,
 		#nav,

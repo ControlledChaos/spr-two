@@ -50,6 +50,9 @@ class Setup {
 		// Login URL.
 		add_filter( 'login_headerurl', [ $this, 'login_url' ] );
 
+		// Login logo.
+		add_action( 'login_header', [ $this, 'login_logo' ] );
+
 		// User color scheme classes.
 		add_filter( 'body_class', [ $this, 'color_scheme_classes' ] );
 
@@ -345,6 +348,18 @@ class Setup {
 	 */
 	public function login_title() {
 		return get_bloginfo( 'name' );
+	}
+
+	/**
+	 * Login logo
+	 */
+	public function login_logo() {
+		printf(
+			'<div class="login-logo"><img src="%s" alt="%s %s" /></div>',
+			esc_url( get_theme_file_uri( '/assets/images/sequoia-pacific-web-logo.svg' ) ),
+			get_bloginfo( 'name' ),
+			__( 'logo', 'spr-two' )
+		);
 	}
 
 	/**

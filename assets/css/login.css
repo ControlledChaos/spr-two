@@ -103,6 +103,19 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #333333;
+}
+
+.login .login-logo {
+  max-width: 160px;
+  margin: 0 auto;
+}
+
+.login .login-logo img {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
 }
 
 .login h1 {
@@ -165,7 +178,7 @@
   width: 100%;
   max-width: 1280px;
   margin: 0;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem;
 }
 
 .login #login #loginform,
