@@ -1,0 +1,736 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sequoia Pacific Realty Theme #2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-02 06:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.2; wp-5.7.2\n"
+"X-Domain: spr-two"
+
+#: includes/classes/frontend/class-template-tags.php:300
+msgid ", "
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:169
+msgid "5+ unit buildings"
+msgstr ""
+
+#: includes/classes/core/class-php-version.php:135
+#, php-format
+msgid "<p>The %s website is down for maintenance. Please check back soon!.</p>"
+msgstr ""
+
+#: includes/classes/core/class-php-version.php:120
+#, php-format
+msgid ""
+"<p>The active theme has been disabled because the minimum PHP version of "
+"<strong>%s</strong> has not been met. Go to the <a href=\"%s\">%s</a> to "
+"activate another theme.</p>"
+msgstr ""
+
+#: includes/classes/widgets/class-theme-mode.php:34
+msgid "Add a button to toggle light & dark modes."
+msgstr ""
+
+#: template-parts/content/content-404-front.php:25
+msgid "add a new page."
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:272
+msgid "agricultural land"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:425
+msgid "all property types"
+msgstr ""
+
+#: template-parts/footer/footer-default.php:22
+msgid "All rights reserved"
+msgstr ""
+
+#: includes/classes/vendor/class-sidebar_selector.php:58
+msgid "Allow Null?"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:203
+msgid "apartment buildings"
+msgstr ""
+
+#: sidebar.php:38
+msgid "Archives"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:379
+msgid "business opportunities"
+msgstr ""
+
+#: template-parts/header/toolbar.php:68
+msgid "Call:"
+msgstr ""
+
+#: includes/classes/vendor/class-sidebar_selector.php:30
+msgid "Choice"
+msgstr ""
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#: sidebar.php:67
+msgid "Comments RSS"
+msgstr ""
+
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/content/content-location-acf.php:268
+msgid "commercial land"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:333
+msgid "commercial leases"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:398
+msgid "commercial opportunities"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:287
+msgid "commercial properties"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:134
+#: template-parts/content/content-location-acf.php:195
+msgid "condominiums"
+msgstr ""
+
+#: template-parts/header/toolbar.php:105
+msgid "Contact"
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:84
+msgid "Contact & Office"
+msgstr ""
+
+#: template-parts/content/content-listing.php:44
+#: template-parts/content/content.php:46
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#. Author of the theme
+msgid "Controlled Chaos Design"
+msgstr ""
+
+#: template-parts/footer/footer-default.php:19
+msgid "Copyright "
+msgstr ""
+
+#: includes/classes/frontend/class-template-tags.php:472
+msgid "cover image, undefined"
+msgstr ""
+
+#: template-parts/header/toolbar.php:95
+msgid "Customize"
+msgstr ""
+
+#: template-parts/header/toolbar.php:95
+msgid "Customize this site"
+msgstr ""
+
+#: includes/classes/frontend/class-template-tags.php:394
+msgid "Dark Theme"
+msgstr ""
+
+#: template-parts/header/toolbar.php:86
+msgid "Dashboard"
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:56
+msgid "Default Sidebar"
+msgstr ""
+
+#: includes/classes/vendor/class-sidebar_selector.php:69
+msgid "Default Value"
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:73
+#, php-format
+msgid ""
+"Displays to the %s of shortcode content, such as listings from the MLS "
+"plugin."
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:59
+#, php-format
+msgid "Displays to the %s of the main content."
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:225
+msgid "double wide homes"
+msgstr ""
+
+#: includes/classes/core/class-php-version.php:131
+msgid "Down for Maintenance"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:157
+msgid "duplexes"
+msgstr ""
+
+#: template-parts/header/toolbar.php:77
+msgid "Edit"
+msgstr ""
+
+#: template-parts/header/toolbar.php:77
+msgid "Edit this page"
+msgstr ""
+
+#: sidebar.php:66
+msgid "Entries RSS"
+msgstr ""
+
+#: includes/classes/backend/class-block-editor.php:110
+msgid "Error Red"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:237
+msgid "expando homes"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:248
+msgid "farm"
+msgstr ""
+
+#. Name of the template
+msgid "Featured Image"
+msgstr ""
+
+#. Name of the template
+msgid "Featured Image, Sidebar"
+msgstr ""
+
+#: template-parts/content/content-page-front-acf.php:23
+msgid "Featured Services"
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:131
+msgid "Footer Four"
+msgstr ""
+
+#: includes/classes/core/class-setup.php:208
+msgid "Footer Menu"
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:98
+msgid "Footer One"
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:120
+msgid "Footer Three"
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:109
+msgid "Footer Two"
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:87
+msgid ""
+"For displaying office hours and contact information. Used on the front page "
+"and in the page footer."
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:70
+msgid "Front Page Sidebar"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:294
+#: template-parts/content/content-location-acf.php:340
+msgid "general commercial properties"
+msgstr ""
+
+#: template-parts/header/toolbar.php:86
+msgid "Go to the dashboard"
+msgstr ""
+
+#: includes/classes/core/class-setup.php:207
+msgid "Hero Menu"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:390
+msgid "hotel & motel opportunities"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:302
+#: template-parts/content/content-location-acf.php:348
+msgid "hotel & motel properties"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://github.com/ControlledChaos"
+msgstr ""
+
+#. URI of the theme
+msgid "https://github.com/ControlledChaos/spr-two"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:276
+msgid "industrial land"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:402
+msgid "industrial opportunities"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:310
+#: template-parts/content/content-location-acf.php:356
+msgid "industrial properties"
+msgstr ""
+
+#: template-parts/content/content-404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: template-parts/content/content-none.php:21
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
+msgstr ""
+
+#: template-parts/content/content-none-acf.php:21
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: includes/classes/core/class-setup.php:113
+msgid "Kaweah Country"
+msgstr ""
+
+#: includes/classes/core/class-setup.php:118
+msgid "Kaweah River"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:257
+msgid "land"
+msgstr ""
+
+#: includes/classes/frontend/class-template-tags.php:319
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:51
+msgid "left"
+msgstr ""
+
+#: includes/classes/backend/class-block-editor.php:95
+msgid "Light Gray"
+msgstr ""
+
+#: includes/classes/frontend/class-template-tags.php:394
+#: includes/classes/frontend/class-template-tags.php:418
+msgid "Light Theme"
+msgstr ""
+
+#: includes/classes/frontend/class-template-tags.php:305
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: template-parts/content/content-featured.php:24
+msgid "Listing content is not available."
+msgstr ""
+
+#: template-parts/content/partials/front-acf-hero.php:89
+msgid "Loading&hellip;"
+msgstr ""
+
+#: template-parts/header/toolbar.php:29
+msgid "Log In"
+msgstr ""
+
+#: template-parts/header/toolbar.php:24
+msgid "Log Out"
+msgstr ""
+
+#: includes/classes/core/class-setup.php:206
+msgid "Main Menu"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:130
+#: template-parts/content/content-location-acf.php:191
+msgid "manufactured homes on land"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:214
+msgid "manufactured in park"
+msgstr ""
+
+#: template-parts/navigation/navigation-main.php:21
+msgid "Menu"
+msgstr ""
+
+#: sidebar.php:52
+msgid "Meta"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:410
+msgid "mobile opportunities"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:318
+#: template-parts/content/content-location-acf.php:364
+msgid "mobile properties"
+msgstr ""
+
+#: template-parts/content/content-404.php:32
+msgid "Most Used Categories"
+msgstr ""
+
+#: includes/classes/frontend/class-template-tags.php:512
+msgid "Next"
+msgstr ""
+
+#: includes/classes/vendor/class-sidebar_selector.php:64
+msgid "No"
+msgstr ""
+
+#. Name of the template
+msgid "No Sidebar Page"
+msgstr ""
+
+#: template-parts/content/content-none-acf.php:31
+#: template-parts/content/content-none.php:31
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:386
+msgid "office opportunities"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:298
+#: template-parts/content/content-location-acf.php:344
+msgid "office properties"
+msgstr ""
+
+#: comments.php:36
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: template-parts/content/content-404-front.php:23
+msgid "or"
+msgstr ""
+
+#: template-parts/content/content-listing.php:55
+#: template-parts/content/content-page-acf.php:39
+#: template-parts/content/content-page-front.php:77
+#: template-parts/content/content-page.php:39
+#: template-parts/content/content.php:57
+msgid "Pages:"
+msgstr ""
+
+#: includes/classes/backend/class-block-editor.php:100
+msgid "Pale Gray"
+msgstr ""
+
+#: template-parts/content/content-page-front.php:28
+msgid ""
+"Panoramic view of Three Rivers, California, from Lake Kaweah to the Sierra "
+"Nevada Mountains"
+msgstr ""
+
+#: includes/classes/vendor/class-plugin.php:452
+msgid "plugin to be activated."
+msgstr ""
+
+#: includes/classes/frontend/class-template-tags.php:278
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. %s: post date.
+#: includes/classes/frontend/class-template-tags.php:258
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: includes/classes/frontend/class-template-tags.php:302
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: includes/classes/frontend/class-template-tags.php:506
+msgid "Previous"
+msgstr ""
+
+#. Name of the template
+msgid "Properties Sold"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:441
+msgid "Properties Tagged:"
+msgstr ""
+
+#. Name of the template
+#: template-parts/content/content-none-acf.php:45
+#: template-parts/content/content-none.php:45
+msgid "Property Search"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:233
+msgid "quad wide homes"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:165
+msgid "quadruplexes"
+msgstr ""
+
+#: template-parts/content/content-404-front.php:22
+msgid "Reading Settings"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:150
+msgid "residential income properties"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:264
+msgid "residential land"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:180
+msgid "residential leases"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:119
+msgid "residential properties"
+msgstr ""
+
+#: includes/classes/widgets/class-register.php:49
+msgid "right"
+msgstr ""
+
+#: template-parts/content/partials/front-acf-hero.php:198
+msgid "Scroll to content"
+msgstr ""
+
+#: searchform.php:17 searchform.php:22 searchform.php:25
+msgid "Search"
+msgstr ""
+
+#: searchform.php:21
+msgid "Search for:"
+msgstr ""
+
+#: template-parts/content/partials/front-acf-hero.php:115
+msgid "Search Properties"
+msgstr ""
+
+#: search.php:29
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Second WordPress/ClassicPress theme for the Sequoia Pacific Realty website, "
+"May 2021. The Sequoia Pacific Realty website and this plugin rely heavily on "
+"the custom Sequoia Pacific Realty plugin and the Advanced Custom Fields Pro "
+"(ACF) plugin. Do not deactivate these plugins unless errors are being "
+"investigated. And do not delete them! If these two plugins included with the "
+"Sequoia Pacific Realty website is somehow deleted, please contact Greg Sweet "
+"(greg@ccdzine.com)  for a new copy."
+msgstr ""
+
+#: includes/classes/vendor/class-sidebar_selector.php:96
+msgid "Select a Sidebar"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:406
+msgid "senior housing opportunities"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:314
+#: template-parts/content/content-location-acf.php:360
+msgid "senior housing properties"
+msgstr ""
+
+#. Name of the theme
+msgid "Sequoia Pacific Realty Theme #2"
+msgstr ""
+
+#: includes/classes/core/class-setup.php:128
+msgid "Sequoia Tree Trunk"
+msgstr ""
+
+#: includes/classes/vendor/class-sidebar_selector.php:29
+msgid "Sidebar Selector"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:126
+#: template-parts/content/content-location-acf.php:187
+msgid "Single family homes"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:221
+msgid "single wide homes"
+msgstr ""
+
+#: header.php:46
+msgid "Skip to content"
+msgstr ""
+
+#: includes/classes/core/class-setup.php:209
+msgid "Social Menu"
+msgstr ""
+
+#: template-parts/content/content-none.php:19
+msgid "Sorry, but nothing matched your search terms."
+msgstr ""
+
+#: template-parts/content/content-none-acf.php:19
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:414
+msgid "specialty opportunities"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:322
+#: template-parts/content/content-location-acf.php:368
+msgid "specialty properties"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:394
+msgid "sports & entertainment opportunities"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:306
+#: template-parts/content/content-location-acf.php:352
+msgid "sports & entertainment properties"
+msgstr ""
+
+#: sidebar.php:64
+msgid "Subscribe"
+msgstr ""
+
+#: includes/classes/backend/class-block-editor.php:120
+msgid "Success Green"
+msgstr ""
+
+#: includes/classes/core/class-setup.php:123
+msgid "Sunset View from the High Country"
+msgstr ""
+
+#: includes/classes/frontend/class-template-tags.php:308
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: includes/classes/backend/class-block-editor.php:90
+msgid "Text"
+msgstr ""
+
+#: template-parts/content/content-404-front.php:16
+#: template-parts/content/content-404.php:19
+msgid "That page can't be found."
+msgstr ""
+
+#: includes/classes/core/class-php-version.php:116
+msgid "Theme Disabled"
+msgstr ""
+
+#: includes/classes/widgets/class-theme-mode.php:41
+msgid "Theme Mode"
+msgstr ""
+
+#: includes/classes/core/class-php-version.php:123
+msgid "themes page"
+msgstr ""
+
+#: includes/classes/vendor/class-plugin.php:450
+msgid "This plugin is not allowed by the"
+msgstr ""
+
+#: template-parts/content/content-404-front.php:20
+msgid ""
+"This site is set to display a static home page but the ID of that page was "
+"found. Try choosing a static front page in the"
+msgstr ""
+
+#: includes/classes/widgets/class-theme-mode.php:63
+msgid "Title text will display above the toggle button (optional)."
+msgstr ""
+
+#: includes/classes/widgets/class-theme-mode.php:61
+msgid "Title:"
+msgstr ""
+
+#: includes/classes/frontend/class-template-tags.php:417
+msgid "Toggle light/dark theme"
+msgstr ""
+
+#: sidebar.php:29
+msgid "Toggle Theme Mode"
+msgstr ""
+
+#: footer.php:20
+msgid "Top"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:138
+#: template-parts/content/content-location-acf.php:199
+msgid "townhouses"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:229
+msgid "triple wide homes"
+msgstr ""
+
+#: template-parts/content/content-location-acf.php:161
+msgid "triplexes"
+msgstr ""
+
+#: template-parts/content/content-404.php:49
+msgid "Try looking in the monthly archives."
+msgstr ""
+
+#: includes/classes/backend/class-block-editor.php:115
+msgid "Warning Yellow"
+msgstr ""
+
+#: includes/classes/backend/class-block-editor.php:105
+msgid "White"
+msgstr ""
+
+#: template-parts/content/content-none-acf.php:46
+#: template-parts/content/content-none.php:46
+msgid "Would you like to search available properties?"
+msgstr ""
+
+#: includes/classes/vendor/class-sidebar_selector.php:63
+msgid "Yes"
+msgstr ""
+
+#: sidebar.php:57
+msgid "Your Profile"
+msgstr ""
