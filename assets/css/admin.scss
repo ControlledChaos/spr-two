@@ -161,6 +161,17 @@ body {
 		}
 	}
 
+	.wp-submenu a {
+		color: $white;
+	}
+
+	.opensub .wp-submenu li.current a, .wp-submenu li.current, .wp-submenu li.current a, .wp-submenu li.current a:focus, .wp-submenu li.current a:hover, a.wp-has-current-submenu:focus + .wp-submenu li.current a {
+		font-size: 0.9375rem;
+		font-weight: bold;
+		color: $white;
+
+	}
+
 	div.wp-menu-image {
 		&:before {
 			color: $white;
@@ -221,6 +232,21 @@ body {
 
 	li.wp-has-current-submenu:hover .wp-submenu {
 		background-color: $bg_light;
+	}
+}
+
+///
+/// Custom dashboard
+///
+.sprc-dashboard-actions-icon {
+	color: $text_light;
+}
+
+.sprc-dashboard-actions p a {
+	color: $text_dark;
+
+	&:hover {
+		color: $text_light;
 	}
 }
 

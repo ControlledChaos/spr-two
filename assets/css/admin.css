@@ -232,6 +232,16 @@ body {
   }
 }
 
+#adminmenu .wp-submenu a {
+  color: #ffffff;
+}
+
+#adminmenu .opensub .wp-submenu li.current a, #adminmenu .wp-submenu li.current, #adminmenu .wp-submenu li.current a, #adminmenu .wp-submenu li.current a:focus, #adminmenu .wp-submenu li.current a:hover, #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a {
+  font-size: 0.9375rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
 #adminmenu div.wp-menu-image:before {
   color: #ffffff;
 }
@@ -291,6 +301,18 @@ body {
 
 .no-js li.wp-has-current-submenu:hover .wp-submenu {
   background-color: #3e5871;
+}
+
+.sprc-dashboard-actions-icon {
+  color: #3e5871;
+}
+
+.sprc-dashboard-actions p a {
+  color: #2c3e50;
+}
+
+.sprc-dashboard-actions p a:hover {
+  color: #3e5871;
 }
 
 .spr-location-area-specific-none > div p:last-of-type {
