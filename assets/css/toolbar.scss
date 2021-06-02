@@ -4,7 +4,10 @@
 
 @import 'modules/_colors';
 
-#wpadminbar {}
+#wpadminbar {
+	background-color: $bg_darker;
+	color: $header_text_color;
+}
 
 body {
 
