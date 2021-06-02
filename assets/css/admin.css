@@ -315,6 +315,10 @@ body {
   color: #3e5871;
 }
 
+.welcome-panel .sprc-dashboard-content-wrapper h2 {
+  font-weight: 500;
+}
+
 .spr-location-area-specific-none > div p:last-of-type {
   margin-bottom: 0;
 }
