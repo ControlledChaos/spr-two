@@ -117,10 +117,11 @@ $sprt_mls = new Vendor\MLS_Plugin;
 
 // Frontend classes.
 if ( ! is_admin() ) {
-	$sprt_head   = new Front\Head;
-	$sprt_tags   = new Front\Template_Tags;
-	$sprt_assets = new Front\Assets;
-	$sprt_layout = new Front\Layout;
+	$sprt_head    = new Front\Head;
+	$sprt_content = new Front\Content;
+	$sprt_tags    = new Front\Template_Tags;
+	$sprt_assets  = new Front\Assets;
+	$sprt_layout  = new Front\Layout;
 }
 
 // Backend classes.

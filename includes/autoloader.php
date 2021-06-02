@@ -72,6 +72,7 @@ define( 'SPRT_CLASSES', [
 
 	// Frontend classes.
 	SPRT_CLASS_NS . '\Front\Head'          => SPRT_CLASS['front'] . 'head.php',
+	SPRT_CLASS_NS . '\Front\Content'       => SPRT_CLASS['front'] . 'content.php',
 	SPRT_CLASS_NS . '\Front\Template_Tags' => SPRT_CLASS['front'] . 'template-tags.php',
 	SPRT_CLASS_NS . '\Front\Assets'        => SPRT_CLASS['front'] . 'assets.php',
 	SPRT_CLASS_NS . '\Front\Layout'        => SPRT_CLASS['front'] . 'layout.php',
