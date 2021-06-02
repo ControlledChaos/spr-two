@@ -355,7 +355,8 @@ class Setup {
 	 */
 	public function login_logo() {
 		printf(
-			'<div class="login-logo"><img src="%s" alt="%s %s" /></div>',
+			'<div class="login-logo"><a href="%s"><img src="%s" alt="%s %s" /></a></div>',
+			esc_url( site_url( '/' ) ),
 			esc_url( get_theme_file_uri( '/assets/images/sequoia-pacific-web-logo.svg' ) ),
 			get_bloginfo( 'name' ),
 			__( 'logo', 'spr-two' )
