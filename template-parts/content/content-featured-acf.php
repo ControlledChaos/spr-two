@@ -14,23 +14,31 @@ namespace SPR_Two;
 use SPR_Two\Classes\Front as Front;
 
 $mls_number    = get_field( 'spr_featured_mls' );
-$mls_shortcode = sprintf(
-	'[idx_listing_details listing="%s"]',
-	$mls_number
-);
 
 if ( is_singular() ) {
+
 	$title = sprintf(
 		'<h1 class="entry-title">%s %s</h1>',
 		get_field( 'spr_featured_heading' ),
 		"(MLS# $mls_number)"
 	);
+
+	$mls_shortcode = sprintf(
+		'[idx_listing_details listing="%s"]',
+		$mls_number
+	);
+
 } else {
+
 	$title = sprintf(
-		'<h2 class="entry-title"><a href="%s">%s %s</a></h2>',
+		'<h2 class="entry-title"><a href="%s">%s</a></h2>',
 		get_permalink(),
-		get_field( 'spr_featured_heading' ),
-		"(MLS# $mls_number)"
+		get_field( 'spr_featured_heading' )
+	);
+
+	$mls_shortcode = sprintf(
+		'[idx_listing_summary source="location" location="ListingId=%s" default_view="list"]',
+		$mls_number . '&' . $mls_number
 	);
 }
 
