@@ -2106,7 +2106,11 @@ article .gallery .gallery-item img {
 
 /* Featured properties */
 .front-featured-properties .front-content-block-message {
-  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.front-featured-properties .slick-track {
+  margin-top: 1rem;
 }
 
 .front-featured-properties .front-featured-slides {
