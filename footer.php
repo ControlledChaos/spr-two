@@ -40,6 +40,7 @@ echo sprintf(
 			fade : false,
 			easing : "easeInOut",
 			adaptiveHeight : false,
+			pauseOnHover : false,
 			responsive: [
 				{
 					breakpoint: 800,
