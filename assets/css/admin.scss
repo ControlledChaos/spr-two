@@ -21,16 +21,20 @@ body {
 
 	h1,
 	h2 {
-		font-family: $serif;
+		font-family: $variable_serif;
 		font-weight: normal;
 		font-style: normal;
 		font-variant: small-caps;
 		font-variant-caps: small-caps;
+		letter-spacing: 0.025em;
 		color: $text_dark;
 
-		@supports ( font-variation-settings: normal ) {
-			font-family: $variable_serif;
-			letter-spacing: 0.025em;
+		&.nav-tab-wrapper {
+			font-family: unset;
+			font-size: unset;
+			font-weight: unset;
+			font-variant: unset;
+			font-variant-caps: unset;
 		}
 
 		> a {
@@ -39,24 +43,14 @@ body {
 	}
 
 	> h1 {
-		font-size: 2rem;
-
-		@supports ( font-variation-settings: normal ) {
-			font-size: 2.25rem;
-		}
+		font-size: 2.25rem;
 	}
 
 	h3 {
-		font-family: $serif;
-		font-size: 1.5rem;
-		font-weight: 500;
+		font-family: $variable_serif;
+		font-size: 1.25rem;
+		font-weight: 450;
 		color: $text_dark;
-
-		@supports ( font-variation-settings: normal ) {
-			font-family: $variable_serif;
-			font-size: 1.625rem;
-			font-weight: 450;
-		}
 	}
 
 	.widget-title h3,
@@ -81,22 +75,14 @@ body {
 		.sprc-dashboard-content-wrapper {
 
 			h2 {
-				font-size: 1.4375rem;
-
-				@supports ( font-variation-settings: normal ) {
-					font-size: 1.5rem;
-				}
+				font-size: 1.5rem;
 			}
 		}
 
 		.sprc-dashboard-actions {
 
 			h3 {
-				font-size: 1.1875rem;
-
-				@supports ( font-variation-settings: normal ) {
-					font-size: 1.25rem;
-				}
+				font-size: 1.25rem;
 			}
 		}
 	}
@@ -149,14 +135,9 @@ body {
 	li {
 		a {
 			&.menu-top {
-				font-family: $serif;
+				font-family: $variable_serif;
 				font-size: 1rem;
-				font-weight: 600;
-
-				@supports ( font-variation-settings: normal ) {
-					font-family: $variable_serif;
-					font-weight: 550;
-				}
+				font-weight: 550;
 			}
 		}
 	}

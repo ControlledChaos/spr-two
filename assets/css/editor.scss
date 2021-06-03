@@ -16,11 +16,7 @@ body {
 }
 
 .serif {
-	font-family: $serif;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-	}
+	font-family: $variable_serif;
 }
 
 h1,
@@ -37,19 +33,14 @@ ol {
 
 h1,
 h2 {
-	font-family: $serif;
-	font-size: 2rem;
+	font-family: $variable_serif;
+	font-size: 2.25rem;
 	font-weight: normal;
 	font-style: normal;
 	font-variant: small-caps;
 	font-variant-caps: small-caps;
+	letter-spacing: 0.025em;
 	color: $text_dark;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-		font-size: 2.25rem;
-		letter-spacing: 0.025em;
-	}
 
 	> a {
 		color: $text_dark;
@@ -57,16 +48,10 @@ h2 {
 }
 
 h3 {
-	font-family: $serif;
-	font-size: 1.5rem;
-	font-weight: 500;
+	font-family: $variable_serif;
+	font-size: 1.625rem;
+	font-weight: 450;
 	color: $text_dark;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-		font-size: 1.625rem;
-		font-weight: 450;
-	}
 }
 
 a {
@@ -99,5 +84,21 @@ a {
 	b,
 	strong {
 		color: inherit;
+	}
+}
+
+.wp-caption {
+
+	img {
+		display: block;
+	}
+
+	.wp-caption-text {
+		margin-top: 0.5em;
+		font-family: $variable_serif;
+		font-size: 1.25em;
+		font-weight: 500;
+		font-style: italic;
+		text-align: center;
 	}
 }

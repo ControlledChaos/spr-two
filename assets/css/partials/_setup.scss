@@ -56,11 +56,7 @@ body {
 }
 
 .serif {
-	font-family: $serif;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-	}
+	font-family: $variable_serif;
 }
 
 .entry-content,
@@ -79,18 +75,14 @@ ol {
 
 h1,
 h2 {
-	font-family: $serif;
+	font-family: $variable_serif;
+	font-size: 1.5rem;
 	font-weight: normal;
 	font-style: normal;
 	font-variant: small-caps;
 	font-variant-caps: small-caps;
+	letter-spacing: 0.025em;
 	color: $text_dark;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-		font-size: 1.5rem;
-		letter-spacing: 0.025em;
-	}
 
 	> a {
 		color: $text_dark;
@@ -98,18 +90,11 @@ h2 {
 }
 
 h3 {
-	font-family: $serif;
-	font-size: 1.5rem;
-	font-weight: 500;
-	line-height: 1.25;
+	font-family: $variable_serif;
+	font-size: 1.625rem;
+	font-weight: 450;
+	line-height: 1;
 	color: $text_dark;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-		font-size: 1.625rem;
-		font-weight: 450;
-		line-height: 1;
-	}
 }
 
 a {

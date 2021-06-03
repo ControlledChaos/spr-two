@@ -69,7 +69,7 @@ body.admin-bar {
 		a {
 			padding: 0.5em;
 			cursor: pointer;
-			font-family: $serif;
+			font-family: $variable_serif;
 			font-size: 1.25em;
 			font-weight: bold;
 			font-weight: 500;
@@ -78,10 +78,6 @@ body.admin-bar {
 			background-color: $button_background_color;
 			border-color: $button_border_color;
 			color: $button_text_color;
-
-			@supports ( font-variation-settings: normal ) {
-				font-family: $variable_serif;
-			}
 
 			&.list-view,
 			&.map-view {
@@ -150,17 +146,13 @@ body.admin-bar {
 .flexmls_connect__ld_price,
 .flexmls_connect__sr_price {
 	float: none;
-	font-family: $serif;
+	font-family: $variable_serif;
 	font-size: 1.875em;
 	font-weight: bold;
 	font-weight: 600;
 	font-style: italic;
 	line-height: 1;
 	color: $green;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-	}
 }
 
 .flexmls_connect__ld_price {
@@ -271,7 +263,7 @@ body.admin-bar {
 	width: auto;
 	padding: 0.5em;
 	cursor: pointer;
-	font-family: $serif;
+	font-family:$variable_serif;
 	font-size: 1.25rem;
 	font-weight: normal;
 	font-weight: 500;
@@ -281,10 +273,6 @@ body.admin-bar {
 	border-color: $button_border_color;
 	color: $button_text_color;
 	transition: all .15s;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-	}
 
 	&:hover,
 	&:focus {
@@ -360,20 +348,15 @@ body.admin-bar {
 
 .flexmls_connect__sr_detail .flexmls_connect__detail_header {
 	margin-top: 0.5em;
-    font-family: $serif;
+    font-family: $variable_serif;
+	font-size: 1.625em;
 	font-weight: 500;
-	font-size: 1.5em;
 	font-variant: small-caps;
 	font-variant-caps: small-caps;
+	letter-spacing: 0.035em;
     display: block;
     background-color: unset;
     color: $text_dark;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-		font-size: 1.625em;
-		letter-spacing: 0.035em;
-	}
 }
 
 .flexmls_connect__sr_detail {
@@ -452,10 +435,7 @@ body.admin-bar {
 	h3 {
 		font-variant: small-caps;
 		font-variant-caps: small-caps;
-
-		@supports ( font-variation-settings: normal ) {
-			letter-spacing: 0.035em;
-		}
+		letter-spacing: 0.035em;
 	}
 }
 
@@ -493,15 +473,10 @@ body.admin-bar {
 	font-weight: 600;
 
 	em {
-		font-family: $serif;
+		font-family: $variable_serif;
+		font-size: 1.625em;
 		font-weight: 500;
-		font-size: 1.5em;
 		color: $notify;
-
-		@supports ( font-variation-settings: normal ) {
-			font-family: $variable_serif;
-			font-size: 1.625em;
-		}
 	}
 }
 
@@ -515,13 +490,9 @@ body.admin-bar {
 
 .flexmls_connect__photo_switcher {
     color: $text_color !important;
-	font-family: $serif !important;
+	font-family: $variable_serif !important;
     font-size: 1.25em;
     margin: 0 0 .5em 0 !important;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-	}
 
 	img {
 		display: none;
@@ -581,7 +552,7 @@ body.admin-bar {
 		width: auto;
 		padding: 0.5em;
 		vertical-align: middle;
-		font-family: $serif;
+		font-family: $variable_serif;
 		font-size: 1.25rem;
 		font-weight: normal;
 		font-weight: 500;
@@ -593,10 +564,6 @@ body.admin-bar {
 		color: $button_text_color;
 		-webkit-transition: all .15s;
 		transition: all .15s;
-
-		@supports ( font-variation-settings: normal ) {
-			font-family: $variable_serif;
-		}
 
 		&:hover,
 		&.hover,
@@ -660,14 +627,10 @@ body.admin-bar {
 		line-height: 1.2;
 
 		.slides-relevant-info {
-			font-family: $serif;
+			font-family: $variable_serif;
 			font-size: 1.3125rem;
 			line-height: 1;
 			color: $text_medium;
-
-			@supports ( font-variation-settings: normal ) {
-				font-family: $variable_serif;
-			}
 		}
 
 		small {
@@ -693,7 +656,7 @@ body.admin-bar {
 			width: auto;
 			padding: 0.5em !important;
 			cursor: pointer;
-			font-family: $serif;
+			font-family: $variable_serif;
 			font-size: 1.25rem !important;
 			font-weight: normal !important;
 			font-weight: 500 !important;
@@ -704,10 +667,6 @@ body.admin-bar {
 			color: $button_text_color !important;
 			-webkit-transition: all .15s;
 			transition: all .15s;
-
-			@supports ( font-variation-settings: normal ) {
-				font-family: $variable_serif;
-			}
 
 			&:hover,
 			&.hover,
@@ -793,19 +752,14 @@ body.admin-bar {
 		padding: 0 !important;
 
 		.flexmls_connect__search_new_title {
-			font-family: $serif;
-			font-size: 2.25rem;
+			font-family: $variable_serif;
+			font-size: 2.375rem;
 			font-weight: normal;
 			font-style: normal;
 			font-variant: small-caps;
 			font-variant-caps: small-caps;
+			letter-spacing: 0.025em;
 			line-height: 1;
-
-			@supports ( font-variation-settings: normal ) {
-				font-family: $variable_serif;
-				font-size: 2.375rem;
-				letter-spacing: 0.025em;
-			}
 		}
 
 		&.flexmls_connect__search_new_horizontal {
@@ -859,14 +813,10 @@ body.admin-bar {
 
 				label {
 					margin-bottom: 0.5em !important;
-					font-family: $serif !important;
+					font-family: $variable_serif !important;
 					font-size: 1.25rem !important;
 					font-weight: 500;
 					text-shadow: 0.05em 0.05em 0.05em rgba( $color: $black, $alpha: 0.85 );
-
-					@supports ( font-variation-settings: normal ) {
-						font-family: $variable_serif !important;
-					}
 
 					& + input:not([type="checkbox"]):not([type="radio"]),
 					& ~ input:not([type="checkbox"]):not([type="radio"]),
@@ -962,25 +912,19 @@ body.admin-bar {
 			width: auto !important;
 			margin: 1rem 0 0 0 !important;
 			padding: .625em 1.5em !important;
-			font-family: $serif !important;
-			font-size: 1.5rem !important;
+			font-family: $variable_serif !important;
+			font-size: 1.625rem !important;
 			font-weight: normal !important;
-			font-weight: 500 !important;
+			font-weight: 550 !important;
 			font-style: italic !important;
 			line-height: 1 !important;
+			letter-spacing: 0.025em !important;
 			background-color: rgba( $color: $black, $alpha: 0.325 );
 			border-color: $hero_border_color !important;
 			color: $hero_text_color !important;
 			-webkit-transition: all .15s;
 			transition: all .15s;
 			text-align: unset !important;
-
-			@supports ( font-variation-settings: normal ) {
-				font-family: $variable_serif !important;
-				font-size: 1.625rem !important;
-				font-weight: 550 !important;
-				letter-spacing: 0.025em !important;
-			}
 
 			&:hover,
 			&.hover,
@@ -1122,19 +1066,14 @@ body.admin-bar {
 			padding: 0 !important;
 
 			.flexmls_connect__search_new_title {
-				font-family: $serif;
-				font-size: 2.25rem;
+				font-family: $variable_serif;
+				font-size: 2.375rem;
 				font-weight: normal;
 				font-style: normal;
 				font-variant: small-caps;
 				font-variant-caps: small-caps;
+				letter-spacing: 0.025em;
 				line-height: 1;
-
-				@supports ( font-variation-settings: normal ) {
-					font-family: $variable_serif;
-					font-size: 2.375rem;
-					letter-spacing: 0.025em;
-				}
 			}
 
 			&.flexmls_connect__search_new_horizontal {
@@ -1163,13 +1102,9 @@ body.admin-bar {
 
 					label {
 						margin-bottom: 0.5em !important;
-						font-family: $serif !important;
+						font-family: $variable_serif !important;
 						font-size: 1.25rem !important;
 						font-weight: 500;
-
-						@supports ( font-variation-settings: normal ) {
-							font-family: $variable_serif !important;
-						}
 
 						& + input:not([type="checkbox"]):not([type="radio"]),
 						& ~ input:not([type="checkbox"]):not([type="radio"]),
@@ -1267,11 +1202,12 @@ body.admin-bar {
 				width: auto !important;
 				margin: 1rem 0 0 0 !important;
 				padding: .625em 1.5em !important;
-				font-family: $serif !important;
-				font-size: 1.5rem !important;
+				font-family: $variable_serif !important;
+				font-size: 1.625rem !important;
 				font-weight: normal !important;
-				font-weight: 500 !important;
+				font-weight: 550 !important;
 				font-style: italic !important;
+				letter-spacing: 0.025em !important;
 				line-height: 1 !important;
 				-webkit-transition: all .15s;
 				transition: all .15s;
@@ -1279,13 +1215,6 @@ body.admin-bar {
 				background-color: $button_background_color !important;
 				border-color: $button_border_color !important;
 				color: $button_text_color !important;
-
-				@supports ( font-variation-settings: normal ) {
-					font-family: $variable_serif !important;
-					font-size: 1.625rem !important;
-					font-weight: 550 !important;
-					letter-spacing: 0.025em !important;
-				}
 
 				&:hover,
 				&.hover,

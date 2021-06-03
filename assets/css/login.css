@@ -119,21 +119,14 @@
 }
 
 .login h1 {
-  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-  font-size: 2rem;
+  font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 2.25rem;
   font-weight: normal;
   font-style: normal;
   font-variant: small-caps;
   font-variant-caps: small-caps;
+  letter-spacing: 0.025em;
   color: #2c3e50;
-}
-
-@supports (font-variation-settings: normal) {
-  .login h1 {
-    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-    font-size: 2.25rem;
-    letter-spacing: 0.025em;
-  }
 }
 
 .login h1 > a {
@@ -216,7 +209,7 @@
   width: auto;
   padding: 0.5em;
   cursor: pointer;
-  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 1.25rem;
   font-weight: normal;
   font-weight: 500;
@@ -228,12 +221,6 @@
   color: #344a5f;
   -webkit-transition: all .15s;
   transition: all .15s;
-}
-
-@supports (font-variation-settings: normal) {
-  .login #login #wp-submit {
-    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-  }
 }
 
 .login #login #wp-submit:hover, .login #login #wp-submit.hover, .login #login #wp-submit:focus, .login #login #wp-submit.focus {

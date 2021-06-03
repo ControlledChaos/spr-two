@@ -102,20 +102,22 @@ body {
 
 .wrap h1,
 .wrap h2 {
-  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-weight: normal;
   font-style: normal;
   font-variant: small-caps;
   font-variant-caps: small-caps;
+  letter-spacing: 0.025em;
   color: #2c3e50;
 }
 
-@supports (font-variation-settings: normal) {
-  .wrap h1,
-  .wrap h2 {
-    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-    letter-spacing: 0.025em;
-  }
+.wrap h1.nav-tab-wrapper,
+.wrap h2.nav-tab-wrapper {
+  font-family: unset;
+  font-size: unset;
+  font-weight: unset;
+  font-variant: unset;
+  font-variant-caps: unset;
 }
 
 .wrap h1 > a,
@@ -124,28 +126,14 @@ body {
 }
 
 .wrap > h1 {
-  font-size: 2rem;
-}
-
-@supports (font-variation-settings: normal) {
-  .wrap > h1 {
-    font-size: 2.25rem;
-  }
+  font-size: 2.25rem;
 }
 
 .wrap h3 {
-  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 450;
   color: #2c3e50;
-}
-
-@supports (font-variation-settings: normal) {
-  .wrap h3 {
-    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-    font-size: 1.625rem;
-    font-weight: 450;
-  }
 }
 
 .wrap .widget-title h3,
@@ -164,23 +152,11 @@ body {
 }
 
 .wrap .welcome-panel .sprc-dashboard-content-wrapper h2 {
-  font-size: 1.4375rem;
-}
-
-@supports (font-variation-settings: normal) {
-  .wrap .welcome-panel .sprc-dashboard-content-wrapper h2 {
-    font-size: 1.5rem;
-  }
+  font-size: 1.5rem;
 }
 
 .wrap .welcome-panel .sprc-dashboard-actions h3 {
-  font-size: 1.1875rem;
-}
-
-@supports (font-variation-settings: normal) {
-  .wrap .welcome-panel .sprc-dashboard-actions h3 {
-    font-size: 1.25rem;
-  }
+  font-size: 1.25rem;
 }
 
 .wrap .select2-container {
@@ -220,16 +196,9 @@ body {
 }
 
 #adminmenu li a.menu-top {
-  font-family: "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
   font-size: 1rem;
-  font-weight: 600;
-}
-
-@supports (font-variation-settings: normal) {
-  #adminmenu li a.menu-top {
-    font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
-    font-weight: 550;
-  }
+  font-weight: 550;
 }
 
 #adminmenu .wp-submenu a {

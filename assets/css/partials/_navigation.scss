@@ -17,16 +17,11 @@
 	max-width: 100%;
 	margin: 0.5rem 0;
 	padding: 0 2rem;
-	font-family: $serif;
-	font-size: 1.1875rem;
+	font-family: $variable_serif;
+	font-size: 1.375rem;
 	font-variant: small-caps;
 	font-variant-caps: small-caps;
 	color: $nav_text_color;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-		font-size: 1.375rem;
-	}
 
 	div:first-of-type {
 		text-align: center;
@@ -86,6 +81,10 @@
 		&:focus,
 		&.focus {
 			color: $nav_link_action_color;
+		}
+
+		&:not( [href] ) {
+			cursor: default;
 		}
 	}
 }
@@ -212,11 +211,10 @@
 				top: 100%;
 				left: -999em;
 				display: block;
-				padding-top: 1em;
+				padding-top: 1rem;
+				padding-bottom: 0.5rem;
 				padding-left: unset;
 				background-color: $subnav_bg_color;
-				-webkit-box-shadow: 3px 3px 5px rgba( $color: $black, $alpha: 0.5 );
-				box-shadow: 3px 3px 5px rgba( $color: $black, $alpha: 0.5 );
 
 				li {
 					&:not( :last-of-type ) {

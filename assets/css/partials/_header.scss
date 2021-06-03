@@ -97,9 +97,7 @@
 }
 
 .site-header-wrap {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
+	position: relative;
 	z-index: 9998;
 	width: 100vw;
 	max-width: 100%;
@@ -107,6 +105,12 @@
 	background-image: linear-gradient( to top, $header_bg_color 0%, darken( $color: $header_bg_color, $amount: 5% ) 100% );
 	border-bottom: solid 1px darken( $color: $header_bg_color, $amount: 15% );
 	box-shadow: 0px 5px 15px -6px rgba( $color: $black, $alpha: 0.625 );
+
+	@media screen and ( min-width: 769px ) {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+	}
 
 	&.header-wrap-scrolled {
 
@@ -158,8 +162,8 @@
 
 	.site-title {
 		margin: 0;
-		font-family: $serif;
-		font-size: 2em;
+		font-family: $variable_serif;
+		font-size: 2.25em;
 		font-weight: normal;
 		font-weight: 400;
 		font-style: italic;
@@ -169,9 +173,8 @@
 		// transform: translateX( -34px );
 		transition: all 0.2s;
 
-		@supports ( font-variation-settings: normal ) {
-			font-family: $variable_serif;
-			font-size: 2.25em;
+		@media screen and ( max-width: 600px ) {
+			line-height: 1.2;
 		}
 
 		& a {
@@ -200,6 +203,10 @@
 	img {
 		max-width: 72px;
 		transition: all 0.2s;
+
+		@media screen and ( max-width: 600px ) {
+			margin-right: 1rem;
+		}
 	}
 }
 
@@ -208,18 +215,12 @@
 }
 
 .site-header-contact {
-	font-size: 1.285em;
-	font-family: $serif;
-	font-weight: 500;
+	font-family: $variable_serif;
+	font-size: 1.5em;
+	font-weight: 450;
 	font-style: italic;
 	line-height: 1.25;
 	color: $medium_gray;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-		font-size: 1.5em;
-		font-weight: 450;
-	}
 
 	p {
 		margin-top: 0.3em;

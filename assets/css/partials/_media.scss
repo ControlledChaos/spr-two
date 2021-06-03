@@ -90,10 +90,20 @@ body.no-sidebar {
 
 	&.alignleft {
 		margin: 0 1em 1em 0;
+
+		@media screen and ( max-width: 600px ) {
+			float: none;
+			margin: 2em auto;
+		}
 	}
 
 	&.alignright {
 		margin: 0 0 1em 1em;
+
+		@media screen and ( max-width: 600px ) {
+			float: none;
+			margin: 2em auto;
+		}
 	}
 
 	&.aligncenter {
@@ -109,16 +119,11 @@ body.no-sidebar {
 
 	.wp-caption-text {
 		margin-top: 0.5em;
-		font-family: $serif;
-		font-weight: 600;
+		font-family: $variable_serif;
+		font-size: 1.25em;
+		font-weight: 500;
 		font-style: italic;
 		text-align: center;
-
-		@supports ( font-variation-settings: normal ) {
-			font-family: $variable_serif;
-			font-size: 1.25em;
-			font-weight: 500;
-		}
 	}
 }
 

@@ -53,7 +53,7 @@
 		> div {
 			width: 100%;
 			// max-width: 360px;
-			margin-right: 5vw;
+			margin-right: 2vw;
 			padding-right: 1rem;
 
 			@media screen and ( max-width: 800px ) {
@@ -100,8 +100,10 @@
 		color: $white;
 
 		ul {
+			max-width: 320px;
+
 			&.menu {
-				column-count: 3;
+				column-count: 2;
 				li {
 					line-height: 1.35;
 

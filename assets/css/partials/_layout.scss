@@ -83,6 +83,10 @@ main article {
 	& > div {
 		min-width: 360px;
 
+		@media screen and ( max-width: 480px ) {
+			min-width: unset;
+		}
+
 		&:first-of-type {
 			margin-right: 1rem;
 

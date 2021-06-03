@@ -9,16 +9,11 @@
 
 	.location-search-parameters {
 		margin-top: 0;
-		font-family: $serif;
+		font-family: $variable_serif;
 		font-size: 1.375rem;
 		font-weight: bold;
-		font-weight: 600;
+		font-weight: 450;
 		font-style: italic;
-
-		@supports ( font-variation-settings: normal ) {
-			font-family: $variable_serif;
-			font-weight: 450;
-		}
 	}
 }
 
@@ -28,18 +23,12 @@
 .listing-address,
 .entry-content p.listing-type {
 	margin-top: 0;
-	font-family: $serif;
-	font-size: 1.5rem;
+	font-family: $variable_serif;
+	font-size: 1.65rem;
 	font-weight: normal;
-	font-weight: 500;
+	font-weight: 450;
 	font-style: italic;
 	line-height: 1.2;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-		font-size: 1.65rem;
-		font-weight: 450;
-	}
 }
 
 .listing-address {
@@ -48,18 +37,12 @@
 
 .entry-content h3.listing-price {
 	margin: 0.5em 0 0;
-	font-family: $serif;
-	font-size: 2em;
+	font-family: $variable_serif;
+	font-size: 2.1em;
 	font-weight: bold;
-	font-weight: 600;
+	font-weight: 550;
 	font-style: italic;
 	color: $green;
-
-	@supports ( font-variation-settings: normal ) {
-		font-family: $variable_serif;
-		font-size: 2.1em;
-		font-weight: 550;
-	}
 }
 
 .listing-featured-image {
