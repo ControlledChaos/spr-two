@@ -20,8 +20,9 @@ if ( $featured_posts ) :
 
 	echo '<ul class="front-featured-slides">';
 	foreach ( $featured_posts as $featured_post ) :
-		$featured_mls = get_field( 'spr_featured_mls', $featured_post->ID );
-		$mls_array[] = 'ListingId=' . $featured_mls . '&' . $featured_mls;
+		$featured_heading = get_field( 'spr_featured_heading', $featured_post->ID );
+		$featured_mls     = get_field( 'spr_featured_mls', $featured_post->ID );
+		$mls_array[]      = 'ListingId=' . $featured_mls . '&' . $featured_mls;
 
 		echo '<li>';
 		$featured = sprintf(
@@ -30,6 +31,10 @@ if ( $featured_posts ) :
 			$featured_mls
 		);
 		echo do_shortcode( $featured );
+		echo sprintf(
+			'<h3>%s</h3>',
+			$featured_heading
+		);
 		echo '</li>';
 	endforeach;
 	echo '</ul>';
