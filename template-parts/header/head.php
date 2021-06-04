@@ -25,10 +25,10 @@ namespace SPR_Two;
 	<?php if ( is_search() ) { echo esc_attr( '<meta name="robots" content="noindex,nofollow" />' ); } ?>
 
 	<!-- Preload font files -->
-	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/crimson/crimson-pro-roman.woff' ) ); ?>" />
-	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/crimson/crimson-pro-italic.woff' ) ); ?>" />
-	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/EBGaramond-Regular.woff2' ) ); ?>" />
-	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/EBGaramond-Italic.woff2' ) ); ?>" />
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/crimson/crimson-pro-roman.woff' ) ); ?>" as="font" crossorigin type="font/woff" />
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/crimson/crimson-pro-italic.woff' ) ); ?>" as="font" crossorigin type="font/woff" />
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/EBGaramond-Regular.woff2' ) ); ?>" as="font" crossorigin type="font/woff2" />
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( '/assets/fonts/EBGaramond-Italic.woff2' ) ); ?>" as="font" crossorigin type="font/woff2" />
 
 	<?php
 	// Hook into the head.
