@@ -158,13 +158,13 @@ jQuery(document).ready( function($) {
 
 	$(window).resize( function() {
 
-		var windowSize = jQuery(window).width();
+		var windowSize = $(window).width();
 
-		if ( windowSize.width() <= 768 ) {
+		if ( windowSize <= 768 ) {
 			$( '#secondary, #front-section-sidebar, #contact-office-sidebar' ).trigger( 'sticky_kit:detach' ).css( 'position', 'relative' );
 		}
 
-		if ( windowSize.width() > 768 ) {
+		if ( windowSize > 768 ) {
 			$( '#secondary, #front-section-sidebar, #contact-office-sidebar' ).stick_in_parent({
 				offset_top   : 70,
 				recalc_every : 1
