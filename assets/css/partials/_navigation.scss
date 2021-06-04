@@ -91,6 +91,9 @@
 
 .menu-toggle {
 	display: inline-block;
+	background-color: inherit;
+	border-color: rgba( $color: $white, $alpha: 0.325 );
+	color: $white;
 }
 
 .main-navigation.toggled ul {

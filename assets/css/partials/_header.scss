@@ -160,6 +160,10 @@
 	max-width: $wrapper_width;
 	margin: 0 auto;
 
+	@media screen and ( max-width: 480px ) {
+		padding: 0;
+	}
+
 	.site-title {
 		margin: 0;
 		font-family: $variable_serif;
@@ -175,6 +179,14 @@
 
 		@media screen and ( max-width: 600px ) {
 			line-height: 1.2;
+		}
+
+		@media screen and ( max-width: 480px ) {
+			font-size: 1.75em;
+		}
+
+		@media screen and ( max-width: 414px ) {
+			font-size: 1.5625rem;
 		}
 
 		& a {
@@ -205,7 +217,7 @@
 		transition: all 0.2s;
 
 		@media screen and ( max-width: 600px ) {
-			margin-right: 1rem;
+			// margin-right: 1rem;
 		}
 	}
 }
@@ -263,16 +275,5 @@
 		position: absolute !important;
 		width: 1px;
 		word-wrap: normal !important;
-	}
-}
-
-@media screen and ( max-width: 480px ) {
-
-	.site-branding {
-		padding: 0;
-
-		.site-title {
-			font-size: 1.75em;
-		}
 	}
 }

@@ -425,6 +425,7 @@ h2 {
   font-style: normal;
   font-variant: small-caps;
   font-variant-caps: small-caps;
+  line-height: 1;
   letter-spacing: 0.025em;
   color: #2c3e50;
 }
@@ -1293,6 +1294,12 @@ article .gallery .gallery-item img {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 480px) {
+  .site-branding {
+    padding: 0;
+  }
+}
+
 .site-branding .site-title {
   margin: 0;
   font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
@@ -1310,6 +1317,18 @@ article .gallery .gallery-item img {
 @media screen and (max-width: 600px) {
   .site-branding .site-title {
     line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-branding .site-title {
+    font-size: 1.75em;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .site-branding .site-title {
+    font-size: 1.5625rem;
   }
 }
 
@@ -1337,12 +1356,6 @@ article .gallery .gallery-item img {
   max-width: 72px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-}
-
-@media screen and (max-width: 600px) {
-  .site-branding img {
-    margin-right: 1rem;
-  }
 }
 
 .site-header-image {
@@ -1398,15 +1411,6 @@ article .gallery .gallery-item img {
     position: absolute !important;
     width: 1px;
     word-wrap: normal !important;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .site-branding {
-    padding: 0;
-  }
-  .site-branding .site-title {
-    font-size: 1.75em;
   }
 }
 
@@ -1486,6 +1490,9 @@ article .gallery .gallery-item img {
 
 .menu-toggle {
   display: inline-block;
+  background-color: inherit;
+  border-color: rgba(255, 255, 255, 0.325);
+  color: #ffffff;
 }
 
 .main-navigation.toggled ul {
@@ -3637,6 +3644,10 @@ article .gallery .gallery-item img {
 
 .gm-style .gm-style-iw-c {
   border-radius: 0px !important;
+}
+
+.flex-map {
+  margin: 2rem 0 !important;
 }
 
 .mls-search-form.mls-search-page .flexmls_connect__search {
