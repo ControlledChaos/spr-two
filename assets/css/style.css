@@ -484,6 +484,12 @@ small {
   transition: none;
 }
 
+@media (hover: none) {
+  #back-to-top {
+    display: none !important;
+  }
+}
+
 #back-to-top.focus, #back-to-top:focus {
   background-color: #ffffff;
   border-color: #cccccc;

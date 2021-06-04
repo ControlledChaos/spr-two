@@ -144,6 +144,10 @@ small {
 	z-index: 500;
 	transition: none;
 
+	@media (hover: none) {
+		display: none !important;
+	}
+
 	&.focus,
 	&:focus {
 		background-color: $button_background_color;
