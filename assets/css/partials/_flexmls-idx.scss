@@ -726,6 +726,8 @@ body.admin-bar {
 
 .flexmls_connect__slides {
 	img {
+		display: block;
+		width: 100%;
 		object-fit: cover;
 	}
 }
