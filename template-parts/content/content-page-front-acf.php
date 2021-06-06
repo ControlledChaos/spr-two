@@ -107,8 +107,8 @@ get_template_part( 'template-parts/content/partials/front-acf', 'hero' );
 
 				</section>
 
-				<?php elseif ( get_row_layout() == 'spr_front_content_shortcode' ) : ?>
-				<section id="<?php echo $layout; ?>" class="front-content-section front-shortcode-content">
+				<?php elseif ( get_row_layout() == 'spr_front_content_properties' ) : ?>
+				<section id="<?php echo $layout; ?>" class="front-content-section front-properties">
 
 					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
 
@@ -207,7 +207,7 @@ get_template_part( 'template-parts/content/partials/front-acf', 'hero' );
 					</div>
 				</section>
 
-				<?php elseif ( get_row_layout() == 'spr_front_content_properties' ) : ?>
+				<?php elseif ( get_row_layout() == 'spr_front_content_featured' ) : ?>
 				<section id="<?php echo $layout; ?>" class="front-content-section front-featured-properties hide-if-no-js">
 
 					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
