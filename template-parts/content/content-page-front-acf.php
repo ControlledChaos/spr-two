@@ -121,22 +121,68 @@ get_template_part( 'template-parts/content/partials/front-acf', 'hero' );
 							</div>
 
 							<?php
-							$shortcode   = get_sub_field( 'spr_front_shortcode' );
-							$grid_width  =  get_sub_field( 'spr_front_grid_width' );
-							$grid_height =  get_sub_field( 'spr_front_grid_height' );
+							$display     = get_sub_field( 'spr_front_listings_display' );
+							$locations   = get_sub_field( 'spr_front_grid_locations' );
+							$per_page    = get_sub_field( 'spr_front_list_per_page' );
+							$grid_width  = get_sub_field( 'spr_front_grid_width' );
+							$grid_height = get_sub_field( 'spr_front_grid_height' );
 
-							// Grid shortcode.
-							$grid_display = sprintf(
-								'[idx_slideshow link="default" horizontal="%s" vertical="%s" source="location" location="PostalCode=93271&93271|PostalCode=93221&93221|PostalCode=93244&93244|PostalCode=93286&93286" display="all" sort="recently_changed" additional_fields="beds,baths,sqft" destination="local" send_to="photo"]',
-								$grid_width,
-								$grid_height
-							);
-
-							if ( $shortcode ) {
-								echo do_shortcode( $shortcode );
+							if ( $per_page ) {
+								$per_page = $per_page;
 							} else {
-								// Build code.
+								$per_page = '10';
 							}
+
+							if ( $grid_width ) {
+								$grid_width = $grid_width;
+							} else {
+								$grid_width = '3';
+							}
+
+							if ( $grid_height ) {
+								$grid_height = $grid_height;
+							} else {
+								$grid_height = '3';
+							}
+
+							foreach ( $locations as $location ) :
+								$search = get_field( 'spr_location_search', $location->ID );
+								$type   = get_field( 'spr_location_type', $location->ID );
+
+								// Define the search type.
+								if ( 'area' == $type ) {
+									$type = 'MLSAreaMinor';
+								} elseif ( 'zip' == $type ) {
+									$type = 'PostalCode';
+								} elseif ( 'county' == $type ) {
+									$type = 'CountyOrParish';
+								} else {
+									$type = 'City';
+								}
+
+								$search_array[] = $type . '=' . $search . '&' . $search;
+
+							endforeach;
+
+							$listings = implode( '|', $search_array );
+
+							if ( 'list' == $display ) {
+								$display = sprintf(
+									'[idx_listing_summary source="location" location="%s" display="all" sort="recently_changed" listings_per_page="%s" status="Active" default_view="list"]',
+									$listings,
+									$per_page
+								);
+
+							} else {
+								$display = sprintf(
+									'[idx_slideshow link="default" horizontal="%s" vertical="%s" source="location" location="%s" display="all" sort="recently_changed" additional_fields="beds,baths,sqft" destination="local" send_to="photo"]',
+									$grid_width,
+									$grid_height,
+									$listings
+								);
+							}
+
+							echo do_shortcode( $display );
 							?>
 						</div>
 						<?php
