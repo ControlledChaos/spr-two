@@ -8,6 +8,10 @@
 @import '../modules/_colors';
 @import '../modules/_typography';
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: $sans;
 	line-height: 1.5;
