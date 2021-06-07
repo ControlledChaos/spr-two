@@ -64,7 +64,15 @@
 
 .entry-content,
 .entry-summary {
-	max-width: 1024px;
+	max-width: 100%;
+}
+
+body:not( .no-sidebar ) {
+
+	.entry-content,
+	.entry-summary {
+		max-width: 1024px;
+	}
 }
 
 .home .entry-content {

@@ -29,8 +29,6 @@ use SPR_Two\Classes\Front as Front;
 		<?php endif; ?>
 	</header>
 
-	<?php  Front\tags()->post_thumbnail(); ?>
-
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div>

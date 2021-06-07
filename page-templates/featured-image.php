@@ -31,13 +31,19 @@ get_header();
 		<?php while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page-featured-image' );
+			get_template_part( 'template-parts/content/content', 'page-featured-image' . $sprt_acf->suffix() );
 
 		endwhile; // End of the loop.
 		?>
 
 		</main>
 	</div>
+	<?php
+
+	// Get the default sidebar file.
+	get_sidebar();
+	?>
+</div><!-- #content -->
 <?php
 
 // Get the default footer file.

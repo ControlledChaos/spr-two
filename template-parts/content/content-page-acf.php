@@ -27,10 +27,6 @@ use SPR_Two\Classes\Front as Front;
 		} ?>
 	</header>
 
-	<?php if ( ! is_front_page() ) {
-		Front\tags()->post_thumbnail();
-	} ?>
-
 	<div class="entry-content" itemprop="articleBody">
 		<?php
 		the_content();

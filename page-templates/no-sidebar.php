@@ -4,7 +4,7 @@
  *
  * Removes the sidebar from the right of the main page content (left for RTL languages).
  *
- * Template Name: No Sidebar Page
+ * Template Name: No Sidebar
  * Template Post Type: page
  * Description: Removes the sidebar from the right of the main page content (left for RTL languages).
  *
@@ -31,7 +31,7 @@ get_header();
 		<?php while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content/content', 'page' );
+			get_template_part( 'template-parts/content/content', 'page' . $sprt_acf->suffix() );
 
 		endwhile; // End of the loop.
 		?>

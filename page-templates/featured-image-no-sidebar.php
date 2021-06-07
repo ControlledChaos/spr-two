@@ -1,10 +1,10 @@
 <?php
 /**
- * Featured Image, Sidebar template
+ * Featured Image, No Sidebar template
  *
  * Adds the featured image to the top of the page and adds a sidebar to the right of the main page content (left for RTL languages).
  *
- * Template Name: Featured Image, Sidebar
+ * Template Name: Featured Image, No Sidebar
  * Template Post Type: page
  * Description: Adds the featured image to the top of the page and adds a sidebar to the right of the main page content (left for RTL languages).
  *
@@ -31,18 +31,13 @@ get_header();
 		<?php while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page-featured-image-no-sidebar' );
+			get_template_part( 'template-parts/content/content', 'page-featured-image' . $sprt_acf->suffix() );
 
 		endwhile; // End of the loop.
 		?>
 
 		</main>
 	</div>
-	<?php
-
-	// Get the default sidebar file.
-	get_sidebar();
-	?>
 </div><!-- #content -->
 <?php
 

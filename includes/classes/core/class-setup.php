@@ -257,9 +257,12 @@ class Setup {
 		if (
 			! is_active_sidebar( 'default' ) ||
 			! is_active_sidebar( 'front-section' ) ||
-			is_page_template( [ 'page-templates/no-sidebar.php' ] )
+			is_page_template( [
+				'page-templates/no-sidebar.php',
+				'page-templates/featured-image-no-sidebar.php'
+			] )
 		) {
-			$classes[] .= 'no-sidebar';
+			$classes[] .= ' no-sidebar';
 		}
 
 		// Return the modified array of body classes.

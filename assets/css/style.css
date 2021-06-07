@@ -1734,6 +1734,11 @@ article .gallery .gallery-item img {
 
 .entry-content,
 .entry-summary {
+  max-width: 100%;
+}
+
+body:not(.no-sidebar) .entry-content,
+body:not(.no-sidebar) .entry-summary {
   max-width: 1024px;
 }
 
