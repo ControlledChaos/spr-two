@@ -67,7 +67,7 @@
 	max-width: 100%;
 }
 
-body:not( .no-sidebar ) {
+body:not( .static-front ):not( .no-sidebar ) {
 
 	.entry-content,
 	.entry-summary {

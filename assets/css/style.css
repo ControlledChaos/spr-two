@@ -1737,8 +1737,8 @@ article .gallery .gallery-item img {
   max-width: 100%;
 }
 
-body:not(.no-sidebar) .entry-content,
-body:not(.no-sidebar) .entry-summary {
+body:not(.static-front):not(.no-sidebar) .entry-content,
+body:not(.static-front):not(.no-sidebar) .entry-summary {
   max-width: 1024px;
 }
 
