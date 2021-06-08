@@ -9,4 +9,4 @@ The Sequoia Pacific Realty website and this theme rely heavily on the custom Seq
 ![ClassicPress tested on version 1.2.0](https://img.shields.io/badge/ClassicPress-1.2.0-03768e.svg?style=flat-square)
 ![ACF Pro Ready](https://img.shields.io/badge/ACF-ready-00d3ae.svg?style=flat-square)
 
-![Theme Screenshot](https://raw.githubusercontent.com/ControlledChaos/spr-two/master/screenshot.jpg)
+![Theme Screenshot](https://github.com/ControlledChaos/spr-two/raw/master/screenshot.png)
