@@ -2977,6 +2977,7 @@ corresponds to the arrow we want to display */
 }
 
 .tooltipster-sidetip.header-staff-tooltips .tooltipster-content {
+  max-width: 240px;
   text-align: center;
 }
 
