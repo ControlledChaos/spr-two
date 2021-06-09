@@ -2232,7 +2232,7 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
 
 .front-staff-members .front-staff-slides li figure figcaption h4 {
   margin-top: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.2;
   color: #3e5871;
 }
