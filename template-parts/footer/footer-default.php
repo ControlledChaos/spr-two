@@ -96,8 +96,8 @@ if ( 'page' == $front_page && $front_id && $gallery ) {
 		<div class="footer-four">
 			<?php dynamic_sidebar( 'footer-four' ); ?>
 		</div>
-	</div>
 	<?php endif; ?>
+	</div>
 
 </aside>
 <footer id="colophon" class="site-footer">
