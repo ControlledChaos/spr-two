@@ -1480,7 +1480,7 @@ article .gallery .gallery-item img {
 .main-navigation li:hover > ul,
 .main-navigation li:focus > ul,
 .main-navigation li.focus > ul {
-  left: 0;
+  right: 0;
 }
 
 .main-navigation a {
@@ -1654,12 +1654,13 @@ article .gallery .gallery-item img {
   .main-navigation ul ul {
     position: absolute;
     top: 100%;
-    left: -999em;
+    right: -999em;
     display: block;
     padding-top: 1rem;
     padding-bottom: 0.5rem;
     padding-left: unset;
     background-color: #233140;
+    text-align: right;
   }
   .main-navigation ul ul li:not(:last-of-type) {
     margin-right: 0;

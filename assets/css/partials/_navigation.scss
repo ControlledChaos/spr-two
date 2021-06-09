@@ -66,7 +66,7 @@
 		&:hover > ul,
 		&:focus > ul,
 		&.focus > ul {
-			left: 0;
+			right: 0;
 		}
 	}
 
@@ -212,12 +212,13 @@
 			ul {
 				position: absolute;
 				top: 100%;
-				left: -999em;
+				right: -999em;
 				display: block;
 				padding-top: 1rem;
 				padding-bottom: 0.5rem;
 				padding-left: unset;
 				background-color: $subnav_bg_color;
+				text-align: right;
 
 				li {
 					&:not( :last-of-type ) {
