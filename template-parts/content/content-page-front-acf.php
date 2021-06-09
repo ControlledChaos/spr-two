@@ -220,6 +220,19 @@ get_template_part( 'template-parts/content/partials/front-acf', 'hero' );
 
 				</section>
 
+				<?php elseif ( get_row_layout() == 'spr_front_content_staff' ) : ?>
+				<section id="<?php echo $layout; ?>" class="front-content-section front-staff-members hide-if-no-js">
+
+					<h2><?php the_sub_field( 'spr_front_content_heading' ); ?></h2>
+
+					<div class="front-content-block-message">
+						<?php the_sub_field( 'spr_front_content_message' ); ?>
+					</div>
+
+					<?php get_template_part( 'template-parts/content/partials/front-acf', 'staff' ); ?>
+
+				</section>
+
 				<?php elseif ( get_row_layout() == 'spr_front_content_image_links' ) : ?>
 				<section id="<?php echo $layout; ?>" class="front-content-section front-image-links">
 

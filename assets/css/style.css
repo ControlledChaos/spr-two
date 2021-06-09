@@ -2160,6 +2160,106 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   right: 0;
 }
 
+/* Staff Members */
+.front-staff-members .front-content-block-message {
+  text-align: center;
+}
+
+.front-staff-members .front-staff-slides {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.front-staff-members .front-staff-slides li {
+  display: inline-block !important;
+  width: 33.33326%;
+  width: calc( 100% / 3);
+  height: 100%;
+  padding: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 801px) {
+  .front-staff-members .front-staff-slides li {
+    width: 50%;
+  }
+}
+
+.front-staff-members .front-staff-slides li > div:first-of-type {
+  display: inline-block;
+  padding: 1.5rem;
+  border: solid 1px #cccccc;
+}
+
+.front-staff-members .front-staff-slides li p.bio {
+  text-align: justify;
+}
+
+.front-staff-members .front-staff-slides li figure {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.front-staff-members .front-staff-slides li figure img {
+  display: block;
+}
+
+.front-staff-members .front-staff-slides li figure figcaption {
+  text-align: center;
+}
+
+.front-staff-members .front-staff-slides li figure figcaption h4 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #3e5871;
+}
+
+.front-staff-members .front-staff-slides li figure figcaption p {
+  margin-top: 0.25em;
+  font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.1875rem;
+  font-weight: bold;
+  font-weight: 550;
+  font-style: italic;
+  line-height: 1.2;
+  color: #555555;
+}
+
+.front-staff-modal {
+  display: none;
+  max-width: 480px !important;
+  padding: 1.5rem !important;
+}
+
+.front-staff-modal .modal-heading {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: bold;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #3e5871;
+}
+
+.front-staff-modal img {
+  margin-top: 0;
+}
+
 /* Image links */
 .front-image-links {
   border-top: solid 1px #cccccc;

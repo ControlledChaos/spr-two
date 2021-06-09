@@ -57,12 +57,39 @@ echo sprintf(
 			]
 		});
 	  });'
-); endif; ?>
+);
+echo sprintf(
+	'<script>%s</script>',
+	'jQuery(document).ready(function(){
+		jQuery( ".front-staff-slides" ).slick({
+			slidesToShow : 3,
+			slidesToScroll : 3,
+			autoplay : false,
+			speed : 750,
+			fade : false,
+			easing : "easeInOut",
+			adaptiveHeight : false,
+			pauseOnHover : false,
+			responsive: [
+				{
+					breakpoint: 801,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll : 2,
+					}
+				}
+			]
+		});
+	  });'
+);
+endif; ?>
+<?php if ( is_page( 'application' ) ) : ?>
 <script>
 document.addEventListener( 'wpcf7mailsent', function( event ) {
     location = 'http://sequoiapacificrealty.com/application-deposit/';
 }, false );
 </script>
+<?php endif; ?>
 <?php if ( is_front_page() ) : ?>
 <script>
 jQuery(document).ready(function($) {
