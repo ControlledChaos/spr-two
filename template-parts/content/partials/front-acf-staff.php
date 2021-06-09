@@ -40,7 +40,7 @@ if ( $staff_members ) :
 		}
 
 		$trim = sprintf(
-			'&hellip; <a class="hide-if-no-js" href="javascript:void;" data-src="#%s-bio-modal" data-fancybox>%s</a>',
+			'&hellip; <a class="hide-if-no-js front-staff-read-more" href="javascript:void;" data-src="#%s-bio-modal" data-fancybox>%s</a>',
 			$staff_member->ID,
 			__( 'Read more', 'spr-two' )
 		);
@@ -55,11 +55,12 @@ if ( $staff_members ) :
 						<p><?php echo $position; ?></p>
 					</figcaption>
 				</figure>
-				<p class="bio"><?php echo wp_trim_words( $bio, 40, $trim ); ?></p>
+				<p class="bio"><?php echo wp_trim_words( $bio, 30, $trim ); ?></p>
 			</div>
 			<div id="<?php echo "{$staff_member->ID}-bio-modal"; ?>" class="front-staff-modal" style="display: none;">
 				<img class="alignleft avatar" src="<?php echo $src; ?>" alt="<?php esc_html_e( "$name's profile pic" ); ?>" width="120" height="120" />
 				<p class="modal-heading"><?php echo $name; ?></p>
+				<p><?php echo $position; ?></p>
 				<div class="bio">
 					<?php echo $bio; ?>
 				</div>

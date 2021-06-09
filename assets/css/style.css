@@ -1115,16 +1115,6 @@ article .gallery .gallery-item img {
   border-color: #ffffff;
 }
 
-.logged-in.admin-bar .fancybox-container {
-  top: 32px;
-}
-
-@media screen and (max-width: 782px) {
-  .logged-in.admin-bar .fancybox-container {
-    top: 46px;
-  }
-}
-
 .slick-track {
   margin-top: 3rem;
 }
@@ -2253,6 +2243,11 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   text-align: justify;
 }
 
+.front-staff-members .front-staff-slides li p.bio .front-staff-read-more {
+  font-weight: bold;
+  font-weight: 600;
+}
+
 .front-staff-members .front-staff-slides li figure {
   width: 100%;
   display: -webkit-inline-box;
@@ -2306,6 +2301,17 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   font-weight: 600;
   line-height: 1.2;
   color: #3e5871;
+}
+
+.front-staff-modal .modal-heading + p {
+  margin-top: 0.25em;
+  font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
+  font-size: 1.1875rem;
+  font-weight: bold;
+  font-weight: 550;
+  font-style: italic;
+  line-height: 1.2;
+  color: #555555;
 }
 
 .front-staff-modal img {

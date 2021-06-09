@@ -391,6 +391,11 @@
 
 			p.bio {
 				text-align: justify;
+
+				.front-staff-read-more {
+					font-weight: bold;
+					font-weight: 600;
+				}
 			}
 
 			figure {
@@ -441,6 +446,17 @@
 		font-weight: 600;
 		line-height: 1.2;
 		color: $text_light;
+
+		+ p {
+			margin-top: 0.25em;
+			font-family: $variable_serif;
+			font-size: 1.1875rem;
+			font-weight: bold;
+			font-weight: 550;
+			font-style: italic;
+			line-height: 1.2;
+			color: $medium_gray;
+		}
 	}
 
 	img {
