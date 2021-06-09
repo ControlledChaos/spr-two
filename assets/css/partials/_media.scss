@@ -173,14 +173,6 @@ article .gallery {
 	border-color: $white;
 }
 
-.logged-in.admin-bar .fancybox-container {
-	top: 32px;
-
-	@media screen and ( max-width: 782px ) {
-		top: 46px;
-	}
-}
-
 // Slick slider.
 .slick-track {
 	margin-top: 3rem;
