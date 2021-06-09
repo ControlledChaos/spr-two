@@ -501,6 +501,12 @@ small {
   color: #344a5f;
 }
 
+#back-to-top.focus.hover, #back-to-top.focus:hover, #back-to-top:focus.hover, #back-to-top:focus:hover {
+  background-color: #f8ce30;
+  border-color: #555555;
+  color: #333333;
+}
+
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);

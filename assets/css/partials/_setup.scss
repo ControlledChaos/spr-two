@@ -158,6 +158,13 @@ small {
 		background-color: $button_background_color;
 		border-color: $button_border_color;
 		color: $button_text_color;
+
+		&.hover,
+		&:hover {
+			background-color: $button_action_background_color;
+			border-color: $button_action_border_color;
+			color: $button_action_text_color;
+		}
 	}
 }
 
