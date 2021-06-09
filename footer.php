@@ -24,13 +24,26 @@ use SPR_Two\Classes\Front as Front;
 <?php Front\tags()->after_page(); ?>
 <?php wp_footer(); ?>
 
+<script>
+	// Enhanced tooltips on hover.
+	jQuery(document).ready( function($) {
+		$( '.header-staff-figure' ).tooltipster(
+			{
+				theme : 'header-staff-tooltips',
+				side  : 'bottom',
+				contentAsHTML : true,
+				content : jQuery( '.header-staff-content' )
+			}
+		);
+	});
+</script>
 <?php
 
 // Add the sticky menu script.
 if ( is_front_page() ) :
 echo sprintf(
 	'<script>%s</script>',
-	'jQuery(document).ready(function(){
+	'jQuery(document).ready( function(){
 		jQuery( ".front-featured-slides" ).slick({
 			slidesToShow : 3,
 			slidesToScroll : 1,
@@ -60,7 +73,7 @@ echo sprintf(
 );
 echo sprintf(
 	'<script>%s</script>',
-	'jQuery(document).ready(function(){
+	'jQuery(document).ready( function(){
 		jQuery( ".front-staff-slides" ).slick({
 			slidesToShow : 3,
 			slidesToScroll : 3,

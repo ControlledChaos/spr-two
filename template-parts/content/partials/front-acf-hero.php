@@ -119,7 +119,7 @@ if ( $search_button ) {
 if ( is_array( $search_params ) && ! empty( $search_params ) ) {
 	$search_params = implode( ',', $search_params );
 } else {
-	$search_params - 'beds,baths,square_footage,list_price';
+	$search_params = 'beds,baths,square_footage,list_price';
 }
 
 // Show map at the top of search results.

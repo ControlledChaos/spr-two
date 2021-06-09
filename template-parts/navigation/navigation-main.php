@@ -14,18 +14,24 @@ namespace SPR_Two;
 use SPR_Two\Classes\Front as Front;
 
 ?>
-<nav id="site-navigation" class="main-navigation" role="directory" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<div class="nav-staff-wrap">
+	<nav id="site-navigation" class="main-navigation" role="directory" itemscope itemtype="http://schema.org/SiteNavigationElement">
 
-	<div>
-		<button class="button menu-toggle" aria-controls="main-menu" aria-expanded="false">
-			<?php esc_html_e( 'Menu', 'spr-two' ); ?>
-		</button>
+		<div>
+			<button class="button menu-toggle" aria-controls="main-menu" aria-expanded="false">
+				<?php esc_html_e( 'Menu', 'spr-two' ); ?>
+			</button>
+		</div>
+
+		<?php
+		wp_nav_menu( [
+			'theme_location' => 'main',
+			'menu_id'        => 'main-menu',
+		] );
+		?>
+	</nav>
+
+	<div class="staff-list">
+		<?php get_template_part( 'template-parts/navigation/partials/staff', 'list' ); ?>
 	</div>
-
-	<?php
-	wp_nav_menu( [
-		'theme_location' => 'main',
-		'menu_id'        => 'main-menu',
-	] );
-	?>
-</nav>
+</div>
