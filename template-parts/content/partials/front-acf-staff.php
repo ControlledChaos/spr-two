@@ -29,7 +29,7 @@ if ( $staff_members ) :
 
 		if ( $photo ) {
 			$url  = $photo['url'];
-			if ( has_image_size( 'large-thumbnail' ) ) {
+			if ( has_image_size( 'x-large-thumbnail' ) ) {
 				$size = 'x-large-thumbnail';
 			} else {
 				$size = 'thumbnail';
