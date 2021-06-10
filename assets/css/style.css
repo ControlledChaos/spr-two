@@ -1309,6 +1309,12 @@ article .gallery .gallery-item img {
 
 .site-header-wrap .staff-list figure img {
   display: block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.site-header-wrap.header-wrap-scrolled .staff-list figure img {
+  width: 52px;
 }
 
 .site-header-wrap .header-staff-content {
