@@ -2407,6 +2407,7 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   display: inline-block !important;
   width: 33.33326%;
   width: calc( 100% / 3);
+  min-width: 25%;
   height: 100%;
   padding: 0.5rem;
   font-size: 0.9375rem;
