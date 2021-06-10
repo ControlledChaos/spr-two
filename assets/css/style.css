@@ -2907,6 +2907,8 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
 }
 
 .footer-widgets .widget ul.menu li {
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
   line-height: 1.35;
 }
 
