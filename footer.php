@@ -83,10 +83,17 @@ echo sprintf(
 			pauseOnHover : false,
 			responsive: [
 				{
-					breakpoint: 801,
+					breakpoint: 800,
 					settings: {
 						slidesToShow: 2,
-						slidesToScroll : 2,
+						slidesToScroll : 2
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll : 1
 					}
 				}
 			]

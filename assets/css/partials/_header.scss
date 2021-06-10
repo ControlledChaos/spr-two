@@ -144,11 +144,21 @@
 	.nav-staff-wrap {
 		display: flex;
 		align-items: center;
+
+		@media screen and ( max-width: 768px ) {
+			width: 100%;
+			flex-direction: column;
+			justify-content: center;
+		}
 	}
 
 	.staff-list {
 		margin-left: 1em;
 		color: $header_text_color;
+
+		@media screen and ( max-width: 768px ) {
+			display: none;
+		}
 
 		ul {
 			list-style: none;

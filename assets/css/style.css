@@ -1279,9 +1279,28 @@ article .gallery .gallery-item img {
           align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .site-header-wrap .nav-staff-wrap {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .site-header-wrap .staff-list {
   margin-left: 1em;
   color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .site-header-wrap .staff-list {
+    display: none;
+  }
 }
 
 .site-header-wrap .staff-list ul {
@@ -1863,12 +1882,32 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   margin: 0;
 }
 
+@media screen and (max-width: 640px) {
+  .single-staff .entry-title,
+  .post-type-archive-staff .entry-title {
+    text-align: center;
+  }
+}
+
 .single-staff .staff-content,
 .post-type-archive-staff .staff-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .single-staff .staff-content,
+  .post-type-archive-staff .staff-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .single-staff .staff-content figure,
@@ -1890,6 +1929,13 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   font-weight: 600;
 }
 
+@media screen and (max-width: 640px) {
+  .single-staff .staff-email,
+  .post-type-archive-staff .staff-email {
+    text-align: center;
+  }
+}
+
 .entry-content .staff-position {
   margin-top: 0;
   font-family: "Crimson Pro", "EB Garamond", Garamond, NonBreakingSpaceOverride, "Hoefler Text", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "Times New Roman", Constantia, Times, Georgia, serif;
@@ -1898,6 +1944,12 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   font-weight: 500;
   font-style: italic;
   color: #3e5871;
+}
+
+@media screen and (max-width: 640px) {
+  .entry-content .staff-position {
+    text-align: center;
+  }
 }
 
 .more-staff {
@@ -2318,6 +2370,11 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
 }
 
 /* Staff Members */
+.front-staff-members {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+
 .front-staff-members .front-content-block-message {
   text-align: center;
 }
@@ -2332,6 +2389,20 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   margin: 0 auto;
 }
 
+.front-staff-members .front-staff-slides .slick-list,
+.front-staff-members .front-staff-slides .slick-track {
+  min-width: 100% !important;
+}
+
+.front-staff-members .front-staff-slides .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .front-staff-members .front-staff-slides li {
   display: inline-block !important;
   width: 33.33326%;
@@ -2342,7 +2413,7 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   line-height: 1.4;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 800px) {
   .front-staff-members .front-staff-slides li {
     width: 50%;
   }
@@ -2401,6 +2472,22 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   font-style: italic;
   line-height: 1.2;
   color: #555555;
+}
+
+.front-staff-members .slick-arrow {
+  position: absolute;
+  bottom: -3rem;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.front-staff-members .slick-arrow.slick-prev {
+  left: 0;
+}
+
+.front-staff-members .slick-arrow.slick-next {
+  left: auto;
+  right: 0;
 }
 
 .front-staff-modal {

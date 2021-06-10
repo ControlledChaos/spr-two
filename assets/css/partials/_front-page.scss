@@ -358,6 +358,8 @@
 
 /* Staff Members */
 .front-staff-members {
+	margin-bottom: 0;
+	padding-bottom: 1rem;
 
 	.front-content-block-message {
 		text-align: center;
@@ -370,6 +372,16 @@
 		max-width: 1440px;
 		margin: 0 auto;
 
+		.slick-list,
+		.slick-track {
+			min-width: 100% !important;
+		}
+
+		.slick-track {
+			display: flex;
+			justify-content: center;
+		}
+
 		li {
 			display: inline-block !important;
 			width: 33.33326%;
@@ -379,7 +391,7 @@
 			font-size: 0.9375rem;
 			line-height: 1.4;
 
-			@media screen and (min-width: 801px) {
+			@media screen and (min-width: 800px) {
 				width: 50%;
 			}
 
@@ -430,6 +442,22 @@
 					}
 				}
 			}
+		}
+	}
+
+	.slick-arrow {
+		position: absolute;
+		bottom: -3rem;
+		z-index: 100;
+		cursor: pointer;
+
+		&.slick-prev {
+			left: 0;
+		}
+
+		&.slick-next {
+			left: auto;
+			right: 0;
 		}
 	}
 }
