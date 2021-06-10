@@ -19,6 +19,10 @@
 	margin: 2rem 0 0;
 }
 
+.page-title {
+	font-size: 1.75rem;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -113,4 +117,99 @@ body:not( .static-front ):not( .no-sidebar ) {
 
 .entry-footer span {
 	margin-right: 1em;
+}
+
+// Staff post type.
+.single-staff {
+	.staff-content {
+		margin-top: 4rem;
+	}
+}
+
+.single-staff,
+.post-type-archive-staff {
+	main {
+		article {
+			clear: both;
+
+			&:not( :first-of-type ) {
+				margin-top: 2rem;
+				border-top: solid 1px $box_border_color;
+			}
+		}
+	}
+
+	.entry-title {
+		margin: 0;
+	}
+
+	.staff-content {
+		display: flex;
+		width: 100%;
+
+		figure {
+			margin-right: 2em;
+			margin-bottom: 2rem;
+			min-width: 20%;
+			max-width: 240px;
+
+			img {
+				display: block;
+			}
+		}
+	}
+
+	.staff-email {
+		font-weight: bold;
+		font-weight: 600;
+	}
+}
+
+.entry-content {
+
+	.staff-position {
+		margin-top: 0;
+		font-family: $variable_serif;
+		font-size: 1.4375rem;
+		font-weight: bold;
+		font-weight: 500;
+		font-style: italic;
+		color: $text_light;
+	}
+}
+
+.more-staff {
+	margin-top: 2rem;
+	padding-top: 2rem;
+	border-top: solid 1px $box_border_color;
+
+	h2 {
+		margin: 0;
+	}
+
+	ul {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+
+		li {
+			display: inline-block;
+			margin: 1.5rem 0.5rem 0;
+		}
+	}
+
+	figure {
+		margin: 0;
+
+		figcaption {
+			text-align: center;
+			font-family: $variable_serif;
+			font-size: 1.3125rem;
+			font-weight: bold;
+			font-weight: 500;
+			font-style: italic;
+			color: $text_light;
+		}
+	}
 }
