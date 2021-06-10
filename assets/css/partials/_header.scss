@@ -154,9 +154,18 @@
 			list-style: none;
 			margin: 0;
 
+			div:not( .header-staff-content ) {
+				display: inline-block !important;
+				width: auto !important;
+			}
+
 			li {
 				display: inline;
 				margin: 0;
+
+				&:not( :first-of-type ) {
+					display: none;
+				}
 			}
 		}
 
