@@ -19,13 +19,11 @@ use SPR_Two\Classes\Front as Front;
 
 // Query the `staff` post type.
 $args = [
-	'post_type'           => [ 'staff' ],
-	'post_status'         => [ 'publish' ],
-	'nopaging'            => true,
-	'posts_per_page'      => '-1',
-	'ignore_sticky_posts' => true,
-	'order'               => 'ASC',
-	'orderby'             => 'menu_order',
+	'post_type'      => [ 'staff' ],
+	'post_status'    => [ 'publish' ],
+	'nopaging'       => true,
+	'order'          => 'ASC',
+	'orderby'        => 'menu_order'
 ];
 $query = new \WP_Query( $args );
 
@@ -53,15 +51,13 @@ if ( $query->have_posts() ) : $count = 0; ?>
 				<?php echo get_the_title() . ' | ' . $position; ?>
 			</figcaption>
 		</figure>
-		<div class="header-staff-content">
+		<div id="header-staff-content" class="header-staff-content">
 			<h4><?php the_title(); ?></h4>
 			<p><?php echo $position; ?></p>
 		</div>
 	</li>
 	<?php endif; ?>
 
-<?php endwhile; ?>
+<?php endwhile; wp_reset_postdata(); ?>
 </ul>
 <?php endif;
-
-wp_reset_postdata();
