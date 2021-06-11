@@ -380,10 +380,10 @@
 				top: 7px;
 				right: 7px;
 				display: inline-block;
-				width: 1.175em;
+				width: 1.325em;
 
 				svg {
-					fill: #aaaaaa;
+					fill: $link_color;
 				}
 
 				&:hover {
@@ -513,12 +513,12 @@
 
 	.staff-email-icon-link {
 		display: inline-block;
-		width: 1em;
+		width: 1.25em;
 		margin-left: 0.5em;
 		vertical-align: middle;
 
 		svg {
-			fill: #aaaaaa;
+			fill: $link_color;
 		}
 
 		&:hover {

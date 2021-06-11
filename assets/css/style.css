@@ -2398,11 +2398,11 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   top: 7px;
   right: 7px;
   display: inline-block;
-  width: 1.175em;
+  width: 1.325em;
 }
 
 .front-staff-members .front-staff-slides .front-staff-slide-wrap .staff-email-icon-link svg {
-  fill: #aaaaaa;
+  fill: #3e5871;
 }
 
 .front-staff-members .front-staff-slides .front-staff-slide-wrap .staff-email-icon-link:hover svg {
@@ -2540,13 +2540,13 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
 
 .front-staff-modal .staff-email-icon-link {
   display: inline-block;
-  width: 1em;
+  width: 1.25em;
   margin-left: 0.5em;
   vertical-align: middle;
 }
 
 .front-staff-modal .staff-email-icon-link svg {
-  fill: #aaaaaa;
+  fill: #3e5871;
 }
 
 .front-staff-modal .staff-email-icon-link:hover svg {
