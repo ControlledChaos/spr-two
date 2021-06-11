@@ -485,6 +485,21 @@
 	}
 }
 
+.static-front {
+	.shortcode-section-content {
+		.flexmls_connect__carousel {
+
+			.flexmls_connect__count {
+				display: none !important;
+			}
+
+			.flexmls_connect__container {
+				margin-top: 1em;
+			}
+		}
+	}
+}
+
 .front-staff-modal {
 	display: none;
 	position: relative;
