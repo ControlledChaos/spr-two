@@ -2389,6 +2389,26 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   margin: 0 auto;
 }
 
+.front-staff-members .front-staff-slides .front-staff-slide-wrap {
+  position: relative;
+}
+
+.front-staff-members .front-staff-slides .front-staff-slide-wrap .staff-email-icon-link {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  display: inline-block;
+  width: 1.175em;
+}
+
+.front-staff-members .front-staff-slides .front-staff-slide-wrap .staff-email-icon-link svg {
+  fill: #aaaaaa;
+}
+
+.front-staff-members .front-staff-slides .front-staff-slide-wrap .staff-email-icon-link:hover svg {
+  fill: #698bac;
+}
+
 .front-staff-members .front-staff-slides .slick-list,
 .front-staff-members .front-staff-slides .slick-track {
   min-width: 100% !important;
@@ -2493,6 +2513,7 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
 
 .front-staff-modal {
   display: none;
+  position: relative;
   max-width: 480px !important;
   padding: 1.5rem !important;
 }
@@ -2515,6 +2536,21 @@ body:not(.static-front):not(.no-sidebar) .entry-summary {
   font-style: italic;
   line-height: 1.2;
   color: #555555;
+}
+
+.front-staff-modal .staff-email-icon-link {
+  display: inline-block;
+  width: 1em;
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+
+.front-staff-modal .staff-email-icon-link svg {
+  fill: #aaaaaa;
+}
+
+.front-staff-modal .staff-email-icon-link:hover svg {
+  fill: #698bac;
 }
 
 .front-staff-modal img {

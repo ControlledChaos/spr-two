@@ -372,6 +372,28 @@
 		max-width: 1440px;
 		margin: 0 auto;
 
+		.front-staff-slide-wrap {
+			position: relative;
+
+			.staff-email-icon-link {
+				position: absolute;
+				top: 7px;
+				right: 7px;
+				display: inline-block;
+				width: 1.175em;
+
+				svg {
+					fill: #aaaaaa;
+				}
+
+				&:hover {
+					svg {
+						fill: $link_action_color;
+					}
+				}
+			}
+		}
+
 		.slick-list,
 		.slick-track {
 			min-width: 100% !important;
@@ -465,6 +487,7 @@
 
 .front-staff-modal {
 	display: none;
+	position: relative;
 	max-width: 480px !important;
 	padding: 1.5rem !important;
 
@@ -485,6 +508,23 @@
 			font-style: italic;
 			line-height: 1.2;
 			color: $medium_gray;
+		}
+	}
+
+	.staff-email-icon-link {
+		display: inline-block;
+		width: 1em;
+		margin-left: 0.5em;
+		vertical-align: middle;
+
+		svg {
+			fill: #aaaaaa;
+		}
+
+		&:hover {
+			svg {
+				fill: $link_action_color;
+			}
 		}
 	}
 
