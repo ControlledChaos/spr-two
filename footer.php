@@ -45,6 +45,7 @@ echo sprintf(
 		jQuery( ".front-featured-slides" ).slick({
 			slidesToShow : 3,
 			slidesToScroll : 1,
+			infinite: false,
 			autoplay : true,
 			autoplaySpeed : 7500,
 			speed : 750,
@@ -67,6 +68,8 @@ echo sprintf(
 				}
 			]
 		});
+		jQuery( "div[data-connect-total-pages=0]" ).closest( ".slick-slide" ).addClass( "screen-reader-text" );
+		jQuery( "div[data-connect-total-pages=0]" ).closest( "li" ).remove();
 	  });'
 );
 echo sprintf(

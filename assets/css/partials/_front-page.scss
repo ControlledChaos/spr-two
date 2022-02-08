@@ -294,6 +294,8 @@
 	}
 
 	.slick-track {
+		display: flex;
+		justify-content: center;
 		margin-top: 1rem;
 	}
 
@@ -607,5 +609,13 @@
 
 	img {
 		display: block;
+	}
+}
+
+div[data-connect-total-pages="0"] {
+	display: none;
+
+	& + h3 {
+		display: none;
 	}
 }
